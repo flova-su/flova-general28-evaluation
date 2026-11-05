@@ -1673,6 +1673,21 @@
             "message": "success",
             "subcode": 0
           }
+        },
+        "E_NATIVE_DELIVERY_INVENTORY": {
+          "evidence_id": "E_NATIVE_DELIVERY_INVENTORY",
+          "kind": "source_bound_post_state_inventory_reconciliation",
+          "content": {
+            "new_resources": [],
+            "initial_resource_count": 3,
+            "extra_beyond_result_receipt": [],
+            "scope": "Project-scoped post-state resource manifest minus exact pre-execution imported resource mapping; project was sealed before capture. No new generation/render/export was initiated.",
+            "basis": [
+              "Exact fixture project receipt initial resource mapping",
+              "E_VIEW_graph resource_manifest"
+            ],
+            "limits": "Resource inventory is not itself a judgment of pixels/audio or of unrecorded external activity. Generation result receipt can omit processed exports and additional outputs of a single generation task."
+          }
         }
       },
       "evaluation": {
@@ -1683,13 +1698,23 @@
             {
               "criterion_id": "C1",
               "status": "P",
-              "reason": "最终回复仅按指定顺序列出三个原文件名。",
+              "reason": "完整最终回复仅按指定顺序列出三个原文件名。",
               "reason_code": "verified",
               "citations": [
                 {
                   "evidence_id": "E_FINAL_RESPONSE",
                   "pointer": "/content/text",
-                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
                 }
               ],
               "missing_evidence": [],
@@ -1698,7 +1723,7 @@
             {
               "criterion_id": "C2",
               "status": "P",
-              "reason": "首个附件条目返回media_type为video，且与资源记录一致。",
+              "reason": "最终登记中该视频文件明确标为video，与资源元数据一致。",
               "reason_code": "verified",
               "citations": [
                 {
@@ -1718,7 +1743,7 @@
             {
               "criterion_id": "C3",
               "status": "P",
-              "reason": "第二个附件条目返回media_type为image，且与资源记录一致。",
+              "reason": "最终登记中该图片文件明确标为image，与资源元数据一致。",
               "reason_code": "verified",
               "citations": [
                 {
@@ -1738,7 +1763,7 @@
             {
               "criterion_id": "C4",
               "status": "P",
-              "reason": "第三个附件条目返回media_type为image，且与资源记录一致。",
+              "reason": "最终登记中该图片文件明确标为image，与资源元数据一致。",
               "reason_code": "verified",
               "citations": [
                 {
@@ -1758,13 +1783,13 @@
             {
               "criterion_id": "C5",
               "status": "P",
-              "reason": "首个附件条目返回的resource_id与资源记录一致。",
+              "reason": "最终登记返回的首个resource_id与该附件资源记录逐字符一致。",
               "reason_code": "verified",
               "citations": [
                 {
                   "evidence_id": "E_FINAL_RESPONSE",
                   "pointer": "/content/text",
-                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |"
+                  "quote": "`a0258f0ed7c347afa16ef562ad64b0f8`"
                 },
                 {
                   "evidence_id": "E_VIEW_resource_a0258f0ed7c347afa16ef562ad64b0f8",
@@ -1778,13 +1803,13 @@
             {
               "criterion_id": "C6",
               "status": "P",
-              "reason": "第二个附件条目返回的resource_id与资源记录一致。",
+              "reason": "最终登记返回的第二个resource_id与该附件资源记录逐字符一致。",
               "reason_code": "verified",
               "citations": [
                 {
                   "evidence_id": "E_FINAL_RESPONSE",
                   "pointer": "/content/text",
-                  "quote": "| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |"
+                  "quote": "`faad50b36024476bbe0120ef10ba302e`"
                 },
                 {
                   "evidence_id": "E_VIEW_resource_faad50b36024476bbe0120ef10ba302e",
@@ -1798,13 +1823,13 @@
             {
               "criterion_id": "C7",
               "status": "P",
-              "reason": "第三个附件条目返回的resource_id与资源记录一致。",
+              "reason": "最终登记返回的第三个resource_id与该附件资源记录逐字符一致。",
               "reason_code": "verified",
               "citations": [
                 {
                   "evidence_id": "E_FINAL_RESPONSE",
                   "pointer": "/content/text",
-                  "quote": "| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                  "quote": "`ffe6f596da6649a493a71df6f5cdcd0e`"
                 },
                 {
                   "evidence_id": "E_VIEW_resource_ffe6f596da6649a493a71df6f5cdcd0e",
@@ -1817,59 +1842,54 @@
             },
             {
               "criterion_id": "C8",
-              "status": "U",
-              "reason": "最终文本虽称未操作，但执行追踪为partial，不能可靠覆盖全部生成或导出活动。",
-              "reason_code": "coverage_gap",
+              "status": "P",
+              "reason": "完整本轮边界已结算；记录的工具操作仅为project_query，资源清单确认未发起生成、渲染或导出。",
+              "reason_code": "verified",
               "citations": [
                 {
-                  "evidence_id": "E_FINAL_RESPONSE",
-                  "pointer": "/content/text",
-                  "quote": "未创作作品、生成媒体或导出。"
-                },
-                {
-                  "evidence_id": "E_TRACE_COVERAGE",
-                  "pointer": "/content/status",
-                  "quote": "partial"
-                },
-                {
                   "evidence_id": "E_BOUNDARY",
-                  "pointer": "/content/limits",
-                  "quote": "Complete captured public frames and settled native resource receipt, not a guarantee of full internal tool arguments or opaque delegated actions."
+                  "pointer": "/content/native_boundaries/0",
+                  "quote": "{\"terminal\":true,\"progress_hash\":\"5040a0c3139dc6889b6dfb9f48276a394c57f30beb510958955a05bb0691d4cd\",\"frames_complete\":true,\"resources_settled\":true}"
+                },
+                {
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/0/data/tool",
+                  "quote": "project_query"
+                },
+                {
+                  "evidence_id": "E_NATIVE_DELIVERY_INVENTORY",
+                  "pointer": "/content/scope",
+                  "quote": "Project-scoped post-state resource manifest minus exact pre-execution imported resource mapping; project was sealed before capture. No new generation/render/export was initiated."
                 }
               ],
-              "missing_evidence": [
-                "覆盖本轮全部工具调用、委派操作及导出/媒体生成任务的完整可信活动记录。"
-              ],
+              "missing_evidence": [],
               "blocked_by": null
             }
           ],
           "quality": [],
-          "limitations": [
-            "执行追踪记录明确为partial，无法仅凭最终回复确认未发生全部被禁止操作。"
-          ]
+          "limitations": []
         },
         "metadata": {
           "actual_model": "gpt-5.6-terra",
           "requested_model": "gpt-5.6-terra",
-          "started_at": "2026-11-05T17:45:40.704129+00:00",
-          "elapsed_seconds": 13.613252834000008,
-          "input_sha256": "a091c4e17e76e192e2d983a2723ab553201797afeab243dc0636cb9a5a2ee082",
+          "started_at": "2026-11-05T18:32:19.424963+00:00",
+          "elapsed_seconds": 12.285482708000004,
+          "input_sha256": "8eda3a23e110972f8ccee09806ca58bb70817e1cd72a4acf9de6fbad4f29958b",
           "citation_reanchored": null,
           "semantic_decisions_unchanged": null,
-          "actual_media_attached": null
+          "actual_media_attached": 0
         },
-        "attempt": "attempt-005"
+        "attempt": "attempt-007"
       },
       "score": {
-        "lower": 85.0,
+        "lower": 100,
         "upper": 100,
-        "coverage": 85.0,
+        "coverage": 100,
         "counts": {
-          "P": 7,
-          "U": 1
+          "P": 8
         },
         "must_failed": [],
-        "status": "undetermined",
+        "status": "pass",
         "applicable_budget": 100.0
       },
       "media": [],
@@ -2568,6 +2588,21 @@
             "message": "success",
             "subcode": 0
           }
+        },
+        "E_NATIVE_DELIVERY_INVENTORY": {
+          "evidence_id": "E_NATIVE_DELIVERY_INVENTORY",
+          "kind": "source_bound_post_state_inventory_reconciliation",
+          "content": {
+            "new_resources": [],
+            "initial_resource_count": 3,
+            "extra_beyond_result_receipt": [],
+            "scope": "Project-scoped post-state resource manifest minus exact pre-execution imported resource mapping; project was sealed before capture. No new generation/render/export was initiated.",
+            "basis": [
+              "Exact fixture project receipt initial resource mapping",
+              "E_VIEW_graph resource_manifest"
+            ],
+            "limits": "Resource inventory is not itself a judgment of pixels/audio or of unrecorded external activity. Generation result receipt can omit processed exports and additional outputs of a single generation task."
+          }
         }
       },
       "evaluation": {
@@ -2578,7 +2613,7 @@
             {
               "criterion_id": "C1",
               "status": "P",
-              "reason": "最终回复按指定顺序列出恰好三个原文件名，未混入其他附件。",
+              "reason": "最终回复按指定顺序列出三个原文件名，未混入其他文件。",
               "reason_code": "verified",
               "citations": [
                 {
@@ -2593,7 +2628,7 @@
             {
               "criterion_id": "C2",
               "status": "P",
-              "reason": "首项明确登记media_type为video。",
+              "reason": "第一项明确登记media_type为video。",
               "reason_code": "verified",
               "citations": [
                 {
@@ -2638,7 +2673,7 @@
             {
               "criterion_id": "C5",
               "status": "P",
-              "reason": "首项登记的resource_id与可信资源读取一致。",
+              "reason": "第一项登记的resource_id与附件元数据一致。",
               "reason_code": "verified",
               "citations": [
                 {
@@ -2658,7 +2693,7 @@
             {
               "criterion_id": "C6",
               "status": "P",
-              "reason": "第二项登记的resource_id与可信资源读取一致。",
+              "reason": "第二项登记的resource_id与附件元数据一致。",
               "reason_code": "verified",
               "citations": [
                 {
@@ -2678,7 +2713,7 @@
             {
               "criterion_id": "C7",
               "status": "P",
-              "reason": "第三项登记的resource_id与可信资源读取一致。",
+              "reason": "第三项登记的resource_id与附件元数据一致。",
               "reason_code": "verified",
               "citations": [
                 {
@@ -2697,54 +2732,108 @@
             },
             {
               "criterion_id": "C8",
-              "status": "U",
-              "reason": "动作追踪记录为partial，且边界明确不保证覆盖不透明委派动作，无法可靠确认全程未发生禁止操作。",
-              "reason_code": "coverage_gap",
+              "status": "P",
+              "reason": "完整终态、已记录事件及资源清单均显示只读取项目资源，未产生新资源或导出。",
+              "reason_code": "verified",
               "citations": [
                 {
-                  "evidence_id": "E_TRACE_COVERAGE",
-                  "pointer": "/content/status",
-                  "quote": "partial"
+                  "evidence_id": "E_BOUNDARY",
+                  "pointer": "/content/native_boundaries/0",
+                  "quote": {
+                    "terminal": true,
+                    "progress_hash": "bb7b5e6ee9852cbdc9b3306f16a1c41daae8ba69a3b7cd9c68c505f8e2cbccff",
+                    "frames_complete": true,
+                    "resources_settled": true
+                  }
                 },
                 {
-                  "evidence_id": "E_BOUNDARY",
-                  "pointer": "/content/limits",
-                  "quote": "Complete captured public frames and settled native resource receipt, not a guarantee of full internal tool arguments or opaque delegated actions."
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/0/data",
+                  "quote": {
+                    "activity_id": "call_00_lce29omcui2vomai6lbde4j8",
+                    "tool": "project_query",
+                    "summary": "Read the current project graph",
+                    "presentation": {
+                      "schema_version": 1,
+                      "copy_key": "projectContentView",
+                      "detail": {
+                        "kind": "targets",
+                        "targets": {
+                          "items": [
+                            {
+                              "entity_type": "resource",
+                              "entity_id": "a0258f0ed7c347afa16ef562ad64b0f8",
+                              "display_name": "辅助静帧_不实际引用_2秒.mp4",
+                              "ref": {
+                                "kind": "resource_ref",
+                                "resource_id": "a0258f0ed7c347afa16ef562ad64b0f8"
+                              }
+                            },
+                            {
+                              "entity_type": "resource",
+                              "entity_id": "faad50b36024476bbe0120ef10ba302e",
+                              "display_name": "CHR001-ST01_阿藤_行走济世装_v01.png",
+                              "ref": {
+                                "kind": "resource_ref",
+                                "resource_id": "faad50b36024476bbe0120ef10ba302e"
+                              }
+                            }
+                          ],
+                          "total_count": 3
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "evidence_id": "E_NATIVE_DELIVERY_INVENTORY",
+                  "pointer": "/content",
+                  "quote": {
+                    "new_resources": [],
+                    "initial_resource_count": 3,
+                    "extra_beyond_result_receipt": [],
+                    "scope": "Project-scoped post-state resource manifest minus exact pre-execution imported resource mapping; project was sealed before capture. No new generation/render/export was initiated.",
+                    "basis": [
+                      "Exact fixture project receipt initial resource mapping",
+                      "E_VIEW_graph resource_manifest"
+                    ],
+                    "limits": "Resource inventory is not itself a judgment of pixels/audio or of unrecorded external activity. Generation result receipt can omit processed exports and additional outputs of a single generation task."
+                  }
+                },
+                {
+                  "evidence_id": "E_NATIVE_DELIVERY_INVENTORY",
+                  "pointer": "/content/scope",
+                  "quote": "No new generation/render/export was initiated."
                 }
               ],
-              "missing_evidence": [
-                "完整覆盖本轮所有工具、委派及导出活动的可信动作记录。"
-              ],
+              "missing_evidence": [],
               "blocked_by": null
             }
           ],
           "quality": [],
-          "limitations": [
-            "执行动作追踪为partial，不能据最终文本或有限事件摘要确认未发生任何媒体生成、创作或导出。"
-          ]
+          "limitations": []
         },
         "metadata": {
           "actual_model": "gpt-5.6-terra",
           "requested_model": "gpt-5.6-terra",
-          "started_at": "2026-11-05T17:45:41.151803+00:00",
-          "elapsed_seconds": 10.82304937500001,
-          "input_sha256": "c37d9e082466f4551fb3e6c4d6adedbd895dbed54231a46162471213296e8474",
-          "citation_reanchored": null,
+          "started_at": "2026-11-05T18:32:24.268869+00:00",
+          "elapsed_seconds": 12.007543374999997,
+          "input_sha256": "ed5cd063d009af36bc3c91f2747be21c752945aeeedfe4b8913c6a431b3d8024",
+          "citation_reanchored": true,
           "semantic_decisions_unchanged": null,
-          "actual_media_attached": null
+          "actual_media_attached": 0
         },
-        "attempt": "attempt-005"
+        "attempt": "attempt-007"
       },
       "score": {
-        "lower": 85.0,
+        "lower": 100,
         "upper": 100,
-        "coverage": 85.0,
+        "coverage": 100,
         "counts": {
-          "P": 7,
-          "U": 1
+          "P": 8
         },
         "must_failed": [],
-        "status": "undetermined",
+        "status": "pass",
         "applicable_budget": 100.0
       },
       "media": [],
@@ -3228,11 +3317,11 @@
         "rankable": true
       },
       "composite": {
-        "lower": 78.0,
+        "lower": 90.0,
         "upper": 90.0,
-        "gate": "undetermined",
+        "gate": "pass",
         "formula": "80% absolute + 20% paired comparison",
-        "rankable": false
+        "rankable": true
       },
       "consistency_flags": []
     },
@@ -3563,14 +3652,15 @@
         "rankable": true
       },
       "composite": {
-        "lower": 78.0,
+        "lower": 90.0,
         "upper": 90.0,
-        "gate": "undetermined",
+        "gate": "pass",
         "formula": "80% absolute + 20% paired comparison",
-        "rankable": false
+        "rankable": true
       },
       "consistency_flags": []
     }
   },
-  "input_media": []
+  "input_media": [],
+  "review_notes": []
 }

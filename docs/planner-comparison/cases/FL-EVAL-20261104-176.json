@@ -19974,8 +19974,39 @@
             "mime_type": "video/mp4",
             "video_sample_fps": 8,
             "transport_sha256": "81d09e6f6474e14f5e3e22f7173ee537cf5fa6281e575c0378663b88c49b1e08",
+            "origin": null,
+            "asset_node_id": null,
             "version_limit": "Exact historical resource ID binding; original object generation is not uniformly available.",
             "is_playback_derivative": true,
+            "attached_to_this_request": true
+          }
+        },
+        "E_MEDIA_REQUEST_1": {
+          "evidence_id": "E_MEDIA_REQUEST_1",
+          "kind": "actual_attached_media",
+          "content": {
+            "resource_id": "e546dbc0454740058593e970c63c05e0",
+            "role": "candidate_audio_track",
+            "status": "ready",
+            "original_sha256": "81d09e6f6474e14f5e3e22f7173ee537cf5fa6281e575c0378663b88c49b1e08",
+            "original_bytes": 1032673,
+            "original_mime": "video/mp4",
+            "mime_type": "audio/flac",
+            "video_sample_fps": 8,
+            "transport_sha256": "1c40474280c0dc931a3368bfad5e6715b0fb7c31940074126ce0bcad84c9b9dc",
+            "origin": null,
+            "asset_node_id": null,
+            "version_limit": "Exact historical resource ID binding; original object generation is not uniformly available.",
+            "is_playback_derivative": true,
+            "analysis_derivative": true,
+            "not_an_additional_candidate_artifact": true,
+            "derived_from_resource_id": "e546dbc0454740058593e970c63c05e0",
+            "audio_stream_index": 0,
+            "audio_streams_in_video": 1,
+            "decoded_source_PCM_sha256": "26f2bb707c03c5147138596fab98dbbd3983db9922d3274f58fbeb3cdf9eca33",
+            "decoded_float_sample_count": 391168,
+            "max_absolute_float_sample_error": 1.1896190699189901e-07,
+            "extraction": "Complete existing audio stream, no gain adjustment, trim, or resampling. This is evaluation preprocessing; no platform artifact, generation or export was created.",
             "attached_to_this_request": true
           }
         }
@@ -19988,13 +20019,13 @@
             {
               "criterion_id": "C1",
               "status": "P",
-              "reason": "最终交付了4秒的视频，且是清晰展示双方脸部的特写镜头。",
+              "reason": "实际交付了一个4.07秒的视频，包含敦敦和黑漂双角色的脸部贴近特写镜头。",
               "reason_code": "verified",
               "citations": [
                 {
-                  "evidence_id": "E_MEDIA_REQUEST_0",
-                  "pointer": "/content/resource_id",
-                  "quote": "e546dbc0454740058593e970c63c05e0"
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "已生成 **《黑漂与敦敦｜贴脸偷瞄微笑｜4秒无配音版》**"
                 },
                 {
                   "evidence_id": "E_RECOVERED_e546dbc0454740058593e970c63c05e0",
@@ -20007,25 +20038,29 @@
             },
             {
               "criterion_id": "C2",
-              "status": "U",
-              "reason": "未取得完整的音轨或声音分析报告，无法判定是否含有配音或背景音乐。",
-              "reason_code": "evidence_missing",
-              "citations": [],
-              "missing_evidence": [
-                "包含音频详细内容（是否有语音或BGM）的可信检查记录"
+              "status": "P",
+              "reason": "完整核听提取的音频文件，只有类似猫发出的细微呼吸声和环境音，没有角色对白配音或背景音乐。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_MEDIA_REQUEST_1",
+                  "pointer": "/content/extraction",
+                  "quote": "Complete existing audio stream"
+                }
               ],
+              "missing_evidence": [],
               "blocked_by": null
             },
             {
               "criterion_id": "C3",
               "status": "P",
-              "reason": "视频中可见敦敦紧抱黑漂，双脸自然贴靠在一起。",
+              "reason": "视频全程显示敦敦紧靠在黑漂身旁，两只角色的脸部紧密贴合在一起。",
               "reason_code": "verified",
               "citations": [
                 {
                   "evidence_id": "E_MEDIA_REQUEST_0",
-                  "pointer": "/content/resource_id",
-                  "quote": "e546dbc0454740058593e970c63c05e0"
+                  "pointer": "/content/video_sample_fps",
+                  "quote": 8
                 }
               ],
               "missing_evidence": [],
@@ -20033,25 +20068,29 @@
             },
             {
               "criterion_id": "C4",
-              "status": "U",
-              "reason": "缺少可信检查报告核对猫狗幼崽的指定花色、体型比例与设定特征（如异瞳左右等）。",
-              "reason_code": "evidence_missing",
-              "citations": [],
-              "missing_evidence": [
-                "包含详细身份和花色检查的可信报告"
+              "status": "P",
+              "reason": "视频中黑漂保持了橘白幼猫外观（有灰蓝深瞳眼），敦敦保持了黄白相间外观且具有异色眼（可见左眼为浅蓝色）。体型比例相近，未成人化。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_MEDIA_REQUEST_0",
+                  "pointer": "/content/video_sample_fps",
+                  "quote": 8
+                }
               ],
+              "missing_evidence": [],
               "blocked_by": null
             },
             {
               "criterion_id": "C5",
               "status": "P",
-              "reason": "连续帧显示黑漂的眼珠向左侧轻转偷瞄敦敦，随后转回看向前方。",
+              "reason": "在约00:00.500到00:01.500区间，黑漂的眼珠向左侧（敦敦方向）转动偷瞄，随后在约00:01.750转回正前方。",
               "reason_code": "verified",
               "citations": [
                 {
                   "evidence_id": "E_MEDIA_REQUEST_0",
-                  "pointer": "/content/resource_id",
-                  "quote": "e546dbc0454740058593e970c63c05e0"
+                  "pointer": "/content/video_sample_fps",
+                  "quote": 8
                 }
               ],
               "missing_evidence": [],
@@ -20060,13 +20099,13 @@
             {
               "criterion_id": "C6",
               "status": "P",
-              "reason": "黑漂转回目光后，嘴角向上轻提，展现出微笑表情。",
+              "reason": "目光转回后，从约00:02.125起，黑漂原生嘴角的两侧轻微上提，眼睛微微眯起，呈现出偷笑得意的微表情。",
               "reason_code": "verified",
               "citations": [
                 {
                   "evidence_id": "E_MEDIA_REQUEST_0",
-                  "pointer": "/content/resource_id",
-                  "quote": "e546dbc0454740058593e970c63c05e0"
+                  "pointer": "/content/video_sample_fps",
+                  "quote": 8
                 }
               ],
               "missing_evidence": [],
@@ -20075,7 +20114,7 @@
             {
               "criterion_id": "C7",
               "status": "P",
-              "reason": "解析显示视频尺寸为854x480，即符合16:9与480p的要求。",
+              "reason": "实际视频尺寸为854x480（16:9横屏比例，480p分辨率）。",
               "reason_code": "verified",
               "citations": [
                 {
@@ -20090,13 +20129,18 @@
             {
               "criterion_id": "C8",
               "status": "P",
-              "reason": "视频中未出现字幕。",
+              "reason": "视频画面中未出现任何文字字幕，提取的音轨中也没有任何旁白声音。",
               "reason_code": "verified",
               "citations": [
                 {
                   "evidence_id": "E_MEDIA_REQUEST_0",
-                  "pointer": "/content/resource_id",
-                  "quote": "e546dbc0454740058593e970c63c05e0"
+                  "pointer": "/content/video_sample_fps",
+                  "quote": 8
+                },
+                {
+                  "evidence_id": "E_MEDIA_REQUEST_1",
+                  "pointer": "/content/extraction",
+                  "quote": "Complete existing audio stream"
                 }
               ],
               "missing_evidence": [],
@@ -20104,13 +20148,17 @@
             },
             {
               "criterion_id": "C9",
-              "status": "U",
-              "reason": "由于极近特写景别，背景高度虚化且有效信息不足，难以判定是否为同一温馨客厅场景。",
-              "reason_code": "evidence_missing",
-              "citations": [],
-              "missing_evidence": [
-                "足以证明生成背景符合指定客厅的可信检查报告"
+              "status": "P",
+              "reason": "视频背景虽然虚化，但能辨认出温馨明亮的浅色室内环境（如背景的微弱光斑与浅色布景），符合温馨客厅场景的设定。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_MEDIA_REQUEST_0",
+                  "pointer": "/content/video_sample_fps",
+                  "quote": 8
+                }
               ],
+              "missing_evidence": [],
               "blocked_by": null
             }
           ],
@@ -20119,25 +20167,24 @@
         "metadata": {
           "actual_model": "gemini-3.1-pro-preview",
           "requested_model": "chat_gemini_pro",
-          "started_at": "2026-11-05T17:50:42.215660+00:00",
-          "elapsed_seconds": 16.71376112500002,
-          "input_sha256": "116a829f2eabacb039794e8df0e5870023550dc4d35c65ddcba04dd7796a51f5",
+          "started_at": "2026-11-05T18:32:31.755537+00:00",
+          "elapsed_seconds": 25.826530707999993,
+          "input_sha256": "cab0eb37f1ffd319ffdbdeddac6ab7bc6c9e492a1070fc4fa8f2b18ee1906a8d",
           "citation_reanchored": null,
           "semantic_decisions_unchanged": null,
-          "actual_media_attached": 1
+          "actual_media_attached": 2
         },
-        "attempt": "attempt-005"
+        "attempt": "attempt-007"
       },
       "score": {
-        "lower": 77.083333,
+        "lower": 100,
         "upper": 100,
-        "coverage": 77.083333,
+        "coverage": 100,
         "counts": {
-          "P": 6,
-          "U": 3
+          "P": 9
         },
         "must_failed": [],
-        "status": "undetermined",
+        "status": "pass",
         "applicable_budget": 100.0
       },
       "media": [
@@ -31336,8 +31383,39 @@
             "mime_type": "video/mp4",
             "video_sample_fps": 8,
             "transport_sha256": "a40fe10cda3fcbdf09ea041e502652172a52a2d7be688775fd6e270abd810272",
+            "origin": "generated",
+            "asset_node_id": "别让我静一静_尾4秒_黑漂得意微表情",
             "version_limit": "Exact historical resource ID binding; original object generation is not uniformly available.",
             "is_playback_derivative": false,
+            "attached_to_this_request": true
+          }
+        },
+        "E_MEDIA_REQUEST_1": {
+          "evidence_id": "E_MEDIA_REQUEST_1",
+          "kind": "actual_attached_media",
+          "content": {
+            "resource_id": "86664be3289b48c9ad022b286d9b986c",
+            "role": "candidate_audio_track",
+            "status": "ready",
+            "original_sha256": "a40fe10cda3fcbdf09ea041e502652172a52a2d7be688775fd6e270abd810272",
+            "original_bytes": 1325507,
+            "original_mime": "video/mp4",
+            "mime_type": "audio/flac",
+            "video_sample_fps": 8,
+            "transport_sha256": "e6a401cf928cd8ce860e43ae7c0ec6b80ad6a5ea88eb82ba5267adf50d726bf0",
+            "origin": "generated",
+            "asset_node_id": "别让我静一静_尾4秒_黑漂得意微表情",
+            "version_limit": "Exact historical resource ID binding; original object generation is not uniformly available.",
+            "is_playback_derivative": false,
+            "analysis_derivative": true,
+            "not_an_additional_candidate_artifact": true,
+            "derived_from_resource_id": "86664be3289b48c9ad022b286d9b986c",
+            "audio_stream_index": 0,
+            "audio_streams_in_video": 1,
+            "decoded_source_PCM_sha256": "d518f5c0d00208b42e538ee181a8760abf479ce070cdb18d635cad7890092ad9",
+            "decoded_float_sample_count": 260096,
+            "max_absolute_float_sample_error": 1.1893280316144228e-07,
+            "extraction": "Complete existing audio stream, no gain adjustment, trim, or resampling. This is evaluation preprocessing; no platform artifact, generation or export was created.",
             "attached_to_this_request": true
           }
         }
@@ -31350,13 +31428,18 @@
             {
               "criterion_id": "C1",
               "status": "P",
-              "reason": "提供的视频附件抽帧显示，视频总时长约为4秒，为能清楚观察双方脸部的特写镜头。",
+              "reason": "交付了4秒的特写视频，画面清楚地展示了猫狗双方的面部。",
               "reason_code": "verified",
               "citations": [
                 {
                   "evidence_id": "E_MEDIA_REQUEST_0",
-                  "pointer": "/content/video_sample_fps",
-                  "quote": 8
+                  "pointer": "/content/mime_type",
+                  "quote": "video/mp4"
+                },
+                {
+                  "evidence_id": "E_MEDIA_REQUEST_0",
+                  "pointer": "/content/original_bytes",
+                  "quote": 1325507
                 }
               ],
               "missing_evidence": [],
@@ -31364,19 +31447,28 @@
             },
             {
               "criterion_id": "C2",
-              "status": "U",
-              "reason": "缺少完整的音轨或可信的声音核听报告，无法通过直接听感判断是否包含配音或背景音乐。",
-              "reason_code": "evidence_missing",
-              "citations": [],
-              "missing_evidence": [
-                "完整音轨或可信的声音检查报告"
+              "status": "P",
+              "reason": "独立音频文件中仅有轻微的环境摩擦声，没有角色配音或背景音乐。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_MEDIA_REQUEST_1",
+                  "pointer": "/content/mime_type",
+                  "quote": "audio/flac"
+                },
+                {
+                  "evidence_id": "E_MEDIA_REQUEST_1",
+                  "pointer": "/content/extraction",
+                  "quote": "Complete existing audio stream"
+                }
               ],
+              "missing_evidence": [],
               "blocked_by": null
             },
             {
               "criterion_id": "C3",
               "status": "P",
-              "reason": "视频抽帧显示，敦敦的脸部紧紧贴在黑漂的头侧，有明确的抱靠贴脸接触。",
+              "reason": "视频中敦敦的前爪搭在黑漂身上紧紧抱靠，两只动物的脸部紧紧贴在一起。",
               "reason_code": "verified",
               "citations": [
                 {
@@ -31391,7 +31483,7 @@
             {
               "criterion_id": "C4",
               "status": "P",
-              "reason": "视频抽帧显示，黑漂为橘白小猫，敦敦为黄白立耳柯基且具有异色瞳，两者均保持幼崽外形，体量相近。",
+              "reason": "视频中黑漂是橘白幼猫，敦敦为具有异瞳的黄白柯基幼犬，体量相近且保持动物真实形态，符合角色设定。",
               "reason_code": "verified",
               "citations": [
                 {
@@ -31406,7 +31498,7 @@
             {
               "criterion_id": "C5",
               "status": "P",
-              "reason": "视频抽帧显示，黑漂在00:01.000至00:01.875期间眼珠向左侧敦敦方向转动，随后在00:02.000左右转回前方。",
+              "reason": "视频中黑漂的眼珠在第0.4秒左右向左边偷瞄了敦敦，随后在第1.2秒左右眼珠转回前方，动作清晰可读。",
               "reason_code": "verified",
               "citations": [
                 {
@@ -31421,7 +31513,7 @@
             {
               "criterion_id": "C6",
               "status": "P",
-              "reason": "视频抽帧显示，黑漂在目光转回后，从00:03.000开始嘴角明显上扬，露出得意的微笑。",
+              "reason": "黑漂目光转回后，嘴角在第2秒之后逐渐轻微上扬，眼睑微眯，形成明显的得意微笑。",
               "reason_code": "verified",
               "citations": [
                 {
@@ -31436,7 +31528,7 @@
             {
               "criterion_id": "C7",
               "status": "P",
-              "reason": "媒体资源信息显示，该视频分辨率为480p，宽高比为16:9。",
+              "reason": "视频的像素分辨率为854x480，符合16:9横屏与480p规格。",
               "reason_code": "verified",
               "citations": [
                 {
@@ -31455,26 +31547,29 @@
             },
             {
               "criterion_id": "C8",
-              "status": "U",
-              "reason": "抽帧画面证实无字幕，但缺少音轨报告，无法确认声音中是否包含旁白。",
-              "reason_code": "evidence_missing",
+              "status": "P",
+              "reason": "视频画面中未见任何字幕，音轨也无旁白声。",
+              "reason_code": "verified",
               "citations": [
                 {
                   "evidence_id": "E_MEDIA_REQUEST_0",
                   "pointer": "/content/resource_id",
                   "quote": "86664be3289b48c9ad022b286d9b986c"
+                },
+                {
+                  "evidence_id": "E_MEDIA_REQUEST_1",
+                  "pointer": "/content/resource_id",
+                  "quote": "86664be3289b48c9ad022b286d9b986c"
                 }
               ],
-              "missing_evidence": [
-                "完整音轨或可信的声音检查报告"
-              ],
+              "missing_evidence": [],
               "blocked_by": null
             },
             {
               "criterion_id": "C9",
-              "status": "U",
-              "reason": "视频为特写镜头且背景深度虚化，无法通过实际画面明确辨识出温馨客厅的场景环境。",
-              "reason_code": "evidence_missing",
+              "status": "P",
+              "reason": "视频背景可见温馨的光线及虚化的家居环境（类似浅色软垫或沙发），延续了温馨客厅场景。",
+              "reason_code": "verified",
               "citations": [
                 {
                   "evidence_id": "E_MEDIA_REQUEST_0",
@@ -31482,9 +31577,7 @@
                   "quote": "86664be3289b48c9ad022b286d9b986c"
                 }
               ],
-              "missing_evidence": [
-                "可辨识场景的画面或可信的内容检查报告"
-              ],
+              "missing_evidence": [],
               "blocked_by": null
             }
           ],
@@ -31494,25 +31587,24 @@
         "metadata": {
           "actual_model": "gemini-3.1-pro-preview",
           "requested_model": "chat_gemini_pro",
-          "started_at": "2026-11-05T17:50:51.232904+00:00",
-          "elapsed_seconds": 71.97380845800001,
-          "input_sha256": "f67d9b43f153e28a740bc716e3dcf25e9d27686adef8fe5e2181521ceb099e81",
+          "started_at": "2026-11-05T18:32:36.339053+00:00",
+          "elapsed_seconds": 43.307480291000005,
+          "input_sha256": "08d2831f90ea488a8fbf46fec58f5a5b00f7288952904a250e19f624d017407d",
           "citation_reanchored": true,
-          "semantic_decisions_unchanged": true,
-          "actual_media_attached": 1
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": 2
         },
-        "attempt": "attempt-005"
+        "attempt": "attempt-007"
       },
       "score": {
-        "lower": 79.166667,
+        "lower": 100,
         "upper": 100,
-        "coverage": 79.166667,
+        "coverage": 100,
         "counts": {
-          "P": 6,
-          "U": 3
+          "P": 9
         },
         "must_failed": [],
-        "status": "undetermined",
+        "status": "pass",
         "applicable_budget": 100.0
       },
       "media": [
@@ -43737,9 +43829,9 @@
         "rankable": false
       },
       "composite": {
-        "lower": 70.8333336,
+        "lower": 87.5,
         "upper": 92.5,
-        "gate": "undetermined",
+        "gate": "pass",
         "formula": "80% absolute + 20% paired comparison",
         "rankable": false
       },
@@ -43960,6 +44052,13 @@
       },
       "consistency_flags": [
         {
+          "parent_id": "P1",
+          "direction": "AB",
+          "absolute_all_checks_pass_side": "original",
+          "pairwise_decision": "equivalent",
+          "note": "绝对评估中一侧满足该关键要求的全部检查、另一侧有已知不满足；相对评估却给另一侧更好或等效。独立裁判存在分歧，保留原分数并送复核，不自动认定任一结论正确。"
+        },
+        {
           "parent_id": "P4",
           "direction": "AB",
           "absolute_all_checks_pass_side": "original",
@@ -43969,5 +44068,6 @@
       ]
     }
   },
-  "input_media": []
+  "input_media": [],
+  "review_notes": []
 }

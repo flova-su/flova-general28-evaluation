@@ -52850,6 +52850,79 @@
             "message": "success",
             "subcode": 0
           }
+        },
+        "E_NATIVE_DELIVERY_INVENTORY": {
+          "evidence_id": "E_NATIVE_DELIVERY_INVENTORY",
+          "kind": "source_bound_post_state_inventory_reconciliation",
+          "content": {
+            "new_resources": [
+              {
+                "resource_id": "21c9e9a1f7d26415e59854edebc1d49d",
+                "media_type": "audio",
+                "from_type": "processed",
+                "created_at": "2026-11-05T11:24:22.830038+00:00",
+                "asset_node_id": "浅蓝TVC_细雾轻气流拟音"
+              },
+              {
+                "resource_id": "0dd869b3433c7e9a8f9634e274a05216",
+                "media_type": "audio",
+                "from_type": "processed",
+                "created_at": "2026-11-05T11:23:26.699650+00:00",
+                "asset_node_id": "浅蓝TVC_箱盖轻启拟音"
+              }
+            ],
+            "initial_resource_count": 134,
+            "extra_beyond_result_receipt": [
+              "21c9e9a1f7d26415e59854edebc1d49d",
+              "0dd869b3433c7e9a8f9634e274a05216"
+            ],
+            "scope": "Project-scoped post-state resource manifest minus exact pre-execution imported resource mapping; project was sealed before capture. No new generation/render/export was initiated.",
+            "basis": [
+              "Exact fixture project receipt initial resource mapping",
+              "E_VIEW_graph resource_manifest"
+            ],
+            "limits": "Resource inventory is not itself a judgment of pixels/audio or of unrecorded external activity. Generation result receipt can omit processed exports and additional outputs of a single generation task."
+          }
+        },
+        "E_MEDIA_REQUEST_0": {
+          "evidence_id": "E_MEDIA_REQUEST_0",
+          "kind": "actual_attached_media",
+          "content": {
+            "resource_id": "21c9e9a1f7d26415e59854edebc1d49d",
+            "role": "candidate",
+            "status": "ready",
+            "original_sha256": "7c3acd6fd0efb684effea5da9b51e9c7bfa6a7bb08c7c7c9f2372fc02a5ba67b",
+            "original_bytes": 1375532,
+            "original_mime": "audio/x-wav",
+            "mime_type": "audio/flac",
+            "encoding_note": "FLAC decoding of original audio, with no gain, trim or resampling; float sources quantized by ffmpeg FLAC encoder. Original retained.",
+            "transport_sha256": "8874a1d2110cd4beed826ed85f7024b38aab77887d9b3e075bc20f53a91b298b",
+            "origin": "processed",
+            "asset_node_id": "浅蓝TVC_细雾轻气流拟音",
+            "version_limit": "Exact historical resource ID binding; original object generation is not uniformly available.",
+            "is_playback_derivative": false,
+            "attached_to_this_request": true
+          }
+        },
+        "E_MEDIA_REQUEST_1": {
+          "evidence_id": "E_MEDIA_REQUEST_1",
+          "kind": "actual_attached_media",
+          "content": {
+            "resource_id": "0dd869b3433c7e9a8f9634e274a05216",
+            "role": "candidate",
+            "status": "ready",
+            "original_sha256": "0090e9f16b7cd2e68cd297dc5e33957225a59df3ebf9e8592eaf80affcb94bef",
+            "original_bytes": 369836,
+            "original_mime": "audio/x-wav",
+            "mime_type": "audio/flac",
+            "encoding_note": "FLAC decoding of original audio, with no gain, trim or resampling; float sources quantized by ffmpeg FLAC encoder. Original retained.",
+            "transport_sha256": "860741ccdc77c8b79e2b014ef1b0ebb872905a3b394c4c6995845dfb1ef96a27",
+            "origin": "processed",
+            "asset_node_id": "浅蓝TVC_箱盖轻启拟音",
+            "version_limit": "Exact historical resource ID binding; original object generation is not uniformly available.",
+            "is_playback_derivative": false,
+            "attached_to_this_request": true
+          }
         }
       },
       "evaluation": {
@@ -52859,28 +52932,30 @@
           "criteria": [
             {
               "criterion_id": "C1",
-              "status": "P",
-              "reason": "可信的Composition数据显示，当前剪辑工程'浅蓝TVC_58_5秒粗剪合片_v1'的音轨音量参数已更新。",
-              "reason_code": "verified",
+              "status": "U",
+              "reason": "可信执行记录显示助手调用了组成当前剪辑工作的活动并自述调整了声音，但评估器所需证据中并未包含代表当前剪辑线的混音结果音频记录、快照对比以及可验证的合成音频对象。",
+              "reason_code": "evidence_missing",
               "citations": [
                 {
-                  "evidence_id": "E_VIEW_composition_87c48c230b1f8a687314",
-                  "pointer": "/content/data/body/tracks/1/clips/0/volume",
-                  "quote": "0.25"
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/1/data/result_summary",
+                  "quote": "只读核查 rev 631，未做任何写入。"
                 },
                 {
-                  "evidence_id": "E_VIEW_composition_87c48c230b1f8a687314",
-                  "pointer": "/content/data/body/tracks/2/clips/12/volume",
-                  "quote": "2.0"
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/3/data/result_summary",
+                  "quote": "只读交付，未做任何写入：revision 631"
                 }
               ],
-              "missing_evidence": [],
+              "missing_evidence": [
+                "包含剪辑线当前混音结果的视频或音频文件记录，或者等效的真实前后快照。"
+              ],
               "blocked_by": null
             },
             {
               "criterion_id": "C2",
               "status": "U",
-              "reason": "由于没有实际导出的合成混音文件和可信试听报告，仅凭音量参数和离线RMS估算无法可靠判断音效是否比背景音乐明显且清楚可听。",
+              "reason": "由于没有提供包含整段配乐与各音效相混合的最终试听文件或可信的渲染播放报告，无法验证最终合成后的音效是否清楚可辨并且比背景音乐突出。",
               "reason_code": "evidence_missing",
               "citations": [
                 {
@@ -52890,79 +52965,89 @@
                 }
               ],
               "missing_evidence": [
-                "包含最新混音效果的实际导出合成音频文件",
-                "基于实际混音文件的主观听辨报告"
+                "实际合成后的音频或视频试听文件，以及相关的渲染播放报告。"
               ],
               "blocked_by": null
             },
             {
               "criterion_id": "C3",
-              "status": "P",
-              "reason": "当前剪辑工程数据显示，指定的卡扣音效(2149a...)位于约8.9秒处，其他已有音效事件也均保留在相应时间点，维持了对位。",
-              "reason_code": "verified",
+              "status": "U",
+              "reason": "由于缺少当前剪辑线合成后的音频/视频或等价的真实快照数据，无法核实音效对位是否保留，也无法直接验证卡扣音是否确实位于9秒且对准扣具画面。",
+              "reason_code": "evidence_missing",
               "citations": [
                 {
-                  "evidence_id": "E_VIEW_composition_87c48c230b1f8a687314",
-                  "pointer": "/content/data/body/tracks/2/clips/0/resource_id",
-                  "quote": "2149a1465be92fd995ad3169a1fe0a8b"
-                },
-                {
-                  "evidence_id": "E_VIEW_composition_87c48c230b1f8a687314",
-                  "pointer": "/content/data/body/tracks/2/clips/0/start",
-                  "quote": "8900"
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/21/data/result_summary",
+                  "quote": "这是**独立离线 PCM 数值测试**，不是实际 Composition 播放或成片试听。未修改项目、原资源，未发布音视频。"
                 }
               ],
-              "missing_evidence": [],
+              "missing_evidence": [
+                "完整的工程前后状态对照、合成音频以及真实视听报告。"
+              ],
               "blocked_by": null
             },
             {
               "criterion_id": "C4",
-              "status": "P",
-              "reason": "当前剪辑工程数据显示，视频轨道上的11个片段的资源、顺序、切点及总时长(58751ms)保持原样，未被擅改。",
-              "reason_code": "verified",
+              "status": "U",
+              "reason": "证据中缺失真实的工程前后对比快照以及完整运行时连续提交的差异，这导致无法断言非目标剪辑是否被准确保留且没有截断。",
+              "reason_code": "evidence_missing",
               "citations": [
                 {
-                  "evidence_id": "E_VIEW_composition_87c48c230b1f8a687314",
-                  "pointer": "/content/data/body/tracks/0/clips/10/start",
-                  "quote": "46687"
-                },
-                {
-                  "evidence_id": "E_VIEW_composition_87c48c230b1f8a687314",
-                  "pointer": "/content/data/body/tracks/0/clips/10/duration",
-                  "quote": "12064"
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/21/data/result_summary",
+                  "quote": "未修改项目、原资源，未发布音视频。"
                 }
               ],
-              "missing_evidence": [],
+              "missing_evidence": [
+                "可验证的真实工程前后快照，或没有间隙及截断的运行时差异日志。"
+              ],
               "blocked_by": null
             }
           ],
+          "quality": [],
           "limitations": []
         },
         "metadata": {
           "actual_model": "gemini-3.1-pro-preview",
           "requested_model": "chat_gemini_pro",
-          "started_at": "2026-11-05T17:53:58.833423+00:00",
-          "elapsed_seconds": 64.30179612500007,
-          "input_sha256": "54965408a8acf2018cbb4e8134db16d730815284b5da8fd271a56309c99fbf51",
+          "started_at": "2026-11-05T18:31:23.577039+00:00",
+          "elapsed_seconds": 36.209302042000004,
+          "input_sha256": "ecb704d32263dd2d73f3d199e113caca3299b54072bcdf307d937ce87952a772",
           "citation_reanchored": true,
-          "semantic_decisions_unchanged": null,
-          "actual_media_attached": 0
+          "semantic_decisions_unchanged": true,
+          "actual_media_attached": 2
         },
-        "attempt": "attempt-005"
+        "attempt": "attempt-007"
       },
       "score": {
-        "lower": 50.0,
+        "lower": 0,
         "upper": 100,
-        "coverage": 50.0,
+        "coverage": 0,
         "counts": {
-          "P": 3,
-          "U": 1
+          "U": 4
         },
         "must_failed": [],
         "status": "undetermined",
         "applicable_budget": 100.0
       },
-      "media": [],
+      "media": [
+        {
+          "id": "21c9e9a1f7d26415e59854edebc1d49d",
+          "kind": "audio",
+          "src": "media/7c3acd6fd0efb684effea5da9b51e9c7bfa6a7bb08c7c7c9f2372fc02a5ba67b.wav",
+          "caption": "本轮处理音效 · 独立音轨，非最终混音 · 21c9e9a1f7d2",
+          "is_playback_derivative": false,
+          "original_sha256": "7c3acd6fd0efb684effea5da9b51e9c7bfa6a7bb08c7c7c9f2372fc02a5ba67b"
+        },
+        {
+          "id": "0dd869b3433c7e9a8f9634e274a05216",
+          "kind": "audio",
+          "src": "media/0090e9f16b7cd2e68cd297dc5e33957225a59df3ebf9e8592eaf80affcb94bef.wav",
+          "caption": "本轮处理音效 · 独立音轨，非最终混音 · 0dd869b3433c",
+          "is_playback_derivative": false,
+          "original_sha256": "0090e9f16b7cd2e68cd297dc5e33957225a59df3ebf9e8592eaf80affcb94bef"
+        }
+      ],
       "execution": [
         {
           "id": "chat-9d902aade54d4bf6ba3dce81b144bc47_35",
@@ -72482,19 +72567,19 @@
             {
               "criterion_id": "P1",
               "decision": "equivalent",
-              "reason": "双方都成功将混音调整（音轨源入点修正、音量调整及替换增强后的音效资源）保存到了当前剪辑线中。",
+              "reason": "双方都成功将混音调整和重新对位的音频保存到了当前的剪辑线中。",
               "evidence_X": [
                 {
-                  "evidence_id": "E_COMPOSITION_CHANGE_CHAIN",
-                  "pointer": "/content/revision_chain/2/changes/clips_changed/0/after/source_in",
-                  "quote": 1200
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "我已在 **《浅蓝TVC_58.5秒粗剪合片_v1》** 中重新裁入这些主响点"
                 }
               ],
               "evidence_Y": [
                 {
-                  "evidence_id": "E_VIEW_composition_87c48c230b1f8a687314",
-                  "pointer": "/content/data/body/tracks/2/clips/10/resource_id",
-                  "quote": "21c9e9a1f7d26415e59854edebc1d49d"
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "这次已把卡扣、界面和头皮音效裁到真正有声音的位置"
                 }
               ],
               "missing_evidence": []
@@ -72502,11 +72587,11 @@
             {
               "criterion_id": "P2",
               "decision": "X_better",
-              "reason": "双方都针对原始音效响度不足的问题生成了增强版音效素材。但X额外生成并替换了“局部避让版”的背景音乐（在音效出现时自动压低音量），从而在保证音效清晰的同时兼顾了配乐的整体响度表现；Y仅采用全局压低背景音乐音量至0.25的粗放方式，X在混音听感处理上更为细腻专业。",
+              "reason": "为了让音效比背景音乐更明显，X不仅提升了所有微弱音效的响度，还专门生成了一版在音效出现时局部降低音量的背景音乐（局部避让版），在突出音效的同时不影响整体音乐的能量。Y仅通过整体压低背景音乐音量和增强其中两个音效来处理，效果不如X精细。",
               "evidence_X": [
                 {
-                  "evidence_id": "E_COMPOSITION_CHANGE_CHAIN",
-                  "pointer": "/content/revision_chain/2/changes/clips_changed/3/after/resource_id",
+                  "evidence_id": "E_MEDIA_REQUEST_5",
+                  "pointer": "/content/resource_id",
                   "quote": "b233a6e3773acccaea05db8eeaf176f4"
                 },
                 {
@@ -72517,29 +72602,34 @@
               ],
               "evidence_Y": [
                 {
-                  "evidence_id": "E_VIEW_composition_87c48c230b1f8a687314",
-                  "pointer": "/content/data/body/tracks/1/clips/0/volume",
-                  "quote": "0.25"
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "背景音乐再次降低"
+                },
+                {
+                  "evidence_id": "E_MEDIA_REQUEST_0",
+                  "pointer": "/content/resource_id",
+                  "quote": "21c9e9a1f7d26415e59854edebc1d49d"
                 }
               ],
               "missing_evidence": []
             },
             {
               "criterion_id": "P3",
-              "decision": "X_better",
-              "reason": "双方均修正了音效由于源入点（source_in）截取错误导致主峰值丢失的问题。但X在细节对位上更精确，例如针对细雾音效，X进一步将其源入点调整至1.2秒以消除起音滞后，使气流声与画面严格同步；Y仅将细雾源入点设为0.5秒。",
+              "decision": "equivalent",
+              "reason": "双方都正确保留了音效与画面的对应关系，包括指定的9秒处的卡扣声。",
               "evidence_X": [
                 {
-                  "evidence_id": "E_COMPOSITION_CHANGE_CHAIN",
-                  "pointer": "/content/revision_chain/2/changes/clips_changed/0/after/source_in",
-                  "quote": "1200"
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "请打开这支合片试听约 **9秒卡扣、17.7秒界面、37.1秒细雾"
                 }
               ],
               "evidence_Y": [
                 {
-                  "evidence_id": "E_VIEW_composition_87c48c230b1f8a687314",
-                  "pointer": "/content/data/body/tracks/2/clips/10/source_in",
-                  "quote": "500"
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "请重点听一下约9秒的卡扣声、17–20秒的界面声、37–41秒的细雾声，以及45秒左右的头皮操作声"
                 }
               ],
               "missing_evidence": []
@@ -72550,14 +72640,14 @@
         "metadata": {
           "actual_model": "gemini-3.1-pro-preview",
           "requested_model": "chat_gemini_pro",
-          "started_at": "2026-11-05T17:54:23.600572+00:00",
-          "elapsed_seconds": 64.94620320899998,
-          "input_sha256": "cf8f170f3c7e99aa9e176803c0be8f7db7c420765482cfdde94686d40349cc82",
+          "started_at": "2026-11-05T18:31:44.349711+00:00",
+          "elapsed_seconds": 39.903414166999994,
+          "input_sha256": "ef9a8a1ca28415d66417faba7d812adf66bb1362dc08ac1ae4d0386f21de2a31",
           "citation_reanchored": true,
-          "semantic_decisions_unchanged": true,
-          "actual_media_attached": 6
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": 8
         },
-        "attempt": "attempt-005"
+        "attempt": "attempt-007"
       },
       "BA": {
         "judgment": {
@@ -72567,24 +72657,19 @@
             {
               "criterion_id": "P1",
               "decision": "Y_better",
-              "reason": "Y在更新剪辑线时，成功将配乐资源替换为了具备局部避让效果的新版本，从而在特定音效段落降低背景音乐音量。而X虽然在回复和时间线备注中声称替换了局部避让版配乐，但在实际调用工具修改剪辑线时遗漏了修改`resource_id`字段，仅修改了备注和整体音量，导致避让版配乐未被实际应用。",
+              "reason": "X宣称已重新调整剪辑线的声音，但实际执行时只调用了只读查看，未将任何混音或裁切调整写入时间线。Y成功使用编辑工具更新了当前剪辑线中的各个音频片段，并完成了保存（revision 74）。",
               "evidence_X": [
                 {
-                  "evidence_id": "E_VIEW_composition_87c48c230b1f8a687314",
-                  "pointer": "/content/data/body/tracks/1/clips/0/resource_id",
-                  "quote": "7db1b5c4f7ecf70c06eef8b9378ece0c"
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/3/data/result_summary",
+                  "quote": "只读交付，未做任何写入：revision 631"
                 }
               ],
               "evidence_Y": [
                 {
                   "evidence_id": "E_TOOL_f15024eac405819b",
-                  "pointer": "/content/result/data/changes/clips_changed/3/fields",
-                  "quote": "[\"asset_node_id_at_bind\", \"note\", \"resource_id\"]"
-                },
-                {
-                  "evidence_id": "E_TOOL_f15024eac405819b",
-                  "pointer": "/content/result/data/changes/clips_changed/3/after/resource_id",
-                  "quote": "b233a6e3773acccaea05db8eeaf176f4"
+                  "pointer": "/content/result/data/revision_after",
+                  "quote": "74"
                 }
               ],
               "missing_evidence": []
@@ -72592,12 +72677,12 @@
             {
               "criterion_id": "P2",
               "decision": "Y_better",
-              "reason": "Y通过成功应用局部避让版的配乐，确保了在音效出现的关键段落（如细雾、身体、头皮操作）背景音乐自动降低，从而使音效比背景音乐更明显。X由于未能实际应用避让版配乐，仅靠整体降低音乐音量，效果不如Y。",
+              "reason": "X未能实际应用修改，因此音效无法比背景音乐明显。Y在剪辑线中替换了具有局部避让处理的配乐版本，并结合音量调整，有效让出了音效的频段和响度空间，解决了音效听不见的问题。",
               "evidence_X": [
                 {
-                  "evidence_id": "E_VIEW_composition_87c48c230b1f8a687314",
-                  "pointer": "/content/data/body/tracks/1/clips/0/volume",
-                  "quote": "0.25"
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/3/data/result_summary",
+                  "quote": "只读交付，未做任何写入"
                 }
               ],
               "evidence_Y": [
@@ -72605,19 +72690,24 @@
                   "evidence_id": "E_TOOL_f15024eac405819b",
                   "pointer": "/content/result/data/changes/clips_changed/3/after/resource_id",
                   "quote": "b233a6e3773acccaea05db8eeaf176f4"
+                },
+                {
+                  "evidence_id": "E_TOOL_f15024eac405819b",
+                  "pointer": "/content/result/data/changes/clips_changed/1/after/volume",
+                  "quote": 0.85
                 }
               ],
               "missing_evidence": []
             },
             {
               "criterion_id": "P3",
-              "decision": "equivalent",
-              "reason": "双方都重新调整了各音效片段（如卡扣、UI转页、细雾等）的源入点和截取范围，确保了音效的主要响点与画面动作正确对位，在此项要求上等效。",
+              "decision": "Y_better",
+              "reason": "X未修改时间线，没有修正音效实际发声点与画面的错位。Y对剪辑线中的卡扣、转页等音效重新设置了准确的源入点（如卡扣音效改从0.68秒切入），确保了实际主响点对齐画面中的动作。",
               "evidence_X": [
                 {
-                  "evidence_id": "E_FINAL_RESPONSE",
-                  "pointer": "/content/text",
-                  "quote": "这次已把卡扣、界面和头皮音效裁到真正有声音的位置"
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/3/data/result_summary",
+                  "quote": "未调整时间线"
                 }
               ],
               "evidence_Y": [
@@ -72635,14 +72725,14 @@
         "metadata": {
           "actual_model": "gemini-3.1-pro-preview",
           "requested_model": "chat_gemini_pro",
-          "started_at": "2026-11-05T17:54:31.215170+00:00",
-          "elapsed_seconds": 71.86961804199996,
-          "input_sha256": "9fc9810a3a605ebe5df425519b9da9fc6536da1e830ba9738c054587831e0590",
-          "citation_reanchored": false,
+          "started_at": "2026-11-05T18:31:58.073972+00:00",
+          "elapsed_seconds": 80.870006208,
+          "input_sha256": "46643e1821598822acbb68d0967903260ca435e734463f9826b3e6884e504531",
+          "citation_reanchored": true,
           "semantic_decisions_unchanged": true,
-          "actual_media_attached": 6
+          "actual_media_attached": 8
         },
-        "attempt": "attempt-005"
+        "attempt": "attempt-007"
       },
       "score": {
         "criteria": [
@@ -72664,8 +72754,8 @@
           },
           {
             "criterion_id": "P3",
-            "first_mapped": "loss",
-            "second_mapped": "tie",
+            "first_mapped": "tie",
+            "second_mapped": "loss",
             "status": "order_conflict",
             "score": null,
             "weight": 20.0
@@ -72679,7 +72769,7 @@
         "rankable": false
       },
       "composite": {
-        "lower": 40.0,
+        "lower": 0.0,
         "upper": 90.0,
         "gate": "undetermined",
         "formula": "80% absolute + 20% paired comparison",
@@ -72887,5 +72977,15 @@
       "consistency_flags": []
     }
   },
-  "input_media": []
+  "input_media": [],
+  "review_notes": [
+    {
+      "type": "真实证据缺口",
+      "text": "已取回独立音轨与时间线数据，但没有本轮最终混音的直接试听文件。单轨响度、音量参数和配方不能替代最终混音听感。"
+    },
+    {
+      "type": "裁判解释需复核",
+      "text": "Terra 本轮确有两份新增处理音轨，已在当前时间线中找到对应引用。部分 API 理由将“只读核查”子步骤解释为整轮未修改；应核对具体子任务范围和实际终态，不能仅据该摘要得出全轮未修改。原判定保留为试跑结果，尚非人工金标。"
+    }
+  ]
 }

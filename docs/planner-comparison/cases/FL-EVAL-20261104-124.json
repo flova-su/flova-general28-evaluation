@@ -6685,6 +6685,21 @@
             "subcode": 0
           }
         },
+        "E_NATIVE_DELIVERY_INVENTORY": {
+          "evidence_id": "E_NATIVE_DELIVERY_INVENTORY",
+          "kind": "source_bound_post_state_inventory_reconciliation",
+          "content": {
+            "new_resources": [],
+            "initial_resource_count": 9,
+            "extra_beyond_result_receipt": [],
+            "scope": "Project-scoped post-state resource manifest minus exact pre-execution imported resource mapping; project was sealed before capture. No new generation/render/export was initiated.",
+            "basis": [
+              "Exact fixture project receipt initial resource mapping",
+              "E_VIEW_graph resource_manifest"
+            ],
+            "limits": "Resource inventory is not itself a judgment of pixels/audio or of unrecorded external activity. Generation result receipt can omit processed exports and additional outputs of a single generation task."
+          }
+        },
         "F_VERSIONED_PLATFORM_FACTS": {
           "evidence_id": "F_VERSIONED_PLATFORM_FACTS",
           "kind": "shared_authoritative_platform_facts",
@@ -6746,6 +6761,8 @@
             "height": 2160,
             "decoded_RGBA_exact_match": true,
             "transport_sha256": "723170e76beca9d2b9d24df63e5e5c0d5813ab54e7fd0272a9acb37feaa9bf7b",
+            "origin": null,
+            "asset_node_id": null,
             "version_limit": "Exact historical resource ID binding; original object generation is not uniformly available.",
             "is_playback_derivative": false,
             "attached_to_this_request": true
@@ -6760,7 +6777,7 @@
             {
               "criterion_id": "C1",
               "status": "F",
-              "reason": "完整终态资源回执确认两次本轮候选图像生成均失败，未交付实际候选媒体。",
+              "reason": "本轮两项候选生成均终态失败，且结算后的新增资源为空，未交付请求的近景修改图片。",
               "reason_code": "known_non_delivery",
               "citations": [
                 {
@@ -6774,9 +6791,9 @@
                   "quote": "failed"
                 },
                 {
-                  "evidence_id": "E_MEDIA_REQUEST_0",
-                  "pointer": "/content/not_an_artifact",
-                  "quote": "true"
+                  "evidence_id": "E_NATIVE_DELIVERY_INVENTORY",
+                  "pointer": "/content/new_resources",
+                  "quote": []
                 }
               ],
               "missing_evidence": [],
@@ -6785,34 +6802,32 @@
             {
               "criterion_id": "C2",
               "status": "U",
-              "reason": "提交记录指定了GPT Image 2和4K，但两次任务均失败，缺少实际交付图片以核验真实输出规格。",
+              "reason": "虽有提交为GPT Image 2、4K的记录，但没有成功交付的实际媒体，无法核验真实输出规格。",
               "reason_code": "evidence_missing",
               "citations": [
                 {
                   "evidence_id": "E_ACTIONS",
-                  "pointer": "/content/events/13/data/presentation/detail/models/items/0/display_name",
-                  "quote": "GPT Image 2"
+                  "pointer": "/content/events/12/data/presentation/detail/models/items/0",
+                  "quote": {
+                    "display_name": "GPT Image 2",
+                    "resolution": "4K"
+                  }
                 },
                 {
-                  "evidence_id": "E_ACTIONS",
-                  "pointer": "/content/events/13/data/presentation/detail/models/items/0/resolution",
-                  "quote": "4K"
-                },
-                {
-                  "evidence_id": "E_MEDIA_REQUEST_1",
-                  "pointer": "/content/status",
-                  "quote": "generation_failed"
+                  "evidence_id": "E_BOUNDARY",
+                  "pointer": "/content/resource_receipt/1/status",
+                  "quote": "failed"
                 }
               ],
               "missing_evidence": [
-                "本轮成功交付图片及其实际尺寸、绑定模型元数据。"
+                "成功交付图片的真实尺寸及其与本轮模型执行的绑定记录"
               ],
               "blocked_by": null
             },
             {
               "criterion_id": "C3",
               "status": "B",
-              "reason": "本轮近景修改图片未交付，无法对实际画面检查是否仍为同一场景的第一人称近景。",
+              "reason": "本轮近景修改图片未交付，无法检查是否保持同场景第一人称并收紧为近景。",
               "reason_code": "blocked_by_non_delivery",
               "citations": [
                 {
@@ -6821,9 +6836,9 @@
                   "quote": "generation_failed"
                 },
                 {
-                  "evidence_id": "E_MEDIA_REQUEST_0",
-                  "pointer": "/content/not_an_artifact",
-                  "quote": "true"
+                  "evidence_id": "E_NATIVE_DELIVERY_INVENTORY",
+                  "pointer": "/content/new_resources",
+                  "quote": []
                 }
               ],
               "missing_evidence": [],
@@ -6832,18 +6847,18 @@
             {
               "criterion_id": "C4",
               "status": "B",
-              "reason": "本轮候选图片未交付，无法与基线对照人物身份及相互站位。",
+              "reason": "本轮近景修改图片未交付，无法对照检查人物身份和相互站位。",
               "reason_code": "blocked_by_non_delivery",
               "citations": [
                 {
-                  "evidence_id": "E_BOUNDARY",
-                  "pointer": "/content/resource_receipt/0/status",
-                  "quote": "failed"
+                  "evidence_id": "E_MEDIA_REQUEST_1",
+                  "pointer": "/content/status",
+                  "quote": "generation_failed"
                 },
                 {
-                  "evidence_id": "E_MEDIA_REQUEST_1",
-                  "pointer": "/content/not_an_artifact",
-                  "quote": "true"
+                  "evidence_id": "E_NATIVE_DELIVERY_INVENTORY",
+                  "pointer": "/content/new_resources",
+                  "quote": []
                 }
               ],
               "missing_evidence": [],
@@ -6852,7 +6867,7 @@
             {
               "criterion_id": "C5",
               "status": "B",
-              "reason": "本轮候选图片未交付，无法检查陈默POV、下缘空手及未露脸或露身体。",
+              "reason": "本轮近景修改图片未交付，无法检查陈默POV、下缘空手及不露脸或身体。",
               "reason_code": "blocked_by_non_delivery",
               "citations": [
                 {
@@ -6861,9 +6876,9 @@
                   "quote": "generation_failed"
                 },
                 {
-                  "evidence_id": "E_MEDIA_REQUEST_0",
-                  "pointer": "/content/not_an_artifact",
-                  "quote": "true"
+                  "evidence_id": "E_NATIVE_DELIVERY_INVENTORY",
+                  "pointer": "/content/new_resources",
+                  "quote": []
                 }
               ],
               "missing_evidence": [],
@@ -6872,27 +6887,7 @@
             {
               "criterion_id": "C6",
               "status": "B",
-              "reason": "本轮候选图片未交付，无法直接观察人物是否具有真实质感。",
-              "reason_code": "blocked_by_non_delivery",
-              "citations": [
-                {
-                  "evidence_id": "E_BOUNDARY",
-                  "pointer": "/content/resource_receipt/1/status",
-                  "quote": "failed"
-                },
-                {
-                  "evidence_id": "E_MEDIA_REQUEST_1",
-                  "pointer": "/content/not_an_artifact",
-                  "quote": "true"
-                }
-              ],
-              "missing_evidence": [],
-              "blocked_by": "C1"
-            },
-            {
-              "criterion_id": "C7",
-              "status": "B",
-              "reason": "本轮候选图片未交付，无法直接检查噪点及人物五官是否变形。",
+              "reason": "本轮近景修改图片未交付，无法观察人物是否具有真实质感。",
               "reason_code": "blocked_by_non_delivery",
               "citations": [
                 {
@@ -6901,9 +6896,29 @@
                   "quote": "generation_failed"
                 },
                 {
-                  "evidence_id": "E_MEDIA_REQUEST_1",
-                  "pointer": "/content/not_an_artifact",
-                  "quote": "true"
+                  "evidence_id": "E_NATIVE_DELIVERY_INVENTORY",
+                  "pointer": "/content/new_resources",
+                  "quote": []
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": "C1"
+            },
+            {
+              "criterion_id": "C7",
+              "status": "B",
+              "reason": "本轮近景修改图片未交付，无法观察噪点和人物五官是否变形。",
+              "reason_code": "blocked_by_non_delivery",
+              "citations": [
+                {
+                  "evidence_id": "E_MEDIA_REQUEST_0",
+                  "pointer": "/content/status",
+                  "quote": "generation_failed"
+                },
+                {
+                  "evidence_id": "E_NATIVE_DELIVERY_INVENTORY",
+                  "pointer": "/content/new_resources",
+                  "quote": []
                 }
               ],
               "missing_evidence": [],
@@ -6912,20 +6927,20 @@
           ],
           "quality": [],
           "limitations": [
-            "本轮实际附件仅为用户提供的input_reference；没有成功交付的候选图片可供内容或视觉质量核验。"
+            "本轮两次图像生成均被输入内容安全审核拦截；现有附件为修改前输入参考图，不是本轮交付。"
           ]
         },
         "metadata": {
           "actual_model": "gpt-5.6-terra",
           "requested_model": "gpt-5.6-terra",
-          "started_at": "2026-11-05T17:48:35.359475+00:00",
-          "elapsed_seconds": 16.95977987500001,
-          "input_sha256": "3c9234ef5fbdc3f877de5cd8ed90d74e977c87ef1f12932e1b62664d79e9cf39",
-          "citation_reanchored": null,
+          "started_at": "2026-11-05T18:32:31.305622+00:00",
+          "elapsed_seconds": 22.441133042000004,
+          "input_sha256": "411e7532b4bed8121ffc0de0ccdc0212d37e7724eda57745845d63bc80cb72b6",
+          "citation_reanchored": true,
           "semantic_decisions_unchanged": null,
           "actual_media_attached": 1
         },
-        "attempt": "attempt-005"
+        "attempt": "attempt-007"
       },
       "score": {
         "lower": 0,
@@ -8568,6 +8583,12 @@
       "caption": "修改前 / 输入参考 · 2053fedc9c12",
       "is_playback_derivative": false,
       "original_sha256": "bb97918407350a08f1b9ab220043803b30f65a28b3d1c687c193d8822cf9ec51"
+    }
+  ],
+  "review_notes": [
+    {
+      "type": "Rubric 依赖待明确",
+      "text": "DeepSeek 两次生成均失败，确认未交付；C2 仍被判未明，因为它同时涉及请求模型/规格和实际输出规格。后续应明确配置检查与产物属性检查的依赖关系，本轮保留冻结标准与原评分。"
     }
   ]
 }

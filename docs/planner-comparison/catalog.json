@@ -1,6 +1,6 @@
 {
   "schema_version": "flova.planner_comparison_review.v4",
-  "generated_at": "2026-11-05T18:16:07.952972+00:00",
+  "generated_at": "2026-11-05T18:46:46.134325+00:00",
   "dataset_id": "904bf267-f0bb-4d9f-9b46-cf44550d29c9",
   "case_count": 28,
   "valid_calls": 196,
@@ -9,26 +9,26 @@
   "stats": {
     "reference": {
       "n": 28,
-      "absolute_lower": 87.15773810714286,
+      "absolute_lower": 87.9761905,
       "absolute_upper": 90.59523810714286,
       "case_statuses": {
-        "pass": 20,
+        "pass": 21,
         "fail": 5,
-        "undetermined": 3
+        "undetermined": 2
       }
     },
     "terra": {
       "n": 28,
-      "absolute_lower": 82.11309525,
+      "absolute_lower": 81.60714285714286,
       "absolute_upper": 85.17857142857143,
       "case_statuses": {
-        "pass": 19,
+        "pass": 21,
         "fail": 6,
-        "undetermined": 3
+        "undetermined": 1
       },
       "pair_lower": 37.5,
       "pair_upper": 49.107142857142854,
-      "composite_lower": 73.1904762,
+      "composite_lower": 72.78571428571429,
       "composite_upper": 77.96428571428571,
       "comparison_statuses": {
         "unresolved": 7,
@@ -40,16 +40,16 @@
     },
     "deepseek": {
       "n": 28,
-      "absolute_lower": 76.38392857142857,
+      "absolute_lower": 76.91964285714286,
       "absolute_upper": 82.1875,
       "case_statuses": {
-        "pass": 18,
+        "pass": 19,
         "fail": 8,
-        "undetermined": 2
+        "undetermined": 1
       },
       "pair_lower": 37.32142857142857,
       "pair_upper": 52.32142857142857,
-      "composite_lower": 68.57142857142857,
+      "composite_lower": 69.0,
       "composite_upper": 76.21428571428571,
       "comparison_statuses": {
         "unresolved": 7,
@@ -2435,27 +2435,25 @@
       "query": "重新生成一个4秒视频，不要配音，不要背景音乐，敦敦在紧紧抱着黑漂，脸部贴在一起，特写镜头，眼珠转动悄悄喵了眼敦敦，然后又转回来，随即嘴角轻微上扬微笑。",
       "arms": {
         "reference": {
-          "lower": 77.083333,
+          "lower": 100,
           "upper": 100,
-          "coverage": 77.083333,
+          "coverage": 100,
           "counts": {
-            "P": 6,
-            "U": 3
+            "P": 9
           },
           "must_failed": [],
-          "status": "undetermined",
+          "status": "pass",
           "applicable_budget": 100.0
         },
         "terra": {
-          "lower": 79.166667,
+          "lower": 100,
           "upper": 100,
-          "coverage": 79.166667,
+          "coverage": 100,
           "counts": {
-            "P": 6,
-            "U": 3
+            "P": 9
           },
           "must_failed": [],
-          "status": "undetermined",
+          "status": "pass",
           "applicable_budget": 100.0
         },
         "deepseek": {
@@ -2519,9 +2517,9 @@
             "rankable": false
           },
           "composite": {
-            "lower": 70.8333336,
+            "lower": 87.5,
             "upper": 92.5,
-            "gate": "undetermined",
+            "gate": "pass",
             "formula": "80% absolute + 20% paired comparison",
             "rankable": false
           },
@@ -2578,6 +2576,13 @@
             "rankable": false
           },
           "consistency_flags": [
+            {
+              "parent_id": "P1",
+              "direction": "AB",
+              "absolute_all_checks_pass_side": "original",
+              "pairwise_decision": "equivalent",
+              "note": "绝对评估中一侧满足该关键要求的全部检查、另一侧有已知不满足；相对评估却给另一侧更好或等效。独立裁判存在分歧，保留原分数并送复核，不自动认定任一结论正确。"
+            },
             {
               "parent_id": "P4",
               "direction": "AB",
@@ -3242,12 +3247,11 @@
           "applicable_budget": 100.0
         },
         "terra": {
-          "lower": 50.0,
+          "lower": 0,
           "upper": 100,
-          "coverage": 50.0,
+          "coverage": 0,
           "counts": {
-            "P": 3,
-            "U": 1
+            "U": 4
           },
           "must_failed": [],
           "status": "undetermined",
@@ -3288,8 +3292,8 @@
               },
               {
                 "criterion_id": "P3",
-                "first_mapped": "loss",
-                "second_mapped": "tie",
+                "first_mapped": "tie",
+                "second_mapped": "loss",
                 "status": "order_conflict",
                 "score": null,
                 "weight": 20.0
@@ -3303,7 +3307,7 @@
             "rankable": false
           },
           "composite": {
-            "lower": 40.0,
+            "lower": 0.0,
             "upper": 90.0,
             "gate": "undetermined",
             "formula": "80% absolute + 20% paired comparison",
@@ -3376,27 +3380,25 @@
           "applicable_budget": 100.0
         },
         "terra": {
-          "lower": 85.0,
+          "lower": 100,
           "upper": 100,
-          "coverage": 85.0,
+          "coverage": 100,
           "counts": {
-            "P": 7,
-            "U": 1
+            "P": 8
           },
           "must_failed": [],
-          "status": "undetermined",
+          "status": "pass",
           "applicable_budget": 100.0
         },
         "deepseek": {
-          "lower": 85.0,
+          "lower": 100,
           "upper": 100,
-          "coverage": 85.0,
+          "coverage": 100,
           "counts": {
-            "P": 7,
-            "U": 1
+            "P": 8
           },
           "must_failed": [],
-          "status": "undetermined",
+          "status": "pass",
           "applicable_budget": 100.0
         }
       },
@@ -3445,11 +3447,11 @@
             "rankable": true
           },
           "composite": {
-            "lower": 78.0,
+            "lower": 90.0,
             "upper": 90.0,
-            "gate": "undetermined",
+            "gate": "pass",
             "formula": "80% absolute + 20% paired comparison",
-            "rankable": false
+            "rankable": true
           },
           "consistency_flags": []
         },
@@ -3497,11 +3499,11 @@
             "rankable": true
           },
           "composite": {
-            "lower": 78.0,
+            "lower": 90.0,
             "upper": 90.0,
-            "gate": "undetermined",
+            "gate": "pass",
             "formula": "80% absolute + 20% paired comparison",
-            "rankable": false
+            "rankable": true
           },
           "consistency_flags": []
         }
@@ -4250,10 +4252,12 @@
     "两组新Run的后台代码、其他模型配置与Prompt快照相同；历史日志发生在不同版本和审批条件下。当前分数衡量端到端交付，不能把全部差异归因为Planner能力。",
     "原始结果本轮按统一规则重新评判；补充原始配音和实际媒体，新增B依赖状态，因此不与旧v3分数直接混算。",
     "裁判仅校验错误才重试或修复引用，未修改合法评分结论来消除顺序冲突。实际媒体观察以附件哈希定位，原始引用与修复记录均保留。",
-    "全部引用通过定位校验不代表全部业务结论已人工认定；此页是平台开发前的API评估试点。"
+    "全部引用通过定位校验不代表全部业务结论已人工认定；此页是平台开发前的API评估试点。",
+    "遇到请求大小限制，247的双向比较采用完整时长720p传输预览，音轨复制并验证PCM一致；公开页面仍提供原始视频。预览不用于证明原始编码画质或逐像素一致。",
+    "部分案例同时存在绝对/相对评估分歧、依赖定义或轨迹范围解释问题，已在用例中标出。当前分数用于审核评估方案，不能直接作为确定的模型能力排名。"
   ],
   "capture_limitations": [
-    "两个 Run 的只读展示准备已获授权并完成；已取回17份成功生成的媒体及本轮文档、时间线。图片生成失败与下载缺证据分别处理。",
+    "两个 Run 的只读展示准备已获授权并完成；结果回执含17项成功记录；通过初始映射与当前资源清单对账，另补5份附加、加工或导出产物，共22份实际媒体，均已留存。2次图片生成失败单列。",
     "Trace明细接口大量502/504；419份公开事件文件均已校验。部分保持不变的要求仍缺历史状态或完整内部写入证据。",
     "来源快照含captured_current状态；只提取当前请求前734条消息作为上文，没有把后续项目状态当作前置事实。"
   ]

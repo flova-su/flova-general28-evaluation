@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="搜索和筛选 Flova 评估记录，逐条查看上文轨迹、当前指令、模型产物、Rubric 判断与最终合分。">
+  <meta name="theme-color" content="#f5f6f3">
+  <title>Flova · 通用评估集 28 条</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./catalog-data.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#view=list" aria-label="Flova 评估记录首页"><span class="brand-mark">f</span><strong>flova</strong><span class="brand-divider"></span><span class="brand-label">结果评估</span></a>
+    <div class="topbar-meta"><span class="live-dot"></span><span>gpt-5.6-terra 试评</span><a href="https://flova-team.feishu.cn/wiki/CEMMwopc6iKkmWkYy9hcMqAYnGc" target="_blank" rel="noopener">方案文档 ↗</a></div>
+  </header>
+  <main class="workspace">
+    <section id="catalog-view" aria-labelledby="catalog-title">
+      <div class="page-kicker"><span>EVALUATION LIBRARY</span><span>历史真实回应 · 结果评估</span></div>
+      <div class="catalog-heading"><div><h1 id="catalog-title">通用评估集 · 28 条</h1><p>14 类真实任务 · 专属 Rubrics · 线上历史回应 API 评估</p></div><a class="catalog-snapshot" href="https://flova-lab.rain-boat.com/datasets/904bf267-f0bb-4d9f-9b46-cf44550d29c9" target="_blank" rel="noopener"><i></i>查看原评估集 ↗</a></div>
+      <div id="catalog-stats" class="catalog-stats" aria-label="全部评估记录概况"></div>
+      <section class="catalog-card" aria-label="搜索和筛选评估记录">
+        <div class="catalog-toolbar">
+          <label class="catalog-search"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/></svg><span class="sr-only">搜索任务、当前指令或 ID</span><input id="catalog-search" type="search" placeholder="搜索任务、当前指令或 ID" autocomplete="off"></label>
+          <div class="catalog-filters">
+            <label class="catalog-select"><span>评估结论</span><select id="catalog-outcome"><option value="all">全部结论</option value="pass">整体通过</option><option value="fail">整体未通过</option><option value="undetermined">整体未决</option></select></label>
+            <label class="catalog-check"><input id="catalog-unknown" type="checkbox"><span>有未明证据</span></label>
+            <label class="catalog-check review-filter"><input id="catalog-review" type="checkbox"><span>判定待复核 <b id="review-count">0</b></span></label>
+          </div>
+          <label class="catalog-sort"><span class="sr-only">排序方式</span><select id="catalog-sort"><option value="newest">任务时间 · 由新到旧</option><option value="oldest">任务时间 · 由旧到新</option><option value="score-asc">已确认分 · 由低到高</option><option value="score-desc">已确认分 · 由高到低</option></select></label>
+        </div>
+        <div class="catalog-resultbar"><div class="group-filter"><label for="catalog-group">任务类型</label><select id="catalog-group"><option value="all">全部 14 类</option></select><p id="catalog-count" aria-live="polite">正在读取记录…</p></div><button id="catalog-reset" class="catalog-clear" type="button">清除筛选</button></div>
+        <div id="catalog-results" class="catalog-results"></div>
+        <footer class="catalog-pagination-bar"><label class="catalog-size-label">每页<select id="catalog-size" aria-label="每页记录数"><option value="20">20</option><option value="50">50</option><option value="100">100</option></select>条</label><div id="catalog-pagination" class="catalog-pagination" aria-label="评估记录分页"></div></footer>
+      </section>
+      <p class="catalog-help"><span>逐条专属 Rubric</span><i></i><span>完整上下文、产物和证据在详情中查看</span></p>
+      <details class="batch-scope"><summary>本批结果怎么看 · 取证范围与计分口径</summary><p>Rubrics 根据每条任务已记录的公开上文与当前指令独立生成、质检并冻结，未使用平台原 Rubrics。评估使用线上已有回应与本轮产物、执行记录，未重跑 Agent。评估模型为 gpt-5.6-terra，通过 Loom API 调用。</p><p>已确认分是证据支持的实际得分；未明分只构成可能上限。部分媒体无法直接取得，相关项目保留未明；日志中绑定资源的媒体分析报告属于间接证据。公开对话前缀不包含完整运行时系统与工具快照。</p><p>“判定待复核”表示独立复核发现模型理由或判据适用仍有争议，页面保留 API 原判与原分数。它与模型评出的通过、未通过、未决分别展示。</p></details>
+    </section>
+    <section id="detail-view" hidden aria-labelledby="page-title">
+      <div class="detail-navigation"><button id="detail-back" type="button" class="detail-back">← 返回列表</button><div class="record-navigation" aria-label="切换当前筛选中的记录"><span id="detail-position"></span><button id="detail-prev" type="button" aria-label="上一条评估">← 上一条</button><button id="detail-next" type="button" aria-label="下一条评估">下一条 →</button></div></div>
+      <div class="page-kicker"><span>TASK REVIEW</span><span>上下文 · 产物 · 逐条判定</span></div>
+      <div class="page-heading"><div><h1 id="page-title">评估详情</h1><p id="page-subtitle">从上文到最终合分，查看这一轮的完整依据。</p></div></div>
+      <div class="reading-layout"><div id="review-content" class="review-content" aria-live="polite"></div><aside id="result-rail" class="result-rail" aria-label="本轮结果与阅读导航"></aside></div>
+    </section>
+    <footer class="page-footer"><span>每个 Query 的专属 Rubric · 原始回应与依据可追溯</span><span>FLOVA / EVALUATION LAB</span></footer>
+  </main>
+  <aside id="drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true" hidden inert>
+    <header class="drawer-header"><div><div class="eyebrow">SOURCE &amp; ARTIFACT</div><h2 id="drawer-title">查看原文</h2></div><button id="drawer-close" class="icon-button" aria-label="关闭详情"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></header>
+    <div id="drawer-body" class="drawer-body"></div>
+  </aside>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript>请启用 JavaScript，以搜索评估记录和查看任务详情。</noscript>
+</body>
+</html>

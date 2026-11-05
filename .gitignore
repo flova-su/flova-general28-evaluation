@@ -1,0 +1,6 @@
+.DS_Store
+/prepare_public.py
+/qa/
+/deployment*.json
+/dist/
+/__pycache__/

@@ -1,0 +1,3947 @@
+{
+  "id": "FL-EVAL-20261104-203",
+  "title": "图片转 3 秒静态时间线",
+  "group": "G11 时间线编辑",
+  "query": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+  "requested_at": "2026-10-18T11:07:39.692292+00:00",
+  "history": [
+    {
+      "message_id": "d59d213ce72d47989d469c5a37e5cfbe",
+      "conversation_id": "4291e933ad3f44efbfd49383239beb16",
+      "role": "user",
+      "parts": [
+        {
+          "kind": "text",
+          "text": "借助当前技能整理画面描述，随后制作一张森林主题的图片，采用1K分辨率，不需要多张。"
+        }
+      ],
+      "attachments": [],
+      "lifecycle_status": "final",
+      "discarded": false,
+      "created_at": "2026-10-18T11:05:44.89606+00:00"
+    },
+    {
+      "message_id": "1d25de630a37ad1c9a6cc400b05a628a",
+      "conversation_id": "4291e933ad3f44efbfd49383239beb16",
+      "role": "assistant",
+      "parts": [
+        {
+          "kind": "text",
+          "text": "我会用当前技能把森林画面整理成自然、具体的描述，突出林间光线、树木层次和真实材质，再生成一张 1K 图片。画面以清晨薄雾中的森林为方向。"
+        },
+        {
+          "activity": {
+            "activity_id": "call_rWct0KGzSdOlCB5RrKIA7OVa",
+            "async_batch": null,
+            "async_ref": null,
+            "error": null,
+            "error_info": null,
+            "presentation": {
+              "copy_key": "assetCreation",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "display_name": "晨雾森林",
+                      "entity_id": null,
+                      "entity_type": "asset",
+                      "ref": null
+                    }
+                  ],
+                  "total_count": 1
+                }
+              },
+              "schema_version": 1
+            },
+            "result_summary": "Tool completed",
+            "status": "done",
+            "summary": "Create 1 Nodes",
+            "tool": "node_create"
+          },
+          "kind": "tool_activity"
+        },
+        {
+          "activity": {
+            "activity_id": "call_munOnR9L3Ex2PwYyIBGi0l6k",
+            "async_batch": null,
+            "async_ref": null,
+            "error": null,
+            "error_info": null,
+            "presentation": {
+              "copy_key": "generationPlanPreparation",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "display_name": "晨雾森林",
+                      "entity_id": "晨雾森林",
+                      "entity_type": "asset",
+                      "ref": {
+                        "asset_node_id": "晨雾森林",
+                        "kind": "asset_ref"
+                      }
+                    }
+                  ],
+                  "total_count": 1
+                }
+              },
+              "schema_version": 1
+            },
+            "result_summary": "Targets: 1 committed",
+            "status": "done",
+            "summary": "Compile 1 media recipes",
+            "tool": "media_recipe_delegate"
+          },
+          "kind": "tool_activity"
+        },
+        {
+          "activity": {
+            "activity_id": "call_Ow4YXgujg54nti6YY1koropG",
+            "async_batch": {
+              "batch_id": "db90a6035afc483288fbbb8f242508b3",
+              "tasks": [
+                {
+                  "asset_node_id": "晨雾森林",
+                  "status": "done",
+                  "task_id": "2ffed42e1f534f8caa9fef3ebe59c77f"
+                }
+              ]
+            },
+            "async_ref": {
+              "batch_id": "db90a6035afc483288fbbb8f242508b3",
+              "kind": "media_generation",
+              "tasks": [
+                {
+                  "asset_node_id": "晨雾森林",
+                  "status": "done",
+                  "task_id": "2ffed42e1f534f8caa9fef3ebe59c77f"
+                }
+              ]
+            },
+            "error": null,
+            "error_info": null,
+            "presentation": {
+              "copy_key": "imageGeneration",
+              "detail": {
+                "counts": [
+                  {
+                    "count": 1,
+                    "media_type": "image"
+                  }
+                ],
+                "kind": "generation",
+                "models": {
+                  "items": [
+                    {
+                      "display_name": "Seedream 5.0 Pro",
+                      "resolution": "1K"
+                    }
+                  ],
+                  "total_count": 1
+                }
+              },
+              "schema_version": 1
+            },
+            "result_summary": "Tool completed",
+            "status": "done",
+            "summary": "Submit 1 generation tasks",
+            "tool": "asset_visual_generate"
+          },
+          "kind": "tool_activity"
+        },
+        {
+          "kind": "resource_ref",
+          "resource_id": "2ffed42e1f534f8caa9fef3ebe59c77f"
+        },
+        {
+          "kind": "text",
+          "text": "已生成 **1 张森林主题图片**，采用 **1K 分辨率、16:9 横幅**，保存在「晨雾森林」中。\n\n**画面描述：**清晨薄雾笼罩森林，高大树干形成层层纵深，柔和晨光从树冠间侧向洒入。潮润的苔藓、粗糙树皮与蕨类植物呈现自然质感，整体安静、清新，带有电影静帧的氛围。"
+        }
+      ],
+      "attachments": [],
+      "lifecycle_status": "final",
+      "discarded": false,
+      "created_at": "2026-10-18T11:06:47.924607+00:00"
+    }
+  ],
+  "contract": {
+    "schema_version": "flova.pilot_contract.v4",
+    "query_id": "FL-EVAL-20261104-203",
+    "rubric": {
+      "schema_version": "flova.general_rubric.v1",
+      "case_id": "f25ddc0c-639a-484a-8ac0-a5cf5a81e7cb",
+      "query_id": "FL-EVAL-20261104-203",
+      "generation_readiness": "conditional",
+      "source_audit": {
+        "used_source_ids": [
+          "e653cb7804f841aaa9f26b6581bb3526",
+          "1d25de630a37ad1c9a6cc400b05a628a",
+          "d59d213ce72d47989d469c5a37e5cfbe"
+        ],
+        "excluded_sources": [],
+        "limitations": [
+          "已通读全部三条公开来源及其工具活动；历史中生成森林图的请求用于识别“刚才”对象，不重复要求生成图片。",
+          "源图真实像素和当前工程状态未附；公开记录中的生成成功陈述不能代替媒体检查。"
+        ]
+      },
+      "task_spec": {
+        "current_request": "使用上一轮得到的森林图片，实际制作总时长3秒的静态时间线，本轮无需生成视频。",
+        "current_stage": "制作静态时间线",
+        "deliverables": [
+          "引用上一张图片的3秒静态时间线"
+        ],
+        "scope_exclusions": [
+          "不要求重新生成森林图；历史助手自行采用的16:9、清晨薄雾方向不构成本轮新增硬要求。",
+          "不要求视频生成或视频导出。"
+        ],
+        "task_information_gaps": [],
+        "evaluation_evidence_gaps": [
+          "需实际时间线状态、时长和素材引用关系；源图像素未供应，不能以描述判定同图。"
+        ],
+        "source_refs": [
+          {
+            "source_id": "e653cb7804f841aaa9f26b6581bb3526",
+            "pointer": "/content/input/content",
+            "quote": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+            "supports": "确定本轮静态时间线制作范围。"
+          },
+          {
+            "source_id": "1d25de630a37ad1c9a6cc400b05a628a",
+            "pointer": "/content/parts/4/resource_id",
+            "quote": "2ffed42e1f534f8caa9fef3ebe59c77f",
+            "supports": "公开历史中的上一张图片资源身份；不把助手新增的美术方向当作用户约束。"
+          }
+        ]
+      },
+      "source_inventory": [
+        {
+          "requirement": "沿用上一轮这张图片作为素材",
+          "basis": "explicit",
+          "source_refs": [
+            {
+              "source_id": "e653cb7804f841aaa9f26b6581bb3526",
+              "pointer": "/content/input/content",
+              "quote": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+              "supports": "确定本轮静态时间线制作范围。"
+            },
+            {
+              "source_id": "1d25de630a37ad1c9a6cc400b05a628a",
+              "pointer": "/content/parts/4/resource_id",
+              "quote": "2ffed42e1f534f8caa9fef3ebe59c77f",
+              "supports": "公开历史中的上一张图片资源身份；不把助手新增的美术方向当作用户约束。"
+            }
+          ],
+          "criterion_ids": [
+            "C1"
+          ]
+        },
+        {
+          "requirement": "实际制作静态时间线",
+          "basis": "explicit",
+          "source_refs": [
+            {
+              "source_id": "e653cb7804f841aaa9f26b6581bb3526",
+              "pointer": "/content/input/content",
+              "quote": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+              "supports": "确定本轮静态时间线制作范围。"
+            }
+          ],
+          "criterion_ids": [
+            "C2"
+          ]
+        },
+        {
+          "requirement": "总时长3秒",
+          "basis": "explicit",
+          "source_refs": [
+            {
+              "source_id": "e653cb7804f841aaa9f26b6581bb3526",
+              "pointer": "/content/input/content",
+              "quote": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+              "supports": "确定本轮静态时间线制作范围。"
+            }
+          ],
+          "criterion_ids": [
+            "C3"
+          ]
+        },
+        {
+          "requirement": "无需生成视频，保持本轮静态制作范围",
+          "basis": "explicit",
+          "source_refs": [
+            {
+              "source_id": "e653cb7804f841aaa9f26b6581bb3526",
+              "pointer": "/content/input/content",
+              "quote": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+              "supports": "确定本轮静态时间线制作范围。"
+            }
+          ],
+          "criterion_ids": [
+            "C4"
+          ]
+        }
+      ],
+      "parents": [
+        {
+          "parent_id": "P1",
+          "statement": "以刚才的图片作为时间线素材",
+          "weight": 35,
+          "mode": "all",
+          "must": true,
+          "critical": false,
+          "applicability": "always",
+          "source_refs": [
+            {
+              "source_id": "e653cb7804f841aaa9f26b6581bb3526",
+              "pointer": "/content/input/content",
+              "quote": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+              "supports": "确定本轮静态时间线制作范围。"
+            },
+            {
+              "source_id": "1d25de630a37ad1c9a6cc400b05a628a",
+              "pointer": "/content/parts/4/resource_id",
+              "quote": "2ffed42e1f534f8caa9fef3ebe59c77f",
+              "supports": "公开历史中的上一张图片资源身份；不把助手新增的美术方向当作用户约束。"
+            }
+          ]
+        },
+        {
+          "parent_id": "P2",
+          "statement": "完成3秒静态时间线",
+          "weight": 45,
+          "mode": "all",
+          "must": true,
+          "critical": false,
+          "applicability": "always",
+          "source_refs": [
+            {
+              "source_id": "e653cb7804f841aaa9f26b6581bb3526",
+              "pointer": "/content/input/content",
+              "quote": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+              "supports": "确定本轮静态时间线制作范围。"
+            }
+          ]
+        },
+        {
+          "parent_id": "P3",
+          "statement": "不执行视频生成",
+          "weight": 20,
+          "mode": "all",
+          "must": true,
+          "critical": false,
+          "applicability": "always",
+          "source_refs": [
+            {
+              "source_id": "e653cb7804f841aaa9f26b6581bb3526",
+              "pointer": "/content/input/content",
+              "quote": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+              "supports": "确定本轮静态时间线制作范围。"
+            }
+          ]
+        }
+      ],
+      "criteria": [
+        {
+          "criterion_id": "C1",
+          "parent_id": "P1",
+          "statement": "时间线引用上一轮生成的森林图片",
+          "weight": null,
+          "applicability": "always",
+          "anchors": {
+            "P": "可信工程状态显示时间线使用该上一张图片资源或可核实的等同副本。",
+            "F": "可信完整工程状态显示用了其他图片或重新制作的替代素材，未使用用户指明图片。",
+            "U": "缺少时间线素材关联、源图身份或可信状态；仅说已使用不足以证明。",
+            "NA": "never"
+          },
+          "evidence_plan": [
+            "核对素材resource_id、时间线引用及必要的源素材一致性；缺少媒体内容时保留U。"
+          ],
+          "source_refs": [
+            {
+              "source_id": "e653cb7804f841aaa9f26b6581bb3526",
+              "pointer": "/content/input/content",
+              "quote": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+              "supports": "确定本轮静态时间线制作范围。"
+            },
+            {
+              "source_id": "1d25de630a37ad1c9a6cc400b05a628a",
+              "pointer": "/content/parts/4/resource_id",
+              "quote": "2ffed42e1f534f8caa9fef3ebe59c77f",
+              "supports": "公开历史中的上一张图片资源身份；不把助手新增的美术方向当作用户约束。"
+            }
+          ],
+          "fact_key": "c1-时间线引用上一轮生成的森林图片",
+          "dedup_note": "仅评素材来源；静态和时长在C2、C3。"
+        },
+        {
+          "criterion_id": "C2",
+          "parent_id": "P2",
+          "statement": "实际建立静态图片时间线",
+          "weight": null,
+          "applicability": "always",
+          "anchors": {
+            "P": "可信保存状态或完整可检查成果显示已建立承载该图片的静态时间线，无图像运动/视频化。",
+            "F": "完整最终记录证明只给方案未建立时间线，或时间线将图片做成动态内容。",
+            "U": "只有文字承诺、未取回成果或仅局部执行日志，无法确认时间线存在及静态属性。",
+            "NA": "never"
+          },
+          "evidence_plan": [
+            "读取完整时间线/工程状态，检查图片片段和动画状态；不以最终话术代替保存结果。"
+          ],
+          "source_refs": [
+            {
+              "source_id": "e653cb7804f841aaa9f26b6581bb3526",
+              "pointer": "/content/input/content",
+              "quote": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+              "supports": "确定本轮静态时间线制作范围。"
+            }
+          ],
+          "fact_key": "c2-实际建立静态图片时间线",
+          "dedup_note": "仅评时间线存在与静态类型，不评素材身份、总时长或生成调用。"
+        },
+        {
+          "criterion_id": "C3",
+          "parent_id": "P2",
+          "statement": "时间线总时长为3秒",
+          "weight": null,
+          "applicability": "always",
+          "anchors": {
+            "P": "可信时间线状态显示起终点对应总时长3秒。",
+            "F": "可检查的实际时间线总时长不是3秒。",
+            "U": "没有可核实时长或工程快照，或不同证据相互冲突。",
+            "NA": "never"
+          },
+          "evidence_plan": [
+            "读取保存后的时间线时长与片段边界。"
+          ],
+          "source_refs": [
+            {
+              "source_id": "e653cb7804f841aaa9f26b6581bb3526",
+              "pointer": "/content/input/content",
+              "quote": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+              "supports": "确定本轮静态时间线制作范围。"
+            }
+          ],
+          "fact_key": "c3-时间线总时长为3秒",
+          "dedup_note": "仅评全时间线时长。"
+        },
+        {
+          "criterion_id": "C4",
+          "parent_id": "P3",
+          "statement": "本轮未执行视频生成",
+          "weight": null,
+          "applicability": "always",
+          "anchors": {
+            "P": "覆盖本轮的完整可信动作记录未发生视频生成，静态时间线由图片组成。",
+            "F": "可信活动记录明确发生本轮视频生成。",
+            "U": "动作记录不完整，无法确认是否发生视频生成；文字称未生成不证明历史操作。",
+            "NA": "never"
+          },
+          "evidence_plan": [
+            "核对完整本轮执行活动及媒体生成任务类型；片段记录中的缺失不能证明禁止操作未发生。"
+          ],
+          "source_refs": [
+            {
+              "source_id": "e653cb7804f841aaa9f26b6581bb3526",
+              "pointer": "/content/input/content",
+              "quote": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+              "supports": "确定本轮静态时间线制作范围。"
+            }
+          ],
+          "fact_key": "c4-本轮未执行视频生成",
+          "dedup_note": "仅评视频生成行为，不把允许的图片时间线当作视频生成。"
+        }
+      ],
+      "quality": {
+        "enabled": false,
+        "rationale": "当前请求的可核实事实均在基础项覆盖，没有另行明确且独立的质量维度。",
+        "dimensions": []
+      },
+      "authoring_limitations": [
+        "没有读取候选执行结果。媒体、基线与保存状态缺失属于评审证据缺口，不提前判F。"
+      ]
+    },
+    "check_weights": {
+      "C1": {
+        "parent_id": "P1",
+        "weight": 35.0,
+        "weight_exact": "35",
+        "gate": true,
+        "applicability": "always"
+      },
+      "C2": {
+        "parent_id": "P2",
+        "weight": 22.5,
+        "weight_exact": "45/2",
+        "gate": true,
+        "applicability": "always"
+      },
+      "C3": {
+        "parent_id": "P2",
+        "weight": 22.5,
+        "weight_exact": "45/2",
+        "gate": true,
+        "applicability": "always"
+      },
+      "C4": {
+        "parent_id": "P3",
+        "weight": 20.0,
+        "weight_exact": "20",
+        "gate": true,
+        "applicability": "always"
+      }
+    },
+    "comparison_rubric": {
+      "schema_version": "flova.result_acceptability_pairwise.v2",
+      "scope": "same_task_original_reference_vs_candidate",
+      "mode": "fulfillment_then_source_grounded_effect",
+      "criteria": [
+        {
+          "criterion_id": "P1",
+          "statement": "以刚才的图片作为时间线素材",
+          "weight": 35,
+          "acceptance_check_ids": [
+            "C1"
+          ],
+          "source_refs": [
+            {
+              "source_id": "e653cb7804f841aaa9f26b6581bb3526",
+              "pointer": "/content/input/content",
+              "quote": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+              "supports": "确定本轮静态时间线制作范围。"
+            },
+            {
+              "source_id": "1d25de630a37ad1c9a6cc400b05a628a",
+              "pointer": "/content/parts/4/resource_id",
+              "quote": "2ffed42e1f534f8caa9fef3ebe59c77f",
+              "supports": "公开历史中的上一张图片资源身份；不把助手新增的美术方向当作用户约束。"
+            }
+          ],
+          "anchors": {
+            "X_better": "X在本条用户要求下有可核实的更完整实现，或在双方均达到底线后，任务原文明确涉及的呈现/表达效果更好。",
+            "Y_better": "同样条件下Y更好。",
+            "equivalent": "双方实质满足程度与任务目标下效果相当；离散约束双方都满足时不得强造差别。",
+            "insufficient": "必需的实际证据缺失或冲突，不能可靠比较；不把缺证据当作表现更差。"
+          }
+        },
+        {
+          "criterion_id": "P2",
+          "statement": "完成3秒静态时间线",
+          "weight": 45,
+          "acceptance_check_ids": [
+            "C2",
+            "C3"
+          ],
+          "source_refs": [
+            {
+              "source_id": "e653cb7804f841aaa9f26b6581bb3526",
+              "pointer": "/content/input/content",
+              "quote": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+              "supports": "确定本轮静态时间线制作范围。"
+            }
+          ],
+          "anchors": {
+            "X_better": "X在本条用户要求下有可核实的更完整实现，或在双方均达到底线后，任务原文明确涉及的呈现/表达效果更好。",
+            "Y_better": "同样条件下Y更好。",
+            "equivalent": "双方实质满足程度与任务目标下效果相当；离散约束双方都满足时不得强造差别。",
+            "insufficient": "必需的实际证据缺失或冲突，不能可靠比较；不把缺证据当作表现更差。"
+          }
+        },
+        {
+          "criterion_id": "P3",
+          "statement": "不执行视频生成",
+          "weight": 20,
+          "acceptance_check_ids": [
+            "C4"
+          ],
+          "source_refs": [
+            {
+              "source_id": "e653cb7804f841aaa9f26b6581bb3526",
+              "pointer": "/content/input/content",
+              "quote": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+              "supports": "确定本轮静态时间线制作范围。"
+            }
+          ],
+          "anchors": {
+            "X_better": "X在本条用户要求下有可核实的更完整实现，或在双方均达到底线后，任务原文明确涉及的呈现/表达效果更好。",
+            "Y_better": "同样条件下Y更好。",
+            "equivalent": "双方实质满足程度与任务目标下效果相当；离散约束双方都满足时不得强造差别。",
+            "insufficient": "必需的实际证据缺失或冲突，不能可靠比较；不把缺证据当作表现更差。"
+          }
+        }
+      ],
+      "quality_tiebreakers": [],
+      "all_28_requested": true,
+      "not_aesthetic_only": "用户本轮明确要求两组全部用例对原始结果做双向比较。纯查询/配置也比较任务完成与正确性；不强造审美或创造性维度。",
+      "missing_output_policy": "可信确认未交付与评估器缺文件不同：可比较交付完成情况；不得对不存在的作品虚构审美比较。"
+    },
+    "source_hash": "b42257d130698789581113805fddf472625aec168672ea15bbeaa423e06d7433",
+    "rubric_hash": "98e91a5eeaa81fd18e01228fd45ecd7d73ebb0b271f3fa718f79de3fd5bc801d",
+    "policy_version": "evidence_and_dependency.v4",
+    "aggregation_profile": "frozen_explicit_check_budgets.v4"
+  },
+  "results": {
+    "reference": {
+      "text": "已创建「晨雾森林·3秒静态时间线」：\n\n- 使用刚才生成的森林图片，静态展示 **3 秒**\n- 保持 **16:9** 画幅，无运动、转场或音频\n- **未生成视频，未导出文件**\n\n可在时间线中直接预览。",
+      "evidence": {
+        "E_FINAL_RESPONSE": {
+          "evidence_id": "E_FINAL_RESPONSE",
+          "kind": "final_response",
+          "content": {
+            "text": "已创建「晨雾森林·3秒静态时间线」：\n\n- 使用刚才生成的森林图片，静态展示 **3 秒**\n- 保持 **16:9** 画幅，无运动、转场或音频\n- **未生成视频，未导出文件**\n\n可在时间线中直接预览。",
+            "complete_public_response": true
+          }
+        },
+        "E_BOUNDARY": {
+          "evidence_id": "E_BOUNDARY",
+          "kind": "trusted_execution_boundary",
+          "content": {
+            "assessment_scope": "final_turn_result",
+            "source_env": "prod",
+            "scope_id": "bh_creation_ods",
+            "explicit_identity_binding": {
+              "query_id": "FL-EVAL-20261104-203",
+              "case_id": "f25ddc0c-639a-484a-8ac0-a5cf5a81e7cb",
+              "project_id": "393bbbbaa2714ce88d7c6c518f4f1256",
+              "conversation_id": "4291e933ad3f44efbfd49383239beb16",
+              "turn_message_id": "e653cb7804f841aaa9f26b6581bb3526",
+              "conversation_task_id": null,
+              "assistant_message_id": null,
+              "task_ids": [
+                "c9a3984fc958417bb7fddbe17b97100b"
+              ],
+              "assistant_message_ids": [
+                "28f658cf510fe257446e4856b972198e"
+              ],
+              "identity_status": "verified_explicit_task_turn_conversation"
+            },
+            "query_created_at": "2026-10-18 11:07:39.692292",
+            "public_final_messages": [
+              {
+                "message_id": "28f658cf510fe257446e4856b972198e",
+                "created_at": "2026-10-18 11:08:10.459370",
+                "lifecycle_status": "final"
+              }
+            ],
+            "business_tasks": [
+              {
+                "task_id": "c9a3984fc958417bb7fddbe17b97100b",
+                "project_id": "393bbbbaa2714ce88d7c6c518f4f1256",
+                "conversation_id": "4291e933ad3f44efbfd49383239beb16",
+                "task_type": "agent_turn",
+                "assistant_message_id": "28f658cf510fe257446e4856b972198e",
+                "turn_message_id": "e653cb7804f841aaa9f26b6581bb3526",
+                "waiting_batch_id": null,
+                "tool_call_id": null,
+                "interaction_id": null,
+                "dispatch_status": "published",
+                "run_status": "completed",
+                "last_error_stage": null,
+                "last_error_code": null,
+                "last_error_detail": null,
+                "started_at": "2026-10-18 11:07:39.810631",
+                "finished_at": "2026-10-18 11:08:10.453350",
+                "created_at": "2026-10-18 11:07:39.736538",
+                "updated_at": "2026-10-18 11:08:10.453350"
+              }
+            ],
+            "turn_manifests": [
+              {
+                "id": 391634,
+                "project_id": "393bbbbaa2714ce88d7c6c518f4f1256",
+                "conversation_id": "4291e933ad3f44efbfd49383239beb16",
+                "turn_message_id": "e653cb7804f841aaa9f26b6581bb3526",
+                "assistant_message_id": "28f658cf510fe257446e4856b972198e",
+                "status": "sealed",
+                "expected_segment_count": 6,
+                "renderer_version": 1,
+                "created_at": "2026-10-18 11:07:43.727169",
+                "updated_at": "2026-10-18 11:08:10.500844"
+              }
+            ],
+            "archive_sequence_checks": [
+              {
+                "assistant_message_id": "28f658cf510fe257446e4856b972198e",
+                "manifest_status": "sealed",
+                "expected_segment_count": 6,
+                "observed_segment_count": 6,
+                "observed_sequences": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ],
+                "exact_expected_sequence_match": true
+              }
+            ],
+            "archive_payload_coverage": {
+              "segments_observed": 6,
+              "spilled_or_external_payloads": 0,
+              "all_payloads_recovered": true,
+              "complete": true
+            },
+            "instrumented_tool_projection": {
+              "rows": 9,
+              "explicit_project_task_match": true,
+              "conversation_conflicts_excluded": 0,
+              "latest_complete_tuple_policy": true,
+              "source": "flova_obs.stg_observation",
+              "source_bytes_verified": true
+            },
+            "later_feedback_excluded_by_exact_target_keys": true,
+            "candidate_agent_rerun": false
+          }
+        },
+        "E_TOOL_c314d3638a94821b": {
+          "evidence_id": "E_TOOL_c314d3638a94821b",
+          "kind": "instrumented_tool_result",
+          "content": {
+            "langfuse_project_id": "cmowwjcqv000evc07r1bb1tzs",
+            "trace_id": "6a97a1dbb7f62b0f9b6ae18a6a60abb5",
+            "observation_id": "c314d3638a94821b",
+            "conversation_task_id": "c9a3984fc958417bb7fddbe17b97100b",
+            "start_time": "2026-10-18 19:07:43.761000",
+            "end_time": "2026-10-18 19:07:43.795000",
+            "parent_observation_id": "89f00f34e1b35111",
+            "tool_name": "project_query",
+            "tool_call_id": "call_sKd4kMtHK3vE6fnvpe3f6tLY",
+            "status": "success",
+            "level": "DEFAULT",
+            "result": {
+              "status": "success",
+              "data": {
+                "mode": "inspect",
+                "graph_revision": 19,
+                "results": [
+                  {
+                    "target": {
+                      "node_id": "晨雾森林",
+                      "node_type": "asset",
+                      "node_revision": 0
+                    },
+                    "name": "晨雾森林",
+                    "description": "一张森林主题图片：清晨薄雾、层次分明的树木与林间柔光，突出自然材质和空间纵深。输出1K，仅生成一张。",
+                    "details": {
+                      "asset_type": "image",
+                      "resource_count": 1,
+                      "default_resource_id": "2ffed42e1f534f8caa9fef3ebe59c77f",
+                      "candidate_resources": [
+                        {
+                          "resource_id": "2ffed42e1f534f8caa9fef3ebe59c77f",
+                          "media_type": "image",
+                          "from_type": "generated",
+                          "favorite": false,
+                          "default": true
+                        }
+                      ],
+                      "omitted_resource_count": 0,
+                      "draft_count": 1,
+                      "drafts": [
+                        {
+                          "draft_id": "draft_d75010a7a59844b6b327048a",
+                          "draft_revision": 1,
+                          "title": "晨雾森林",
+                          "favorite": false,
+                          "generated": true,
+                          "active_task_count": 0
+                        }
+                      ],
+                      "omitted_draft_count": 0,
+                      "runtime": {
+                        "has_ready": true,
+                        "active_task_count": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "effects": {
+                "graph_changed": false
+              }
+            }
+          }
+        },
+        "E_TOOL_8c954bf49fe57850": {
+          "evidence_id": "E_TOOL_8c954bf49fe57850",
+          "kind": "instrumented_tool_result",
+          "content": {
+            "langfuse_project_id": "cmowwjcqv000evc07r1bb1tzs",
+            "trace_id": "6a97a1dbb7f62b0f9b6ae18a6a60abb5",
+            "observation_id": "8c954bf49fe57850",
+            "conversation_task_id": "c9a3984fc958417bb7fddbe17b97100b",
+            "start_time": "2026-10-18 19:07:51.116000",
+            "end_time": "2026-10-18 19:07:51.159000",
+            "parent_observation_id": "89f00f34e1b35111",
+            "tool_name": "node_create",
+            "tool_call_id": "call_wweMRHPU8N0mniZof6TtgNeP",
+            "status": "success",
+            "level": "DEFAULT",
+            "result": {
+              "status": "success",
+              "data": {
+                "results": [
+                  {
+                    "node_id": "晨雾森林_3秒静态时间线",
+                    "type": "composition",
+                    "revision": 0,
+                    "input_index": 0,
+                    "status": "created"
+                  }
+                ],
+                "warnings": [],
+                "idempotent_replay": false
+              },
+              "effects": {
+                "graph_changed": true
+              }
+            }
+          }
+        },
+        "E_TOOL_51e255743011c5af": {
+          "evidence_id": "E_TOOL_51e255743011c5af",
+          "kind": "instrumented_tool_result",
+          "content": {
+            "langfuse_project_id": "cmowwjcqv000evc07r1bb1tzs",
+            "trace_id": "6a97a1dbb7f62b0f9b6ae18a6a60abb5",
+            "observation_id": "51e255743011c5af",
+            "conversation_task_id": "c9a3984fc958417bb7fddbe17b97100b",
+            "start_time": "2026-10-18 19:08:02.321000",
+            "end_time": "2026-10-18 19:08:02.356000",
+            "parent_observation_id": "788783e6d0ab827c",
+            "tool_name": "insert_clip",
+            "tool_call_id": "call_00_vz2l394q33p8d1pslxow6d6x",
+            "status": "success",
+            "level": "DEFAULT",
+            "result": {
+              "status": "success",
+              "data": {
+                "receipt": "inserted static_forest_3s at [0s–3s]; total 3s",
+                "affected_clip_ids": [
+                  "static_forest_3s"
+                ],
+                "diagnostics": [],
+                "op_status": "committed",
+                "round": {
+                  "operation_count": 1,
+                  "revision_before": 0,
+                  "revision_after": 1
+                },
+                "post_write": {
+                  "revision": 1,
+                  "edl": "settings: 1920x1080 30fps | total 3s | 1 clips\n[v1] video\n  static_forest_3s [00:00.000–00:03.000]  晨雾森林 (res:2ffed42e1f534f8caa9fef3ebe59c77f)  note: 晨雾森林静帧：0-3s 静止画面，无运动、无淡入淡出、无音频。",
+                  "rendered_clip_count": 1,
+                  "next_after_clip_id": null
+                }
+              },
+              "effects": {
+                "graph_changed": true
+              }
+            }
+          }
+        },
+        "E_TOOL_89fcb329b04e2056": {
+          "evidence_id": "E_TOOL_89fcb329b04e2056",
+          "kind": "instrumented_tool_result",
+          "content": {
+            "langfuse_project_id": "cmowwjcqv000evc07r1bb1tzs",
+            "trace_id": "6a97a1dbb7f62b0f9b6ae18a6a60abb5",
+            "observation_id": "89fcb329b04e2056",
+            "conversation_task_id": "c9a3984fc958417bb7fddbe17b97100b",
+            "start_time": "2026-10-18 19:08:04.913000",
+            "end_time": "2026-10-18 19:08:04.914000",
+            "parent_observation_id": "788783e6d0ab827c",
+            "tool_name": "composition_finalize",
+            "tool_call_id": "call_00_jpp4andoj7z2zdxvn7q5wbbx",
+            "status": "success",
+            "level": "DEFAULT",
+            "result": {
+              "status": "success",
+              "data": {
+                "task_id": "ctask_61d245efc8bf492185dbf0f8",
+                "outcome": "completed",
+                "revision_before": 0,
+                "revision_after": 1,
+                "committed_write_rounds": 1,
+                "baseline_rebased": false,
+                "changes": {
+                  "clips_added": [
+                    "static_forest_3s"
+                  ],
+                  "clips_removed": [],
+                  "clips_changed": [],
+                  "tracks_added": [],
+                  "tracks_removed": [],
+                  "tracks_changed": [],
+                  "settings_changed": [
+                    {
+                      "field": "canvas_size_mode",
+                      "before": "auto",
+                      "after": "fixed"
+                    }
+                  ],
+                  "total_duration_ms": {
+                    "before": 0,
+                    "after": 3000
+                  },
+                  "truncated": false
+                },
+                "checks": [
+                  {
+                    "id": "runtime:timeline_valid",
+                    "text": "The final Composition body is valid.",
+                    "check_type": "timeline_valid",
+                    "status": "met",
+                    "evidence": "Timeline validation passed."
+                  },
+                  {
+                    "id": "runtime:required_resources_bound",
+                    "text": "All required Resources are bound in the final Composition.",
+                    "check_type": "required_resources_bound",
+                    "status": "met",
+                    "evidence": "All 1 required Resources are bound.",
+                    "details": {
+                      "missing_resource_ids": []
+                    }
+                  },
+                  {
+                    "id": "runtime:duration_within",
+                    "text": "The final duration matches the delivery target.",
+                    "check_type": "duration_within",
+                    "status": "met",
+                    "evidence": "Final duration is 3s; target is 3s ± 0s.",
+                    "details": {
+                      "actual_ms": 3000,
+                      "target_ms": 3000,
+                      "tolerance_ms": 0
+                    }
+                  },
+                  {
+                    "id": "runtime:aspect_equals",
+                    "text": "The final canvas matches the delivery aspect ratio.",
+                    "check_type": "aspect_equals",
+                    "status": "met",
+                    "evidence": "Canvas is 1920:1080; target is 16:9.",
+                    "details": {
+                      "relative_error": 0
+                    }
+                  }
+                ],
+                "media_gaps": [],
+                "summary": "在视频轨 v1 上新增单个静态图片剪辑 static_forest_3s，绑定资源 2ffed42e1f534f8caa9fef3ebe59c77f（晨雾森林），位置 [00:00.000–00:03.000]，源入点 0s、速度 1.0、无淡入淡出、无音频。画布为 1920x1080 / 30fps（16:9），时间线总时长 3.0s，恰好等于要求的 3 秒，无空隙、无重叠、无转场，图片从头到尾静止显示。未生成视频，也未执行导出（导出为独立界面操作）。",
+                "deviations": [],
+                "diagnostics": []
+              },
+              "effects": {
+                "graph_changed": true
+              }
+            }
+          }
+        },
+        "E_ACTION_LOG": {
+          "evidence_id": "E_ACTION_LOG",
+          "kind": "action_log_record_index",
+          "content": {
+            "record_refs": [
+              "E_ARCHIVE_34f8a28e4a4f535d85965ceaa485f482",
+              "E_ARCHIVE_66b2b2ed304b5bacbacb762b7aa07ed7",
+              "E_ARCHIVE_12445d627f5a552b86b52acc1ccd4c9d",
+              "E_ARCHIVE_67e050a633ee5f41af71167a13093cbe",
+              "E_ARCHIVE_6044dc8cb96559188fd4ba0c094ebf0d",
+              "E_ARCHIVE_27f61859f8655bf2b2614c64f4c58839",
+              "E_CALLS_dfa228781f40f370",
+              "E_TOOL_c314d3638a94821b",
+              "E_CALLS_47ddd0192537b351",
+              "E_TOOL_8c954bf49fe57850",
+              "E_CALLS_a2a53a0596b637d9",
+              "E_CALLS_73cbbf414babe6cf",
+              "E_TOOL_51e255743011c5af",
+              "E_CALLS_4356c0d0a47571bd",
+              "E_TOOL_89fcb329b04e2056"
+            ],
+            "archive_segment_record_refs": [
+              "E_ARCHIVE_34f8a28e4a4f535d85965ceaa485f482",
+              "E_ARCHIVE_66b2b2ed304b5bacbacb762b7aa07ed7",
+              "E_ARCHIVE_12445d627f5a552b86b52acc1ccd4c9d",
+              "E_ARCHIVE_67e050a633ee5f41af71167a13093cbe",
+              "E_ARCHIVE_6044dc8cb96559188fd4ba0c094ebf0d",
+              "E_ARCHIVE_27f61859f8655bf2b2614c64f4c58839"
+            ],
+            "instrumented_action_record_refs": [
+              "E_CALLS_dfa228781f40f370",
+              "E_TOOL_c314d3638a94821b",
+              "E_CALLS_47ddd0192537b351",
+              "E_TOOL_8c954bf49fe57850",
+              "E_CALLS_a2a53a0596b637d9",
+              "E_CALLS_73cbbf414babe6cf",
+              "E_TOOL_51e255743011c5af",
+              "E_CALLS_4356c0d0a47571bd",
+              "E_TOOL_89fcb329b04e2056"
+            ],
+            "public_receipt_record_refs": [],
+            "order_note": "Use per-record start_time/created_at or archive seq; refs preserve stable evidence file order. Bodies are stored once in referenced record.content.",
+            "coverage": "Complete recovery of all 6 recorded target-turn public archive segments (3 tool calls and their 3 matching result/delegate records): sealed manifest, exact sequence 0–5, no spilled/external payloads, all referenced records present. Exact-task instrumented child call/result records supplement this public archive. This does not assert completeness of unrecorded delegated internals or media bytes.",
+            "context_update_payloads_excluded": true,
+            "hidden_reasoning_excluded": true
+          }
+        },
+        "E_SCOPE_RECONCILIATION": {
+          "evidence_id": "E_SCOPE_RECONCILIATION",
+          "kind": "trusted_target_turn_recorded_scope_reconciliation",
+          "content": {
+            "project_id": "393bbbbaa2714ce88d7c6c518f4f1256",
+            "task_ids": [
+              "c9a3984fc958417bb7fddbe17b97100b"
+            ],
+            "source_env": "prod",
+            "scope": "exact target turn including explicit continuation tasks and delegated records with the same project/task binding",
+            "query_receipt": {
+              "status": "ready",
+              "truncated": false,
+              "all_query_rows": 799,
+              "rows_sha256": "d9d6e02209e5d5bb6e06680b930899e10add889ba73f72a3f74efe20bbbdaff8",
+              "sql_sha256": "88f701ddf3bd6aa94263b4bc69b1542f0d0f6bf88da38b385bd754eae1aef0f2"
+            },
+            "source_observation_count": 16,
+            "trace_ids": [
+              "6a97a1dbb7f62b0f9b6ae18a6a60abb5"
+            ],
+            "payload_bearing_observation_count": 9,
+            "recovered_payload_bearing_observation_count": 9,
+            "missing_payload_observation_count": 0,
+            "all_recorded_nonempty_tool_payloads_recovered": true,
+            "sealed_public_archive_matches": true,
+            "archive_expected": 6,
+            "archive_observed": 6,
+            "recorded_call_names": {
+              "project_query": 1,
+              "node_create": 1,
+              "composition_delegate": 1,
+              "insert_clip": 1,
+              "composition_finalize": 1
+            },
+            "recorded_call_count_in_recovered_inline_calls": 5,
+            "tool_observations": [
+              {
+                "observation_id": "c314d3638a94821b",
+                "trace_id": "6a97a1dbb7f62b0f9b6ae18a6a60abb5",
+                "name": "project_query",
+                "tool_call_id": "call_sKd4kMtHK3vE6fnvpe3f6tLY",
+                "content_bytes": 989,
+                "code_commit": "c5e856c595ccb694bb61d1c0ce33eaa68f8db655"
+              },
+              {
+                "observation_id": "8c954bf49fe57850",
+                "trace_id": "6a97a1dbb7f62b0f9b6ae18a6a60abb5",
+                "name": "node_create",
+                "tool_call_id": "call_wweMRHPU8N0mniZof6TtgNeP",
+                "content_bytes": 250,
+                "code_commit": "c5e856c595ccb694bb61d1c0ce33eaa68f8db655"
+              },
+              {
+                "observation_id": "51e255743011c5af",
+                "trace_id": "6a97a1dbb7f62b0f9b6ae18a6a60abb5",
+                "name": "insert_clip",
+                "tool_call_id": "call_00_vz2l394q33p8d1pslxow6d6x",
+                "content_bytes": 732,
+                "code_commit": "c5e856c595ccb694bb61d1c0ce33eaa68f8db655"
+              },
+              {
+                "observation_id": "89fcb329b04e2056",
+                "trace_id": "6a97a1dbb7f62b0f9b6ae18a6a60abb5",
+                "name": "composition_finalize",
+                "tool_call_id": "call_00_jpp4andoj7z2zdxvn7q5wbbx",
+                "content_bytes": 2393,
+                "code_commit": "c5e856c595ccb694bb61d1c0ce33eaa68f8db655"
+              }
+            ],
+            "payload_record_refs": [
+              "E_CALLS_dfa228781f40f370",
+              "E_TOOL_c314d3638a94821b",
+              "E_CALLS_47ddd0192537b351",
+              "E_TOOL_8c954bf49fe57850",
+              "E_CALLS_a2a53a0596b637d9",
+              "E_CALLS_73cbbf414babe6cf",
+              "E_TOOL_51e255743011c5af",
+              "E_CALLS_4356c0d0a47571bd",
+              "E_TOOL_89fcb329b04e2056"
+            ],
+            "closure_interpretation": "All nonempty recorded tool-call/result observations in the exact task scope are represented by recovered payloads; sealed public archive counts/sequence also match. This supports bounded conclusions about recorded task actions, including delegated actions recorded under those task IDs. It does not assert universal absence of unrecorded activity, external storage state or unseen media properties.",
+            "supersedes": "The generic E_ACTION_LOG partial-recovery label is not a claim of a known missing payload for this verified scope. Original historical coverage label is retained."
+          }
+        }
+      },
+      "evaluation": {
+        "judgment": {
+          "schema_version": "flova.absolute_judgment.v4",
+          "query_id": "FL-EVAL-20261104-203",
+          "criteria": [
+            {
+              "criterion_id": "C1",
+              "status": "P",
+              "reason": "最终合成状态显示唯一图片剪辑绑定上一轮森林图片资源2ffed42e1f534f8caa9fef3ebe59c77f。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/summary",
+                  "quote": "绑定资源 2ffed42e1f534f8caa9fef3ebe59c77f（晨雾森林）"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C2",
+              "status": "P",
+              "reason": "已完成并验证有效的合成时间线含单个静态图片剪辑，全程无运动、转场或音频。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/summary",
+                  "quote": "在视频轨 v1 上新增单个静态图片剪辑 static_forest_3s"
+                },
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/summary",
+                  "quote": "无空隙、无重叠、无转场，图片从头到尾静止显示。"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C3",
+              "status": "P",
+              "reason": "最终合成校验明确显示实际时长3000毫秒，目标也是3000毫秒。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/checks/2/evidence",
+                  "quote": "Final duration is 3s; target is 3s ± 0s."
+                },
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/checks/2/details",
+                  "quote": "{\"actual_ms\":3000,\"target_ms\":3000,\"tolerance_ms\":0}"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C4",
+              "status": "P",
+              "reason": "本轮完整记录的调用类型不含视频生成，最终合成记录也明确未生成视频。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_SCOPE_RECONCILIATION",
+                  "pointer": "/content/recorded_call_names",
+                  "quote": "{\"project_query\":1,\"node_create\":1,\"composition_delegate\":1,\"insert_clip\":1,\"composition_finalize\":1}"
+                },
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/summary",
+                  "quote": "未生成视频，也未执行导出"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            }
+          ],
+          "quality": [],
+          "limitations": []
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:22.718435+00:00",
+          "elapsed_seconds": 8.026411582999998,
+          "input_sha256": "ffd1c8d1a995ca004c8d4a9c2e6a5109f4141a57424469d9af1832189ecb5048",
+          "citation_reanchored": true,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "score": {
+        "lower": 100,
+        "upper": 100,
+        "coverage": 100,
+        "counts": {
+          "P": 4
+        },
+        "must_failed": [],
+        "status": "pass",
+        "applicable_budget": 100.0
+      },
+      "media": [],
+      "execution": [
+        {
+          "evidenceId": "E_ARCHIVE_34f8a28e4a4f535d85965ceaa485f482",
+          "recordKind": "archived_public_tool_call",
+          "createdAt": "2026-10-18T11:07:43.732038+00:00",
+          "originalCreatedAt": "2026-10-18 11:07:43.732038",
+          "archiveSeq": 0,
+          "contentPointer": "/content/calls",
+          "timestampSourceTimezone": "UTC",
+          "kind": "tool_call",
+          "tool_calls": [
+            {
+              "name": "project_query",
+              "call_id": "call_sKd4kMtHK3vE6fnvpe3f6tLY",
+              "argumentsRef": {
+                "evidenceId": "E_ARCHIVE_34f8a28e4a4f535d85965ceaa485f482",
+                "pointer": "/content/calls/0/arguments"
+              }
+            }
+          ],
+          "seq": 1
+        },
+        {
+          "evidenceId": "E_TOOL_c314d3638a94821b",
+          "recordKind": "instrumented_tool_result",
+          "createdAt": "2026-10-18T19:07:43.761000+08:00",
+          "originalCreatedAt": "2026-10-18 19:07:43.761000",
+          "archiveSeq": null,
+          "contentPointer": "/content/result",
+          "timestampSourceTimezone": "Asia/Shanghai",
+          "kind": "tool_result",
+          "tool_name": "project_query",
+          "call_id": "call_sKd4kMtHK3vE6fnvpe3f6tLY",
+          "seq": 2
+        },
+        {
+          "evidenceId": "E_ARCHIVE_66b2b2ed304b5bacbacb762b7aa07ed7",
+          "recordKind": "archived_public_tool_result",
+          "createdAt": "2026-10-18T11:07:43.816449+00:00",
+          "originalCreatedAt": "2026-10-18 11:07:43.816449",
+          "archiveSeq": 1,
+          "contentPointer": "/content/result",
+          "timestampSourceTimezone": "UTC",
+          "kind": "tool_result",
+          "tool_name": "project_query",
+          "call_id": "call_sKd4kMtHK3vE6fnvpe3f6tLY",
+          "seq": 3
+        },
+        {
+          "evidenceId": "E_ARCHIVE_12445d627f5a552b86b52acc1ccd4c9d",
+          "recordKind": "archived_public_tool_call",
+          "createdAt": "2026-10-18T11:07:51.093826+00:00",
+          "originalCreatedAt": "2026-10-18 11:07:51.093826",
+          "archiveSeq": 2,
+          "contentPointer": "/content/calls",
+          "timestampSourceTimezone": "UTC",
+          "kind": "tool_call",
+          "tool_calls": [
+            {
+              "name": "node_create",
+              "call_id": "call_wweMRHPU8N0mniZof6TtgNeP",
+              "argumentsRef": {
+                "evidenceId": "E_ARCHIVE_12445d627f5a552b86b52acc1ccd4c9d",
+                "pointer": "/content/calls/0/arguments"
+              }
+            }
+          ],
+          "seq": 4
+        },
+        {
+          "evidenceId": "E_ARCHIVE_67e050a633ee5f41af71167a13093cbe",
+          "recordKind": "archived_public_tool_result",
+          "createdAt": "2026-10-18T11:07:51.175785+00:00",
+          "originalCreatedAt": "2026-10-18 11:07:51.175785",
+          "archiveSeq": 3,
+          "contentPointer": "/content/result",
+          "timestampSourceTimezone": "UTC",
+          "kind": "tool_result",
+          "tool_name": "node_create",
+          "call_id": "call_wweMRHPU8N0mniZof6TtgNeP",
+          "seq": 5
+        },
+        {
+          "evidenceId": "E_ARCHIVE_6044dc8cb96559188fd4ba0c094ebf0d",
+          "recordKind": "archived_public_tool_call",
+          "createdAt": "2026-10-18T11:07:59.061285+00:00",
+          "originalCreatedAt": "2026-10-18 11:07:59.061285",
+          "archiveSeq": 4,
+          "contentPointer": "/content/calls",
+          "timestampSourceTimezone": "UTC",
+          "kind": "tool_call",
+          "tool_calls": [
+            {
+              "name": "composition_delegate",
+              "call_id": "call_dFCP79xspjExGixZn6onTyAX",
+              "argumentsRef": {
+                "evidenceId": "E_ARCHIVE_6044dc8cb96559188fd4ba0c094ebf0d",
+                "pointer": "/content/calls/0/arguments"
+              }
+            }
+          ],
+          "seq": 6
+        },
+        {
+          "evidenceId": "E_CALLS_73cbbf414babe6cf",
+          "recordKind": "instrumented_tool_calls",
+          "createdAt": "2026-10-18T19:07:59.254000+08:00",
+          "originalCreatedAt": "2026-10-18 19:07:59.254000",
+          "archiveSeq": null,
+          "contentPointer": "/content/calls",
+          "timestampSourceTimezone": "Asia/Shanghai",
+          "kind": "tool_call",
+          "tool_calls": [
+            {
+              "name": "insert_clip",
+              "call_id": "call_00_vz2l394q33p8d1pslxow6d6x",
+              "argumentsRef": {
+                "evidenceId": "E_CALLS_73cbbf414babe6cf",
+                "pointer": "/content/calls/0/arguments"
+              }
+            }
+          ],
+          "seq": 7
+        },
+        {
+          "evidenceId": "E_TOOL_51e255743011c5af",
+          "recordKind": "instrumented_tool_result",
+          "createdAt": "2026-10-18T19:08:02.321000+08:00",
+          "originalCreatedAt": "2026-10-18 19:08:02.321000",
+          "archiveSeq": null,
+          "contentPointer": "/content/result",
+          "timestampSourceTimezone": "Asia/Shanghai",
+          "kind": "tool_result",
+          "tool_name": "insert_clip",
+          "call_id": "call_00_vz2l394q33p8d1pslxow6d6x",
+          "seq": 8
+        },
+        {
+          "evidenceId": "E_CALLS_4356c0d0a47571bd",
+          "recordKind": "instrumented_tool_calls",
+          "createdAt": "2026-10-18T19:08:02.375000+08:00",
+          "originalCreatedAt": "2026-10-18 19:08:02.375000",
+          "archiveSeq": null,
+          "contentPointer": "/content/calls",
+          "timestampSourceTimezone": "Asia/Shanghai",
+          "kind": "tool_call",
+          "tool_calls": [
+            {
+              "name": "composition_finalize",
+              "call_id": "call_00_jpp4andoj7z2zdxvn7q5wbbx",
+              "argumentsRef": {
+                "evidenceId": "E_CALLS_4356c0d0a47571bd",
+                "pointer": "/content/calls/0/arguments"
+              }
+            }
+          ],
+          "seq": 9
+        },
+        {
+          "evidenceId": "E_TOOL_89fcb329b04e2056",
+          "recordKind": "instrumented_tool_result",
+          "createdAt": "2026-10-18T19:08:04.913000+08:00",
+          "originalCreatedAt": "2026-10-18 19:08:04.913000",
+          "archiveSeq": null,
+          "contentPointer": "/content/result",
+          "timestampSourceTimezone": "Asia/Shanghai",
+          "kind": "tool_result",
+          "tool_name": "composition_finalize",
+          "call_id": "call_00_jpp4andoj7z2zdxvn7q5wbbx",
+          "seq": 10
+        },
+        {
+          "evidenceId": "E_ARCHIVE_27f61859f8655bf2b2614c64f4c58839",
+          "recordKind": "archived_public_delegate_report",
+          "createdAt": "2026-10-18T11:08:04.951835+00:00",
+          "originalCreatedAt": "2026-10-18 11:08:04.951835",
+          "archiveSeq": 5,
+          "contentPointer": "/content/result",
+          "timestampSourceTimezone": "UTC",
+          "kind": "tool_result",
+          "tool_name": "composition_delegate",
+          "call_id": "call_dFCP79xspjExGixZn6onTyAX",
+          "seq": 11
+        }
+      ],
+      "source_link": "https://flova.ai/en/project/?id=393bbbbaa2714ce88d7c6c518f4f1256&message_id=e653cb7804f841aaa9f26b6581bb3526",
+      "execution_flags": []
+    },
+    "terra": {
+      "text": "已制作「晨雾森林 · 3秒静态时间线」：整段使用刚才的图片，无运动、字幕或声音。\n\n未生成或导出视频，时间线可继续编辑。",
+      "evidence": {
+        "E_FINAL_RESPONSE": {
+          "evidence_id": "E_FINAL_RESPONSE",
+          "kind": "final_response",
+          "content": {
+            "text": "已制作「晨雾森林 · 3秒静态时间线」：整段使用刚才的图片，无运动、字幕或声音。\n\n未生成或导出视频，时间线可继续编辑。",
+            "complete_public_response": true
+          }
+        },
+        "E_BOUNDARY": {
+          "evidence_id": "E_BOUNDARY",
+          "kind": "trusted_execution_boundary",
+          "content": {
+            "execution_status": "succeeded",
+            "finish_reason": "single_turn_complete",
+            "turn_count": 1,
+            "native_boundaries": [
+              {
+                "terminal": true,
+                "progress_hash": "3f06fc5329693aa0628a76e319192739bf869b9710ed655f7781400b8b405f6a",
+                "frames_complete": true,
+                "resources_settled": true
+              }
+            ],
+            "frame_count": 36,
+            "frame_index_first": 1,
+            "frame_index_last": 36,
+            "frame_gaps": [],
+            "frame_hashes": [
+              "fbc0a712d189cb2b4dccdf46d86f231e0ca37c61e125e7ac2a33abf97f7946ce",
+              "246fe7c56cb7f330e55f5d9c5203931de50689e5988be06f159674cc22a1c4d9"
+            ],
+            "resource_receipt": [],
+            "limits": "Complete captured public frames and settled native resource receipt, not a guarantee of full internal tool arguments or opaque delegated actions."
+          }
+        },
+        "E_ACTIONS": {
+          "evidence_id": "E_ACTIONS",
+          "kind": "recorded_current_turn_events",
+          "content": {
+            "events": [
+              {
+                "id": "chat-3177eb028c6d403191422c094f19733c_1",
+                "type": "tool_started",
+                "stream_chat_id": "chat-3177eb028c6d403191422c094f19733c",
+                "data": {
+                  "activity_id": "call_dtENuMiJ3Gm3z5mYKJhV8ZtR",
+                  "tool": "project_query",
+                  "summary": "Read the current project graph",
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "projectContentView",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "asset",
+                            "entity_id": "晨雾森林",
+                            "display_name": "晨雾森林",
+                            "ref": {
+                              "kind": "asset_ref",
+                              "asset_node_id": "晨雾森林"
+                            }
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  }
+                },
+                "timestamp": 1793877269.5294178
+              },
+              {
+                "id": "chat-3177eb028c6d403191422c094f19733c_2",
+                "type": "tool_finished",
+                "stream_chat_id": "chat-3177eb028c6d403191422c094f19733c",
+                "data": {
+                  "activity_id": "call_dtENuMiJ3Gm3z5mYKJhV8ZtR",
+                  "tool": "project_query",
+                  "summary": "Read the current project graph",
+                  "operation": null,
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "projectContentView",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "asset",
+                            "entity_id": "晨雾森林",
+                            "display_name": "晨雾森林",
+                            "ref": {
+                              "kind": "asset_ref",
+                              "asset_node_id": "晨雾森林"
+                            }
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  },
+                  "status": "done",
+                  "result_summary": "Project graph updated to revision 19",
+                  "error": null,
+                  "error_info": null,
+                  "async_ref": null,
+                  "async_batch": null,
+                  "artifacts": []
+                },
+                "timestamp": 1793877269.7311368
+              },
+              {
+                "id": "chat-3177eb028c6d403191422c094f19733c_3",
+                "type": "tool_started",
+                "stream_chat_id": "chat-3177eb028c6d403191422c094f19733c",
+                "data": {
+                  "activity_id": "call_Xx8hWM8C0BHwtTlgoMJT6PPr",
+                  "tool": "node_create",
+                  "summary": "Create 1 Nodes",
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "compositionCreation",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "node",
+                            "entity_id": null,
+                            "display_name": "晨雾森林 · 3秒静态时间线",
+                            "ref": null
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  },
+                  "artifacts": [
+                    {
+                      "artifact_id": "call_Xx8hWM8C0BHwtTlgoMJT6PPr:artifact:0",
+                      "artifact_kind": "timeline",
+                      "operation": "create",
+                      "state": "pending",
+                      "display_name": "晨雾森林 · 3秒静态时间线",
+                      "ref": null,
+                      "error": null
+                    }
+                  ]
+                },
+                "timestamp": 1793877277.184868
+              },
+              {
+                "id": "chat-3177eb028c6d403191422c094f19733c_4",
+                "type": "tool_finished",
+                "stream_chat_id": "chat-3177eb028c6d403191422c094f19733c",
+                "data": {
+                  "activity_id": "call_Xx8hWM8C0BHwtTlgoMJT6PPr",
+                  "tool": "node_create",
+                  "summary": "Create 1 Nodes",
+                  "operation": null,
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "compositionCreation",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "node",
+                            "entity_id": null,
+                            "display_name": "晨雾森林 · 3秒静态时间线",
+                            "ref": null
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  },
+                  "status": "done",
+                  "result_summary": "Tool completed",
+                  "error": null,
+                  "error_info": null,
+                  "async_ref": null,
+                  "async_batch": null,
+                  "artifacts": [
+                    {
+                      "artifact_id": "call_Xx8hWM8C0BHwtTlgoMJT6PPr:artifact:0",
+                      "artifact_kind": "timeline",
+                      "operation": "create",
+                      "state": "ready",
+                      "display_name": "晨雾森林 · 3秒静态时间线",
+                      "ref": {
+                        "kind": "node_ref",
+                        "node_id": "晨雾森林_3秒静态时间线-2"
+                      },
+                      "error": null
+                    }
+                  ]
+                },
+                "timestamp": 1793877277.2415164
+              },
+              {
+                "id": "chat-3177eb028c6d403191422c094f19733c_5",
+                "type": "tool_started",
+                "stream_chat_id": "chat-3177eb028c6d403191422c094f19733c",
+                "data": {
+                  "activity_id": "call_p1WKWj2hhAAqVyux6ehtS7Ol",
+                  "tool": "composition_delegate",
+                  "summary": "Delegate composition work for [晨雾森林_3秒静态时间线-2]",
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "compositionProcessing",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "node",
+                            "entity_id": "晨雾森林_3秒静态时间线-2",
+                            "display_name": "晨雾森林 · 3秒静态时间线",
+                            "ref": {
+                              "kind": "node_ref",
+                              "node_id": "晨雾森林_3秒静态时间线-2"
+                            }
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  },
+                  "artifacts": [
+                    {
+                      "artifact_id": "call_p1WKWj2hhAAqVyux6ehtS7Ol:artifact:0",
+                      "artifact_kind": "timeline",
+                      "operation": "edit",
+                      "state": "pending",
+                      "display_name": null,
+                      "ref": {
+                        "kind": "node_ref",
+                        "node_id": "晨雾森林_3秒静态时间线-2"
+                      },
+                      "error": null
+                    }
+                  ]
+                },
+                "timestamp": 1793877285.185502
+              },
+              {
+                "id": "chat-3177eb028c6d403191422c094f19733c_6",
+                "type": "tool_finished",
+                "stream_chat_id": "chat-3177eb028c6d403191422c094f19733c",
+                "data": {
+                  "activity_id": "call_p1WKWj2hhAAqVyux6ehtS7Ol",
+                  "tool": "composition_delegate",
+                  "summary": "Delegate composition work for [晨雾森林_3秒静态时间线-2]",
+                  "operation": null,
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "compositionProcessing",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "node",
+                            "entity_id": "晨雾森林_3秒静态时间线-2",
+                            "display_name": "晨雾森林 · 3秒静态时间线",
+                            "ref": {
+                              "kind": "node_ref",
+                              "node_id": "晨雾森林_3秒静态时间线-2"
+                            }
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  },
+                  "status": "done",
+                  "result_summary": "已在时间线 v1 上放置唯一画面「晨雾森林」静帧（res:2ffed42e1f534f8caa9fef3ebe59c77f），片段 c_001 从 00:00.000 连续持续到 00:03.000，总时长正好 3 秒，画布沿用 1920x1080 / 30fps（16:9）。全片只有这一张图片，没有运动变化、没有转场、没有字幕，也没有任何音频轨道或音频片段（原空音频轨 a1 为空，已随装配一并清理，未丢失内容），因此是彻底的静态画面。按要求未生成、也未导出视频——时间线为可继续编辑的 Composition 数据。",
+                  "error": null,
+                  "error_info": null,
+                  "async_ref": null,
+                  "async_batch": null,
+                  "artifacts": [
+                    {
+                      "artifact_id": "call_p1WKWj2hhAAqVyux6ehtS7Ol:artifact:0",
+                      "artifact_kind": "timeline",
+                      "operation": "edit",
+                      "state": "ready",
+                      "display_name": null,
+                      "ref": {
+                        "kind": "node_ref",
+                        "node_id": "晨雾森林_3秒静态时间线-2"
+                      },
+                      "error": null
+                    }
+                  ]
+                },
+                "timestamp": 1793877291.3149087
+              },
+              {
+                "id": "chat-3177eb028c6d403191422c094f19733c_36",
+                "type": "complete",
+                "stream_chat_id": "chat-3177eb028c6d403191422c094f19733c",
+                "data": {
+                  "status": "workflow_completed",
+                  "stream_chat_id": "chat-3177eb028c6d403191422c094f19733c",
+                  "project_id": "lab_4eaf06c18206563390d8936c797b2c9a",
+                  "llm_credits_info": {
+                    "base_credits": 0.0,
+                    "extra_credits": 0.0
+                  }
+                },
+                "timestamp": 1793877297.3765287
+              }
+            ],
+            "stream_text_excluded_because": "Final text supplied in full separately; stream chunks duplicate it."
+          }
+        },
+        "E_TRACE_COVERAGE": {
+          "evidence_id": "E_TRACE_COVERAGE",
+          "kind": "trace_capture_receipt",
+          "content": {
+            "execution_id": "dc315014-b0d5-41ed-81ad-d802de49d587",
+            "tools": 0,
+            "nodes": 2,
+            "errors": [
+              {
+                "turn_id": "20b61657-d17d-4651-85db-2818c959aa25",
+                "error_type": "CliError",
+                "code": "http_502"
+              }
+            ],
+            "status": "partial"
+          }
+        },
+        "E_VIEW_composition_e092a85cd147c1233682": {
+          "evidence_id": "E_VIEW_composition_e092a85cd147c1233682",
+          "kind": "project_scoped_native_read",
+          "content": {
+            "code": 0,
+            "data": {
+              "body": {
+                "schema_version": 2,
+                "settings": {
+                  "background": "#000000",
+                  "canvas_size_mode": "fixed",
+                  "fps": 30,
+                  "height": 1080,
+                  "width": 1920
+                },
+                "tracks": [
+                  {
+                    "clips": [
+                      {
+                        "asset_node_id_at_bind": "晨雾森林",
+                        "audio_fade_in": 0,
+                        "audio_fade_out": 0,
+                        "clip_id": "c_001",
+                        "duration": 3000,
+                        "muted": false,
+                        "note": "静态画面：晨雾森林静帧完整持续3秒，无运动、无转场、无字幕、无声音",
+                        "resource_id": "2ffed42e1f534f8caa9fef3ebe59c77f",
+                        "source_in": 0,
+                        "speed": 1.0,
+                        "start": 0,
+                        "sync_group": null,
+                        "transform": null,
+                        "transition_after": null,
+                        "video_fade_in": 0,
+                        "video_fade_out": 0,
+                        "volume": 1.0
+                      }
+                    ],
+                    "kind": "video",
+                    "role": null,
+                    "track_id": "v1"
+                  }
+                ]
+              },
+              "diagnostics": [],
+              "node_id": "晨雾森林_3秒静态时间线-2",
+              "node_revision": 1
+            },
+            "message": "success",
+            "subcode": 0
+          }
+        },
+        "E_VIEW_graph": {
+          "evidence_id": "E_VIEW_graph",
+          "kind": "project_scoped_native_read",
+          "content": {
+            "code": 0,
+            "data": {
+              "active_tasks": [],
+              "graph_revision": 21,
+              "layout": {},
+              "layout_updated_at": null,
+              "legacy_skill_migration_required": false,
+              "nodes": [
+                {
+                  "adopted_skill": {
+                    "role": "folder",
+                    "skill_key": "bce8041b76d5f933bea87fca11152bce"
+                  },
+                  "created_at": "2026-10-18T11:05:43.673860+00:00",
+                  "created_by": "user",
+                  "derived_from": null,
+                  "description": null,
+                  "name": "Lira 图像提示词优化技能.skill",
+                  "node_id": "Lira图像提示词优化技能_skill",
+                  "note": null,
+                  "revision": 1,
+                  "root_order": 1024.0,
+                  "root_pinned": false,
+                  "skill_binding": {
+                    "role": "folder",
+                    "skill_key": "bce8041b76d5f933bea87fca11152bce"
+                  },
+                  "type": "group",
+                  "updated_at": "2026-10-18T11:05:43.791122+00:00"
+                },
+                {
+                  "adopted_skill": {
+                    "role": "main",
+                    "skill_key": "bce8041b76d5f933bea87fca11152bce"
+                  },
+                  "artifact_capabilities": {
+                    "download": "markdown",
+                    "preview": "markdown"
+                  },
+                  "content_revision": 1,
+                  "created_at": "2026-10-18T11:05:43.707639+00:00",
+                  "created_by": "user",
+                  "derived_from": null,
+                  "description": null,
+                  "name": "Lira 图像提示词优化技能",
+                  "node_id": "Lira图像提示词优化技能",
+                  "note": null,
+                  "read_only": false,
+                  "revision": 0,
+                  "root_order": 2048.0,
+                  "root_pinned": false,
+                  "skill_binding": {
+                    "role": "main",
+                    "skill_key": "bce8041b76d5f933bea87fca11152bce"
+                  },
+                  "type": "document",
+                  "updated_at": "2026-10-18T11:05:43.707642+00:00",
+                  "word_count": 288
+                },
+                {
+                  "asset_type": "image",
+                  "created_at": "2026-10-18T11:05:51.829555+00:00",
+                  "created_by": "agent",
+                  "derived_from": null,
+                  "description": "一张森林主题图片：清晨薄雾、层次分明的树木与林间柔光，突出自然材质和空间纵深。输出1K，仅生成一张。",
+                  "drafts": [
+                    {
+                      "active_task_count": 0,
+                      "archived_at": null,
+                      "aspect_ratio": "16:9",
+                      "asset_node_id": "晨雾森林",
+                      "created_at": "2026-10-18T11:06:18.497788+00:00",
+                      "draft_id": "draft_d75010a7a59844b6b327048a",
+                      "exists": true,
+                      "favorite": false,
+                      "favorited_at": null,
+                      "generated": true,
+                      "last_generated_revision": 1,
+                      "review_status": "confirmed",
+                      "revision": 1,
+                      "title": "晨雾森林",
+                      "updated_at": "2026-10-18T11:06:41.198856+00:00",
+                      "updated_by": "agent"
+                    }
+                  ],
+                  "name": "晨雾森林",
+                  "node_id": "晨雾森林",
+                  "note": null,
+                  "resource_count": 1,
+                  "revision": 0,
+                  "root_order": 3072.0,
+                  "root_pinned": false,
+                  "runtime": {
+                    "active_task_count": 0,
+                    "has_ready": true,
+                    "latest_failure": null
+                  },
+                  "type": "asset",
+                  "updated_at": "2026-10-18T11:05:51.829560+00:00"
+                },
+                {
+                  "clip_count": 1,
+                  "created_at": "2026-11-05T11:14:37.209331+00:00",
+                  "created_by": "agent",
+                  "derived_from": null,
+                  "description": "以「晨雾森林」[晨雾森林] 图片制作的3秒静态时间线，不生成视频。",
+                  "name": "晨雾森林 · 3秒静态时间线",
+                  "node_id": "晨雾森林_3秒静态时间线-2",
+                  "note": null,
+                  "revision": 1,
+                  "root_order": 5120.0,
+                  "root_pinned": false,
+                  "total_duration": 3000,
+                  "type": "composition",
+                  "updated_at": "2026-11-05T11:14:48.029074+00:00"
+                }
+              ],
+              "project": {
+                "created_at": "2026-11-05T11:13:28.190071+00:00",
+                "description": null,
+                "history_epoch": 0,
+                "history_format": "snapshot_v1",
+                "migration_source_project_id": null,
+                "permission_context": {
+                  "custom_approval_rules": null,
+                  "display_mode": "direct",
+                  "effective_mode": "full_access",
+                  "has_custom_approval_rules": false,
+                  "project_mode": "full_access",
+                  "required_approvals": [],
+                  "source": "project"
+                },
+                "permission_mode": "full_access",
+                "project_id": "lab_4eaf06c18206563390d8936c797b2c9a",
+                "read_only": true,
+                "revision": 0,
+                "state": "active",
+                "title": "Flova Lab 5d1a696b824e53d88fead060b931f6ed",
+                "updated_at": "2026-11-05T11:14:37.228459+00:00"
+              },
+              "project_id": "lab_4eaf06c18206563390d8936c797b2c9a",
+              "resource_manifest": [
+                {
+                  "asset_node_id": "晨雾森林",
+                  "resources": [
+                    {
+                      "asset_node_id": "晨雾森林",
+                      "attached_at": "2026-10-18T11:06:41.173775+00:00",
+                      "created_at": "2026-10-18T11:06:41.173775+00:00",
+                      "credits_info": {
+                        "cur_user_level": "normal",
+                        "detail": {
+                          "promo": null,
+                          "quantity": 1,
+                          "unit": "image",
+                          "unit_price": 5.0,
+                          "unit_price_after_promo": 5.0
+                        },
+                        "init_revenue": 5.0,
+                        "media_type": "image",
+                        "model_name": "image_seedream_5_0_pro",
+                        "model_type": 9,
+                        "resolution": "1K",
+                        "revenue": 5.0,
+                        "tool_version": null
+                      },
+                      "deleted_at": null,
+                      "duration": null,
+                      "favorite": false,
+                      "favorited_at": null,
+                      "from_type": "generated",
+                      "generation_tool": "TextToImage",
+                      "hidden_at": null,
+                      "is_user_uploaded": false,
+                      "media_height": 720,
+                      "media_type": "image",
+                      "media_width": 1280,
+                      "resource_id": "2ffed42e1f534f8caa9fef3ebe59c77f",
+                      "standard_url": {
+                        "large": "[signed URL omitted]",
+                        "medium": "[signed URL omitted]",
+                        "small": "[signed URL omitted]"
+                      },
+                      "thumbnail_url": "[signed URL omitted]",
+                      "updated_at": "2026-10-18T11:06:41.988591+00:00"
+                    }
+                  ]
+                }
+              ],
+              "scope": "full",
+              "task_slots": [],
+              "viewport": null
+            },
+            "message": "success",
+            "subcode": 0
+          }
+        },
+        "E_VIEW_resource_2ffed42e1f534f8caa9fef3ebe59c77f": {
+          "evidence_id": "E_VIEW_resource_2ffed42e1f534f8caa9fef3ebe59c77f",
+          "kind": "project_scoped_native_read",
+          "content": {
+            "code": 0,
+            "data": {
+              "as_of_seq": 21,
+              "asset_node_id": "晨雾森林",
+              "recipe_references": [],
+              "resource": {
+                "asset_node_id": "晨雾森林",
+                "attached_at": "2026-10-18T11:06:41.173775+00:00",
+                "copied_from_resource_id": null,
+                "created_at": "2026-10-18T11:06:41.173775+00:00",
+                "credits_info": {
+                  "cur_user_level": "normal",
+                  "detail": {
+                    "promo": null,
+                    "quantity": 1,
+                    "unit": "image",
+                    "unit_price": 5.0,
+                    "unit_price_after_promo": 5.0
+                  },
+                  "init_revenue": 5.0,
+                  "media_type": "image",
+                  "model_name": "image_seedream_5_0_pro",
+                  "model_type": 9,
+                  "resolution": "1K",
+                  "revenue": 5.0,
+                  "tool_version": null
+                },
+                "deleted_at": null,
+                "duration": null,
+                "erase_subtitle_eligible": false,
+                "erase_subtitle_unavailable_reason": "unsupported_model",
+                "extend_video_eligible": false,
+                "favorite": false,
+                "favorited_at": null,
+                "from_type": "generated",
+                "generation": {
+                  "annotation_inputs": null,
+                  "draft_id": "draft_d75010a7a59844b6b327048a",
+                  "draft_revision": 1,
+                  "extend_video_resource_id": null,
+                  "inputs": [],
+                  "model": "image_seedream_5_0_pro",
+                  "negative": null,
+                  "params": {
+                    "aspect_ratio": "16:9",
+                    "resolution": "1K"
+                  },
+                  "prompt_text": "一张写实自然摄影质感的森林影院级静帧。清晨薄雾笼罩高大的树林，近处粗壮树干与潮润苔藓构成前景，中景树木错落排列，远处树干逐渐融入浅灰雾气，形成清晰的空间纵深。摄影机采用平视广角远景，两侧树干自然框景，林间空隙引导视线深入画面。地面铺着湿润落叶与低矮蕨类，树皮呈粗糙开裂的深褐色表面，苔藓柔软细密，叶片带有细小露珠。柔和晨光从画面左上方穿过树冠，侧向照亮树干边缘与蕨叶，在薄雾中形成淡淡光束；林下阴影柔和，亮度随林木遮挡逐层衰减。以低饱和苔绿、深褐与灰白雾色为主，少量淡金晨光点亮叶缘，保留自然材质细节与细腻胶片颗粒，画面安静、通透。",
+                  "task_id": "2ffed42e1f534f8caa9fef3ebe59c77f",
+                  "tool": "TextToImage",
+                  "video_edit_input": null
+                },
+                "generation_replayable": true,
+                "generation_tool": "TextToImage",
+                "hidden_at": null,
+                "is_user_uploaded": false,
+                "media_info": {
+                  "actual_size": "1280x720",
+                  "aspect_ratio": "16:9",
+                  "bitrate_bps": null,
+                  "content_type": null,
+                  "duration": null,
+                  "file_size": 324840,
+                  "format": "jpeg",
+                  "fps": null,
+                  "has_audio": null,
+                  "height": 720,
+                  "image_size": null,
+                  "lyric_analysis": null,
+                  "resolution": null,
+                  "title": null,
+                  "width": 1280,
+                  "words_analysis": null
+                },
+                "media_type": "image",
+                "processing": null,
+                "resource_id": "2ffed42e1f534f8caa9fef3ebe59c77f",
+                "standard_url": {
+                  "compressed": "[signed URL omitted]",
+                  "large": "[signed URL omitted]",
+                  "medium": "[signed URL omitted]",
+                  "small": "[signed URL omitted]"
+                },
+                "subtitle_erased": false,
+                "thumbnail_url": "[signed URL omitted]",
+                "transcoder_url": null,
+                "updated_at": "2026-10-18T11:06:41.988591+00:00",
+                "upload_info": null,
+                "url": "[signed URL omitted]",
+                "watermark_status": "ready",
+                "watermark_url": "[signed URL omitted]"
+              }
+            },
+            "message": "success",
+            "subcode": 0
+          }
+        }
+      },
+      "evaluation": {
+        "judgment": {
+          "schema_version": "flova.absolute_judgment.v4",
+          "query_id": "FL-EVAL-20261104-203",
+          "criteria": [
+            {
+              "criterion_id": "C1",
+              "status": "P",
+              "reason": "时间线片段绑定资源ID 2ffed42e1f534f8caa9fef3ebe59c77f；该资源归属“晨雾森林”资产。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_VIEW_composition_e092a85cd147c1233682",
+                  "pointer": "/content/data/body/tracks/0/clips/0/resource_id",
+                  "quote": "2ffed42e1f534f8caa9fef3ebe59c77f"
+                },
+                {
+                  "evidence_id": "E_VIEW_resource_2ffed42e1f534f8caa9fef3ebe59c77f",
+                  "pointer": "/content/data/asset_node_id",
+                  "quote": "晨雾森林"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C2",
+              "status": "P",
+              "reason": "已保存的时间线仅含一个图片片段，且无变换、转场。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_VIEW_composition_e092a85cd147c1233682",
+                  "pointer": "/content/data/body/tracks/0/clips/0/note",
+                  "quote": "静态画面：晨雾森林静帧完整持续3秒，无运动、无转场、无字幕、无声音"
+                },
+                {
+                  "evidence_id": "E_VIEW_composition_e092a85cd147c1233682",
+                  "pointer": "/content/data/body/tracks/0/clips/0/transform",
+                  "quote": "null"
+                },
+                {
+                  "evidence_id": "E_VIEW_composition_e092a85cd147c1233682",
+                  "pointer": "/content/data/body/tracks/0/clips/0/transition_after",
+                  "quote": "null"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C3",
+              "status": "P",
+              "reason": "片段从0开始、时长3000毫秒，工程图也记录总时长3000毫秒。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_VIEW_composition_e092a85cd147c1233682",
+                  "pointer": "/content/data/body/tracks/0/clips/0/duration",
+                  "quote": "3000"
+                },
+                {
+                  "evidence_id": "E_VIEW_composition_e092a85cd147c1233682",
+                  "pointer": "/content/data/body/tracks/0/clips/0/start",
+                  "quote": "0"
+                },
+                {
+                  "evidence_id": "E_VIEW_graph",
+                  "pointer": "/content/data/nodes/3/total_duration",
+                  "quote": "3000"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C4",
+              "status": "P",
+              "reason": "本轮完整捕获的公开执行帧中仅见工程查询、时间线创建和时间线编辑；已完成的编辑记录明确说明未生成或导出视频。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_BOUNDARY",
+                  "pointer": "/content/native_boundaries/0/frames_complete",
+                  "quote": "true"
+                },
+                {
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/5/data/result_summary",
+                  "quote": "按要求未生成、也未导出视频——时间线为可继续编辑的 Composition 数据。"
+                },
+                {
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/5/data/tool",
+                  "quote": "composition_delegate"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            }
+          ],
+          "quality": [],
+          "limitations": []
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:24.504107+00:00",
+          "elapsed_seconds": 8.631267124999994,
+          "input_sha256": "3956883b85cca409658b91f1f557a173f5119bffe63a2d022c0955e467efc191",
+          "citation_reanchored": null,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "score": {
+        "lower": 100,
+        "upper": 100,
+        "coverage": 100,
+        "counts": {
+          "P": 4
+        },
+        "must_failed": [],
+        "status": "pass",
+        "applicable_budget": 100.0
+      },
+      "media": [],
+      "execution": [
+        {
+          "id": "chat-3177eb028c6d403191422c094f19733c_1",
+          "type": "tool_started",
+          "stream_chat_id": "chat-3177eb028c6d403191422c094f19733c",
+          "data": {
+            "activity_id": "call_dtENuMiJ3Gm3z5mYKJhV8ZtR",
+            "tool": "project_query",
+            "summary": "Read the current project graph",
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "projectContentView",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "asset",
+                      "entity_id": "晨雾森林",
+                      "display_name": "晨雾森林",
+                      "ref": {
+                        "kind": "asset_ref",
+                        "asset_node_id": "晨雾森林"
+                      }
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            }
+          },
+          "timestamp": 1793877269.5294178
+        },
+        {
+          "id": "chat-3177eb028c6d403191422c094f19733c_2",
+          "type": "tool_finished",
+          "stream_chat_id": "chat-3177eb028c6d403191422c094f19733c",
+          "data": {
+            "activity_id": "call_dtENuMiJ3Gm3z5mYKJhV8ZtR",
+            "tool": "project_query",
+            "summary": "Read the current project graph",
+            "operation": null,
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "projectContentView",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "asset",
+                      "entity_id": "晨雾森林",
+                      "display_name": "晨雾森林",
+                      "ref": {
+                        "kind": "asset_ref",
+                        "asset_node_id": "晨雾森林"
+                      }
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            },
+            "status": "done",
+            "result_summary": "Project graph updated to revision 19",
+            "error": null,
+            "error_info": null,
+            "async_ref": null,
+            "async_batch": null,
+            "artifacts": []
+          },
+          "timestamp": 1793877269.7311368
+        },
+        {
+          "id": "chat-3177eb028c6d403191422c094f19733c_3",
+          "type": "tool_started",
+          "stream_chat_id": "chat-3177eb028c6d403191422c094f19733c",
+          "data": {
+            "activity_id": "call_Xx8hWM8C0BHwtTlgoMJT6PPr",
+            "tool": "node_create",
+            "summary": "Create 1 Nodes",
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "compositionCreation",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "node",
+                      "entity_id": null,
+                      "display_name": "晨雾森林 · 3秒静态时间线",
+                      "ref": null
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            },
+            "artifacts": [
+              {
+                "artifact_id": "call_Xx8hWM8C0BHwtTlgoMJT6PPr:artifact:0",
+                "artifact_kind": "timeline",
+                "operation": "create",
+                "state": "pending",
+                "display_name": "晨雾森林 · 3秒静态时间线",
+                "ref": null,
+                "error": null
+              }
+            ]
+          },
+          "timestamp": 1793877277.184868
+        },
+        {
+          "id": "chat-3177eb028c6d403191422c094f19733c_4",
+          "type": "tool_finished",
+          "stream_chat_id": "chat-3177eb028c6d403191422c094f19733c",
+          "data": {
+            "activity_id": "call_Xx8hWM8C0BHwtTlgoMJT6PPr",
+            "tool": "node_create",
+            "summary": "Create 1 Nodes",
+            "operation": null,
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "compositionCreation",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "node",
+                      "entity_id": null,
+                      "display_name": "晨雾森林 · 3秒静态时间线",
+                      "ref": null
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            },
+            "status": "done",
+            "result_summary": "Tool completed",
+            "error": null,
+            "error_info": null,
+            "async_ref": null,
+            "async_batch": null,
+            "artifacts": [
+              {
+                "artifact_id": "call_Xx8hWM8C0BHwtTlgoMJT6PPr:artifact:0",
+                "artifact_kind": "timeline",
+                "operation": "create",
+                "state": "ready",
+                "display_name": "晨雾森林 · 3秒静态时间线",
+                "ref": {
+                  "kind": "node_ref",
+                  "node_id": "晨雾森林_3秒静态时间线-2"
+                },
+                "error": null
+              }
+            ]
+          },
+          "timestamp": 1793877277.2415164
+        },
+        {
+          "id": "chat-3177eb028c6d403191422c094f19733c_5",
+          "type": "tool_started",
+          "stream_chat_id": "chat-3177eb028c6d403191422c094f19733c",
+          "data": {
+            "activity_id": "call_p1WKWj2hhAAqVyux6ehtS7Ol",
+            "tool": "composition_delegate",
+            "summary": "Delegate composition work for [晨雾森林_3秒静态时间线-2]",
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "compositionProcessing",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "node",
+                      "entity_id": "晨雾森林_3秒静态时间线-2",
+                      "display_name": "晨雾森林 · 3秒静态时间线",
+                      "ref": {
+                        "kind": "node_ref",
+                        "node_id": "晨雾森林_3秒静态时间线-2"
+                      }
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            },
+            "artifacts": [
+              {
+                "artifact_id": "call_p1WKWj2hhAAqVyux6ehtS7Ol:artifact:0",
+                "artifact_kind": "timeline",
+                "operation": "edit",
+                "state": "pending",
+                "display_name": null,
+                "ref": {
+                  "kind": "node_ref",
+                  "node_id": "晨雾森林_3秒静态时间线-2"
+                },
+                "error": null
+              }
+            ]
+          },
+          "timestamp": 1793877285.185502
+        },
+        {
+          "id": "chat-3177eb028c6d403191422c094f19733c_6",
+          "type": "tool_finished",
+          "stream_chat_id": "chat-3177eb028c6d403191422c094f19733c",
+          "data": {
+            "activity_id": "call_p1WKWj2hhAAqVyux6ehtS7Ol",
+            "tool": "composition_delegate",
+            "summary": "Delegate composition work for [晨雾森林_3秒静态时间线-2]",
+            "operation": null,
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "compositionProcessing",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "node",
+                      "entity_id": "晨雾森林_3秒静态时间线-2",
+                      "display_name": "晨雾森林 · 3秒静态时间线",
+                      "ref": {
+                        "kind": "node_ref",
+                        "node_id": "晨雾森林_3秒静态时间线-2"
+                      }
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            },
+            "status": "done",
+            "result_summary": "已在时间线 v1 上放置唯一画面「晨雾森林」静帧（res:2ffed42e1f534f8caa9fef3ebe59c77f），片段 c_001 从 00:00.000 连续持续到 00:03.000，总时长正好 3 秒，画布沿用 1920x1080 / 30fps（16:9）。全片只有这一张图片，没有运动变化、没有转场、没有字幕，也没有任何音频轨道或音频片段（原空音频轨 a1 为空，已随装配一并清理，未丢失内容），因此是彻底的静态画面。按要求未生成、也未导出视频——时间线为可继续编辑的 Composition 数据。",
+            "error": null,
+            "error_info": null,
+            "async_ref": null,
+            "async_batch": null,
+            "artifacts": [
+              {
+                "artifact_id": "call_p1WKWj2hhAAqVyux6ehtS7Ol:artifact:0",
+                "artifact_kind": "timeline",
+                "operation": "edit",
+                "state": "ready",
+                "display_name": null,
+                "ref": {
+                  "kind": "node_ref",
+                  "node_id": "晨雾森林_3秒静态时间线-2"
+                },
+                "error": null
+              }
+            ]
+          },
+          "timestamp": 1793877291.3149087
+        },
+        {
+          "id": "chat-3177eb028c6d403191422c094f19733c_36",
+          "type": "complete",
+          "stream_chat_id": "chat-3177eb028c6d403191422c094f19733c",
+          "data": {
+            "status": "workflow_completed",
+            "stream_chat_id": "chat-3177eb028c6d403191422c094f19733c",
+            "project_id": "lab_4eaf06c18206563390d8936c797b2c9a",
+            "llm_credits_info": {
+              "base_credits": 0.0,
+              "extra_credits": 0.0
+            }
+          },
+          "timestamp": 1793877297.3765287
+        }
+      ],
+      "source_link": "https://flova-lab.rain-boat.com/api/v1/project-viewer/dc315014-b0d5-41ed-81ad-d802de49d587/open",
+      "execution_id": "dc315014-b0d5-41ed-81ad-d802de49d587",
+      "execution_flags": []
+    },
+    "deepseek": {
+      "text": "明白，用这张图做一条 3 秒的静态时间线，不生成视频。我先建立时间线，再把图片作为静止画面铺满 3 秒。3 秒静态时间线已完成：\n\n- **时间线**：新建立的「晨雾森林 3 秒静态时间线」\n- **画面**：使用上一张森林图（唯一画面），从 0 秒持续到 3.000 秒\n- **画布**：1920×1080（16:9），30fps\n- **方式**：静态保持，全程无运动、无转场、无额外片段，也未添加音频\n\n这次只做了时间线组装，没有生成任何视频。如果需要导出成片，可以在时间线里直接导出；想调整时长或画幅也可以随时说。",
+      "evidence": {
+        "E_FINAL_RESPONSE": {
+          "evidence_id": "E_FINAL_RESPONSE",
+          "kind": "final_response",
+          "content": {
+            "text": "明白，用这张图做一条 3 秒的静态时间线，不生成视频。我先建立时间线，再把图片作为静止画面铺满 3 秒。3 秒静态时间线已完成：\n\n- **时间线**：新建立的「晨雾森林 3 秒静态时间线」\n- **画面**：使用上一张森林图（唯一画面），从 0 秒持续到 3.000 秒\n- **画布**：1920×1080（16:9），30fps\n- **方式**：静态保持，全程无运动、无转场、无额外片段，也未添加音频\n\n这次只做了时间线组装，没有生成任何视频。如果需要导出成片，可以在时间线里直接导出；想调整时长或画幅也可以随时说。",
+            "complete_public_response": true
+          }
+        },
+        "E_BOUNDARY": {
+          "evidence_id": "E_BOUNDARY",
+          "kind": "trusted_execution_boundary",
+          "content": {
+            "execution_status": "succeeded",
+            "finish_reason": "single_turn_complete",
+            "turn_count": 1,
+            "native_boundaries": [
+              {
+                "terminal": true,
+                "progress_hash": "d2e8f0ab4ed27db2d16b332e1f9d63692abaae5434bcafc00e0f6ab15d8db858",
+                "frames_complete": true,
+                "resources_settled": true
+              }
+            ],
+            "frame_count": 57,
+            "frame_index_first": 1,
+            "frame_index_last": 57,
+            "frame_gaps": [],
+            "frame_hashes": [
+              "b59c6ccca18f55714d21848278af362c5ca8b5c164c81a7316b5e06fc6a60742",
+              "e4e8daf9e967b87b744bfc45e467df5ccefdeb7290b2b519798c659e48faa265"
+            ],
+            "resource_receipt": [],
+            "limits": "Complete captured public frames and settled native resource receipt, not a guarantee of full internal tool arguments or opaque delegated actions."
+          }
+        },
+        "E_ACTIONS": {
+          "evidence_id": "E_ACTIONS",
+          "kind": "recorded_current_turn_events",
+          "content": {
+            "events": [
+              {
+                "id": "chat-934b65c67fb34d6cb3c14107e5c8de07_12",
+                "type": "tool_started",
+                "stream_chat_id": "chat-934b65c67fb34d6cb3c14107e5c8de07",
+                "data": {
+                  "activity_id": "call_00_i4lnk592kqw5sjk2gdp8eoi7",
+                  "tool": "node_create",
+                  "summary": "Create 1 Nodes",
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "compositionCreation",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "node",
+                            "entity_id": null,
+                            "display_name": "晨雾森林 3秒静态时间线",
+                            "ref": null
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  },
+                  "artifacts": [
+                    {
+                      "artifact_id": "call_00_i4lnk592kqw5sjk2gdp8eoi7:artifact:0",
+                      "artifact_kind": "timeline",
+                      "operation": "create",
+                      "state": "pending",
+                      "display_name": "晨雾森林 3秒静态时间线",
+                      "ref": null,
+                      "error": null
+                    }
+                  ]
+                },
+                "timestamp": 1793876132.0813563
+              },
+              {
+                "id": "chat-934b65c67fb34d6cb3c14107e5c8de07_13",
+                "type": "tool_finished",
+                "stream_chat_id": "chat-934b65c67fb34d6cb3c14107e5c8de07",
+                "data": {
+                  "activity_id": "call_00_i4lnk592kqw5sjk2gdp8eoi7",
+                  "tool": "node_create",
+                  "summary": "Create 1 Nodes",
+                  "operation": null,
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "compositionCreation",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "node",
+                            "entity_id": null,
+                            "display_name": "晨雾森林 3秒静态时间线",
+                            "ref": null
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  },
+                  "status": "done",
+                  "result_summary": "Tool completed",
+                  "error": null,
+                  "error_info": null,
+                  "async_ref": null,
+                  "async_batch": null,
+                  "artifacts": [
+                    {
+                      "artifact_id": "call_00_i4lnk592kqw5sjk2gdp8eoi7:artifact:0",
+                      "artifact_kind": "timeline",
+                      "operation": "create",
+                      "state": "ready",
+                      "display_name": "晨雾森林 3秒静态时间线",
+                      "ref": {
+                        "kind": "node_ref",
+                        "node_id": "晨雾森林3秒静态时间线"
+                      },
+                      "error": null
+                    }
+                  ]
+                },
+                "timestamp": 1793876132.186416
+              },
+              {
+                "id": "chat-934b65c67fb34d6cb3c14107e5c8de07_14",
+                "type": "tool_started",
+                "stream_chat_id": "chat-934b65c67fb34d6cb3c14107e5c8de07",
+                "data": {
+                  "activity_id": "call_00_ftwzi351qmjk0a0kompfk2gc",
+                  "tool": "composition_delegate",
+                  "summary": "Delegate composition work for [晨雾森林3秒静态时间线]",
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "compositionProcessing",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "node",
+                            "entity_id": "晨雾森林3秒静态时间线",
+                            "display_name": "晨雾森林 3秒静态时间线",
+                            "ref": {
+                              "kind": "node_ref",
+                              "node_id": "晨雾森林3秒静态时间线"
+                            }
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  },
+                  "artifacts": [
+                    {
+                      "artifact_id": "call_00_ftwzi351qmjk0a0kompfk2gc:artifact:0",
+                      "artifact_kind": "timeline",
+                      "operation": "edit",
+                      "state": "pending",
+                      "display_name": null,
+                      "ref": {
+                        "kind": "node_ref",
+                        "node_id": "晨雾森林3秒静态时间线"
+                      },
+                      "error": null
+                    }
+                  ]
+                },
+                "timestamp": 1793876138.2979214
+              },
+              {
+                "id": "chat-934b65c67fb34d6cb3c14107e5c8de07_15",
+                "type": "tool_finished",
+                "stream_chat_id": "chat-934b65c67fb34d6cb3c14107e5c8de07",
+                "data": {
+                  "activity_id": "call_00_ftwzi351qmjk0a0kompfk2gc",
+                  "tool": "composition_delegate",
+                  "summary": "Delegate composition work for [晨雾森林3秒静态时间线]",
+                  "operation": null,
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "compositionProcessing",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "node",
+                            "entity_id": "晨雾森林3秒静态时间线",
+                            "display_name": "晨雾森林 3秒静态时间线",
+                            "ref": {
+                              "kind": "node_ref",
+                              "node_id": "晨雾森林3秒静态时间线"
+                            }
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  },
+                  "status": "done",
+                  "result_summary": "建立 3 秒静态时间线：仅在视频轨 v1 上插入一个片段 forest_still_01，使用唯一画面「晨雾森林」静帧（res:2ffed42e1f534f8caa9fef3ebe59c77f），从 0 秒持续到 3.000 秒。片段无缩放、位移或其他运动，无转场、无额外片段，未添加任何音频轨。画布保持 1920×1080（16:9）/30fps，总时长 3 秒，符合交付规格。",
+                  "error": null,
+                  "error_info": null,
+                  "async_ref": null,
+                  "async_batch": null,
+                  "artifacts": [
+                    {
+                      "artifact_id": "call_00_ftwzi351qmjk0a0kompfk2gc:artifact:0",
+                      "artifact_kind": "timeline",
+                      "operation": "edit",
+                      "state": "ready",
+                      "display_name": null,
+                      "ref": {
+                        "kind": "node_ref",
+                        "node_id": "晨雾森林3秒静态时间线"
+                      },
+                      "error": null
+                    }
+                  ]
+                },
+                "timestamp": 1793876145.8019538
+              },
+              {
+                "id": "chat-934b65c67fb34d6cb3c14107e5c8de07_57",
+                "type": "complete",
+                "stream_chat_id": "chat-934b65c67fb34d6cb3c14107e5c8de07",
+                "data": {
+                  "status": "workflow_completed",
+                  "stream_chat_id": "chat-934b65c67fb34d6cb3c14107e5c8de07",
+                  "project_id": "lab_957901a921db56918b1f9f08ecd0aee6",
+                  "llm_credits_info": {
+                    "base_credits": 0.0,
+                    "extra_credits": 0.0
+                  }
+                },
+                "timestamp": 1793876151.5864878
+              }
+            ],
+            "stream_text_excluded_because": "Final text supplied in full separately; stream chunks duplicate it."
+          }
+        },
+        "E_TRACE_COVERAGE": {
+          "evidence_id": "E_TRACE_COVERAGE",
+          "kind": "trace_capture_receipt",
+          "content": {
+            "execution_id": "0f2c0080-74ea-4d78-a68c-8c43cead8af9",
+            "tools": 0,
+            "nodes": 2,
+            "errors": [
+              {
+                "turn_id": "beac6d2f-85f9-4af0-bcd0-c8549a2ef834",
+                "error_type": "CliError",
+                "code": "http_502"
+              }
+            ],
+            "status": "partial"
+          }
+        },
+        "E_VIEW_composition_ce4ab40a060145745bf9": {
+          "evidence_id": "E_VIEW_composition_ce4ab40a060145745bf9",
+          "kind": "project_scoped_native_read",
+          "content": {
+            "code": 0,
+            "data": {
+              "body": {
+                "schema_version": 2,
+                "settings": {
+                  "background": "#000000",
+                  "canvas_size_mode": "fixed",
+                  "fps": 30,
+                  "height": 1080,
+                  "width": 1920
+                },
+                "tracks": [
+                  {
+                    "clips": [
+                      {
+                        "asset_node_id_at_bind": "晨雾森林",
+                        "audio_fade_in": 0,
+                        "audio_fade_out": 0,
+                        "clip_id": "forest_still_01",
+                        "duration": 3000,
+                        "muted": false,
+                        "note": "唯一画面：晨雾森林静帧，0–3 秒静止保持，无缩放/位移，无转场",
+                        "resource_id": "2ffed42e1f534f8caa9fef3ebe59c77f",
+                        "source_in": 0,
+                        "speed": 1.0,
+                        "start": 0,
+                        "sync_group": null,
+                        "transform": null,
+                        "transition_after": null,
+                        "video_fade_in": 0,
+                        "video_fade_out": 0,
+                        "volume": 1.0
+                      }
+                    ],
+                    "kind": "video",
+                    "role": null,
+                    "track_id": "v1"
+                  },
+                  {
+                    "clips": [],
+                    "kind": "audio",
+                    "role": null,
+                    "track_id": "a1"
+                  }
+                ]
+              },
+              "diagnostics": [],
+              "node_id": "晨雾森林3秒静态时间线",
+              "node_revision": 1
+            },
+            "message": "success",
+            "subcode": 0
+          }
+        },
+        "E_VIEW_graph": {
+          "evidence_id": "E_VIEW_graph",
+          "kind": "project_scoped_native_read",
+          "content": {
+            "code": 0,
+            "data": {
+              "active_tasks": [],
+              "graph_revision": 21,
+              "layout": {},
+              "layout_updated_at": null,
+              "legacy_skill_migration_required": false,
+              "nodes": [
+                {
+                  "adopted_skill": {
+                    "role": "folder",
+                    "skill_key": "bce8041b76d5f933bea87fca11152bce"
+                  },
+                  "created_at": "2026-10-18T11:05:43.673860+00:00",
+                  "created_by": "user",
+                  "derived_from": null,
+                  "description": null,
+                  "name": "Lira 图像提示词优化技能.skill",
+                  "node_id": "Lira图像提示词优化技能_skill",
+                  "note": null,
+                  "revision": 1,
+                  "root_order": 1024.0,
+                  "root_pinned": false,
+                  "skill_binding": {
+                    "role": "folder",
+                    "skill_key": "bce8041b76d5f933bea87fca11152bce"
+                  },
+                  "type": "group",
+                  "updated_at": "2026-10-18T11:05:43.791122+00:00"
+                },
+                {
+                  "adopted_skill": {
+                    "role": "main",
+                    "skill_key": "bce8041b76d5f933bea87fca11152bce"
+                  },
+                  "artifact_capabilities": {
+                    "download": "markdown",
+                    "preview": "markdown"
+                  },
+                  "content_revision": 1,
+                  "created_at": "2026-10-18T11:05:43.707639+00:00",
+                  "created_by": "user",
+                  "derived_from": null,
+                  "description": null,
+                  "name": "Lira 图像提示词优化技能",
+                  "node_id": "Lira图像提示词优化技能",
+                  "note": null,
+                  "read_only": false,
+                  "revision": 0,
+                  "root_order": 2048.0,
+                  "root_pinned": false,
+                  "skill_binding": {
+                    "role": "main",
+                    "skill_key": "bce8041b76d5f933bea87fca11152bce"
+                  },
+                  "type": "document",
+                  "updated_at": "2026-10-18T11:05:43.707642+00:00",
+                  "word_count": 288
+                },
+                {
+                  "asset_type": "image",
+                  "created_at": "2026-10-18T11:05:51.829555+00:00",
+                  "created_by": "agent",
+                  "derived_from": null,
+                  "description": "一张森林主题图片：清晨薄雾、层次分明的树木与林间柔光，突出自然材质和空间纵深。输出1K，仅生成一张。",
+                  "drafts": [
+                    {
+                      "active_task_count": 0,
+                      "archived_at": null,
+                      "aspect_ratio": "16:9",
+                      "asset_node_id": "晨雾森林",
+                      "created_at": "2026-10-18T11:06:18.497788+00:00",
+                      "draft_id": "draft_d75010a7a59844b6b327048a",
+                      "exists": true,
+                      "favorite": false,
+                      "favorited_at": null,
+                      "generated": true,
+                      "last_generated_revision": 1,
+                      "review_status": "confirmed",
+                      "revision": 1,
+                      "title": "晨雾森林",
+                      "updated_at": "2026-10-18T11:06:41.198856+00:00",
+                      "updated_by": "agent"
+                    }
+                  ],
+                  "name": "晨雾森林",
+                  "node_id": "晨雾森林",
+                  "note": null,
+                  "resource_count": 1,
+                  "revision": 0,
+                  "root_order": 3072.0,
+                  "root_pinned": false,
+                  "runtime": {
+                    "active_task_count": 0,
+                    "has_ready": true,
+                    "latest_failure": null
+                  },
+                  "type": "asset",
+                  "updated_at": "2026-10-18T11:05:51.829560+00:00"
+                },
+                {
+                  "clip_count": 1,
+                  "created_at": "2026-11-05T10:55:32.157887+00:00",
+                  "created_by": "agent",
+                  "derived_from": null,
+                  "description": "以「晨雾森林」图片为画面的 3 秒静态时间线，用于按实际时长预览与交付，不含视频生成。",
+                  "name": "晨雾森林 3秒静态时间线",
+                  "node_id": "晨雾森林3秒静态时间线",
+                  "note": null,
+                  "revision": 1,
+                  "root_order": 5120.0,
+                  "root_pinned": false,
+                  "total_duration": 3000,
+                  "type": "composition",
+                  "updated_at": "2026-11-05T10:55:43.388486+00:00"
+                }
+              ],
+              "project": {
+                "created_at": "2026-11-05T10:54:21.392141+00:00",
+                "description": null,
+                "history_epoch": 0,
+                "history_format": "snapshot_v1",
+                "migration_source_project_id": null,
+                "permission_context": {
+                  "custom_approval_rules": null,
+                  "display_mode": "direct",
+                  "effective_mode": "full_access",
+                  "has_custom_approval_rules": false,
+                  "project_mode": "full_access",
+                  "required_approvals": [],
+                  "source": "project"
+                },
+                "permission_mode": "full_access",
+                "project_id": "lab_957901a921db56918b1f9f08ecd0aee6",
+                "read_only": true,
+                "revision": 0,
+                "state": "active",
+                "title": "Flova Lab 54daad55cfdd51d0840d4ecfe6599443",
+                "updated_at": "2026-11-05T10:55:32.169952+00:00"
+              },
+              "project_id": "lab_957901a921db56918b1f9f08ecd0aee6",
+              "resource_manifest": [
+                {
+                  "asset_node_id": "晨雾森林",
+                  "resources": [
+                    {
+                      "asset_node_id": "晨雾森林",
+                      "attached_at": "2026-10-18T11:06:41.173775+00:00",
+                      "created_at": "2026-10-18T11:06:41.173775+00:00",
+                      "credits_info": {
+                        "cur_user_level": "normal",
+                        "detail": {
+                          "promo": null,
+                          "quantity": 1,
+                          "unit": "image",
+                          "unit_price": 5.0,
+                          "unit_price_after_promo": 5.0
+                        },
+                        "init_revenue": 5.0,
+                        "media_type": "image",
+                        "model_name": "image_seedream_5_0_pro",
+                        "model_type": 9,
+                        "resolution": "1K",
+                        "revenue": 5.0,
+                        "tool_version": null
+                      },
+                      "deleted_at": null,
+                      "duration": null,
+                      "favorite": false,
+                      "favorited_at": null,
+                      "from_type": "generated",
+                      "generation_tool": "TextToImage",
+                      "hidden_at": null,
+                      "is_user_uploaded": false,
+                      "media_height": 720,
+                      "media_type": "image",
+                      "media_width": 1280,
+                      "resource_id": "2ffed42e1f534f8caa9fef3ebe59c77f",
+                      "standard_url": {
+                        "large": "[signed URL omitted]",
+                        "medium": "[signed URL omitted]",
+                        "small": "[signed URL omitted]"
+                      },
+                      "thumbnail_url": "[signed URL omitted]",
+                      "updated_at": "2026-10-18T11:06:41.988591+00:00"
+                    }
+                  ]
+                }
+              ],
+              "scope": "full",
+              "task_slots": [],
+              "viewport": null
+            },
+            "message": "success",
+            "subcode": 0
+          }
+        },
+        "E_VIEW_resource_2ffed42e1f534f8caa9fef3ebe59c77f": {
+          "evidence_id": "E_VIEW_resource_2ffed42e1f534f8caa9fef3ebe59c77f",
+          "kind": "project_scoped_native_read",
+          "content": {
+            "code": 0,
+            "data": {
+              "as_of_seq": 21,
+              "asset_node_id": "晨雾森林",
+              "recipe_references": [],
+              "resource": {
+                "asset_node_id": "晨雾森林",
+                "attached_at": "2026-10-18T11:06:41.173775+00:00",
+                "copied_from_resource_id": null,
+                "created_at": "2026-10-18T11:06:41.173775+00:00",
+                "credits_info": {
+                  "cur_user_level": "normal",
+                  "detail": {
+                    "promo": null,
+                    "quantity": 1,
+                    "unit": "image",
+                    "unit_price": 5.0,
+                    "unit_price_after_promo": 5.0
+                  },
+                  "init_revenue": 5.0,
+                  "media_type": "image",
+                  "model_name": "image_seedream_5_0_pro",
+                  "model_type": 9,
+                  "resolution": "1K",
+                  "revenue": 5.0,
+                  "tool_version": null
+                },
+                "deleted_at": null,
+                "duration": null,
+                "erase_subtitle_eligible": false,
+                "erase_subtitle_unavailable_reason": "unsupported_model",
+                "extend_video_eligible": false,
+                "favorite": false,
+                "favorited_at": null,
+                "from_type": "generated",
+                "generation": {
+                  "annotation_inputs": null,
+                  "draft_id": "draft_d75010a7a59844b6b327048a",
+                  "draft_revision": 1,
+                  "extend_video_resource_id": null,
+                  "inputs": [],
+                  "model": "image_seedream_5_0_pro",
+                  "negative": null,
+                  "params": {
+                    "aspect_ratio": "16:9",
+                    "resolution": "1K"
+                  },
+                  "prompt_text": "一张写实自然摄影质感的森林影院级静帧。清晨薄雾笼罩高大的树林，近处粗壮树干与潮润苔藓构成前景，中景树木错落排列，远处树干逐渐融入浅灰雾气，形成清晰的空间纵深。摄影机采用平视广角远景，两侧树干自然框景，林间空隙引导视线深入画面。地面铺着湿润落叶与低矮蕨类，树皮呈粗糙开裂的深褐色表面，苔藓柔软细密，叶片带有细小露珠。柔和晨光从画面左上方穿过树冠，侧向照亮树干边缘与蕨叶，在薄雾中形成淡淡光束；林下阴影柔和，亮度随林木遮挡逐层衰减。以低饱和苔绿、深褐与灰白雾色为主，少量淡金晨光点亮叶缘，保留自然材质细节与细腻胶片颗粒，画面安静、通透。",
+                  "task_id": "2ffed42e1f534f8caa9fef3ebe59c77f",
+                  "tool": "TextToImage",
+                  "video_edit_input": null
+                },
+                "generation_replayable": true,
+                "generation_tool": "TextToImage",
+                "hidden_at": null,
+                "is_user_uploaded": false,
+                "media_info": {
+                  "actual_size": "1280x720",
+                  "aspect_ratio": "16:9",
+                  "bitrate_bps": null,
+                  "content_type": null,
+                  "duration": null,
+                  "file_size": 324840,
+                  "format": "jpeg",
+                  "fps": null,
+                  "has_audio": null,
+                  "height": 720,
+                  "image_size": null,
+                  "lyric_analysis": null,
+                  "resolution": null,
+                  "title": null,
+                  "width": 1280,
+                  "words_analysis": null
+                },
+                "media_type": "image",
+                "processing": null,
+                "resource_id": "2ffed42e1f534f8caa9fef3ebe59c77f",
+                "standard_url": {
+                  "compressed": "[signed URL omitted]",
+                  "large": "[signed URL omitted]",
+                  "medium": "[signed URL omitted]",
+                  "small": "[signed URL omitted]"
+                },
+                "subtitle_erased": false,
+                "thumbnail_url": "[signed URL omitted]",
+                "transcoder_url": null,
+                "updated_at": "2026-10-18T11:06:41.988591+00:00",
+                "upload_info": null,
+                "url": "[signed URL omitted]",
+                "watermark_status": "ready",
+                "watermark_url": "[signed URL omitted]"
+              }
+            },
+            "message": "success",
+            "subcode": 0
+          }
+        }
+      },
+      "evaluation": {
+        "judgment": {
+          "schema_version": "flova.absolute_judgment.v4",
+          "query_id": "FL-EVAL-20261104-203",
+          "criteria": [
+            {
+              "criterion_id": "C1",
+              "status": "P",
+              "reason": "原生时间线状态显示片段绑定的资源ID与上一轮森林图资源ID一致。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_VIEW_composition_ce4ab40a060145745bf9",
+                  "pointer": "/content/data/body/tracks/0/clips/0/resource_id",
+                  "quote": "2ffed42e1f534f8caa9fef3ebe59c77f"
+                },
+                {
+                  "evidence_id": "E_VIEW_resource_2ffed42e1f534f8caa9fef3ebe59c77f",
+                  "pointer": "/content/data/resource/resource_id",
+                  "quote": "2ffed42e1f534f8caa9fef3ebe59c77f"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C2",
+              "status": "P",
+              "reason": "原生工程状态存在一个视频轨静帧片段，且无变换、转场或音频片段。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_VIEW_composition_ce4ab40a060145745bf9",
+                  "pointer": "/content/data/body/tracks/0/clips/0",
+                  "quote": "{\"asset_node_id_at_bind\":\"晨雾森林\",\"audio_fade_in\":0,\"audio_fade_out\":0,\"clip_id\":\"forest_still_01\",\"duration\":3000,\"muted\":false,\"note\":\"唯一画面：晨雾森林静帧，0–3 秒静止保持，无缩放/位移，无转场\",\"resource_id\":\"2ffed42e1f534f8caa9fef3ebe59c77f\",\"source_in\":0,\"speed\":1.0,\"start\":0,\"sync_group\":null,\"transform\":null,\"transition_after\":null,\"video_fade_in\":0,\"video_fade_out\":0,\"volume\":1.0}"
+                },
+                {
+                  "evidence_id": "E_VIEW_composition_ce4ab40a060145745bf9",
+                  "pointer": "/content/data/body/tracks/1/clips",
+                  "quote": "[]"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C3",
+              "status": "P",
+              "reason": "唯一片段从0开始、时长3000毫秒；工程节点总时长也为3000毫秒。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_VIEW_composition_ce4ab40a060145745bf9",
+                  "pointer": "/content/data/body/tracks/0/clips/0/duration",
+                  "quote": "3000"
+                },
+                {
+                  "evidence_id": "E_VIEW_composition_ce4ab40a060145745bf9",
+                  "pointer": "/content/data/body/tracks/0/clips/0/start",
+                  "quote": "0"
+                },
+                {
+                  "evidence_id": "E_VIEW_graph",
+                  "pointer": "/content/data/nodes/3/total_duration",
+                  "quote": "3000"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C4",
+              "status": "P",
+              "reason": "完整本轮记录仅显示创建和编辑时间线，结算资源清单为空，未见视频生成活动或视频资源。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_BOUNDARY",
+                  "pointer": "/content/resource_receipt",
+                  "quote": "[]"
+                },
+                {
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/0/data/tool",
+                  "quote": "node_create"
+                },
+                {
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/2/data/tool",
+                  "quote": "composition_delegate"
+                },
+                {
+                  "evidence_id": "E_VIEW_graph",
+                  "pointer": "/content/data/resource_manifest/0/resources/0/media_type",
+                  "quote": "image"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            }
+          ],
+          "quality": [],
+          "limitations": []
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:27.234075+00:00",
+          "elapsed_seconds": 6.623453458,
+          "input_sha256": "0e9ebe9973752a52200436c02ca15b5804ce35023caa7ab88ff312d83d955393",
+          "citation_reanchored": null,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "score": {
+        "lower": 100,
+        "upper": 100,
+        "coverage": 100,
+        "counts": {
+          "P": 4
+        },
+        "must_failed": [],
+        "status": "pass",
+        "applicable_budget": 100.0
+      },
+      "media": [],
+      "execution": [
+        {
+          "id": "chat-934b65c67fb34d6cb3c14107e5c8de07_12",
+          "type": "tool_started",
+          "stream_chat_id": "chat-934b65c67fb34d6cb3c14107e5c8de07",
+          "data": {
+            "activity_id": "call_00_i4lnk592kqw5sjk2gdp8eoi7",
+            "tool": "node_create",
+            "summary": "Create 1 Nodes",
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "compositionCreation",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "node",
+                      "entity_id": null,
+                      "display_name": "晨雾森林 3秒静态时间线",
+                      "ref": null
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            },
+            "artifacts": [
+              {
+                "artifact_id": "call_00_i4lnk592kqw5sjk2gdp8eoi7:artifact:0",
+                "artifact_kind": "timeline",
+                "operation": "create",
+                "state": "pending",
+                "display_name": "晨雾森林 3秒静态时间线",
+                "ref": null,
+                "error": null
+              }
+            ]
+          },
+          "timestamp": 1793876132.0813563
+        },
+        {
+          "id": "chat-934b65c67fb34d6cb3c14107e5c8de07_13",
+          "type": "tool_finished",
+          "stream_chat_id": "chat-934b65c67fb34d6cb3c14107e5c8de07",
+          "data": {
+            "activity_id": "call_00_i4lnk592kqw5sjk2gdp8eoi7",
+            "tool": "node_create",
+            "summary": "Create 1 Nodes",
+            "operation": null,
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "compositionCreation",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "node",
+                      "entity_id": null,
+                      "display_name": "晨雾森林 3秒静态时间线",
+                      "ref": null
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            },
+            "status": "done",
+            "result_summary": "Tool completed",
+            "error": null,
+            "error_info": null,
+            "async_ref": null,
+            "async_batch": null,
+            "artifacts": [
+              {
+                "artifact_id": "call_00_i4lnk592kqw5sjk2gdp8eoi7:artifact:0",
+                "artifact_kind": "timeline",
+                "operation": "create",
+                "state": "ready",
+                "display_name": "晨雾森林 3秒静态时间线",
+                "ref": {
+                  "kind": "node_ref",
+                  "node_id": "晨雾森林3秒静态时间线"
+                },
+                "error": null
+              }
+            ]
+          },
+          "timestamp": 1793876132.186416
+        },
+        {
+          "id": "chat-934b65c67fb34d6cb3c14107e5c8de07_14",
+          "type": "tool_started",
+          "stream_chat_id": "chat-934b65c67fb34d6cb3c14107e5c8de07",
+          "data": {
+            "activity_id": "call_00_ftwzi351qmjk0a0kompfk2gc",
+            "tool": "composition_delegate",
+            "summary": "Delegate composition work for [晨雾森林3秒静态时间线]",
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "compositionProcessing",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "node",
+                      "entity_id": "晨雾森林3秒静态时间线",
+                      "display_name": "晨雾森林 3秒静态时间线",
+                      "ref": {
+                        "kind": "node_ref",
+                        "node_id": "晨雾森林3秒静态时间线"
+                      }
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            },
+            "artifacts": [
+              {
+                "artifact_id": "call_00_ftwzi351qmjk0a0kompfk2gc:artifact:0",
+                "artifact_kind": "timeline",
+                "operation": "edit",
+                "state": "pending",
+                "display_name": null,
+                "ref": {
+                  "kind": "node_ref",
+                  "node_id": "晨雾森林3秒静态时间线"
+                },
+                "error": null
+              }
+            ]
+          },
+          "timestamp": 1793876138.2979214
+        },
+        {
+          "id": "chat-934b65c67fb34d6cb3c14107e5c8de07_15",
+          "type": "tool_finished",
+          "stream_chat_id": "chat-934b65c67fb34d6cb3c14107e5c8de07",
+          "data": {
+            "activity_id": "call_00_ftwzi351qmjk0a0kompfk2gc",
+            "tool": "composition_delegate",
+            "summary": "Delegate composition work for [晨雾森林3秒静态时间线]",
+            "operation": null,
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "compositionProcessing",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "node",
+                      "entity_id": "晨雾森林3秒静态时间线",
+                      "display_name": "晨雾森林 3秒静态时间线",
+                      "ref": {
+                        "kind": "node_ref",
+                        "node_id": "晨雾森林3秒静态时间线"
+                      }
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            },
+            "status": "done",
+            "result_summary": "建立 3 秒静态时间线：仅在视频轨 v1 上插入一个片段 forest_still_01，使用唯一画面「晨雾森林」静帧（res:2ffed42e1f534f8caa9fef3ebe59c77f），从 0 秒持续到 3.000 秒。片段无缩放、位移或其他运动，无转场、无额外片段，未添加任何音频轨。画布保持 1920×1080（16:9）/30fps，总时长 3 秒，符合交付规格。",
+            "error": null,
+            "error_info": null,
+            "async_ref": null,
+            "async_batch": null,
+            "artifacts": [
+              {
+                "artifact_id": "call_00_ftwzi351qmjk0a0kompfk2gc:artifact:0",
+                "artifact_kind": "timeline",
+                "operation": "edit",
+                "state": "ready",
+                "display_name": null,
+                "ref": {
+                  "kind": "node_ref",
+                  "node_id": "晨雾森林3秒静态时间线"
+                },
+                "error": null
+              }
+            ]
+          },
+          "timestamp": 1793876145.8019538
+        },
+        {
+          "id": "chat-934b65c67fb34d6cb3c14107e5c8de07_57",
+          "type": "complete",
+          "stream_chat_id": "chat-934b65c67fb34d6cb3c14107e5c8de07",
+          "data": {
+            "status": "workflow_completed",
+            "stream_chat_id": "chat-934b65c67fb34d6cb3c14107e5c8de07",
+            "project_id": "lab_957901a921db56918b1f9f08ecd0aee6",
+            "llm_credits_info": {
+              "base_credits": 0.0,
+              "extra_credits": 0.0
+            }
+          },
+          "timestamp": 1793876151.5864878
+        }
+      ],
+      "source_link": "https://flova-lab.rain-boat.com/api/v1/project-viewer/0f2c0080-74ea-4d78-a68c-8c43cead8af9/open",
+      "execution_id": "0f2c0080-74ea-4d78-a68c-8c43cead8af9",
+      "execution_flags": []
+    }
+  },
+  "comparisons": {
+    "terra": {
+      "AB": {
+        "judgment": {
+          "schema_version": "flova.pairwise_judgment.v2",
+          "comparison_id": "FL-EVAL-20261104-203-AB",
+          "criteria": [
+            {
+              "criterion_id": "P1",
+              "decision": "equivalent",
+              "reason": "双方均有可核实的时间线剪辑资源绑定记录，且绑定的都是上一轮图片资源 2ffed42e1f534f8caa9fef3ebe59c77f（晨雾森林）。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/summary",
+                  "quote": "绑定资源 2ffed42e1f534f8caa9fef3ebe59c77f（晨雾森林）"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_VIEW_composition_e092a85cd147c1233682",
+                  "pointer": "/content/data/body/tracks/0/clips/0/resource_id",
+                  "quote": "2ffed42e1f534f8caa9fef3ebe59c77f"
+                },
+                {
+                  "evidence_id": "E_VIEW_composition_e092a85cd147c1233682",
+                  "pointer": "/content/data/body/tracks/0/clips/0/asset_node_id_at_bind",
+                  "quote": "晨雾森林"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P2",
+              "decision": "equivalent",
+              "reason": "双方均实际创建单一静态图片剪辑，并将总时长精确设为3秒：X的最终校验明确通过3秒目标；Y的原生时间线读取显示剪辑从0开始、持续3000毫秒。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/checks/2/evidence",
+                  "quote": "Final duration is 3s; target is 3s ± 0s."
+                },
+                {
+                  "evidence_id": "E_TOOL_51e255743011c5af",
+                  "pointer": "/content/result/data/post_write/edl",
+                  "quote": "static_forest_3s [00:00.000–00:03.000]"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_VIEW_composition_e092a85cd147c1233682",
+                  "pointer": "/content/data/body/tracks/0/clips/0/start",
+                  "quote": "0"
+                },
+                {
+                  "evidence_id": "E_VIEW_composition_e092a85cd147c1233682",
+                  "pointer": "/content/data/body/tracks/0/clips/0/duration",
+                  "quote": "3000"
+                },
+                {
+                  "evidence_id": "E_VIEW_graph",
+                  "pointer": "/content/data/nodes/3/total_duration",
+                  "quote": "3000"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P3",
+              "decision": "equivalent",
+              "reason": "双方交付均为可编辑的Composition/时间线，而非视频文件；X的最终合成记录明确说明未生成或导出视频，Y的完成事件也明确说明未生成、未导出视频。两边均无相反的已记录视频生成或导出交付证据。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/summary",
+                  "quote": "未生成视频，也未执行导出"
+                },
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/checks/0/status",
+                  "quote": "met"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/5/data/result_summary",
+                  "quote": "按要求未生成、也未导出视频——时间线为可继续编辑的 Composition 数据。"
+                },
+                {
+                  "evidence_id": "E_VIEW_graph",
+                  "pointer": "/content/data/nodes/3/type",
+                  "quote": "composition"
+                }
+              ],
+              "missing_evidence": []
+            }
+          ],
+          "limitations": [
+            "未附上可直接播放或渲染的媒体文件；本次比较仅依据双方可信时间线状态及工具/原生读取记录，未对画面像素质量、预览效果或未记录的外部活动作判断。",
+            "Y的工具事件摘要不含完整工具参数，但其原生Composition读取足以核实当前剪辑、资源绑定和时长。"
+          ]
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:30.753500+00:00",
+          "elapsed_seconds": 9.943758959000007,
+          "input_sha256": "49504a3c8cc576bed4d5b648a3cd9cb6d48090a9d36eab570fe6d08a7a438a70",
+          "citation_reanchored": true,
+          "semantic_decisions_unchanged": true,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "BA": {
+        "judgment": {
+          "schema_version": "flova.pairwise_judgment.v2",
+          "comparison_id": "FL-EVAL-20261104-203-BA",
+          "criteria": [
+            {
+              "criterion_id": "P1",
+              "decision": "equivalent",
+              "reason": "双方均将上一轮图片资源2ffed42e1f534f8caa9fef3ebe59c77f绑定为时间线中的唯一画面，满足以刚才图片作为素材的要求。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_VIEW_composition_e092a85cd147c1233682",
+                  "pointer": "/content/data/body/tracks/0/clips/0/resource_id",
+                  "quote": "2ffed42e1f534f8caa9fef3ebe59c77f"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/summary",
+                  "quote": "绑定资源 2ffed42e1f534f8caa9fef3ebe59c77f（晨雾森林）"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P2",
+              "decision": "equivalent",
+              "reason": "双方均有单个静态图片片段从00:00持续至00:03，且总时长准确为3000毫秒（3秒）。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_VIEW_composition_e092a85cd147c1233682",
+                  "pointer": "/content/data/body/tracks/0/clips/0/duration",
+                  "quote": "3000"
+                },
+                {
+                  "evidence_id": "E_VIEW_composition_e092a85cd147c1233682",
+                  "pointer": "/content/data/body/tracks/0/clips/0/start",
+                  "quote": "0"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/changes/total_duration_ms/after",
+                  "quote": "3000"
+                },
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/checks/2/evidence",
+                  "quote": "Final duration is 3s; target is 3s ± 0s."
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P3",
+              "decision": "equivalent",
+              "reason": "双方记录均明确表明仅完成可编辑时间线，未生成或导出视频，符合“不执行视频生成”的离散要求。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/5/data/result_summary",
+                  "quote": "按要求未生成、也未导出视频——时间线为可继续编辑的 Composition 数据。"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/summary",
+                  "quote": "未生成视频，也未执行导出"
+                }
+              ],
+              "missing_evidence": []
+            }
+          ],
+          "limitations": [
+            "未提供时间线预览媒体；本比较仅依据可信的时间线结构、资源绑定与完成记录核实素材、时长和未生成视频，未对画面视觉效果作评价。",
+            "X的执行边界说明不保证完整内部工具参数，Y的范围说明也不主张未记录活动的普遍不存在；但两方均有可核实的最终时间线结构或已完成工具结果支持本轮离散要求。"
+          ]
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:33.139429+00:00",
+          "elapsed_seconds": 9.197834959000005,
+          "input_sha256": "9bbd87bf3cb122474a40140ad34c7b6e9f0a6a30926a42e77c3e9d5a4aa207fc",
+          "citation_reanchored": null,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "score": {
+        "criteria": [
+          {
+            "criterion_id": "P1",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 35.0
+          },
+          {
+            "criterion_id": "P2",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 45.0
+          },
+          {
+            "criterion_id": "P3",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 20.0
+          }
+        ],
+        "score": 50.0,
+        "score_lower": 50.0,
+        "score_upper": 50.0,
+        "coverage_percent": 100.0,
+        "order_conflict_weight": 0.0,
+        "rankable": true
+      },
+      "composite": {
+        "lower": 90.0,
+        "upper": 90.0,
+        "gate": "pass",
+        "formula": "80% absolute + 20% paired comparison",
+        "rankable": true
+      },
+      "consistency_flags": []
+    },
+    "deepseek": {
+      "AB": {
+        "judgment": {
+          "schema_version": "flova.pairwise_judgment.v2",
+          "comparison_id": "FL-EVAL-20261104-203-AB",
+          "criteria": [
+            {
+              "criterion_id": "P1",
+              "decision": "equivalent",
+              "reason": "双方均将上一轮指定的图片资源2ffed42e1f534f8caa9fef3ebe59c77f绑定为时间线中唯一的静态画面；没有可核实的素材使用差异。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/summary",
+                  "quote": "绑定资源 2ffed42e1f534f8caa9fef3ebe59c77f（晨雾森林）"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_VIEW_composition_ce4ab40a060145745bf9",
+                  "pointer": "/content/data/body/tracks/0/clips/0/resource_id",
+                  "quote": "2ffed42e1f534f8caa9fef3ebe59c77f"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P2",
+              "decision": "equivalent",
+              "reason": "双方都实际建立了单个图片剪辑从0秒覆盖至3秒的有效静态时间线，且总时长均为3000毫秒/3秒。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/checks/2/evidence",
+                  "quote": "Final duration is 3s; target is 3s ± 0s."
+                },
+                {
+                  "evidence_id": "E_TOOL_51e255743011c5af",
+                  "pointer": "/content/result/data/post_write/edl",
+                  "quote": "static_forest_3s [00:00.000–00:03.000]"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_VIEW_composition_ce4ab40a060145745bf9",
+                  "pointer": "/content/data/body/tracks/0/clips/0/duration",
+                  "quote": "3000"
+                },
+                {
+                  "evidence_id": "E_VIEW_graph",
+                  "pointer": "/content/data/nodes/3/total_duration",
+                  "quote": "3000"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P3",
+              "decision": "equivalent",
+              "reason": "双方的可核实交付都是时间线组装而非视频成片：X的完整记录范围仅含查询、创建、插入剪辑和时间线完成操作，并明确记录未生成视频；Y的已记录完成事件为时间线创建与合成委派，且实际读取结果为静态图片剪辑的composition，未见视频资源或视频生成交付。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_SCOPE_RECONCILIATION",
+                  "pointer": "/content/recorded_call_names",
+                  "quote": "{\"project_query\": 1, \"node_create\": 1, \"composition_delegate\": 1, \"insert_clip\": 1, \"composition_finalize\": 1}"
+                },
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/summary",
+                  "quote": "未生成视频，也未执行导出"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/3/data/result_summary",
+                  "quote": "建立 3 秒静态时间线：仅在视频轨 v1 上插入一个片段 forest_still_01"
+                },
+                {
+                  "evidence_id": "E_VIEW_composition_ce4ab40a060145745bf9",
+                  "pointer": "/content/data/body/tracks/0/clips/0/note",
+                  "quote": "唯一画面：晨雾森林静帧，0–3 秒静止保持，无缩放/位移，无转场"
+                }
+              ],
+              "missing_evidence": []
+            }
+          ],
+          "limitations": [
+            "未提供任何最终渲染视频媒体；但用户明确要求无需生成视频，本比较仅能依据各自可信执行/项目读取记录核对是否完成静态时间线及是否存在视频生成交付。Y的工具事件摘要不含完整工具参数，且其追踪捕获标记为partial；已结合该候选的原生时间线读取和已记录事件进行判断。"
+          ]
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:33.260431+00:00",
+          "elapsed_seconds": 11.345921125000018,
+          "input_sha256": "887011fc11787db211a40c04d3d11a7eaf4ac32d4c24845d43197171a45846d2",
+          "citation_reanchored": null,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "BA": {
+        "judgment": {
+          "schema_version": "flova.pairwise_judgment.v2",
+          "comparison_id": "FL-EVAL-20261104-203-BA",
+          "criteria": [
+            {
+              "criterion_id": "P1",
+              "decision": "equivalent",
+              "reason": "双方均有可信的时间线记录，且唯一视频片段均绑定到历史上一张图片资源2ffed42e1f534f8caa9fef3ebe59c77f；均满足以刚才图片作为时间线素材。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_VIEW_composition_ce4ab40a060145745bf9",
+                  "pointer": "/content/data/body/tracks/0/clips/0/resource_id",
+                  "quote": "2ffed42e1f534f8caa9fef3ebe59c77f"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_TOOL_51e255743011c5af",
+                  "pointer": "/content/result/data/post_write/edl",
+                  "quote": "晨雾森林 (res:2ffed42e1f534f8caa9fef3ebe59c77f)"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P2",
+              "decision": "equivalent",
+              "reason": "双方均已创建仅含一个静态图片片段的时间线，片段从0秒覆盖至3.000秒，且总时长为3000毫秒/3秒；均完整满足3秒静态时间线要求。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_VIEW_composition_ce4ab40a060145745bf9",
+                  "pointer": "/content/data/body/tracks/0/clips/0/duration",
+                  "quote": "3000"
+                },
+                {
+                  "evidence_id": "E_VIEW_graph",
+                  "pointer": "/content/data/nodes/3/total_duration",
+                  "quote": "3000"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/checks/2/evidence",
+                  "quote": "Final duration is 3s; target is 3s ± 0s."
+                },
+                {
+                  "evidence_id": "E_TOOL_51e255743011c5af",
+                  "pointer": "/content/result/data/receipt",
+                  "quote": "inserted static_forest_3s at [0s–3s]; total 3s"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P3",
+              "decision": "equivalent",
+              "reason": "双方的已完成时间线均明确为静态图片剪辑，且可信执行记录均明确未生成视频；均符合“无需生成视频”的限制。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/3/data/result_summary",
+                  "quote": "无转场、无额外片段，未添加任何音频轨。画布保持 1920×1080（16:9）/30fps，总时长 3 秒，符合交付规格。"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "这次只做了时间线组装，没有生成任何视频。"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_TOOL_89fcb329b04e2056",
+                  "pointer": "/content/result/data/summary",
+                  "quote": "未生成视频，也未执行导出"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "未生成视频，未导出文件"
+                }
+              ],
+              "missing_evidence": []
+            }
+          ],
+          "limitations": [
+            "本任务要求时间线而非渲染视频；双方均无须提供成片媒体。比较依据为各自可信的已提交时间线与工具执行记录，未对不存在的导出视频作媒体质量判断。"
+          ]
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:33.863575+00:00",
+          "elapsed_seconds": 7.282328125000021,
+          "input_sha256": "b41fc6eb987dfb15fe2a67cc92608dfadd465897045a705382b2f0ffd0086b5b",
+          "citation_reanchored": null,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "score": {
+        "criteria": [
+          {
+            "criterion_id": "P1",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 35.0
+          },
+          {
+            "criterion_id": "P2",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 45.0
+          },
+          {
+            "criterion_id": "P3",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 20.0
+          }
+        ],
+        "score": 50.0,
+        "score_lower": 50.0,
+        "score_upper": 50.0,
+        "coverage_percent": 100.0,
+        "order_conflict_weight": 0.0,
+        "rankable": true
+      },
+      "composite": {
+        "lower": 90.0,
+        "upper": 90.0,
+        "gate": "pass",
+        "formula": "80% absolute + 20% paired comparison",
+        "rankable": true
+      },
+      "consistency_flags": []
+    }
+  },
+  "input_media": []
+}

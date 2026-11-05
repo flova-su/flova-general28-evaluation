@@ -1,0 +1,4260 @@
+{
+  "schema_version": "flova.planner_comparison_review.v4",
+  "generated_at": "2026-11-05T18:16:07.952972+00:00",
+  "dataset_id": "904bf267-f0bb-4d9f-9b46-cf44550d29c9",
+  "case_count": 28,
+  "valid_calls": 196,
+  "planned_calls": 196,
+  "complete_cases": 28,
+  "stats": {
+    "reference": {
+      "n": 28,
+      "absolute_lower": 87.15773810714286,
+      "absolute_upper": 90.59523810714286,
+      "case_statuses": {
+        "pass": 20,
+        "fail": 5,
+        "undetermined": 3
+      }
+    },
+    "terra": {
+      "n": 28,
+      "absolute_lower": 82.11309525,
+      "absolute_upper": 85.17857142857143,
+      "case_statuses": {
+        "pass": 19,
+        "fail": 6,
+        "undetermined": 3
+      },
+      "pair_lower": 37.5,
+      "pair_upper": 49.107142857142854,
+      "composite_lower": 73.1904762,
+      "composite_upper": 77.96428571428571,
+      "comparison_statuses": {
+        "unresolved": 7,
+        "loss": 6,
+        "tie": 13,
+        "win": 2
+      },
+      "order_conflict_cases": 6
+    },
+    "deepseek": {
+      "n": 28,
+      "absolute_lower": 76.38392857142857,
+      "absolute_upper": 82.1875,
+      "case_statuses": {
+        "pass": 18,
+        "fail": 8,
+        "undetermined": 2
+      },
+      "pair_lower": 37.32142857142857,
+      "pair_upper": 52.32142857142857,
+      "composite_lower": 68.57142857142857,
+      "composite_upper": 76.21428571428571,
+      "comparison_statuses": {
+        "unresolved": 7,
+        "loss": 9,
+        "win": 3,
+        "tie": 9
+      },
+      "order_conflict_cases": 5
+    }
+  },
+  "cases": [
+    {
+      "id": "FL-EVAL-20261104-004",
+      "title": "旧银镯标题点评",
+      "group": "G01 项目问答",
+      "query": "旧银镯别扔，改完比新的还有故事，这个标题你觉得怎么样",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 3
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 3
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 3
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "loss",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "loss",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 35.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "win",
+                "second_mapped": "loss",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 35.0
+              }
+            ],
+            "score": null,
+            "score_lower": 0.0,
+            "score_upper": 100.0,
+            "coverage_percent": 0.0,
+            "order_conflict_weight": 100.0,
+            "rankable": false
+          },
+          "composite": {
+            "lower": 80.0,
+            "upper": 100.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 35.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "win",
+                "second_mapped": "tie",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 35.0
+              }
+            ],
+            "score": 100.0,
+            "score_lower": 65.0,
+            "score_upper": 100.0,
+            "coverage_percent": 65.0,
+            "order_conflict_weight": 35.0,
+            "rankable": false
+          },
+          "composite": {
+            "lower": 93.0,
+            "upper": 100.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-006",
+      "title": "两份设计草稿对比",
+      "group": "G01 项目问答",
+      "query": "分析这两个设计方案",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 2
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 0,
+          "upper": 0,
+          "coverage": 100,
+          "counts": {
+            "F": 2
+          },
+          "must_failed": [
+            "C1",
+            "C2"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 0,
+          "upper": 0,
+          "coverage": 100,
+          "counts": {
+            "F": 2
+          },
+          "must_failed": [
+            "C1",
+            "C2"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 50.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 50.0
+              }
+            ],
+            "score": 0.0,
+            "score_lower": 0.0,
+            "score_upper": 0.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 0.0,
+            "upper": 0.0,
+            "gate": "fail",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 50.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 50.0
+              }
+            ],
+            "score": 0.0,
+            "score_lower": 0.0,
+            "score_upper": 0.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 0.0,
+            "upper": 0.0,
+            "gate": "fail",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-027",
+      "title": "积分从哪里来",
+      "group": "G02 模型、产品与商业化问答",
+      "query": "how does credits get generated",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 2
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 2
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 35.0,
+          "upper": 35.0,
+          "coverage": 100,
+          "counts": {
+            "P": 1,
+            "F": 1
+          },
+          "must_failed": [
+            "C2"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 35.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 65.0
+              }
+            ],
+            "score": 0.0,
+            "score_lower": 0.0,
+            "score_upper": 0.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 80.0,
+            "upper": 80.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 35.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 65.0
+              }
+            ],
+            "score": 0.0,
+            "score_lower": 0.0,
+            "score_upper": 0.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 28.0,
+            "upper": 28.0,
+            "gate": "fail",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-028",
+      "title": "Skill 与图像、声音生成的分工",
+      "group": "G02 模型、产品与商业化问答",
+      "query": "借助flova生成大量的人物参考图和声音时，主要是用到flova中的skill吗，还是什么其他的功能",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 3
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 3
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 3
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 40.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 30.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 40.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "win",
+                "second_mapped": "tie",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "loss",
+                "second_mapped": "win",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 30.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 20.0,
+            "score_upper": 80.0,
+            "coverage_percent": 40.0,
+            "order_conflict_weight": 60.0,
+            "rankable": false
+          },
+          "composite": {
+            "lower": 84.0,
+            "upper": 96.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-041",
+      "title": "检索播音专业名人",
+      "group": "G03 外部搜索",
+      "query": "首先你帮我检索一下，在大家比较熟知的明星或者名人中，有哪些是学播音主持专业出身的，最好是现在的年轻孩子熟知的人，能够引起他们的讨论和兴趣的，我会做成一个这样的ppt\n首页，你先帮我找一下人物，确认之后再生成ppt\n",
+      "arms": {
+        "reference": {
+          "lower": 0,
+          "upper": 0,
+          "coverage": 100,
+          "counts": {
+            "F": 1,
+            "B": 3
+          },
+          "must_failed": [
+            "C1",
+            "C2",
+            "C4"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 4
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 30.0,
+          "upper": 75.0,
+          "coverage": 55.0,
+          "counts": {
+            "F": 1,
+            "U": 1,
+            "P": 2
+          },
+          "must_failed": [
+            "C1"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 45.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 10.0
+              }
+            ],
+            "score": 100.0,
+            "score_lower": 100.0,
+            "score_upper": 100.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 100.0,
+            "upper": 100.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 45.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 10.0
+              }
+            ],
+            "score": 100.0,
+            "score_lower": 100.0,
+            "score_upper": 100.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 44.0,
+            "upper": 80.0,
+            "gate": "fail",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-054",
+      "title": "核实抖音 PK 规则",
+      "group": "G03 外部搜索",
+      "query": "请你检索抖音pk通用规则",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 3
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 3
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 3
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 45.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 25.0
+              }
+            ],
+            "score": 0.0,
+            "score_lower": 0.0,
+            "score_upper": 0.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 80.0,
+            "upper": 80.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 45.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 25.0
+              }
+            ],
+            "score": 0.0,
+            "score_lower": 0.0,
+            "score_upper": 0.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 80.0,
+            "upper": 80.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-078",
+      "title": "改写鸭腿饭剧本前两幕",
+      "group": "G04 文本创作与修订",
+      "query": "第二幕修改，都走到门店了就不需要发语音了直接改成安林坐到老位置开心的大喊：“老板老样子”浩哥穿着围裙站在灶台前，背影僵硬。转过身，礼貌却生硬，像第一次见到安林。\r\n\r\n浩哥：“我听不懂你在说什么？”\r\n\r\n安林指了指鸭腿，认真解释。\r\n\r\n安林：“就老样子啊，鸭腿饭。”\n电子菜单也不合理直接改成沙县小吃菜单稍后我会上传菜单素材。然后接上“鸭腿大小，咱们都是一样的”\n安林低头，手机弹出提示。手机提示：“对方撤回了一条消息”删除\n浩哥收回手机，恢复忙碌。安林留在座位上，一脸“我不是吃过吗”的困惑（改成安林一脸紧张慌乱的表情）\n就先出第一幕和第二幕的剧本后面的先取消\n",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 5
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 5
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 5
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 15.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P5",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 15.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P5",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-080",
+      "title": "60 秒梦境穿梭剧本",
+      "group": "G04 文本创作与修订",
+      "query": "我想做一个关于做梦类似的剧本，大概时长为60秒左右，剧情快速，主人公在床上做梦不停的在不同梦境中穿梭的场景",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 4
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 4
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 4
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 20.0
+              }
+            ],
+            "score": 25.0,
+            "score_lower": 25.0,
+            "score_upper": 25.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 85.0,
+            "upper": 85.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-083",
+      "title": "强化老爷爷声线提示词",
+      "group": "G05 Prompt 创作与修订",
+      "query": "你要在提示词里面着重提一下老爷爷的声音，他是老年人该是什么声线呢",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 3
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 3
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 3
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 35.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 40.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 35.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 40.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              }
+            ],
+            "score": 87.5,
+            "score_lower": 87.5,
+            "score_upper": 87.5,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 97.5,
+            "upper": 97.5,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-088",
+      "title": "KTV 欢唱卡视觉提示词",
+      "group": "G05 Prompt 创作与修订",
+      "query": "ktv欢唱卡设计，帮我写个AI提示词，需要有个视角主体，",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 2
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 2
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 2
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 55.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 45.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 55.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 45.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-109",
+      "title": "企业总部大堂单图",
+      "group": "G06 图片制作",
+      "query": "只做一件事：生成 1 张图片，不要生成任何视频、不要写剧本、不要出分镜、不要建 storyboard，出图后立即结束。\n图像模型必须使用 GPT Image 2.5 Flare（不要用 Nano Banana 或其他模型）。\n分辨率为 1K（不要 2K、不要 4K）。\n提示词：约600㎡企业总部大堂，挑高十二米，米白大理石地面（镜面反光）、金色金属竖向格栅、深色石材前台，五米长前台、董事长专用电梯（独立门厅带木质门套）、大堂中央一组沙发、顶部巨型水晶灯，从大堂正门仰视整面挑高墙与专用电梯门厅；日（天光从玻璃顶棚落下）；高精度3D半写实国漫渲染，电影级场景建模，PBR材质，全局光照加体积光，瓷白温润的材质微反光，自然色彩过渡，8K超高清，画面层次分明；空旷无人，纯场景，无人物，无动物；单幅完整画面，不要双联/拼接/分屏/对照图；画面纯净，绝对无文字，无水印，无标签；不要真人实拍质感，不要2D插画，不要日漫风格，不要卡通质感，不要游戏UI感；16:9",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 15
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 95.0,
+          "upper": 95.0,
+          "coverage": 100,
+          "counts": {
+            "P": 14,
+            "F": 1
+          },
+          "must_failed": [
+            "C15"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 15
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 15.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 15.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P5",
+                "first_mapped": "tie",
+                "second_mapped": "win",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 15.0
+              },
+              {
+                "criterion_id": "P6",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 15.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 42.5,
+            "score_upper": 57.5,
+            "coverage_percent": 85.0,
+            "order_conflict_weight": 15.0,
+            "rankable": false
+          },
+          "composite": {
+            "lower": 84.5,
+            "upper": 87.5,
+            "gate": "fail",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": [
+            {
+              "parent_id": "P6",
+              "direction": "AB",
+              "absolute_all_checks_pass_side": "original",
+              "pairwise_decision": "equivalent",
+              "note": "绝对评估中一侧满足该关键要求的全部检查、另一侧有已知不满足；相对评估却给另一侧更好或等效。独立裁判存在分歧，保留原分数并送复核，不自动认定任一结论正确。"
+            },
+            {
+              "parent_id": "P6",
+              "direction": "BA",
+              "absolute_all_checks_pass_side": "original",
+              "pairwise_decision": "equivalent",
+              "note": "绝对评估中一侧满足该关键要求的全部检查、另一侧有已知不满足；相对评估却给另一侧更好或等效。独立裁判存在分歧，保留原分数并送复核，不自动认定任一结论正确。"
+            }
+          ]
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 15.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 15.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P5",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 15.0
+              },
+              {
+                "criterion_id": "P6",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 15.0
+              }
+            ],
+            "score": 42.5,
+            "score_lower": 42.5,
+            "score_upper": 42.5,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 88.5,
+            "upper": 88.5,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-113",
+      "title": "《中西方音乐史》第三集封面",
+      "group": "G06 图片制作",
+      "query": "附件是我《中西方音乐史》系列视频的封面（这是第一/二集用的系列封面），作为风格参考：16:9横屏、史诗级电影感、金色光效与流动的金色音符光带、深邃星空、厚重的金色书法大标题“中西方音乐史”居上、底部金色副标题配两侧细金线装饰。\n\n本轮任务：只生成一张第三集专用封面图片，不要生成视频、音频或分镜。\n- 尺寸 16:9 横屏，高清。\n- 主题：第三集《中国礼乐是怎样诞生的》——西周礼乐文明。画面要比参考图更酷炫、更有冲击力：宏伟的西周宗庙/祭坛，层层台阶，青铜编钟与编磬整齐排列并迸发金色声波光环，身着玄色礼服的周天子与乐舞队列（持羽籥的八佾舞者），青铜鼎冒出袅袅香烟，金色光带与音符从编钟中盘旋升腾到夜空，星空与云海、远山宫阙，金红与暗金为主色调，强烈的逆光与体积光。\n- 上方保留与参考图同样风格的金色书法大标题：中西方音乐史\n- 底部副标题必须写成：3 中国礼乐是怎样诞生的？  （副标题前加一个醒目的金色数字“3”，可以做成带光效的徽章或大号数字，与副标题同一行在左侧）\n- 中文文字务必准确、清晰、无错别字，不要出现其他多余文字和水印。",
+      "arms": {
+        "reference": {
+          "lower": 91.666667,
+          "upper": 91.666667,
+          "coverage": 100,
+          "counts": {
+            "P": 11,
+            "F": 1
+          },
+          "must_failed": [
+            "C6"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 12
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 12
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "loss",
+                "second_mapped": "tie",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 15.0
+              },
+              {
+                "criterion_id": "P5",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              }
+            ],
+            "score": 59.375,
+            "score_lower": 47.5,
+            "score_upper": 67.5,
+            "coverage_percent": 80.0,
+            "order_conflict_weight": 20.0,
+            "rankable": false
+          },
+          "composite": {
+            "lower": 89.5,
+            "upper": 93.5,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": [
+            {
+              "parent_id": "P3",
+              "direction": "AB",
+              "absolute_all_checks_pass_side": "candidate",
+              "pairwise_decision": "equivalent",
+              "note": "绝对评估中一侧满足该关键要求的全部检查、另一侧有已知不满足；相对评估却给另一侧更好或等效。独立裁判存在分歧，保留原分数并送复核，不自动认定任一结论正确。"
+            },
+            {
+              "parent_id": "P3",
+              "direction": "BA",
+              "absolute_all_checks_pass_side": "candidate",
+              "pairwise_decision": "equivalent",
+              "note": "绝对评估中一侧满足该关键要求的全部检查、另一侧有已知不满足；相对评估却给另一侧更好或等效。独立裁判存在分歧，保留原分数并送复核，不自动认定任一结论正确。"
+            }
+          ]
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 15.0
+              },
+              {
+                "criterion_id": "P5",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              }
+            ],
+            "score": 37.5,
+            "score_lower": 37.5,
+            "score_upper": 37.5,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 87.5,
+            "upper": 87.5,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": [
+            {
+              "parent_id": "P3",
+              "direction": "AB",
+              "absolute_all_checks_pass_side": "candidate",
+              "pairwise_decision": "original",
+              "note": "绝对评估中一侧满足该关键要求的全部检查、另一侧有已知不满足；相对评估却给另一侧更好或等效。独立裁判存在分歧，保留原分数并送复核，不自动认定任一结论正确。"
+            },
+            {
+              "parent_id": "P3",
+              "direction": "BA",
+              "absolute_all_checks_pass_side": "candidate",
+              "pairwise_decision": "original",
+              "note": "绝对评估中一侧满足该关键要求的全部检查、另一侧有已知不满足；相对评估却给另一侧更好或等效。独立裁判存在分歧，保留原分数并送复核，不自动认定任一结论正确。"
+            }
+          ]
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-122",
+      "title": "黑色圆柱改为灰色",
+      "group": "G07 图片修改",
+      "query": "Flova Image 2.5 Flare 制作图像 \n图1 的黑色圆柱改为图2 的灰色圆柱，其余不变 ",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 4
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 4
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 4
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "win",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 40.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 35.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 30.0,
+            "score_upper": 70.0,
+            "coverage_percent": 60.0,
+            "order_conflict_weight": 40.0,
+            "rankable": false
+          },
+          "composite": {
+            "lower": 86.0,
+            "upper": 94.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "win",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 40.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 35.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 30.0,
+            "score_upper": 70.0,
+            "coverage_percent": 60.0,
+            "order_conflict_weight": 40.0,
+            "rankable": false
+          },
+          "composite": {
+            "lower": 86.0,
+            "upper": 94.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-124",
+      "title": "人物近景与质感修改",
+      "group": "G07 图片修改",
+      "query": "你就按这张图来改近景吗 不要改变人物的站位 还有要真实人物质感 不要有噪点啥的 人物五官不变形 Flova Image 2 制作图像 ",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 7
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 7
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 0,
+          "upper": 12.5,
+          "coverage": 87.5,
+          "counts": {
+            "F": 1,
+            "U": 1,
+            "B": 5
+          },
+          "must_failed": [
+            "C1",
+            "C3",
+            "C4",
+            "C5",
+            "C6",
+            "C7"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              }
+            ],
+            "score": 37.5,
+            "score_lower": 37.5,
+            "score_upper": 37.5,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 87.5,
+            "upper": 87.5,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 25.0
+              }
+            ],
+            "score": 0.0,
+            "score_lower": 0.0,
+            "score_upper": 0.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 0.0,
+            "upper": 10.0,
+            "gate": "fail",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-149",
+      "title": "S07 暖金抱持 3 秒视频",
+      "group": "G08 视频制作",
+      "query": "我已审核S07「暖金色抱持回忆」首帧，确认通过并保留，不重做。\r\n\r\n审核结论：\r\n1. 噜妹侧脸与噜噜胸肩的贴靠自然；\r\n2. 两张脸彼此独立，没有融合或穿模；\r\n3. 短臂支撑方式基本自然，没有明显拉长；\r\n4. 衣冠比例稳定；\r\n5. 暖金光线与回忆氛围成立。\r\n\r\n现在请继续生成 S07 的视频候选。\r\n\r\n要求：\r\n- 使用当前已通过的S07首帧；\r\n- Wan 3.0普通版，480P，16:9，静音，1个候选；\r\n- 时长暂按3秒；\r\n- 画面保持胸上双人近景，女左低男右高；\r\n- 噜妹闭目轻靠噜噜胸肩，保持自然依偎；\r\n- 噜噜低头看她，表现悲伤与不舍；\r\n- 动作以轻微停留、极小幅度呼吸感和轻微衣饰摆动为主，不要继续明显压近，不要强行大幅调整抱姿；\r\n- 不拉长手臂，不增加额外肢体，不出现脸部融合、穿模、服装变化或武器；\r\n- 暖金虚化建筑和柔和侧后光保持稳定。\r\n\r\n请先给出S07视频的预计积分并确认设置；如无需额外说明，也可直接按既定单候选方案生成后停审。",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100.0,
+          "counts": {
+            "N/A": 1,
+            "P": 9
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 93.33333333333333
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 10
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 10
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P5",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "win",
+                "second_mapped": "tie",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "win",
+                "second_mapped": "tie",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P5",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 30.0,
+            "score_upper": 70.0,
+            "coverage_percent": 60.0,
+            "order_conflict_weight": 40.0,
+            "rankable": false
+          },
+          "composite": {
+            "lower": 86.0,
+            "upper": 94.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-153",
+      "title": "Hammam 亲吻与右移镜头",
+      "group": "G08 视频制作",
+      "query": "Animate this exact reference photograph for 5 seconds. Scene: Hammam. Shot: Hammam — 14 09 FACE A FACE INTENSE. Camera: Pan the real camera slowly to the right from a fixed position, revealing the same scene naturally. Shot size: Plan moyen. Movement amplitude: Douce. Duration: 5 seconds. One continuous cinematic shot. Start from the source framing and perform this camera movement throughout the shot, in a coherent three-dimensional scene. Preserve the identities, clothing and location. Use gentle character movements consistent with the visible action. Keep the exact facial features, hairstyles, accessories, architecture and lighting from the reference. Natural breathing, coherent gestures and realistic motion. Create actual camera motion and spatial depth rather than sliding a flat still image.s'embrassent",
+      "arms": {
+        "reference": {
+          "lower": 70.0,
+          "upper": 70.0,
+          "coverage": 100,
+          "counts": {
+            "P": 5,
+            "F": 2
+          },
+          "must_failed": [
+            "C3",
+            "C4"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 7
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 70.0,
+          "upper": 70.0,
+          "coverage": 100,
+          "counts": {
+            "P": 5,
+            "F": 2
+          },
+          "must_failed": [
+            "C3",
+            "C4"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "insufficient",
+                "second_mapped": "tie",
+                "status": "insufficient",
+                "score": null,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "insufficient",
+                "second_mapped": "loss",
+                "status": "insufficient",
+                "score": null,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "insufficient",
+                "second_mapped": "loss",
+                "status": "insufficient",
+                "score": null,
+                "weight": 20.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 12.5,
+            "score_upper": 87.5,
+            "coverage_percent": 25.0,
+            "order_conflict_weight": 0.0,
+            "rankable": false
+          },
+          "composite": {
+            "lower": 82.5,
+            "upper": 97.5,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": [
+            {
+              "parent_id": "P2",
+              "direction": "BA",
+              "absolute_all_checks_pass_side": "candidate",
+              "pairwise_decision": "equivalent",
+              "note": "绝对评估中一侧满足该关键要求的全部检查、另一侧有已知不满足；相对评估却给另一侧更好或等效。独立裁判存在分歧，保留原分数并送复核，不自动认定任一结论正确。"
+            }
+          ]
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "win",
+                "second_mapped": "loss",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "win",
+                "second_mapped": "tie",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "loss",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 20.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 12.5,
+            "score_upper": 87.5,
+            "coverage_percent": 25.0,
+            "order_conflict_weight": 75.0,
+            "rankable": false
+          },
+          "composite": {
+            "lower": 58.5,
+            "upper": 73.5,
+            "gate": "fail",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-176",
+      "title": "猫狗贴脸、偷瞄与微笑",
+      "group": "G09 视频修改",
+      "query": "重新生成一个4秒视频，不要配音，不要背景音乐，敦敦在紧紧抱着黑漂，脸部贴在一起，特写镜头，眼珠转动悄悄喵了眼敦敦，然后又转回来，随即嘴角轻微上扬微笑。",
+      "arms": {
+        "reference": {
+          "lower": 77.083333,
+          "upper": 100,
+          "coverage": 77.083333,
+          "counts": {
+            "P": 6,
+            "U": 3
+          },
+          "must_failed": [],
+          "status": "undetermined",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 79.166667,
+          "upper": 100,
+          "coverage": 79.166667,
+          "counts": {
+            "P": 6,
+            "U": 3
+          },
+          "must_failed": [],
+          "status": "undetermined",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 68.75,
+          "upper": 68.75,
+          "coverage": 100,
+          "counts": {
+            "P": 7,
+            "F": 2
+          },
+          "must_failed": [
+            "C2",
+            "C6"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "win",
+                "second_mapped": "tie",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 25.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 37.5,
+            "score_upper": 62.5,
+            "coverage_percent": 75.0,
+            "order_conflict_weight": 25.0,
+            "rankable": false
+          },
+          "composite": {
+            "lower": 70.8333336,
+            "upper": 92.5,
+            "gate": "undetermined",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "insufficient",
+                "status": "insufficient",
+                "score": null,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "win",
+                "second_mapped": "insufficient",
+                "status": "insufficient",
+                "score": null,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "insufficient",
+                "status": "insufficient",
+                "score": null,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "win",
+                "second_mapped": "insufficient",
+                "status": "insufficient",
+                "score": null,
+                "weight": 25.0
+              }
+            ],
+            "score": null,
+            "score_lower": 0.0,
+            "score_upper": 100.0,
+            "coverage_percent": 0.0,
+            "order_conflict_weight": 0.0,
+            "rankable": false
+          },
+          "composite": {
+            "lower": 55.0,
+            "upper": 75.0,
+            "gate": "fail",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": [
+            {
+              "parent_id": "P4",
+              "direction": "AB",
+              "absolute_all_checks_pass_side": "original",
+              "pairwise_decision": "candidate",
+              "note": "绝对评估中一侧满足该关键要求的全部检查、另一侧有已知不满足；相对评估却给另一侧更好或等效。独立裁判存在分歧，保留原分数并送复核，不自动认定任一结论正确。"
+            }
+          ]
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-178",
+      "title": "机器人原片延长 4 秒",
+      "group": "G09 视频修改",
+      "query": "Use Seedance 2.5 native append extension (VideoExtend) on the referenced project video at 480p: extend it forward by 4 seconds — the robot lies still in the scrap pile as the sparks fade. Produce exactly ONE video and do not regenerate the source.",
+      "arms": {
+        "reference": {
+          "lower": 0,
+          "upper": 10.0,
+          "coverage": 90.0,
+          "counts": {
+            "F": 2,
+            "B": 2,
+            "U": 1
+          },
+          "must_failed": [
+            "C1",
+            "C2",
+            "C3",
+            "C4"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 0,
+          "upper": 0,
+          "coverage": 100,
+          "counts": {
+            "F": 2,
+            "B": 3
+          },
+          "must_failed": [
+            "C1",
+            "C2",
+            "C3",
+            "C4",
+            "C5"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 0,
+          "upper": 40.0,
+          "coverage": 60.0,
+          "counts": {
+            "U": 2,
+            "B": 2,
+            "F": 1
+          },
+          "must_failed": [
+            "C2",
+            "C3",
+            "C4"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 10.0,
+            "upper": 10.0,
+            "gate": "fail",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 10.0,
+            "upper": 42.0,
+            "gate": "fail",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-185",
+      "title": "镜 3 苏倩配音局部修订",
+      "group": "G10 音频制作与修改",
+      "query": "第四集配音微调：重生成「镜3｜苏倩惊愕」这一句配音（asset：S04配音03_镜3苏倩_惊愕，原resource 23c8a978fd3b46b2ad2a6b94c3b4de35）。台词为“是谁干的？！再过一天就能交货……”保持苏倩已登记音色参考不变。表演要求：句首保留惊愕的吸气、短停与轻颤（不尖叫），但整句情绪要落到句尾的“无奈”——说完质问后转为心灰的无奈低语，语气收在无力感上。时间窗维持23.2—27.7秒，声音时长与现文件相当（约4.5秒），不放慢不加速。生成后请核听并替换原配音，其余9句配音与编排一律保持不变；只改这一句，不要动其他任何内容。本轮只重生成镜3这一句配音，不加音效/BGM、不建时间线、不生成视频。",
+      "arms": {
+        "reference": {
+          "lower": 65.0,
+          "upper": 65.0,
+          "coverage": 100,
+          "counts": {
+            "F": 3,
+            "P": 6
+          },
+          "must_failed": [
+            "C1",
+            "C4",
+            "C7"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 9
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 9
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 15.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P5",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 15.0
+              }
+            ],
+            "score": 92.5,
+            "score_lower": 92.5,
+            "score_upper": 92.5,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 98.5,
+            "upper": 98.5,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 15.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "win",
+                "second_mapped": "win",
+                "status": "win",
+                "score": 100,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P5",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 15.0
+              }
+            ],
+            "score": 92.5,
+            "score_lower": 92.5,
+            "score_upper": 92.5,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 98.5,
+            "upper": 98.5,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-191",
+      "title": "江南清晨 20 秒纯音乐",
+      "group": "G10 音频制作与修改",
+      "query": "只做一件事：用模型 Suno（model_key: music_suno_5）生成 1 首背景音乐，纯音乐、没有人声。\n内容要求：江南水乡清晨的氛围音乐，古筝为主，配竹笛和极轻的弦乐铺底，节奏舒缓约72 BPM，清新、温润、略带薄雾感，情绪克制不煽情，适合20秒苏州平江路旅行短片，纯音乐无人声，结尾自然收束。\n不要换成别的模型，不要生成分镜或其他素材，不要追问，生成完直接结束。",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 7
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 7
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 7
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P5",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 15.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P5",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 15.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-203",
+      "title": "图片转 3 秒静态时间线",
+      "group": "G11 时间线编辑",
+      "query": "以刚才得到的这张图片为基础，制作总时长3秒的静态时间线，无需生成视频。",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 4
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 4
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 4
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 35.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 45.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 35.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 45.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-218",
+      "title": "让音效明显高于 BGM",
+      "group": "G11 时间线编辑",
+      "query": "剪辑线内的音效要比背景音乐明显，现在的音效听不见\n",
+      "arms": {
+        "reference": {
+          "lower": 50.0,
+          "upper": 100,
+          "coverage": 50.0,
+          "counts": {
+            "P": 3,
+            "U": 1
+          },
+          "must_failed": [],
+          "status": "undetermined",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 50.0,
+          "upper": 100,
+          "coverage": 50.0,
+          "counts": {
+            "P": 3,
+            "U": 1
+          },
+          "must_failed": [],
+          "status": "undetermined",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 50.0,
+          "upper": 100,
+          "coverage": 50.0,
+          "counts": {
+            "P": 3,
+            "U": 1
+          },
+          "must_failed": [],
+          "status": "undetermined",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "loss",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 50.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "loss",
+                "second_mapped": "tie",
+                "status": "order_conflict",
+                "score": null,
+                "weight": 20.0
+              }
+            ],
+            "score": 0.0,
+            "score_lower": 0.0,
+            "score_upper": 50.0,
+            "coverage_percent": 50.0,
+            "order_conflict_weight": 50.0,
+            "rankable": false
+          },
+          "composite": {
+            "lower": 40.0,
+            "upper": 90.0,
+            "gate": "undetermined",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "loss",
+                "second_mapped": "insufficient",
+                "status": "insufficient",
+                "score": null,
+                "weight": 50.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "loss",
+                "second_mapped": "insufficient",
+                "status": "insufficient",
+                "score": null,
+                "weight": 20.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 15.0,
+            "score_upper": 85.0,
+            "coverage_percent": 30.0,
+            "order_conflict_weight": 0.0,
+            "rankable": false
+          },
+          "composite": {
+            "lower": 43.0,
+            "upper": 97.0,
+            "gate": "undetermined",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-221",
+      "title": "登记三个附件与真实 ID",
+      "group": "G12 项目与素材管理",
+      "query": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 8
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 85.0,
+          "upper": 100,
+          "coverage": 85.0,
+          "counts": {
+            "P": 7,
+            "U": 1
+          },
+          "must_failed": [],
+          "status": "undetermined",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 85.0,
+          "upper": 100,
+          "coverage": 85.0,
+          "counts": {
+            "P": 7,
+            "U": 1
+          },
+          "must_failed": [],
+          "status": "undetermined",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 15.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 78.0,
+            "upper": 90.0,
+            "gate": "undetermined",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 15.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 78.0,
+            "upper": 90.0,
+            "gate": "undetermined",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-238",
+      "title": "切换至韩剧质感 Skill",
+      "group": "G12 项目与素材管理",
+      "query": "现在状态不变，切换到\n\n{\"skill_key\":\"5262d413b30950d4b8ccc7a9add112f2\",\"name\":\"韩剧质感小剧场\",\"description\":\"将创意按信息完整度导向精修真人韩剧偶像短剧情；以全局 K-drama 审美和偶像级颜值底线保持多角色差异，GPT Image 2 只制作角色定妆与场景图，Seedance 2.5 直接引用两类图生成最长 30 秒的视频，默认自然韩语对白，并按六项验收。\"}\n\nskill",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 7
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 7
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 7
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 35.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 10.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 35.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 10.0
+              }
+            ],
+            "score": 37.5,
+            "score_lower": 37.5,
+            "score_upper": 37.5,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 87.5,
+            "upper": 87.5,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-247",
+      "title": "导出 28.40 秒 MP4 成片",
+      "group": "G13 成片导出与下载",
+      "query": "成片确认，可以导出。28.40 秒 16:9 合成预览（镜头衔接、口型与音乐同步、结尾收束）均认可。请直接进入导出，生成可下载的 MP4 成片文件，并把导出结果与下载信息告知我。",
+      "arms": {
+        "reference": {
+          "lower": 86.666667,
+          "upper": 100,
+          "coverage": 86.666667,
+          "counts": {
+            "P": 4,
+            "U": 1
+          },
+          "must_failed": [],
+          "status": "undetermined",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 15.0,
+          "upper": 15.0,
+          "coverage": 100,
+          "counts": {
+            "F": 1,
+            "B": 3,
+            "P": 1
+          },
+          "must_failed": [
+            "C1",
+            "C2",
+            "C3",
+            "C4"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 5
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 45.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 40.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 15.0
+              }
+            ],
+            "score": 0.0,
+            "score_lower": 0.0,
+            "score_upper": 0.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 12.0,
+            "upper": 12.0,
+            "gate": "fail",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 45.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 40.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 15.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-253",
+      "title": "分镜提示词文档导出",
+      "group": "G13 成片导出与下载",
+      "query": "把分镜提示词做成文档导出\n\n",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 3
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 75.0,
+          "upper": 75.0,
+          "coverage": 100,
+          "counts": {
+            "P": 2,
+            "F": 1
+          },
+          "must_failed": [
+            "C3"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 3
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 55.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 70.0,
+            "upper": 70.0,
+            "gate": "fail",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": [
+            {
+              "parent_id": "P3",
+              "direction": "AB",
+              "absolute_all_checks_pass_side": "original",
+              "pairwise_decision": "equivalent",
+              "note": "绝对评估中一侧满足该关键要求的全部检查、另一侧有已知不满足；相对评估却给另一侧更好或等效。独立裁判存在分歧，保留原分数并送复核，不自动认定任一结论正确。"
+            },
+            {
+              "parent_id": "P3",
+              "direction": "BA",
+              "absolute_all_checks_pass_side": "original",
+              "pairwise_decision": "equivalent",
+              "note": "绝对评估中一侧满足该关键要求的全部检查、另一侧有已知不满足；相对评估却给另一侧更好或等效。独立裁判存在分歧，保留原分数并送复核，不自动认定任一结论正确。"
+            }
+          ]
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 55.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 20.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-271",
+      "title": "Skill 保留提示词草稿版本链",
+      "group": "G14 Skill 创作与修改",
+      "query": "每次生成完提示词都要给我一个草稿。然后每次我有修改之后还要给我新的草稿，每次生成完视频之后不要替换之前的草稿，之前的草稿不要删除。把这个问题更新到我的技能里。",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 5
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 5
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 5
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              },
+              {
+                "criterion_id": "P4",
+                "first_mapped": "tie",
+                "second_mapped": "tie",
+                "status": "tie",
+                "score": 50,
+                "weight": 25.0
+              }
+            ],
+            "score": 50.0,
+            "score_lower": 50.0,
+            "score_upper": 50.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 90.0,
+            "upper": 90.0,
+            "gate": "pass",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": true
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    },
+    {
+      "id": "FL-EVAL-20261104-280",
+      "title": "人设音色与生理状态 Skill",
+      "group": "G14 Skill 创作与修改",
+      "query": "将地域、口音、音色、说话习惯的全部细节写入提示词，生成的人声完全匹配对应人设特征。\r\n进阶优化技巧：创作者公布踩坑摸索出的进阶方案，需要给 AI 生成的声音加入真人不同生理状态细节，比如刚睡醒发哑发沉、运动时带喘断句乱、生气时破音语速快、难过时带哭腔卡壳。加个提示词撰写使音色的skill",
+      "arms": {
+        "reference": {
+          "lower": 100,
+          "upper": 100,
+          "coverage": 100,
+          "counts": {
+            "P": 4
+          },
+          "must_failed": [],
+          "status": "pass",
+          "applicable_budget": 100.0
+        },
+        "terra": {
+          "lower": 0,
+          "upper": 0,
+          "coverage": 100,
+          "counts": {
+            "F": 1,
+            "B": 3
+          },
+          "must_failed": [
+            "C1",
+            "C2",
+            "C3",
+            "C4"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        },
+        "deepseek": {
+          "lower": 0,
+          "upper": 0,
+          "coverage": 100,
+          "counts": {
+            "F": 1,
+            "B": 3
+          },
+          "must_failed": [
+            "C1",
+            "C2",
+            "C3",
+            "C4"
+          ],
+          "status": "fail",
+          "applicable_budget": 100.0
+        }
+      },
+      "comparisons": {
+        "terra": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 40.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 30.0
+              }
+            ],
+            "score": 0.0,
+            "score_lower": 0.0,
+            "score_upper": 0.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 0.0,
+            "upper": 0.0,
+            "gate": "fail",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        },
+        "deepseek": {
+          "score": {
+            "criteria": [
+              {
+                "criterion_id": "P1",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 30.0
+              },
+              {
+                "criterion_id": "P2",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 40.0
+              },
+              {
+                "criterion_id": "P3",
+                "first_mapped": "loss",
+                "second_mapped": "loss",
+                "status": "loss",
+                "score": 0,
+                "weight": 30.0
+              }
+            ],
+            "score": 0.0,
+            "score_lower": 0.0,
+            "score_upper": 0.0,
+            "coverage_percent": 100.0,
+            "order_conflict_weight": 0.0,
+            "rankable": true
+          },
+          "composite": {
+            "lower": 0.0,
+            "upper": 0.0,
+            "gate": "fail",
+            "formula": "80% absolute + 20% paired comparison",
+            "rankable": false
+          },
+          "consistency_flags": []
+        }
+      },
+      "complete": true
+    }
+  ],
+  "status": "complete",
+  "notes": [
+    "两组各28条、每条运行1次。每个候选与历史原始日志独立比较，原始日志不是标准答案。",
+    "绝对评分：原始结果与两组候选统一按v4证据和依赖语义重评；业务Rubrics继承并冻结。",
+    "AB：X=原始、Y=候选；BA：X=候选、Y=原始；两次独立API调用。顺序不一致与缺证据不按平局计50。",
+    "合分=80%绝对分+20%双向比较分。硬性要求失败保留失败门槛。缺证据显示固定预算区间，不按已知项重归一。",
+    "顶部汇总只纳入三方绝对评估和双方AB/BA均有效的共同用例；待评用例不按0分计入。",
+    "本次仅试跑和结果展示，尚未开发评估平台。",
+    "两组新Run的后台代码、其他模型配置与Prompt快照相同；历史日志发生在不同版本和审批条件下。当前分数衡量端到端交付，不能把全部差异归因为Planner能力。",
+    "原始结果本轮按统一规则重新评判；补充原始配音和实际媒体，新增B依赖状态，因此不与旧v3分数直接混算。",
+    "裁判仅校验错误才重试或修复引用，未修改合法评分结论来消除顺序冲突。实际媒体观察以附件哈希定位，原始引用与修复记录均保留。",
+    "全部引用通过定位校验不代表全部业务结论已人工认定；此页是平台开发前的API评估试点。"
+  ],
+  "capture_limitations": [
+    "两个 Run 的只读展示准备已获授权并完成；已取回17份成功生成的媒体及本轮文档、时间线。图片生成失败与下载缺证据分别处理。",
+    "Trace明细接口大量502/504；419份公开事件文件均已校验。部分保持不变的要求仍缺历史状态或完整内部写入证据。",
+    "来源快照含captured_current状态；只提取当前请求前734条消息作为上文，没有把后续项目状态当作前置事实。"
+  ]
+}

@@ -1,0 +1,2378 @@
+{
+  "id": "FL-EVAL-20261104-088",
+  "title": "KTV 欢唱卡视觉提示词",
+  "group": "G05 Prompt 创作与修订",
+  "query": "ktv欢唱卡设计，帮我写个AI提示词，需要有个视角主体，",
+  "requested_at": "2026-11-02T01:08:11.718185+00:00",
+  "history": [],
+  "contract": {
+    "schema_version": "flova.pilot_contract.v4",
+    "query_id": "FL-EVAL-20261104-088",
+    "rubric": {
+      "schema_version": "flova.general_rubric.v1",
+      "case_id": "4f23e00d-de3d-4f16-99e5-718e5e51b04b",
+      "query_id": "FL-EVAL-20261104-088",
+      "generation_readiness": "ready",
+      "source_audit": {
+        "used_source_ids": [
+          "9b81aa8d2d74455d9b57298d061fc260"
+        ],
+        "excluded_sources": [],
+        "limitations": [
+          "已读唯一原始请求；“视角主体”按画面的主视觉及其呈现处理，允许合理多种主体和构图选择。",
+          "未给品牌、文字内容或素材；这些是可自行选择或使用占位符的细节，不阻断本轮提示词写作。"
+        ]
+      },
+      "task_spec": {
+        "current_request": "为 KTV 欢唱卡设计写一段 AI 提示词，并让画面有清晰的主体。",
+        "current_stage": "create",
+        "deliverables": [
+          "可用于 KTV 欢唱卡视觉设计的 AI 提示词"
+        ],
+        "scope_exclusions": [
+          "不要求实际生成图片、卡片文件或执行工具。",
+          "不设定品牌名、价格、有效期、尺寸、风格、印刷工艺或固定主体。"
+        ],
+        "task_information_gaps": [],
+        "evaluation_evidence_gaps": [],
+        "source_refs": [
+          {
+            "source_id": "9b81aa8d2d74455d9b57298d061fc260",
+            "pointer": "/content/input/content",
+            "quote": "ktv欢唱卡设计，帮我写个AI提示词，需要有个视角主体，",
+            "supports": "请求用于 KTV 欢唱卡设计的 AI 提示词并强调主体。"
+          }
+        ]
+      },
+      "source_inventory": [
+        {
+          "requirement": "写出 KTV 欢唱卡设计的 AI 提示词。",
+          "basis": "explicit",
+          "source_refs": [
+            {
+              "source_id": "9b81aa8d2d74455d9b57298d061fc260",
+              "pointer": "/content/input/content",
+              "quote": "ktv欢唱卡设计，帮我写个AI提示词，需要有个视角主体，",
+              "supports": "请求用于 KTV 欢唱卡设计的 AI 提示词并强调主体。"
+            }
+          ],
+          "criterion_ids": [
+            "C1"
+          ]
+        },
+        {
+          "requirement": "提示词包含明确的主体及其视觉呈现。",
+          "basis": "explicit",
+          "source_refs": [
+            {
+              "source_id": "9b81aa8d2d74455d9b57298d061fc260",
+              "pointer": "/content/input/content",
+              "quote": "ktv欢唱卡设计，帮我写个AI提示词，需要有个视角主体，",
+              "supports": "请求用于 KTV 欢唱卡设计的 AI 提示词并强调主体。"
+            }
+          ],
+          "criterion_ids": [
+            "C2"
+          ]
+        }
+      ],
+      "parents": [
+        {
+          "parent_id": "P1",
+          "statement": "交付用于欢唱卡设计的完整提示词",
+          "weight": 55,
+          "mode": "all",
+          "must": true,
+          "critical": false,
+          "applicability": "always",
+          "source_refs": [
+            {
+              "source_id": "9b81aa8d2d74455d9b57298d061fc260",
+              "pointer": "/content/input/content",
+              "quote": "ktv欢唱卡设计，帮我写个AI提示词，需要有个视角主体，",
+              "supports": "请求用于 KTV 欢唱卡设计的 AI 提示词并强调主体。"
+            }
+          ]
+        },
+        {
+          "parent_id": "P2",
+          "statement": "在提示词中确立清晰的画面主体",
+          "weight": 45,
+          "mode": "all",
+          "must": true,
+          "critical": false,
+          "applicability": "always",
+          "source_refs": [
+            {
+              "source_id": "9b81aa8d2d74455d9b57298d061fc260",
+              "pointer": "/content/input/content",
+              "quote": "ktv欢唱卡设计，帮我写个AI提示词，需要有个视角主体，",
+              "supports": "请求用于 KTV 欢唱卡设计的 AI 提示词并强调主体。"
+            }
+          ]
+        }
+      ],
+      "criteria": [
+        {
+          "criterion_id": "C1",
+          "parent_id": "P1",
+          "statement": "实际给出可直接用于 AI 视觉生成或设计的提示词，明确对象是 KTV 欢唱卡的卡面，包含足以形成画面的设计描述；不以泛泛设计建议、提问或普通KTV房间效果图替代。",
+          "weight": null,
+          "applicability": "always",
+          "anchors": {
+            "P": "交付可复制的提示词，指向KTV欢唱卡卡面并含具体视觉设计描述。",
+            "F": "完整最终回复无提示词，或仅写通用KTV室内/演唱会海报而没有欢唱卡设计用途。",
+            "U": "未取得完整最终回复或所交付正文，无法确认该项；部分记录中未出现不证明整轮未完成。",
+            "NA": "never"
+          },
+          "evidence_plan": [
+            "读取完整最终回复及交付正文并检查截断；仅据可见内容判定，不把计划或候选自称当作已执行事实。"
+          ],
+          "source_refs": [
+            {
+              "source_id": "9b81aa8d2d74455d9b57298d061fc260",
+              "pointer": "/content/input/content",
+              "quote": "ktv欢唱卡设计，帮我写个AI提示词，需要有个视角主体，",
+              "supports": "请求用于 KTV 欢唱卡设计的 AI 提示词并强调主体。"
+            }
+          ],
+          "fact_key": "FL-EVAL-20261104-088-C1",
+          "dedup_note": "只评分提示词交付与欢唱卡用途；视觉焦点由 C2 单独负责，不按风格数量或篇幅加分。"
+        },
+        {
+          "criterion_id": "C2",
+          "parent_id": "P2",
+          "statement": "提示词明确一个可辨识的主要视觉对象或视觉中心，并说明其在画面中的呈现、构图或观看视角，使“有个视角主体”落实为画面要求；主体可由作者合理选择，不冻结麦克风、人物或特定角度。",
+          "weight": null,
+          "applicability": "always",
+          "anchors": {
+            "P": "提示词让人可明确识别主视觉及其呈现位置、关系或视角，未仅靠背景装饰堆砌。",
+            "F": "提示词只有色彩、灯光与零散装饰而无可辨主要对象，或将所有元素平均堆放导致没有所求主体。",
+            "U": "未取得完整最终回复或所交付正文，无法确认该项；部分记录中未出现不证明整轮未完成。",
+            "NA": "never"
+          },
+          "evidence_plan": [
+            "读取完整最终回复及交付正文并检查截断；仅据可见内容判定，不把计划或候选自称当作已执行事实。"
+          ],
+          "source_refs": [
+            {
+              "source_id": "9b81aa8d2d74455d9b57298d061fc260",
+              "pointer": "/content/input/content",
+              "quote": "ktv欢唱卡设计，帮我写个AI提示词，需要有个视角主体，",
+              "supports": "请求用于 KTV 欢唱卡设计的 AI 提示词并强调主体。"
+            }
+          ],
+          "fact_key": "FL-EVAL-20261104-088-C2",
+          "dedup_note": "只评分主体及其呈现关系；不再次评分卡面用途或提示词是否交付。"
+        }
+      ],
+      "quality": {
+        "enabled": false,
+        "rationale": "本轮是文本讨论或精确修改，未有独立于基础完成度且有来源依据的质量维度。",
+        "dimensions": []
+      },
+      "authoring_limitations": [
+        "已读唯一原始请求；“视角主体”按画面的主视觉及其呈现处理，允许合理多种主体和构图选择。",
+        "未给品牌、文字内容或素材；这些是可自行选择或使用占位符的细节，不阻断本轮提示词写作。"
+      ]
+    },
+    "check_weights": {
+      "C1": {
+        "parent_id": "P1",
+        "weight": 55.0,
+        "weight_exact": "55",
+        "gate": true,
+        "applicability": "always"
+      },
+      "C2": {
+        "parent_id": "P2",
+        "weight": 45.0,
+        "weight_exact": "45",
+        "gate": true,
+        "applicability": "always"
+      }
+    },
+    "comparison_rubric": {
+      "schema_version": "flova.result_acceptability_pairwise.v2",
+      "scope": "same_task_original_reference_vs_candidate",
+      "mode": "fulfillment_then_source_grounded_effect",
+      "criteria": [
+        {
+          "criterion_id": "P1",
+          "statement": "交付用于欢唱卡设计的完整提示词",
+          "weight": 55,
+          "acceptance_check_ids": [
+            "C1"
+          ],
+          "source_refs": [
+            {
+              "source_id": "9b81aa8d2d74455d9b57298d061fc260",
+              "pointer": "/content/input/content",
+              "quote": "ktv欢唱卡设计，帮我写个AI提示词，需要有个视角主体，",
+              "supports": "请求用于 KTV 欢唱卡设计的 AI 提示词并强调主体。"
+            }
+          ],
+          "anchors": {
+            "X_better": "X在本条用户要求下有可核实的更完整实现，或在双方均达到底线后，任务原文明确涉及的呈现/表达效果更好。",
+            "Y_better": "同样条件下Y更好。",
+            "equivalent": "双方实质满足程度与任务目标下效果相当；离散约束双方都满足时不得强造差别。",
+            "insufficient": "必需的实际证据缺失或冲突，不能可靠比较；不把缺证据当作表现更差。"
+          }
+        },
+        {
+          "criterion_id": "P2",
+          "statement": "在提示词中确立清晰的画面主体",
+          "weight": 45,
+          "acceptance_check_ids": [
+            "C2"
+          ],
+          "source_refs": [
+            {
+              "source_id": "9b81aa8d2d74455d9b57298d061fc260",
+              "pointer": "/content/input/content",
+              "quote": "ktv欢唱卡设计，帮我写个AI提示词，需要有个视角主体，",
+              "supports": "请求用于 KTV 欢唱卡设计的 AI 提示词并强调主体。"
+            }
+          ],
+          "anchors": {
+            "X_better": "X在本条用户要求下有可核实的更完整实现，或在双方均达到底线后，任务原文明确涉及的呈现/表达效果更好。",
+            "Y_better": "同样条件下Y更好。",
+            "equivalent": "双方实质满足程度与任务目标下效果相当；离散约束双方都满足时不得强造差别。",
+            "insufficient": "必需的实际证据缺失或冲突，不能可靠比较；不把缺证据当作表现更差。"
+          }
+        }
+      ],
+      "quality_tiebreakers": [],
+      "all_28_requested": true,
+      "not_aesthetic_only": "用户本轮明确要求两组全部用例对原始结果做双向比较。纯查询/配置也比较任务完成与正确性；不强造审美或创造性维度。",
+      "missing_output_policy": "可信确认未交付与评估器缺文件不同：可比较交付完成情况；不得对不存在的作品虚构审美比较。"
+    },
+    "source_hash": "dd7972f1930435d03b82a9585e25c45b3d703fe6679d6fab2ce8802f5b802462",
+    "rubric_hash": "2a30e196959efc249b5852b1f61db61d0e9d7b7c91f35f709dc5f0c190668838",
+    "policy_version": "evidence_and_dependency.v4",
+    "aggregation_profile": "frozen_explicit_check_budgets.v4"
+  },
+  "results": {
+    "reference": {
+      "text": "可以把**麦克风**作为明确的视角主体：从包厢里看向舞台，近处的麦克风最醒目，背景只负责烘托欢唱氛围。\n\n**AI 图片提示词：**\n\n> 设计一张 KTV 欢唱卡，竖版卡片构图。以一支精致的无线麦克风为视觉主体，采用近景、略微仰视的视角，麦克风清晰突出，位于画面中央偏下；后方是虚化的 KTV 包厢、霓虹灯带与柔和光斑，营造朋友聚会、尽情欢唱的热闹氛围。主色调为紫色与电光蓝，点缀少量金色，时尚、有活力但不过度杂乱。画面上方预留醒目的标题区“欢唱卡”，中部预留权益信息区，下方预留使用说明和二维码位置。卡面层次清楚、留白充足、文字区域易读，具有精致的商业平面设计质感。不要出现人物特写，不要让背景抢过麦克风主体。\n\n如果要放**准确的价格、时长和使用规则**，建议先用 AI 生成无字底图，再在设计软件里排文字，避免生成错字。",
+      "evidence": {
+        "E_FINAL_RESPONSE": {
+          "evidence_id": "E_FINAL_RESPONSE",
+          "kind": "final_response",
+          "content": {
+            "text": "可以把**麦克风**作为明确的视角主体：从包厢里看向舞台，近处的麦克风最醒目，背景只负责烘托欢唱氛围。\n\n**AI 图片提示词：**\n\n> 设计一张 KTV 欢唱卡，竖版卡片构图。以一支精致的无线麦克风为视觉主体，采用近景、略微仰视的视角，麦克风清晰突出，位于画面中央偏下；后方是虚化的 KTV 包厢、霓虹灯带与柔和光斑，营造朋友聚会、尽情欢唱的热闹氛围。主色调为紫色与电光蓝，点缀少量金色，时尚、有活力但不过度杂乱。画面上方预留醒目的标题区“欢唱卡”，中部预留权益信息区，下方预留使用说明和二维码位置。卡面层次清楚、留白充足、文字区域易读，具有精致的商业平面设计质感。不要出现人物特写，不要让背景抢过麦克风主体。\n\n如果要放**准确的价格、时长和使用规则**，建议先用 AI 生成无字底图，再在设计软件里排文字，避免生成错字。",
+            "complete_public_response": true
+          }
+        },
+        "E_BOUNDARY": {
+          "evidence_id": "E_BOUNDARY",
+          "kind": "trusted_execution_boundary",
+          "content": {
+            "assessment_scope": "final_turn_result",
+            "source_env": "prod",
+            "scope_id": "bh_creation_ods",
+            "explicit_identity_binding": {
+              "query_id": "FL-EVAL-20261104-088",
+              "case_id": "4f23e00d-de3d-4f16-99e5-718e5e51b04b",
+              "project_id": "70ac57d3cb3046ea8c586a6593fab878",
+              "conversation_id": "1974b2a266db4c1cbb45b8bad0cc54f9",
+              "turn_message_id": "9b81aa8d2d74455d9b57298d061fc260",
+              "conversation_task_id": null,
+              "assistant_message_id": null,
+              "task_ids": [
+                "8c315467eb6a4699b1c5c6c045807b57"
+              ],
+              "assistant_message_ids": [
+                "cd2e68a6276bff539fad8e921b111af8"
+              ],
+              "identity_status": "verified_explicit_task_turn_conversation"
+            },
+            "query_created_at": "2026-11-02 01:08:11.718185",
+            "public_final_messages": [
+              {
+                "message_id": "cd2e68a6276bff539fad8e921b111af8",
+                "created_at": "2026-11-02 01:08:19.967745",
+                "lifecycle_status": "final"
+              }
+            ],
+            "business_tasks": [
+              {
+                "task_id": "8c315467eb6a4699b1c5c6c045807b57",
+                "project_id": "70ac57d3cb3046ea8c586a6593fab878",
+                "conversation_id": "1974b2a266db4c1cbb45b8bad0cc54f9",
+                "task_type": "agent_turn",
+                "assistant_message_id": "cd2e68a6276bff539fad8e921b111af8",
+                "turn_message_id": "9b81aa8d2d74455d9b57298d061fc260",
+                "waiting_batch_id": null,
+                "tool_call_id": null,
+                "interaction_id": null,
+                "dispatch_status": "published",
+                "run_status": "completed",
+                "last_error_stage": null,
+                "last_error_code": null,
+                "last_error_detail": null,
+                "started_at": "2026-11-02 01:08:11.857867",
+                "finished_at": "2026-11-02 01:08:19.964389",
+                "created_at": "2026-11-02 01:08:11.794428",
+                "updated_at": "2026-11-02 01:08:19.964389"
+              }
+            ],
+            "turn_manifests": [
+              {
+                "id": 1621945,
+                "project_id": "70ac57d3cb3046ea8c586a6593fab878",
+                "conversation_id": "1974b2a266db4c1cbb45b8bad0cc54f9",
+                "turn_message_id": "9b81aa8d2d74455d9b57298d061fc260",
+                "assistant_message_id": "cd2e68a6276bff539fad8e921b111af8",
+                "status": "sealed",
+                "expected_segment_count": 0,
+                "renderer_version": 1,
+                "created_at": "2026-11-02 01:08:20.032264",
+                "updated_at": "2026-11-02 01:08:20.032266"
+              }
+            ],
+            "archive_sequence_checks": [
+              {
+                "assistant_message_id": "cd2e68a6276bff539fad8e921b111af8",
+                "manifest_status": "sealed",
+                "expected_segment_count": 0,
+                "observed_segment_count": 0,
+                "observed_sequences": [],
+                "exact_expected_sequence_match": true
+              }
+            ],
+            "archive_payload_coverage": {
+              "segments_observed": 0,
+              "spilled_or_external_payloads": 0,
+              "all_payloads_recovered": true,
+              "complete": true
+            },
+            "instrumented_tool_projection": {
+              "rows": 0,
+              "explicit_project_task_match": true,
+              "conversation_conflicts_excluded": 0,
+              "latest_complete_tuple_policy": true,
+              "source": "flova_obs.stg_observation",
+              "source_bytes_verified": true
+            },
+            "later_feedback_excluded_by_exact_target_keys": true,
+            "candidate_agent_rerun": false
+          }
+        },
+        "E_ACTION_LOG": {
+          "evidence_id": "E_ACTION_LOG",
+          "kind": "action_log_record_index",
+          "content": {
+            "record_refs": [],
+            "archive_segment_record_refs": [],
+            "instrumented_action_record_refs": [],
+            "public_receipt_record_refs": [],
+            "order_note": "Use per-record start_time/created_at or archive seq; refs preserve stable evidence file order. Bodies are stored once in referenced record.content.",
+            "coverage": "partial archival payload recovery; exact-task instrumented tools and public receipts supplement gaps",
+            "context_update_payloads_excluded": true,
+            "hidden_reasoning_excluded": true
+          }
+        }
+      },
+      "evaluation": {
+        "judgment": {
+          "schema_version": "flova.absolute_judgment.v4",
+          "query_id": "FL-EVAL-20261104-088",
+          "criteria": [
+            {
+              "criterion_id": "C1",
+              "status": "P",
+              "reason": "完整最终回复交付了可直接复制的KTV欢唱卡卡面AI图片提示词，并包含具体卡面设计描述。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "设计一张 KTV 欢唱卡，竖版卡片构图。"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "以一支精致的无线麦克风为视觉主体，采用近景、略微仰视的视角"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C2",
+              "status": "P",
+              "reason": "提示词明确麦克风为主视觉，并规定近景仰视、中央偏下位置及背景虚化，主体呈现清晰。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "以一支精致的无线麦克风为视觉主体，采用近景、略微仰视的视角，麦克风清晰突出，位于画面中央偏下；"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "不要让背景抢过麦克风主体。"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            }
+          ],
+          "quality": [],
+          "limitations": []
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:44:55.286722+00:00",
+          "elapsed_seconds": 3.7300794159999953,
+          "input_sha256": "85c737fbf1ee6ab23344d82b219d70a5674abe8c3278bf61b6899eb33904a5a9",
+          "citation_reanchored": null,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "score": {
+        "lower": 100,
+        "upper": 100,
+        "coverage": 100,
+        "counts": {
+          "P": 2
+        },
+        "must_failed": [],
+        "status": "pass",
+        "applicable_budget": 100.0
+      },
+      "media": [],
+      "execution": [],
+      "source_link": "https://flova.ai/en/project/?id=70ac57d3cb3046ea8c586a6593fab878&message_id=9b81aa8d2d74455d9b57298d061fc260",
+      "execution_flags": []
+    },
+    "terra": {
+      "text": "**KTV欢唱卡设计提示词：**\n\n> 设计一张横版KTV欢唱卡，采用精致3D物件与现代平面版式相结合的商业设计。以一支立体麦克风作为醒目的近景视觉主体：银色金属网罩、黑色磨砂手柄，网孔纹理清晰，金属反光细腻。麦克风位于画面右侧，从右下向中上方倾斜，以略低机位近距离观察，通过近大远小的透视突出主体。\n>\n> 背景采用深蓝与紫色渐变，营造KTV舞台氛围，点缀柔焦灯光、弧形声波和细碎光点。柔和侧光照亮麦克风，紫色轮廓光勾勒边缘，前后景层次分明。\n>\n> 采用左侧留白、右侧主体的布局。左上方预留标题区域，左下方预留卡片信息区域，辅以细线和半透明色块。整体时尚、有欢唱氛围，视觉焦点明确，画面精致，适合KTV宣传卡设计。不添加品牌、价格、水印或人物。\n\n建议后期在留白处添加“KTV欢唱卡”和具体权益信息，文字会更清晰。",
+      "evidence": {
+        "E_FINAL_RESPONSE": {
+          "evidence_id": "E_FINAL_RESPONSE",
+          "kind": "final_response",
+          "content": {
+            "text": "**KTV欢唱卡设计提示词：**\n\n> 设计一张横版KTV欢唱卡，采用精致3D物件与现代平面版式相结合的商业设计。以一支立体麦克风作为醒目的近景视觉主体：银色金属网罩、黑色磨砂手柄，网孔纹理清晰，金属反光细腻。麦克风位于画面右侧，从右下向中上方倾斜，以略低机位近距离观察，通过近大远小的透视突出主体。\n>\n> 背景采用深蓝与紫色渐变，营造KTV舞台氛围，点缀柔焦灯光、弧形声波和细碎光点。柔和侧光照亮麦克风，紫色轮廓光勾勒边缘，前后景层次分明。\n>\n> 采用左侧留白、右侧主体的布局。左上方预留标题区域，左下方预留卡片信息区域，辅以细线和半透明色块。整体时尚、有欢唱氛围，视觉焦点明确，画面精致，适合KTV宣传卡设计。不添加品牌、价格、水印或人物。\n\n建议后期在留白处添加“KTV欢唱卡”和具体权益信息，文字会更清晰。",
+            "complete_public_response": true
+          }
+        },
+        "E_BOUNDARY": {
+          "evidence_id": "E_BOUNDARY",
+          "kind": "trusted_execution_boundary",
+          "content": {
+            "execution_status": "succeeded",
+            "finish_reason": "single_turn_complete",
+            "turn_count": 1,
+            "native_boundaries": [
+              {
+                "terminal": true,
+                "progress_hash": "8a9f723eaa04f5f520d2f4d579010196066753e69d3c92c75279a06ca09638c7",
+                "frames_complete": true,
+                "resources_settled": true
+              }
+            ],
+            "frame_count": 70,
+            "frame_index_first": 1,
+            "frame_index_last": 70,
+            "frame_gaps": [],
+            "frame_hashes": [
+              "68e7c029e2b934183fb76ee98c7cbe171b010aa6236136448c91a920d500dbf8",
+              "938380e78d3086c5b92ccdd5d80cc45141368aa019b09acf7a82150425cc0be2",
+              "d984a7f43fe656d7eba313028a57fbce08d295f5d181fda558f6c91d29011073",
+              "48f22224c8bcefc3e18101ddf25e76f67d33e0a6e69bbed3ceeaf8f0f98d60df"
+            ],
+            "resource_receipt": [],
+            "limits": "Complete captured public frames and settled native resource receipt, not a guarantee of full internal tool arguments or opaque delegated actions."
+          }
+        },
+        "E_ACTIONS": {
+          "evidence_id": "E_ACTIONS",
+          "kind": "recorded_current_turn_events",
+          "content": {
+            "events": [
+              {
+                "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_1",
+                "type": "tool_started",
+                "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+                "data": {
+                  "activity_id": "call_BZRUdHc04JRDkXaZYzfW23Or",
+                  "tool": "skill_search",
+                  "summary": "Run skill search",
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "agentAnalysis",
+                    "detail": null
+                  }
+                },
+                "timestamp": 1793877134.1907496
+              },
+              {
+                "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_2",
+                "type": "tool_finished",
+                "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+                "data": {
+                  "activity_id": "call_BZRUdHc04JRDkXaZYzfW23Or",
+                  "tool": "skill_search",
+                  "summary": "Run skill search",
+                  "operation": null,
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "agentAnalysis",
+                    "detail": null
+                  },
+                  "status": "done",
+                  "result_summary": "Tool completed",
+                  "error": null,
+                  "error_info": null,
+                  "async_ref": null,
+                  "async_batch": null,
+                  "artifacts": []
+                },
+                "timestamp": 1793877138.0018406
+              },
+              {
+                "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_3",
+                "type": "tool_started",
+                "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+                "data": {
+                  "activity_id": "call_moxiJD1feh7o0Ohp1GeFXC1M",
+                  "tool": "node_create",
+                  "summary": "Create 1 Nodes",
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "assetCreation",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "asset",
+                            "entity_id": null,
+                            "display_name": "KTV欢唱卡视觉",
+                            "ref": null
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  }
+                },
+                "timestamp": 1793877148.6571126
+              },
+              {
+                "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_4",
+                "type": "tool_finished",
+                "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+                "data": {
+                  "activity_id": "call_moxiJD1feh7o0Ohp1GeFXC1M",
+                  "tool": "node_create",
+                  "summary": "Create 1 Nodes",
+                  "operation": null,
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "assetCreation",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "asset",
+                            "entity_id": null,
+                            "display_name": "KTV欢唱卡视觉",
+                            "ref": null
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  },
+                  "status": "done",
+                  "result_summary": "Tool completed",
+                  "error": null,
+                  "error_info": null,
+                  "async_ref": null,
+                  "async_batch": null,
+                  "artifacts": []
+                },
+                "timestamp": 1793877148.712637
+              },
+              {
+                "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_5",
+                "type": "tool_started",
+                "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+                "data": {
+                  "activity_id": "call_TJQA61KAwFYKlqS049xclz2Y",
+                  "tool": "media_recipe_delegate",
+                  "summary": "Compile 1 media recipes",
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "generationPlanPreparation",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "asset",
+                            "entity_id": "KTV欢唱卡视觉",
+                            "display_name": "KTV欢唱卡视觉",
+                            "ref": {
+                              "kind": "asset_ref",
+                              "asset_node_id": "KTV欢唱卡视觉"
+                            }
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  }
+                },
+                "timestamp": 1793877155.7931361
+              },
+              {
+                "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_6",
+                "type": "tool_finished",
+                "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+                "data": {
+                  "activity_id": "call_TJQA61KAwFYKlqS049xclz2Y",
+                  "tool": "media_recipe_delegate",
+                  "summary": "Compile 1 media recipes",
+                  "operation": null,
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "generationPlanPreparation",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "asset",
+                            "entity_id": "KTV欢唱卡视觉",
+                            "display_name": "KTV欢唱卡视觉",
+                            "ref": {
+                              "kind": "asset_ref",
+                              "asset_node_id": "KTV欢唱卡视觉"
+                            }
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  },
+                  "status": "done",
+                  "result_summary": "Targets: 1 committed",
+                  "error": null,
+                  "error_info": null,
+                  "async_ref": null,
+                  "async_batch": null,
+                  "artifacts": []
+                },
+                "timestamp": 1793877175.2055056
+              },
+              {
+                "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_7",
+                "type": "tool_started",
+                "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+                "data": {
+                  "activity_id": "call_RFNfELuvbBIDNtPfY22UYERu",
+                  "tool": "project_query",
+                  "summary": "Read the current project graph",
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "projectContentView",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "draft",
+                            "entity_id": "draft_cbfb042b4c2945339c80c194",
+                            "display_name": "KTV欢唱卡视觉",
+                            "ref": {
+                              "kind": "prompt_draft_ref",
+                              "asset_node_id": "KTV欢唱卡视觉",
+                              "draft_id": "draft_cbfb042b4c2945339c80c194",
+                              "revision": 1
+                            }
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  }
+                },
+                "timestamp": 1793877183.2996707
+              },
+              {
+                "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_8",
+                "type": "tool_finished",
+                "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+                "data": {
+                  "activity_id": "call_RFNfELuvbBIDNtPfY22UYERu",
+                  "tool": "project_query",
+                  "summary": "Read the current project graph",
+                  "operation": null,
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "projectContentView",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "draft",
+                            "entity_id": "draft_cbfb042b4c2945339c80c194",
+                            "display_name": "KTV欢唱卡视觉",
+                            "ref": {
+                              "kind": "prompt_draft_ref",
+                              "asset_node_id": "KTV欢唱卡视觉",
+                              "draft_id": "draft_cbfb042b4c2945339c80c194",
+                              "revision": 1
+                            }
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  },
+                  "status": "done",
+                  "result_summary": "Project graph updated to revision 2",
+                  "error": null,
+                  "error_info": null,
+                  "async_ref": null,
+                  "async_batch": null,
+                  "artifacts": []
+                },
+                "timestamp": 1793877183.3141918
+              },
+              {
+                "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_70",
+                "type": "complete",
+                "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+                "data": {
+                  "status": "workflow_completed",
+                  "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+                  "project_id": "lab_b972e0e6ddf759e3b55677e97629cd8e",
+                  "llm_credits_info": {
+                    "base_credits": 0.0,
+                    "extra_credits": 0.0
+                  }
+                },
+                "timestamp": 1793877191.0056484
+              }
+            ],
+            "stream_text_excluded_because": "Final text supplied in full separately; stream chunks duplicate it."
+          }
+        },
+        "E_TRACE_COVERAGE": {
+          "evidence_id": "E_TRACE_COVERAGE",
+          "kind": "trace_capture_receipt",
+          "content": {
+            "execution_id": "d6679980-1485-4d56-a9be-6d7bff2e2fb1",
+            "tools": 0,
+            "nodes": 1,
+            "errors": [
+              {
+                "turn_id": "95bdb2b0-e4d7-4f9b-909c-5dd8a93b1583",
+                "error_type": "CliError",
+                "code": "http_504"
+              }
+            ],
+            "status": "partial"
+          }
+        },
+        "E_VIEW_graph": {
+          "evidence_id": "E_VIEW_graph",
+          "kind": "project_scoped_native_read",
+          "content": {
+            "code": 0,
+            "data": {
+              "active_tasks": [],
+              "graph_revision": 2,
+              "layout": {},
+              "layout_updated_at": null,
+              "legacy_skill_migration_required": false,
+              "nodes": [
+                {
+                  "asset_type": "image",
+                  "created_at": "2026-11-05T11:12:28.675854+00:00",
+                  "created_by": "agent",
+                  "derived_from": null,
+                  "description": "KTV欢唱卡平面视觉设计，以明确、突出的主体为视觉焦点。",
+                  "drafts": [
+                    {
+                      "active_task_count": 0,
+                      "archived_at": null,
+                      "aspect_ratio": "16:9",
+                      "asset_node_id": "KTV欢唱卡视觉",
+                      "created_at": "2026-11-05T11:12:55.184879+00:00",
+                      "draft_id": "draft_cbfb042b4c2945339c80c194",
+                      "exists": true,
+                      "favorite": false,
+                      "favorited_at": null,
+                      "generated": false,
+                      "last_generated_revision": null,
+                      "review_status": "awaiting",
+                      "revision": 1,
+                      "title": "KTV欢唱卡视觉",
+                      "updated_at": "2026-11-05T11:12:55.184884+00:00",
+                      "updated_by": "agent"
+                    }
+                  ],
+                  "name": "KTV欢唱卡视觉",
+                  "node_id": "KTV欢唱卡视觉",
+                  "note": null,
+                  "resource_count": 0,
+                  "revision": 0,
+                  "root_order": 1024.0,
+                  "root_pinned": false,
+                  "runtime": {
+                    "active_task_count": 0,
+                    "has_ready": false,
+                    "latest_failure": null
+                  },
+                  "type": "asset",
+                  "updated_at": "2026-11-05T11:12:28.675860+00:00"
+                }
+              ],
+              "project": {
+                "created_at": "2026-11-05T11:11:24.966532+00:00",
+                "description": null,
+                "history_epoch": 0,
+                "history_format": "snapshot_v1",
+                "migration_source_project_id": null,
+                "permission_context": {
+                  "custom_approval_rules": null,
+                  "display_mode": "direct",
+                  "effective_mode": "full_access",
+                  "has_custom_approval_rules": false,
+                  "project_mode": "full_access",
+                  "required_approvals": [],
+                  "source": "project"
+                },
+                "permission_mode": "full_access",
+                "project_id": "lab_b972e0e6ddf759e3b55677e97629cd8e",
+                "read_only": true,
+                "revision": 1,
+                "state": "active",
+                "title": "Flova Lab 85e516e8d27c500c99d22288ee9afb94",
+                "updated_at": "2026-11-05T11:12:28.696388+00:00"
+              },
+              "project_id": "lab_b972e0e6ddf759e3b55677e97629cd8e",
+              "resource_manifest": [
+                {
+                  "asset_node_id": "KTV欢唱卡视觉",
+                  "resources": []
+                }
+              ],
+              "scope": "full",
+              "task_slots": [],
+              "viewport": null
+            },
+            "message": "success",
+            "subcode": 0
+          }
+        }
+      },
+      "evaluation": {
+        "judgment": {
+          "schema_version": "flova.absolute_judgment.v4",
+          "query_id": "FL-EVAL-20261104-088",
+          "criteria": [
+            {
+              "criterion_id": "C1",
+              "status": "P",
+              "reason": "完整最终回复交付了可复制的KTV欢唱卡卡面设计提示词，并含版式、背景、留白和用途描述。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "设计一张横版KTV欢唱卡，采用精致3D物件与现代平面版式相结合的商业设计。"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "整体时尚、有欢唱氛围，视觉焦点明确，画面精致，适合KTV宣传卡设计。"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C2",
+              "status": "P",
+              "reason": "提示词明确以立体麦克风为近景主体，并说明其位置、倾斜方向、低机位视角及透视关系。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "以一支立体麦克风作为醒目的近景视觉主体："
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "麦克风位于画面右侧，从右下向中上方倾斜，以略低机位近距离观察，通过近大远小的透视突出主体。"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            }
+          ],
+          "quality": [],
+          "limitations": []
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:44:59.018861+00:00",
+          "elapsed_seconds": 4.171078082999998,
+          "input_sha256": "d31d9739422ad09f8237dd7bb771d20eff98ac43add1ebbcf8ccd1d47c5a0092",
+          "citation_reanchored": null,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "score": {
+        "lower": 100,
+        "upper": 100,
+        "coverage": 100,
+        "counts": {
+          "P": 2
+        },
+        "must_failed": [],
+        "status": "pass",
+        "applicable_budget": 100.0
+      },
+      "media": [],
+      "execution": [
+        {
+          "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_1",
+          "type": "tool_started",
+          "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+          "data": {
+            "activity_id": "call_BZRUdHc04JRDkXaZYzfW23Or",
+            "tool": "skill_search",
+            "summary": "Run skill search",
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "agentAnalysis",
+              "detail": null
+            }
+          },
+          "timestamp": 1793877134.1907496
+        },
+        {
+          "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_2",
+          "type": "tool_finished",
+          "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+          "data": {
+            "activity_id": "call_BZRUdHc04JRDkXaZYzfW23Or",
+            "tool": "skill_search",
+            "summary": "Run skill search",
+            "operation": null,
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "agentAnalysis",
+              "detail": null
+            },
+            "status": "done",
+            "result_summary": "Tool completed",
+            "error": null,
+            "error_info": null,
+            "async_ref": null,
+            "async_batch": null,
+            "artifacts": []
+          },
+          "timestamp": 1793877138.0018406
+        },
+        {
+          "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_3",
+          "type": "tool_started",
+          "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+          "data": {
+            "activity_id": "call_moxiJD1feh7o0Ohp1GeFXC1M",
+            "tool": "node_create",
+            "summary": "Create 1 Nodes",
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "assetCreation",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "asset",
+                      "entity_id": null,
+                      "display_name": "KTV欢唱卡视觉",
+                      "ref": null
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            }
+          },
+          "timestamp": 1793877148.6571126
+        },
+        {
+          "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_4",
+          "type": "tool_finished",
+          "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+          "data": {
+            "activity_id": "call_moxiJD1feh7o0Ohp1GeFXC1M",
+            "tool": "node_create",
+            "summary": "Create 1 Nodes",
+            "operation": null,
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "assetCreation",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "asset",
+                      "entity_id": null,
+                      "display_name": "KTV欢唱卡视觉",
+                      "ref": null
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            },
+            "status": "done",
+            "result_summary": "Tool completed",
+            "error": null,
+            "error_info": null,
+            "async_ref": null,
+            "async_batch": null,
+            "artifacts": []
+          },
+          "timestamp": 1793877148.712637
+        },
+        {
+          "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_5",
+          "type": "tool_started",
+          "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+          "data": {
+            "activity_id": "call_TJQA61KAwFYKlqS049xclz2Y",
+            "tool": "media_recipe_delegate",
+            "summary": "Compile 1 media recipes",
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "generationPlanPreparation",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "asset",
+                      "entity_id": "KTV欢唱卡视觉",
+                      "display_name": "KTV欢唱卡视觉",
+                      "ref": {
+                        "kind": "asset_ref",
+                        "asset_node_id": "KTV欢唱卡视觉"
+                      }
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            }
+          },
+          "timestamp": 1793877155.7931361
+        },
+        {
+          "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_6",
+          "type": "tool_finished",
+          "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+          "data": {
+            "activity_id": "call_TJQA61KAwFYKlqS049xclz2Y",
+            "tool": "media_recipe_delegate",
+            "summary": "Compile 1 media recipes",
+            "operation": null,
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "generationPlanPreparation",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "asset",
+                      "entity_id": "KTV欢唱卡视觉",
+                      "display_name": "KTV欢唱卡视觉",
+                      "ref": {
+                        "kind": "asset_ref",
+                        "asset_node_id": "KTV欢唱卡视觉"
+                      }
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            },
+            "status": "done",
+            "result_summary": "Targets: 1 committed",
+            "error": null,
+            "error_info": null,
+            "async_ref": null,
+            "async_batch": null,
+            "artifacts": []
+          },
+          "timestamp": 1793877175.2055056
+        },
+        {
+          "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_7",
+          "type": "tool_started",
+          "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+          "data": {
+            "activity_id": "call_RFNfELuvbBIDNtPfY22UYERu",
+            "tool": "project_query",
+            "summary": "Read the current project graph",
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "projectContentView",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "draft",
+                      "entity_id": "draft_cbfb042b4c2945339c80c194",
+                      "display_name": "KTV欢唱卡视觉",
+                      "ref": {
+                        "kind": "prompt_draft_ref",
+                        "asset_node_id": "KTV欢唱卡视觉",
+                        "draft_id": "draft_cbfb042b4c2945339c80c194",
+                        "revision": 1
+                      }
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            }
+          },
+          "timestamp": 1793877183.2996707
+        },
+        {
+          "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_8",
+          "type": "tool_finished",
+          "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+          "data": {
+            "activity_id": "call_RFNfELuvbBIDNtPfY22UYERu",
+            "tool": "project_query",
+            "summary": "Read the current project graph",
+            "operation": null,
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "projectContentView",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "draft",
+                      "entity_id": "draft_cbfb042b4c2945339c80c194",
+                      "display_name": "KTV欢唱卡视觉",
+                      "ref": {
+                        "kind": "prompt_draft_ref",
+                        "asset_node_id": "KTV欢唱卡视觉",
+                        "draft_id": "draft_cbfb042b4c2945339c80c194",
+                        "revision": 1
+                      }
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            },
+            "status": "done",
+            "result_summary": "Project graph updated to revision 2",
+            "error": null,
+            "error_info": null,
+            "async_ref": null,
+            "async_batch": null,
+            "artifacts": []
+          },
+          "timestamp": 1793877183.3141918
+        },
+        {
+          "id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde_70",
+          "type": "complete",
+          "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+          "data": {
+            "status": "workflow_completed",
+            "stream_chat_id": "chat-656b3144a7df4a0d9eaf4653a8b5ddde",
+            "project_id": "lab_b972e0e6ddf759e3b55677e97629cd8e",
+            "llm_credits_info": {
+              "base_credits": 0.0,
+              "extra_credits": 0.0
+            }
+          },
+          "timestamp": 1793877191.0056484
+        }
+      ],
+      "source_link": "https://flova-lab.rain-boat.com/api/v1/project-viewer/d6679980-1485-4d56-a9be-6d7bff2e2fb1/open",
+      "execution_id": "d6679980-1485-4d56-a9be-6d7bff2e2fb1",
+      "execution_flags": []
+    },
+    "deepseek": {
+      "text": "这个项目目前是空的，我会先为“KTV 欢唱卡设计图”建一个图像资产，再让提示词专家按“有明确视角主体”的方向写出可直接生成的设计提示词。你只要求提示词，所以我不会提交生成。提示词已经写好了，保存在资产「KTV欢唱卡设计图」的 Draft 中（GPT Image 2.5 Flare，4:3 / 2K），还没有提交生成。\n\n**把“视角主体”落实到画面里**：右下角伸入的一只右手捏住卡片右下边缘，手部与袖口作为前景的视角主体，卡片是焦点，背后是包厢吧台、灯带、虚化的麦克风，形成前景—主体—背景的纵深，而不是一张正面平铺的版式图。\n\n```\n制作一张中高端KTV门店欢唱权益卡的实景产品设计样机，4:3横幅，轻奢霓虹风格，真实商业摄影质感。\n\n采用持卡者第一人称观看视角：一只成年人的右手从画面右下角伸入，拇指和食指自然捏住卡片右下边缘，将卡片举在眼前。手部与袖口构成前景视角主体，卡片为视觉焦点，卡面完整可见，手指只遮住边缘。背景为KTV包厢内的深色金属吧台、天鹅绒座椅与青蓝色灯带，吧台上放置一支虚化的无线麦克风，形成清楚的前景、主体、背景纵深。人物仅手部与袖口入镜。\n\n卡片是横向圆角矩形，接近标准银行卡尺寸与真实厚度，占画面宽度约一半，正面朝向镜头，轻微侧转约10度，让薄边与空间透视自然可见。卡面采用石墨黑细磨砂材质，左侧排布醒目的香槟金中文标题“欢唱卡”，字体为现代简洁黑体，字形准确、笔画完整，三个字只出现一次；右侧以一条精细的青蓝色音波压纹作音乐装饰。版面具有整齐边距、充足留白和明确主次，烫金标题与深色底面形成高对比，所有文字锐利可读。\n\n使用50mm镜头的近景构图，焦点覆盖整张卡面，手部有真实皮肤纹理，背景柔和虚化。柔和白色主光从镜头左上方照亮卡面，青蓝色灯带与少量洋红色散景作为背景点缀，细窄轮廓光勾勒卡片边缘。表现磨砂表面的微细颗粒、局部烫金的柔和反射、卡片边缘轻微使用痕迹，以及手指接触处自然的遮挡与阴影，反光集中在边缘，标题区域保持清晰。\n\n不添加其他文字、人物面部、二维码或水印。\n```\n\n注意事项：横版占比一半宽度是刻意的，为的是让卡片上的字不被压得太小；如果你需要卡面设计细节更完整可读（比如背面权益条款、条形码），更适合换成卡面正视图或双面展开版。\n\n需要我往哪个方向调整？",
+      "evidence": {
+        "E_FINAL_RESPONSE": {
+          "evidence_id": "E_FINAL_RESPONSE",
+          "kind": "final_response",
+          "content": {
+            "text": "这个项目目前是空的，我会先为“KTV 欢唱卡设计图”建一个图像资产，再让提示词专家按“有明确视角主体”的方向写出可直接生成的设计提示词。你只要求提示词，所以我不会提交生成。提示词已经写好了，保存在资产「KTV欢唱卡设计图」的 Draft 中（GPT Image 2.5 Flare，4:3 / 2K），还没有提交生成。\n\n**把“视角主体”落实到画面里**：右下角伸入的一只右手捏住卡片右下边缘，手部与袖口作为前景的视角主体，卡片是焦点，背后是包厢吧台、灯带、虚化的麦克风，形成前景—主体—背景的纵深，而不是一张正面平铺的版式图。\n\n```\n制作一张中高端KTV门店欢唱权益卡的实景产品设计样机，4:3横幅，轻奢霓虹风格，真实商业摄影质感。\n\n采用持卡者第一人称观看视角：一只成年人的右手从画面右下角伸入，拇指和食指自然捏住卡片右下边缘，将卡片举在眼前。手部与袖口构成前景视角主体，卡片为视觉焦点，卡面完整可见，手指只遮住边缘。背景为KTV包厢内的深色金属吧台、天鹅绒座椅与青蓝色灯带，吧台上放置一支虚化的无线麦克风，形成清楚的前景、主体、背景纵深。人物仅手部与袖口入镜。\n\n卡片是横向圆角矩形，接近标准银行卡尺寸与真实厚度，占画面宽度约一半，正面朝向镜头，轻微侧转约10度，让薄边与空间透视自然可见。卡面采用石墨黑细磨砂材质，左侧排布醒目的香槟金中文标题“欢唱卡”，字体为现代简洁黑体，字形准确、笔画完整，三个字只出现一次；右侧以一条精细的青蓝色音波压纹作音乐装饰。版面具有整齐边距、充足留白和明确主次，烫金标题与深色底面形成高对比，所有文字锐利可读。\n\n使用50mm镜头的近景构图，焦点覆盖整张卡面，手部有真实皮肤纹理，背景柔和虚化。柔和白色主光从镜头左上方照亮卡面，青蓝色灯带与少量洋红色散景作为背景点缀，细窄轮廓光勾勒卡片边缘。表现磨砂表面的微细颗粒、局部烫金的柔和反射、卡片边缘轻微使用痕迹，以及手指接触处自然的遮挡与阴影，反光集中在边缘，标题区域保持清晰。\n\n不添加其他文字、人物面部、二维码或水印。\n```\n\n注意事项：横版占比一半宽度是刻意的，为的是让卡片上的字不被压得太小；如果你需要卡面设计细节更完整可读（比如背面权益条款、条形码），更适合换成卡面正视图或双面展开版。\n\n需要我往哪个方向调整？",
+            "complete_public_response": true
+          }
+        },
+        "E_BOUNDARY": {
+          "evidence_id": "E_BOUNDARY",
+          "kind": "trusted_execution_boundary",
+          "content": {
+            "execution_status": "succeeded",
+            "finish_reason": "single_turn_complete",
+            "turn_count": 1,
+            "native_boundaries": [
+              {
+                "terminal": true,
+                "progress_hash": "57c0c5bb0f6ee81a0327682d101ba0059ebac666cfeab8265793897103f2ef37",
+                "frames_complete": true,
+                "resources_settled": true
+              }
+            ],
+            "frame_count": 197,
+            "frame_index_first": 1,
+            "frame_index_last": 197,
+            "frame_gaps": [],
+            "frame_hashes": [
+              "30d5b02a118ee9d6c0ea1ad8c337261c0fa3edae765c6919bdff5543e102c339",
+              "1b7f9b506b1a3e12aa0add9a125ee8c1fee82f406c67aa47c92daefa9d344b32",
+              "474ddd2be209214d9958e2335b36446790bd919cbb38bb76d8c23ffe676a589f"
+            ],
+            "resource_receipt": [],
+            "limits": "Complete captured public frames and settled native resource receipt, not a guarantee of full internal tool arguments or opaque delegated actions."
+          }
+        },
+        "E_ACTIONS": {
+          "evidence_id": "E_ACTIONS",
+          "kind": "recorded_current_turn_events",
+          "content": {
+            "events": [
+              {
+                "id": "chat-3afc0df76af642c3a650f7b2fd3962d8_27",
+                "type": "tool_started",
+                "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+                "data": {
+                  "activity_id": "call_00_638x2sop2o00umoqzwrcwqpp",
+                  "tool": "node_create",
+                  "summary": "Create 1 Nodes",
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "assetCreation",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "asset",
+                            "entity_id": null,
+                            "display_name": "KTV欢唱卡设计图",
+                            "ref": null
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  }
+                },
+                "timestamp": 1793876292.6440601
+              },
+              {
+                "id": "chat-3afc0df76af642c3a650f7b2fd3962d8_28",
+                "type": "tool_finished",
+                "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+                "data": {
+                  "activity_id": "call_00_638x2sop2o00umoqzwrcwqpp",
+                  "tool": "node_create",
+                  "summary": "Create 1 Nodes",
+                  "operation": null,
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "assetCreation",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "asset",
+                            "entity_id": null,
+                            "display_name": "KTV欢唱卡设计图",
+                            "ref": null
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  },
+                  "status": "done",
+                  "result_summary": "Tool completed",
+                  "error": null,
+                  "error_info": null,
+                  "async_ref": null,
+                  "async_batch": null,
+                  "artifacts": []
+                },
+                "timestamp": 1793876292.6990762
+              },
+              {
+                "id": "chat-3afc0df76af642c3a650f7b2fd3962d8_29",
+                "type": "tool_started",
+                "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+                "data": {
+                  "activity_id": "call_00_hf77rykjuxovxbk08gyt0pua",
+                  "tool": "media_recipe_delegate",
+                  "summary": "Compile 1 media recipes",
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "generationPlanPreparation",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "asset",
+                            "entity_id": "KTV欢唱卡设计图",
+                            "display_name": "KTV欢唱卡设计图",
+                            "ref": {
+                              "kind": "asset_ref",
+                              "asset_node_id": "KTV欢唱卡设计图"
+                            }
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  }
+                },
+                "timestamp": 1793876300.8107133
+              },
+              {
+                "id": "chat-3afc0df76af642c3a650f7b2fd3962d8_30",
+                "type": "tool_finished",
+                "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+                "data": {
+                  "activity_id": "call_00_hf77rykjuxovxbk08gyt0pua",
+                  "tool": "media_recipe_delegate",
+                  "summary": "Compile 1 media recipes",
+                  "operation": null,
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "generationPlanPreparation",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "asset",
+                            "entity_id": "KTV欢唱卡设计图",
+                            "display_name": "KTV欢唱卡设计图",
+                            "ref": {
+                              "kind": "asset_ref",
+                              "asset_node_id": "KTV欢唱卡设计图"
+                            }
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  },
+                  "status": "done",
+                  "result_summary": "Targets: 1 committed",
+                  "error": null,
+                  "error_info": null,
+                  "async_ref": null,
+                  "async_batch": null,
+                  "artifacts": []
+                },
+                "timestamp": 1793876323.6972556
+              },
+              {
+                "id": "chat-3afc0df76af642c3a650f7b2fd3962d8_31",
+                "type": "tool_started",
+                "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+                "data": {
+                  "activity_id": "call_00_cv1veozuvtwf25ayu8v3kn3h",
+                  "tool": "project_query",
+                  "summary": "Read the current project graph",
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "projectContentView",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "draft",
+                            "entity_id": "draft_31ca8e83c8de4b00921115d8",
+                            "display_name": "KTV欢唱卡设计图",
+                            "ref": {
+                              "kind": "prompt_draft_ref",
+                              "asset_node_id": "KTV欢唱卡设计图",
+                              "draft_id": "draft_31ca8e83c8de4b00921115d8",
+                              "revision": 1
+                            }
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  }
+                },
+                "timestamp": 1793876329.1947246
+              },
+              {
+                "id": "chat-3afc0df76af642c3a650f7b2fd3962d8_32",
+                "type": "tool_finished",
+                "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+                "data": {
+                  "activity_id": "call_00_cv1veozuvtwf25ayu8v3kn3h",
+                  "tool": "project_query",
+                  "summary": "Read the current project graph",
+                  "operation": null,
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "projectContentView",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "draft",
+                            "entity_id": "draft_31ca8e83c8de4b00921115d8",
+                            "display_name": "KTV欢唱卡设计图",
+                            "ref": {
+                              "kind": "prompt_draft_ref",
+                              "asset_node_id": "KTV欢唱卡设计图",
+                              "draft_id": "draft_31ca8e83c8de4b00921115d8",
+                              "revision": 1
+                            }
+                          }
+                        ],
+                        "total_count": 1
+                      }
+                    }
+                  },
+                  "status": "done",
+                  "result_summary": "Project graph updated to revision 2",
+                  "error": null,
+                  "error_info": null,
+                  "async_ref": null,
+                  "async_batch": null,
+                  "artifacts": []
+                },
+                "timestamp": 1793876329.2100945
+              },
+              {
+                "id": "chat-3afc0df76af642c3a650f7b2fd3962d8_196",
+                "type": "user_input_request",
+                "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+                "data": {
+                  "message_id": "bffd7ace4ebcdd708b52d5e6d26b7b71",
+                  "tool_call_id": "call_00_i99vyr0b9ypjvwlgmn8y4y6d",
+                  "questions": [
+                    {
+                      "question": "接下来的方向（含生成的话会消耗积分）",
+                      "selection_mode": "single",
+                      "options": [
+                        {
+                          "value": "generate_current",
+                          "label": "就按这版生成",
+                          "description": "用当前提示词生成 1 张 2K 图，看到实际效果再决定改法"
+                        },
+                        {
+                          "value": "restyle_guochao",
+                          "label": "换国潮／潮流风格",
+                          "description": "把轻奢霓虹改成国潮或潮玩风卡面，视角主体保留"
+                        },
+                        {
+                          "value": "angle_topdown",
+                          "label": "换俯拍桌面视角",
+                          "description": "俯拍：卡片躺在吧台上，一只手伸入画面按压卡片，适合展现版面全貌"
+                        },
+                        {
+                          "value": "poster_vertical",
+                          "label": "改成竖版宣传海报构图",
+                          "description": "竖版 3:4，卡片为前景主体，背景铺门店氛围与活动信息位"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "timestamp": 1793876342.5403285
+              },
+              {
+                "id": "chat-3afc0df76af642c3a650f7b2fd3962d8_197",
+                "type": "complete",
+                "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+                "data": {
+                  "status": "workflow_paused",
+                  "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+                  "project_id": "lab_816abe6a150a53bf8be104fb966e7c75"
+                },
+                "timestamp": 1793876342.5436468
+              }
+            ],
+            "stream_text_excluded_because": "Final text supplied in full separately; stream chunks duplicate it."
+          }
+        },
+        "E_TRACE_COVERAGE": {
+          "evidence_id": "E_TRACE_COVERAGE",
+          "kind": "trace_capture_receipt",
+          "content": {
+            "execution_id": "3b204dad-65d2-488e-a221-e088fa4b5d5a",
+            "tools": 0,
+            "nodes": 1,
+            "errors": [
+              {
+                "turn_id": "d2bb26c5-b007-4525-a37a-d0a1decec418",
+                "error_type": "CliError",
+                "code": "http_502"
+              }
+            ],
+            "status": "partial"
+          }
+        },
+        "E_VIEW_graph": {
+          "evidence_id": "E_VIEW_graph",
+          "kind": "project_scoped_native_read",
+          "content": {
+            "code": 0,
+            "data": {
+              "active_tasks": [],
+              "graph_revision": 2,
+              "layout": {},
+              "layout_updated_at": null,
+              "legacy_skill_migration_required": false,
+              "nodes": [
+                {
+                  "asset_type": "image",
+                  "created_at": "2026-11-05T10:58:12.665069+00:00",
+                  "created_by": "agent",
+                  "derived_from": null,
+                  "description": "KTV欢唱卡（门店欢唱权益卡／会员卡）的视觉设计图。需以带有明确视角主体的实景样机方式呈现卡片：卡片版面设计清楚可读，同时交代卡片的场景语境与观看视角。",
+                  "drafts": [
+                    {
+                      "active_task_count": 0,
+                      "archived_at": null,
+                      "aspect_ratio": "4:3",
+                      "asset_node_id": "KTV欢唱卡设计图",
+                      "created_at": "2026-11-05T10:58:43.676073+00:00",
+                      "draft_id": "draft_31ca8e83c8de4b00921115d8",
+                      "exists": true,
+                      "favorite": false,
+                      "favorited_at": null,
+                      "generated": false,
+                      "last_generated_revision": null,
+                      "review_status": "awaiting",
+                      "revision": 1,
+                      "title": "KTV欢唱卡设计图",
+                      "updated_at": "2026-11-05T10:58:43.676078+00:00",
+                      "updated_by": "agent"
+                    }
+                  ],
+                  "name": "KTV欢唱卡设计图",
+                  "node_id": "KTV欢唱卡设计图",
+                  "note": "用户要求「需要有个视角主体」，即画面要有一个明确的视角落点与主体，而非平铺的纯版式图。",
+                  "resource_count": 0,
+                  "revision": 0,
+                  "root_order": 1024.0,
+                  "root_pinned": false,
+                  "runtime": {
+                    "active_task_count": 0,
+                    "has_ready": false,
+                    "latest_failure": null
+                  },
+                  "type": "asset",
+                  "updated_at": "2026-11-05T10:58:12.665077+00:00"
+                }
+              ],
+              "project": {
+                "created_at": "2026-11-05T10:56:58.474273+00:00",
+                "description": null,
+                "history_epoch": 0,
+                "history_format": "snapshot_v1",
+                "migration_source_project_id": null,
+                "permission_context": {
+                  "custom_approval_rules": null,
+                  "display_mode": "direct",
+                  "effective_mode": "full_access",
+                  "has_custom_approval_rules": false,
+                  "project_mode": "full_access",
+                  "required_approvals": [],
+                  "source": "project"
+                },
+                "permission_mode": "full_access",
+                "project_id": "lab_816abe6a150a53bf8be104fb966e7c75",
+                "read_only": true,
+                "revision": 1,
+                "state": "active",
+                "title": "Flova Lab b6b1f9ea98765b7e8fdbdbe81b298e31",
+                "updated_at": "2026-11-05T10:58:12.687837+00:00"
+              },
+              "project_id": "lab_816abe6a150a53bf8be104fb966e7c75",
+              "resource_manifest": [
+                {
+                  "asset_node_id": "KTV欢唱卡设计图",
+                  "resources": []
+                }
+              ],
+              "scope": "full",
+              "task_slots": [],
+              "viewport": null
+            },
+            "message": "success",
+            "subcode": 0
+          }
+        }
+      },
+      "evaluation": {
+        "judgment": {
+          "schema_version": "flova.absolute_judgment.v4",
+          "query_id": "FL-EVAL-20261104-088",
+          "criteria": [
+            {
+              "criterion_id": "C1",
+              "status": "P",
+              "reason": "最终回复提供了可直接复制的 KTV 欢唱权益卡视觉生成提示词，明确为卡面实景设计样机并给出材质、版式、场景和光线描述。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "制作一张中高端KTV门店欢唱权益卡的实景产品设计样机，4:3横幅，轻奢霓虹风格，真实商业摄影质感。"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "卡面采用石墨黑细磨砂材质，左侧排布醒目的香槟金中文标题“欢唱卡”"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C2",
+              "status": "P",
+              "reason": "提示词明确第一人称持卡视角，并指定右下角伸入的手部为前景视角主体、卡片为视觉焦点，且说明前景—主体—背景纵深关系。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "采用持卡者第一人称观看视角：一只成年人的右手从画面右下角伸入，拇指和食指自然捏住卡片右下边缘，将卡片举在眼前。"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "手部与袖口构成前景视角主体，卡片为视觉焦点，卡面完整可见，手指只遮住边缘。"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            }
+          ],
+          "quality": [],
+          "limitations": []
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:44:59.983818+00:00",
+          "elapsed_seconds": 4.674938832999999,
+          "input_sha256": "c4d4ea4a68305ac57ff5e14a46f2805b520cda4031f741ec9d8fd4b3bbfd072d",
+          "citation_reanchored": null,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "score": {
+        "lower": 100,
+        "upper": 100,
+        "coverage": 100,
+        "counts": {
+          "P": 2
+        },
+        "must_failed": [],
+        "status": "pass",
+        "applicable_budget": 100.0
+      },
+      "media": [],
+      "execution": [
+        {
+          "id": "chat-3afc0df76af642c3a650f7b2fd3962d8_27",
+          "type": "tool_started",
+          "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+          "data": {
+            "activity_id": "call_00_638x2sop2o00umoqzwrcwqpp",
+            "tool": "node_create",
+            "summary": "Create 1 Nodes",
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "assetCreation",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "asset",
+                      "entity_id": null,
+                      "display_name": "KTV欢唱卡设计图",
+                      "ref": null
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            }
+          },
+          "timestamp": 1793876292.6440601
+        },
+        {
+          "id": "chat-3afc0df76af642c3a650f7b2fd3962d8_28",
+          "type": "tool_finished",
+          "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+          "data": {
+            "activity_id": "call_00_638x2sop2o00umoqzwrcwqpp",
+            "tool": "node_create",
+            "summary": "Create 1 Nodes",
+            "operation": null,
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "assetCreation",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "asset",
+                      "entity_id": null,
+                      "display_name": "KTV欢唱卡设计图",
+                      "ref": null
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            },
+            "status": "done",
+            "result_summary": "Tool completed",
+            "error": null,
+            "error_info": null,
+            "async_ref": null,
+            "async_batch": null,
+            "artifacts": []
+          },
+          "timestamp": 1793876292.6990762
+        },
+        {
+          "id": "chat-3afc0df76af642c3a650f7b2fd3962d8_29",
+          "type": "tool_started",
+          "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+          "data": {
+            "activity_id": "call_00_hf77rykjuxovxbk08gyt0pua",
+            "tool": "media_recipe_delegate",
+            "summary": "Compile 1 media recipes",
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "generationPlanPreparation",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "asset",
+                      "entity_id": "KTV欢唱卡设计图",
+                      "display_name": "KTV欢唱卡设计图",
+                      "ref": {
+                        "kind": "asset_ref",
+                        "asset_node_id": "KTV欢唱卡设计图"
+                      }
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            }
+          },
+          "timestamp": 1793876300.8107133
+        },
+        {
+          "id": "chat-3afc0df76af642c3a650f7b2fd3962d8_30",
+          "type": "tool_finished",
+          "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+          "data": {
+            "activity_id": "call_00_hf77rykjuxovxbk08gyt0pua",
+            "tool": "media_recipe_delegate",
+            "summary": "Compile 1 media recipes",
+            "operation": null,
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "generationPlanPreparation",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "asset",
+                      "entity_id": "KTV欢唱卡设计图",
+                      "display_name": "KTV欢唱卡设计图",
+                      "ref": {
+                        "kind": "asset_ref",
+                        "asset_node_id": "KTV欢唱卡设计图"
+                      }
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            },
+            "status": "done",
+            "result_summary": "Targets: 1 committed",
+            "error": null,
+            "error_info": null,
+            "async_ref": null,
+            "async_batch": null,
+            "artifacts": []
+          },
+          "timestamp": 1793876323.6972556
+        },
+        {
+          "id": "chat-3afc0df76af642c3a650f7b2fd3962d8_31",
+          "type": "tool_started",
+          "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+          "data": {
+            "activity_id": "call_00_cv1veozuvtwf25ayu8v3kn3h",
+            "tool": "project_query",
+            "summary": "Read the current project graph",
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "projectContentView",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "draft",
+                      "entity_id": "draft_31ca8e83c8de4b00921115d8",
+                      "display_name": "KTV欢唱卡设计图",
+                      "ref": {
+                        "kind": "prompt_draft_ref",
+                        "asset_node_id": "KTV欢唱卡设计图",
+                        "draft_id": "draft_31ca8e83c8de4b00921115d8",
+                        "revision": 1
+                      }
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            }
+          },
+          "timestamp": 1793876329.1947246
+        },
+        {
+          "id": "chat-3afc0df76af642c3a650f7b2fd3962d8_32",
+          "type": "tool_finished",
+          "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+          "data": {
+            "activity_id": "call_00_cv1veozuvtwf25ayu8v3kn3h",
+            "tool": "project_query",
+            "summary": "Read the current project graph",
+            "operation": null,
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "projectContentView",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "draft",
+                      "entity_id": "draft_31ca8e83c8de4b00921115d8",
+                      "display_name": "KTV欢唱卡设计图",
+                      "ref": {
+                        "kind": "prompt_draft_ref",
+                        "asset_node_id": "KTV欢唱卡设计图",
+                        "draft_id": "draft_31ca8e83c8de4b00921115d8",
+                        "revision": 1
+                      }
+                    }
+                  ],
+                  "total_count": 1
+                }
+              }
+            },
+            "status": "done",
+            "result_summary": "Project graph updated to revision 2",
+            "error": null,
+            "error_info": null,
+            "async_ref": null,
+            "async_batch": null,
+            "artifacts": []
+          },
+          "timestamp": 1793876329.2100945
+        },
+        {
+          "id": "chat-3afc0df76af642c3a650f7b2fd3962d8_196",
+          "type": "user_input_request",
+          "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+          "data": {
+            "message_id": "bffd7ace4ebcdd708b52d5e6d26b7b71",
+            "tool_call_id": "call_00_i99vyr0b9ypjvwlgmn8y4y6d",
+            "questions": [
+              {
+                "question": "接下来的方向（含生成的话会消耗积分）",
+                "selection_mode": "single",
+                "options": [
+                  {
+                    "value": "generate_current",
+                    "label": "就按这版生成",
+                    "description": "用当前提示词生成 1 张 2K 图，看到实际效果再决定改法"
+                  },
+                  {
+                    "value": "restyle_guochao",
+                    "label": "换国潮／潮流风格",
+                    "description": "把轻奢霓虹改成国潮或潮玩风卡面，视角主体保留"
+                  },
+                  {
+                    "value": "angle_topdown",
+                    "label": "换俯拍桌面视角",
+                    "description": "俯拍：卡片躺在吧台上，一只手伸入画面按压卡片，适合展现版面全貌"
+                  },
+                  {
+                    "value": "poster_vertical",
+                    "label": "改成竖版宣传海报构图",
+                    "description": "竖版 3:4，卡片为前景主体，背景铺门店氛围与活动信息位"
+                  }
+                ]
+              }
+            ]
+          },
+          "timestamp": 1793876342.5403285
+        },
+        {
+          "id": "chat-3afc0df76af642c3a650f7b2fd3962d8_197",
+          "type": "complete",
+          "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+          "data": {
+            "status": "workflow_paused",
+            "stream_chat_id": "chat-3afc0df76af642c3a650f7b2fd3962d8",
+            "project_id": "lab_816abe6a150a53bf8be104fb966e7c75"
+          },
+          "timestamp": 1793876342.5436468
+        }
+      ],
+      "source_link": "https://flova-lab.rain-boat.com/api/v1/project-viewer/3b204dad-65d2-488e-a221-e088fa4b5d5a/open",
+      "execution_id": "3b204dad-65d2-488e-a221-e088fa4b5d5a",
+      "execution_flags": [
+        "本轮在交互 / 审批处暂停"
+      ]
+    }
+  },
+  "comparisons": {
+    "terra": {
+      "AB": {
+        "judgment": {
+          "schema_version": "flova.pairwise_judgment.v2",
+          "comparison_id": "FL-EVAL-20261104-088-AB",
+          "criteria": [
+            {
+              "criterion_id": "P1",
+              "decision": "equivalent",
+              "reason": "双方均交付了可直接用于生成KTV欢唱卡视觉的完整图片提示词，均包含卡片构图、KTV氛围、主体布局、信息留白及避免项。原请求未指定横竖版或特定风格，X的竖版与Y的横版不构成可核实的完成度差异。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "设计一张 KTV 欢唱卡，竖版卡片构图。"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "画面上方预留醒目的标题区“欢唱卡”，中部预留权益信息区，下方预留使用说明和二维码位置。"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "设计一张横版KTV欢唱卡，采用精致3D物件与现代平面版式相结合的商业设计。"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "采用左侧留白、右侧主体的布局。左上方预留标题区域，左下方预留卡片信息区域，辅以细线和半透明色块。"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P2",
+              "decision": "equivalent",
+              "reason": "双方都以麦克风作为明确的画面主体，并具体规定了主体位置、近景视角或机位、透视/背景处理，使主体与背景可区分。该项是主体确立的离散要求，双方均满足；任务原文未提供可据以判定其中一方主体效果更优的额外标准。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "以一支精致的无线麦克风为视觉主体，采用近景、略微仰视的视角，麦克风清晰突出，位于画面中央偏下；"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "不要让背景抢过麦克风主体。"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "以一支立体麦克风作为醒目的近景视觉主体："
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "麦克风位于画面右侧，从右下向中上方倾斜，以略低机位近距离观察，通过近大远小的透视突出主体。"
+                }
+              ],
+              "missing_evidence": []
+            }
+          ],
+          "limitations": []
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:00.437952+00:00",
+          "elapsed_seconds": 6.580067208999992,
+          "input_sha256": "8a576ad0b1f3ea5e238b235c6d7528c2e649642a0d4265f593162ea1edfcf878",
+          "citation_reanchored": false,
+          "semantic_decisions_unchanged": true,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "BA": {
+        "judgment": {
+          "schema_version": "flova.pairwise_judgment.v2",
+          "comparison_id": "FL-EVAL-20261104-088-BA",
+          "criteria": [
+            {
+              "criterion_id": "P1",
+              "decision": "equivalent",
+              "reason": "双方均直接交付了可用于生成KTV欢唱卡视觉的完整AI图片提示词，包含构图、氛围/配色、版面信息区及避免项；用户未限定卡片横竖版或特定视觉风格，因此无法据此认定任一方完成度更高。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "设计一张横版KTV欢唱卡，采用精致3D物件与现代平面版式相结合的商业设计。"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "整体时尚、有欢唱氛围，视觉焦点明确，画面精致，适合KTV宣传卡设计。"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "设计一张 KTV 欢唱卡，竖版卡片构图。"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "卡面层次清楚、留白充足、文字区域易读，具有精致的商业平面设计质感。"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P2",
+              "decision": "equivalent",
+              "reason": "双方都将麦克风明确设为画面主体，并通过位置、景别/机位、背景弱化或透视来确保主体突出，实质满足“需要有个视角主体”的离散要求；任务原文没有指定主体物、精确位置或视角类型，不能可靠区分优劣。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "以一支立体麦克风作为醒目的近景视觉主体"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "从右下向中上方倾斜，以略低机位近距离观察，通过近大远小的透视突出主体。"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "以一支精致的无线麦克风为视觉主体，采用近景、略微仰视的视角，麦克风清晰突出，位于画面中央偏下；"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "不要让背景抢过麦克风主体。"
+                }
+              ],
+              "missing_evidence": []
+            }
+          ],
+          "limitations": [
+            "现有证据为文字提示词，未附由提示词实际生成的卡面媒体；因此比较仅限提示词对任务要求的文本实现，不能评价实际生成画面的视觉效果。"
+          ]
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:03.191917+00:00",
+          "elapsed_seconds": 6.4289807909999865,
+          "input_sha256": "1ffc64717646757cf475fb463fd4caeefa1973d731ffdbefcfd7fd7ef7ab2048",
+          "citation_reanchored": null,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "score": {
+        "criteria": [
+          {
+            "criterion_id": "P1",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 55.0
+          },
+          {
+            "criterion_id": "P2",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 45.0
+          }
+        ],
+        "score": 50.0,
+        "score_lower": 50.0,
+        "score_upper": 50.0,
+        "coverage_percent": 100.0,
+        "order_conflict_weight": 0.0,
+        "rankable": true
+      },
+      "composite": {
+        "lower": 90.0,
+        "upper": 90.0,
+        "gate": "pass",
+        "formula": "80% absolute + 20% paired comparison",
+        "rankable": true
+      },
+      "consistency_flags": []
+    },
+    "deepseek": {
+      "AB": {
+        "judgment": {
+          "schema_version": "flova.pairwise_judgment.v2",
+          "comparison_id": "FL-EVAL-20261104-088-AB",
+          "criteria": [
+            {
+              "criterion_id": "P1",
+              "decision": "equivalent",
+              "reason": "两方均直接交付了可用于生成KTV欢唱卡设计图的完整AI图片提示词，包含构图、场景、色彩/光线或版式约束，并非仅给出概念或承诺后续提供。用户未限定卡片横竖版、具体风格或文字内容，因此不能仅依据两种不同的设计路线区分完成度。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "设计一张 KTV 欢唱卡，竖版卡片构图。"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "卡面层次清楚、留白充足、文字区域易读，具有精致的商业平面设计质感。"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "制作一张中高端KTV门店欢唱权益卡的实景产品设计样机，4:3横幅，轻奢霓虹风格，真实商业摄影质感。"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "卡片是横向圆角矩形，接近标准银行卡尺寸与真实厚度，占画面宽度约一半"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P2",
+              "decision": "equivalent",
+              "reason": "两方都在提示词内明确指定了画面主体及其位置、焦点关系和背景从属关系。X以中央偏下、近景仰视的无线麦克风为主体；Y以右下方进入画面的持卡手部建立第一人称视角，并明确卡片为焦点。二者均可核实地落实了“有个视角主体”的要求，原请求未规定主体必须是人物、手部或麦克风，无法据此判定一方更优。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "以一支精致的无线麦克风为视觉主体，采用近景、略微仰视的视角，麦克风清晰突出，位于画面中央偏下；"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "不要让背景抢过麦克风主体。"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "采用持卡者第一人称观看视角：一只成年人的右手从画面右下角伸入"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "手部与袖口构成前景视角主体，卡片为视觉焦点"
+                }
+              ],
+              "missing_evidence": []
+            }
+          ],
+          "limitations": []
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:04.660678+00:00",
+          "elapsed_seconds": 8.247147624999997,
+          "input_sha256": "f53c01b9684836d16b6a485524530e0d873402b0afb291e4649224e19a4fba35",
+          "citation_reanchored": true,
+          "semantic_decisions_unchanged": true,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "BA": {
+        "judgment": {
+          "schema_version": "flova.pairwise_judgment.v2",
+          "comparison_id": "FL-EVAL-20261104-088-BA",
+          "criteria": [
+            {
+              "criterion_id": "P1",
+              "decision": "equivalent",
+              "reason": "双方都在最终回复中交付了可直接用于图像生成的完整KTV欢唱卡设计提示词，均包含主题、场景、构图/风格和版面信息等可执行要素。用户未规定特定卡片比例、风格或文字信息，不能据此强行区分优劣。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "制作一张中高端KTV门店欢唱权益卡的实景产品设计样机，4:3横幅，轻奢霓虹风格，真实商业摄影质感。"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "设计一张 KTV 欢唱卡，竖版卡片构图。以一支精致的无线麦克风为视觉主体"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P2",
+              "decision": "equivalent",
+              "reason": "双方均明确确立了画面主体及其视角关系：X指定持卡者第一人称、右下角手部作为前景视角主体并令卡片成为焦点；Y指定近景略仰视且将麦克风置于中央偏下作为视觉主体。二者都可核实地满足“需要有个视角主体”的离散要求，任务原文未要求主体必须为特定物体或视角类型。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "采用持卡者第一人称观看视角：一只成年人的右手从画面右下角伸入"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "手部与袖口构成前景视角主体，卡片为视觉焦点"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "以一支精致的无线麦克风为视觉主体，采用近景、略微仰视的视角，麦克风清晰突出，位于画面中央偏下"
+                }
+              ],
+              "missing_evidence": []
+            }
+          ],
+          "limitations": []
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:07.020212+00:00",
+          "elapsed_seconds": 6.698280582999985,
+          "input_sha256": "a1e67d1f4b9a1ab632bc3865b5c379ca9491117223d7ca1bf48910ce468bb0c6",
+          "citation_reanchored": null,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "score": {
+        "criteria": [
+          {
+            "criterion_id": "P1",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 55.0
+          },
+          {
+            "criterion_id": "P2",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 45.0
+          }
+        ],
+        "score": 50.0,
+        "score_lower": 50.0,
+        "score_upper": 50.0,
+        "coverage_percent": 100.0,
+        "order_conflict_weight": 0.0,
+        "rankable": true
+      },
+      "composite": {
+        "lower": 90.0,
+        "upper": 90.0,
+        "gate": "pass",
+        "formula": "80% absolute + 20% paired comparison",
+        "rankable": true
+      },
+      "consistency_flags": []
+    }
+  },
+  "input_media": []
+}

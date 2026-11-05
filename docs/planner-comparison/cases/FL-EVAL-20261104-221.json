@@ -1,0 +1,3576 @@
+{
+  "id": "FL-EVAL-20261104-221",
+  "title": "登记三个附件与真实 ID",
+  "group": "G12 项目与素材管理",
+  "query": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+  "requested_at": "2026-11-01T11:33:12.471909+00:00",
+  "history": [],
+  "contract": {
+    "schema_version": "flova.pilot_contract.v4",
+    "query_id": "FL-EVAL-20261104-221",
+    "rubric": {
+      "schema_version": "flova.general_rubric.v1",
+      "case_id": "ecca38bb-81f7-4afb-9e48-445c9070df60",
+      "query_id": "FL-EVAL-20261104-221",
+      "generation_readiness": "ready",
+      "source_audit": {
+        "used_source_ids": [
+          "2ce0ef3c294643c8b4674f9a43098477",
+          "resource:a0258f0ed7c347afa16ef562ad64b0f8",
+          "resource:faad50b36024476bbe0120ef10ba302e",
+          "resource:ffe6f596da6649a493a71df6f5cdcd0e"
+        ],
+        "excluded_sources": [],
+        "limitations": [
+          "已通读当前请求、三个有序resource_ref及三个媒体元数据记录。无需检查像素或视频内容即可登记指定字段。"
+        ]
+      },
+      "task_spec": {
+        "current_request": "仅登记本条消息附带的3个文件，按给定文件顺序逐项返回原文件名、media_type及真实resource_id；不创作、不调用媒体生成、不导出。",
+        "current_stage": "附件登记",
+        "deliverables": [
+          "3个附件的有序登记结果，每项包含原文件名、媒体类型和真实resource_id"
+        ],
+        "scope_exclusions": [
+          "后续制作另行指令，本轮不制作任何作品、不调用媒体生成、不导出。",
+          "不要求分析媒体内容。"
+        ],
+        "task_information_gaps": [],
+        "evaluation_evidence_gaps": [
+          "判断禁止操作是否发生需要完整本轮活动记录；最终文本本身足以判断登记字段。"
+        ],
+        "source_refs": [
+          {
+            "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+            "pointer": "/content/input/content",
+            "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+            "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+          },
+          {
+            "source_id": "resource:a0258f0ed7c347afa16ef562ad64b0f8",
+            "pointer": "/content/resource_id",
+            "quote": "a0258f0ed7c347afa16ef562ad64b0f8",
+            "supports": "该附件的真实resource_id。"
+          },
+          {
+            "source_id": "resource:faad50b36024476bbe0120ef10ba302e",
+            "pointer": "/content/resource_id",
+            "quote": "faad50b36024476bbe0120ef10ba302e",
+            "supports": "该附件的真实resource_id。"
+          },
+          {
+            "source_id": "resource:ffe6f596da6649a493a71df6f5cdcd0e",
+            "pointer": "/content/resource_id",
+            "quote": "ffe6f596da6649a493a71df6f5cdcd0e",
+            "supports": "该附件的真实resource_id。"
+          },
+          {
+            "source_id": "resource:a0258f0ed7c347afa16ef562ad64b0f8",
+            "pointer": "/content/media_type",
+            "quote": "video",
+            "supports": "该附件已提供的media_type。"
+          },
+          {
+            "source_id": "resource:faad50b36024476bbe0120ef10ba302e",
+            "pointer": "/content/media_type",
+            "quote": "image",
+            "supports": "该附件已提供的media_type。"
+          },
+          {
+            "source_id": "resource:ffe6f596da6649a493a71df6f5cdcd0e",
+            "pointer": "/content/media_type",
+            "quote": "image",
+            "supports": "该附件已提供的media_type。"
+          }
+        ]
+      },
+      "source_inventory": [
+        {
+          "requirement": "只登记消息附带的三个文件，按明确顺序返回原文件名",
+          "basis": "explicit",
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            }
+          ],
+          "criterion_ids": [
+            "C1"
+          ]
+        },
+        {
+          "requirement": "逐项返回media_type",
+          "basis": "explicit",
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            },
+            {
+              "source_id": "resource:a0258f0ed7c347afa16ef562ad64b0f8",
+              "pointer": "/content/media_type",
+              "quote": "video",
+              "supports": "该附件已提供的media_type。"
+            },
+            {
+              "source_id": "resource:faad50b36024476bbe0120ef10ba302e",
+              "pointer": "/content/media_type",
+              "quote": "image",
+              "supports": "该附件已提供的media_type。"
+            },
+            {
+              "source_id": "resource:ffe6f596da6649a493a71df6f5cdcd0e",
+              "pointer": "/content/media_type",
+              "quote": "image",
+              "supports": "该附件已提供的media_type。"
+            }
+          ],
+          "criterion_ids": [
+            "C2",
+            "C3",
+            "C4"
+          ]
+        },
+        {
+          "requirement": "逐项返回真实resource_id",
+          "basis": "explicit",
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            },
+            {
+              "source_id": "resource:a0258f0ed7c347afa16ef562ad64b0f8",
+              "pointer": "/content/resource_id",
+              "quote": "a0258f0ed7c347afa16ef562ad64b0f8",
+              "supports": "该附件的真实resource_id。"
+            },
+            {
+              "source_id": "resource:faad50b36024476bbe0120ef10ba302e",
+              "pointer": "/content/resource_id",
+              "quote": "faad50b36024476bbe0120ef10ba302e",
+              "supports": "该附件的真实resource_id。"
+            },
+            {
+              "source_id": "resource:ffe6f596da6649a493a71df6f5cdcd0e",
+              "pointer": "/content/resource_id",
+              "quote": "ffe6f596da6649a493a71df6f5cdcd0e",
+              "supports": "该附件的真实resource_id。"
+            }
+          ],
+          "criterion_ids": [
+            "C5",
+            "C6",
+            "C7"
+          ]
+        },
+        {
+          "requirement": "本轮不创作任何作品、不调用媒体生成、不导出；后续制作另发",
+          "basis": "explicit",
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            }
+          ],
+          "criterion_ids": [
+            "C8"
+          ]
+        }
+      ],
+      "parents": [
+        {
+          "parent_id": "P1",
+          "statement": "按顺序登记三个原文件名",
+          "weight": 30,
+          "mode": "all",
+          "must": true,
+          "critical": false,
+          "applicability": "always",
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            }
+          ]
+        },
+        {
+          "parent_id": "P2",
+          "statement": "准确返回各附件媒体类型",
+          "weight": 25,
+          "mode": "all",
+          "must": true,
+          "critical": false,
+          "applicability": "always",
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            },
+            {
+              "source_id": "resource:a0258f0ed7c347afa16ef562ad64b0f8",
+              "pointer": "/content/media_type",
+              "quote": "video",
+              "supports": "该附件已提供的media_type。"
+            },
+            {
+              "source_id": "resource:faad50b36024476bbe0120ef10ba302e",
+              "pointer": "/content/media_type",
+              "quote": "image",
+              "supports": "该附件已提供的media_type。"
+            },
+            {
+              "source_id": "resource:ffe6f596da6649a493a71df6f5cdcd0e",
+              "pointer": "/content/media_type",
+              "quote": "image",
+              "supports": "该附件已提供的media_type。"
+            }
+          ]
+        },
+        {
+          "parent_id": "P3",
+          "statement": "准确返回各附件真实资源ID",
+          "weight": 30,
+          "mode": "all",
+          "must": true,
+          "critical": false,
+          "applicability": "always",
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            },
+            {
+              "source_id": "resource:a0258f0ed7c347afa16ef562ad64b0f8",
+              "pointer": "/content/resource_id",
+              "quote": "a0258f0ed7c347afa16ef562ad64b0f8",
+              "supports": "该附件的真实resource_id。"
+            },
+            {
+              "source_id": "resource:faad50b36024476bbe0120ef10ba302e",
+              "pointer": "/content/resource_id",
+              "quote": "faad50b36024476bbe0120ef10ba302e",
+              "supports": "该附件的真实resource_id。"
+            },
+            {
+              "source_id": "resource:ffe6f596da6649a493a71df6f5cdcd0e",
+              "pointer": "/content/resource_id",
+              "quote": "ffe6f596da6649a493a71df6f5cdcd0e",
+              "supports": "该附件的真实resource_id。"
+            }
+          ]
+        },
+        {
+          "parent_id": "P4",
+          "statement": "仅登记附件，不制作或导出",
+          "weight": 15,
+          "mode": "all",
+          "must": true,
+          "critical": false,
+          "applicability": "always",
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            }
+          ]
+        }
+      ],
+      "criteria": [
+        {
+          "criterion_id": "C1",
+          "parent_id": "P1",
+          "statement": "只列本条三个附件且保持指定原文件名与顺序",
+          "weight": null,
+          "applicability": "always",
+          "anchors": {
+            "P": "完整回复依次列出“辅助静帧_不实际引用_2秒.mp4”、“CHR001-ST01_阿藤_行走济世装_v01.png”、“MS43_回忆后崖边_v01.png”，没有混入其他文件或以规范化asset_node_id替代原文件名。",
+            "F": "完整回复缺漏/新增附件、改变指定顺序或原文件名。",
+            "U": "回复不完整、登记成果未取回，不能确定全量名单。",
+            "NA": "never"
+          },
+          "evidence_plan": [
+            "读取完整最终登记结果并逐项核对给定顺序和文件名。"
+          ],
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            }
+          ],
+          "fact_key": "c1-只列本条三个附件且保持指定原文件名与顺序",
+          "dedup_note": "仅评登记对象、顺序与原文件名；类型和ID另评。"
+        },
+        {
+          "criterion_id": "C2",
+          "parent_id": "P2",
+          "statement": "返回辅助静帧_不实际引用_2秒.mp4的media_type=video",
+          "weight": null,
+          "applicability": "always",
+          "anchors": {
+            "P": "该文件对应条目明确返回media_type为video。",
+            "F": "对应条目的media_type错误，或完整最终登记遗漏该字段。",
+            "U": "未取回完整登记结果，或无法确定字段对应哪一个附件。",
+            "NA": "never"
+          },
+          "evidence_plan": [
+            "按文件名和附件顺序核对媒体类型；不根据扩展名虚构其他字段。"
+          ],
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            },
+            {
+              "source_id": "resource:a0258f0ed7c347afa16ef562ad64b0f8",
+              "pointer": "/content/media_type",
+              "quote": "video",
+              "supports": "该附件已提供的media_type。"
+            }
+          ],
+          "fact_key": "c2-返回辅助静帧_不实际引用_2秒.mp4的media_type=video",
+          "dedup_note": "仅评该附件的media_type。"
+        },
+        {
+          "criterion_id": "C3",
+          "parent_id": "P2",
+          "statement": "返回CHR001-ST01_阿藤_行走济世装_v01.png的media_type=image",
+          "weight": null,
+          "applicability": "always",
+          "anchors": {
+            "P": "该文件对应条目明确返回media_type为image。",
+            "F": "对应条目的media_type错误，或完整最终登记遗漏该字段。",
+            "U": "未取回完整登记结果，或无法确定字段对应哪一个附件。",
+            "NA": "never"
+          },
+          "evidence_plan": [
+            "按文件名和附件顺序核对媒体类型；不根据扩展名虚构其他字段。"
+          ],
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            },
+            {
+              "source_id": "resource:faad50b36024476bbe0120ef10ba302e",
+              "pointer": "/content/media_type",
+              "quote": "image",
+              "supports": "该附件已提供的media_type。"
+            }
+          ],
+          "fact_key": "c3-返回CHR001-ST01_阿藤_行走济世装_v01.png的media_type=image",
+          "dedup_note": "仅评该附件的media_type。"
+        },
+        {
+          "criterion_id": "C4",
+          "parent_id": "P2",
+          "statement": "返回MS43_回忆后崖边_v01.png的media_type=image",
+          "weight": null,
+          "applicability": "always",
+          "anchors": {
+            "P": "该文件对应条目明确返回media_type为image。",
+            "F": "对应条目的media_type错误，或完整最终登记遗漏该字段。",
+            "U": "未取回完整登记结果，或无法确定字段对应哪一个附件。",
+            "NA": "never"
+          },
+          "evidence_plan": [
+            "按文件名和附件顺序核对媒体类型；不根据扩展名虚构其他字段。"
+          ],
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            },
+            {
+              "source_id": "resource:ffe6f596da6649a493a71df6f5cdcd0e",
+              "pointer": "/content/media_type",
+              "quote": "image",
+              "supports": "该附件已提供的media_type。"
+            }
+          ],
+          "fact_key": "c4-返回MS43_回忆后崖边_v01.png的media_type=image",
+          "dedup_note": "仅评该附件的media_type。"
+        },
+        {
+          "criterion_id": "C5",
+          "parent_id": "P3",
+          "statement": "返回辅助静帧_不实际引用_2秒.mp4的真实resource_id",
+          "weight": null,
+          "applicability": "always",
+          "anchors": {
+            "P": "该文件对应条目准确返回a0258f0ed7c347afa16ef562ad64b0f8。",
+            "F": "对应条目的ID有误、使用asset_node_id/URI代替，或完整登记遗漏ID。",
+            "U": "登记结果不完整或附件映射关系不可确认。",
+            "NA": "never"
+          },
+          "evidence_plan": [
+            "逐字符核对登记resource_id与原元数据及有序resource_ref。"
+          ],
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            },
+            {
+              "source_id": "resource:a0258f0ed7c347afa16ef562ad64b0f8",
+              "pointer": "/content/resource_id",
+              "quote": "a0258f0ed7c347afa16ef562ad64b0f8",
+              "supports": "该附件的真实resource_id。"
+            }
+          ],
+          "fact_key": "c5-返回辅助静帧_不实际引用_2秒.mp4的真实resource_id",
+          "dedup_note": "仅评该附件的真实resource_id。"
+        },
+        {
+          "criterion_id": "C6",
+          "parent_id": "P3",
+          "statement": "返回CHR001-ST01_阿藤_行走济世装_v01.png的真实resource_id",
+          "weight": null,
+          "applicability": "always",
+          "anchors": {
+            "P": "该文件对应条目准确返回faad50b36024476bbe0120ef10ba302e。",
+            "F": "对应条目的ID有误、使用asset_node_id/URI代替，或完整登记遗漏ID。",
+            "U": "登记结果不完整或附件映射关系不可确认。",
+            "NA": "never"
+          },
+          "evidence_plan": [
+            "逐字符核对登记resource_id与原元数据及有序resource_ref。"
+          ],
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            },
+            {
+              "source_id": "resource:faad50b36024476bbe0120ef10ba302e",
+              "pointer": "/content/resource_id",
+              "quote": "faad50b36024476bbe0120ef10ba302e",
+              "supports": "该附件的真实resource_id。"
+            }
+          ],
+          "fact_key": "c6-返回CHR001-ST01_阿藤_行走济世装_v01.png的真实resource_id",
+          "dedup_note": "仅评该附件的真实resource_id。"
+        },
+        {
+          "criterion_id": "C7",
+          "parent_id": "P3",
+          "statement": "返回MS43_回忆后崖边_v01.png的真实resource_id",
+          "weight": null,
+          "applicability": "always",
+          "anchors": {
+            "P": "该文件对应条目准确返回ffe6f596da6649a493a71df6f5cdcd0e。",
+            "F": "对应条目的ID有误、使用asset_node_id/URI代替，或完整登记遗漏ID。",
+            "U": "登记结果不完整或附件映射关系不可确认。",
+            "NA": "never"
+          },
+          "evidence_plan": [
+            "逐字符核对登记resource_id与原元数据及有序resource_ref。"
+          ],
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            },
+            {
+              "source_id": "resource:ffe6f596da6649a493a71df6f5cdcd0e",
+              "pointer": "/content/resource_id",
+              "quote": "ffe6f596da6649a493a71df6f5cdcd0e",
+              "supports": "该附件的真实resource_id。"
+            }
+          ],
+          "fact_key": "c7-返回MS43_回忆后崖边_v01.png的真实resource_id",
+          "dedup_note": "仅评该附件的真实resource_id。"
+        },
+        {
+          "criterion_id": "C8",
+          "parent_id": "P4",
+          "statement": "本轮不创作作品、不调用媒体生成、不导出",
+          "weight": null,
+          "applicability": "always",
+          "anchors": {
+            "P": "完整可信动作记录显示本轮仅进行附件登记或必要元数据读取，没有创作、媒体生成或导出。",
+            "F": "可信本轮记录明确显示进行了任一被禁止的创作、媒体生成或导出操作。",
+            "U": "执行活动不完整；仅回复声称未操作不能证明历史行为。",
+            "NA": "never"
+          },
+          "evidence_plan": [
+            "查看完整本轮工具活动及任何新增作品/导出任务；文本表格本身不算作品创作。"
+          ],
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            }
+          ],
+          "fact_key": "c8-本轮不创作作品、不调用媒体生成、不导出",
+          "dedup_note": "仅评用户禁止的执行行为，不重复评登记内容。"
+        }
+      ],
+      "quality": {
+        "enabled": false,
+        "rationale": "当前请求的可核实事实均在基础项覆盖，没有另行明确且独立的质量维度。",
+        "dimensions": []
+      },
+      "authoring_limitations": [
+        "三个附件的内容不纳入本轮登记评价；不因未读取媒体像素降低字段登记的可判定性。"
+      ]
+    },
+    "check_weights": {
+      "C1": {
+        "parent_id": "P1",
+        "weight": 30.0,
+        "weight_exact": "30",
+        "gate": true,
+        "applicability": "always"
+      },
+      "C2": {
+        "parent_id": "P2",
+        "weight": 8.333333333333334,
+        "weight_exact": "25/3",
+        "gate": true,
+        "applicability": "always"
+      },
+      "C3": {
+        "parent_id": "P2",
+        "weight": 8.333333333333334,
+        "weight_exact": "25/3",
+        "gate": true,
+        "applicability": "always"
+      },
+      "C4": {
+        "parent_id": "P2",
+        "weight": 8.333333333333334,
+        "weight_exact": "25/3",
+        "gate": true,
+        "applicability": "always"
+      },
+      "C5": {
+        "parent_id": "P3",
+        "weight": 10.0,
+        "weight_exact": "10",
+        "gate": true,
+        "applicability": "always"
+      },
+      "C6": {
+        "parent_id": "P3",
+        "weight": 10.0,
+        "weight_exact": "10",
+        "gate": true,
+        "applicability": "always"
+      },
+      "C7": {
+        "parent_id": "P3",
+        "weight": 10.0,
+        "weight_exact": "10",
+        "gate": true,
+        "applicability": "always"
+      },
+      "C8": {
+        "parent_id": "P4",
+        "weight": 15.0,
+        "weight_exact": "15",
+        "gate": true,
+        "applicability": "always"
+      }
+    },
+    "comparison_rubric": {
+      "schema_version": "flova.result_acceptability_pairwise.v2",
+      "scope": "same_task_original_reference_vs_candidate",
+      "mode": "fulfillment_then_source_grounded_effect",
+      "criteria": [
+        {
+          "criterion_id": "P1",
+          "statement": "按顺序登记三个原文件名",
+          "weight": 30,
+          "acceptance_check_ids": [
+            "C1"
+          ],
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            }
+          ],
+          "anchors": {
+            "X_better": "X在本条用户要求下有可核实的更完整实现，或在双方均达到底线后，任务原文明确涉及的呈现/表达效果更好。",
+            "Y_better": "同样条件下Y更好。",
+            "equivalent": "双方实质满足程度与任务目标下效果相当；离散约束双方都满足时不得强造差别。",
+            "insufficient": "必需的实际证据缺失或冲突，不能可靠比较；不把缺证据当作表现更差。"
+          }
+        },
+        {
+          "criterion_id": "P2",
+          "statement": "准确返回各附件媒体类型",
+          "weight": 25,
+          "acceptance_check_ids": [
+            "C2",
+            "C3",
+            "C4"
+          ],
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            },
+            {
+              "source_id": "resource:a0258f0ed7c347afa16ef562ad64b0f8",
+              "pointer": "/content/media_type",
+              "quote": "video",
+              "supports": "该附件已提供的media_type。"
+            },
+            {
+              "source_id": "resource:faad50b36024476bbe0120ef10ba302e",
+              "pointer": "/content/media_type",
+              "quote": "image",
+              "supports": "该附件已提供的media_type。"
+            },
+            {
+              "source_id": "resource:ffe6f596da6649a493a71df6f5cdcd0e",
+              "pointer": "/content/media_type",
+              "quote": "image",
+              "supports": "该附件已提供的media_type。"
+            }
+          ],
+          "anchors": {
+            "X_better": "X在本条用户要求下有可核实的更完整实现，或在双方均达到底线后，任务原文明确涉及的呈现/表达效果更好。",
+            "Y_better": "同样条件下Y更好。",
+            "equivalent": "双方实质满足程度与任务目标下效果相当；离散约束双方都满足时不得强造差别。",
+            "insufficient": "必需的实际证据缺失或冲突，不能可靠比较；不把缺证据当作表现更差。"
+          }
+        },
+        {
+          "criterion_id": "P3",
+          "statement": "准确返回各附件真实资源ID",
+          "weight": 30,
+          "acceptance_check_ids": [
+            "C5",
+            "C6",
+            "C7"
+          ],
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            },
+            {
+              "source_id": "resource:a0258f0ed7c347afa16ef562ad64b0f8",
+              "pointer": "/content/resource_id",
+              "quote": "a0258f0ed7c347afa16ef562ad64b0f8",
+              "supports": "该附件的真实resource_id。"
+            },
+            {
+              "source_id": "resource:faad50b36024476bbe0120ef10ba302e",
+              "pointer": "/content/resource_id",
+              "quote": "faad50b36024476bbe0120ef10ba302e",
+              "supports": "该附件的真实resource_id。"
+            },
+            {
+              "source_id": "resource:ffe6f596da6649a493a71df6f5cdcd0e",
+              "pointer": "/content/resource_id",
+              "quote": "ffe6f596da6649a493a71df6f5cdcd0e",
+              "supports": "该附件的真实resource_id。"
+            }
+          ],
+          "anchors": {
+            "X_better": "X在本条用户要求下有可核实的更完整实现，或在双方均达到底线后，任务原文明确涉及的呈现/表达效果更好。",
+            "Y_better": "同样条件下Y更好。",
+            "equivalent": "双方实质满足程度与任务目标下效果相当；离散约束双方都满足时不得强造差别。",
+            "insufficient": "必需的实际证据缺失或冲突，不能可靠比较；不把缺证据当作表现更差。"
+          }
+        },
+        {
+          "criterion_id": "P4",
+          "statement": "仅登记附件，不制作或导出",
+          "weight": 15,
+          "acceptance_check_ids": [
+            "C8"
+          ],
+          "source_refs": [
+            {
+              "source_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "pointer": "/content/input/content",
+              "quote": "请仅登记本条消息附带的3个文件，逐项返回原文件名、media_type及真实resource_id。只登记附件，不创作任何作品、不调用媒体生成、不导出。后续制作指令会另发。文件顺序：[\"辅助静帧_不实际引用_2秒.mp4\", \"CHR001-ST01_阿藤_行走济世装_v01.png\", \"MS43_回忆后崖边_v01.png\"]",
+              "supports": "本轮仅按附件顺序登记名称、类型和真实资源ID。"
+            }
+          ],
+          "anchors": {
+            "X_better": "X在本条用户要求下有可核实的更完整实现，或在双方均达到底线后，任务原文明确涉及的呈现/表达效果更好。",
+            "Y_better": "同样条件下Y更好。",
+            "equivalent": "双方实质满足程度与任务目标下效果相当；离散约束双方都满足时不得强造差别。",
+            "insufficient": "必需的实际证据缺失或冲突，不能可靠比较；不把缺证据当作表现更差。"
+          }
+        }
+      ],
+      "quality_tiebreakers": [],
+      "all_28_requested": true,
+      "not_aesthetic_only": "用户本轮明确要求两组全部用例对原始结果做双向比较。纯查询/配置也比较任务完成与正确性；不强造审美或创造性维度。",
+      "missing_output_policy": "可信确认未交付与评估器缺文件不同：可比较交付完成情况；不得对不存在的作品虚构审美比较。"
+    },
+    "source_hash": "8a5d28ab548e0aa37b1226122ab45bb4262519b47e17dfdf8d57c6a3177124ff",
+    "rubric_hash": "5f90c6c664663b03df7bf22e8f41f664bdbfe7f6ae2122e9a0ec486232f99238",
+    "policy_version": "evidence_and_dependency.v4",
+    "aggregation_profile": "frozen_explicit_check_budgets.v4"
+  },
+  "results": {
+    "reference": {
+      "text": "已登记附件，按指定顺序返回：\n\n| 原文件名 | media_type | resource_id |\n|---|---|---|\n| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |\n\n仅登记附件，未创作作品、未调用媒体生成、未导出。",
+      "evidence": {
+        "E_FINAL_RESPONSE": {
+          "evidence_id": "E_FINAL_RESPONSE",
+          "kind": "final_response",
+          "content": {
+            "text": "已登记附件，按指定顺序返回：\n\n| 原文件名 | media_type | resource_id |\n|---|---|---|\n| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |\n\n仅登记附件，未创作作品、未调用媒体生成、未导出。",
+            "complete_public_response": true
+          }
+        },
+        "E_BOUNDARY": {
+          "evidence_id": "E_BOUNDARY",
+          "kind": "trusted_execution_boundary",
+          "content": {
+            "assessment_scope": "final_turn_result",
+            "source_env": "prod",
+            "scope_id": "bh_creation_ods",
+            "explicit_identity_binding": {
+              "query_id": "FL-EVAL-20261104-221",
+              "case_id": "ecca38bb-81f7-4afb-9e48-445c9070df60",
+              "project_id": "a94d304b7348478cafa276f3c4dfd04d",
+              "conversation_id": "8d68317328f54853883af7ac42464ddc",
+              "turn_message_id": "2ce0ef3c294643c8b4674f9a43098477",
+              "conversation_task_id": null,
+              "assistant_message_id": null,
+              "task_ids": [
+                "08898f2aec704e788d64bd09a3a99c7f"
+              ],
+              "assistant_message_ids": [
+                "b218299d2f05d92668a54be8a674c725"
+              ],
+              "identity_status": "verified_explicit_task_turn_conversation"
+            },
+            "query_created_at": "2026-11-01 11:33:12.471909",
+            "public_final_messages": [
+              {
+                "message_id": "b218299d2f05d92668a54be8a674c725",
+                "created_at": "2026-11-01 11:33:18.105362",
+                "lifecycle_status": "final"
+              }
+            ],
+            "business_tasks": [
+              {
+                "task_id": "08898f2aec704e788d64bd09a3a99c7f",
+                "project_id": "a94d304b7348478cafa276f3c4dfd04d",
+                "conversation_id": "8d68317328f54853883af7ac42464ddc",
+                "task_type": "agent_turn",
+                "assistant_message_id": "b218299d2f05d92668a54be8a674c725",
+                "turn_message_id": "2ce0ef3c294643c8b4674f9a43098477",
+                "waiting_batch_id": null,
+                "tool_call_id": null,
+                "interaction_id": null,
+                "dispatch_status": "published",
+                "run_status": "completed",
+                "last_error_stage": null,
+                "last_error_code": null,
+                "last_error_detail": null,
+                "started_at": "2026-11-01 11:33:12.550931",
+                "finished_at": "2026-11-01 11:33:18.096942",
+                "created_at": "2026-11-01 11:33:12.476789",
+                "updated_at": "2026-11-01 11:33:18.096942"
+              }
+            ],
+            "turn_manifests": [
+              {
+                "id": 1586571,
+                "project_id": "a94d304b7348478cafa276f3c4dfd04d",
+                "conversation_id": "8d68317328f54853883af7ac42464ddc",
+                "turn_message_id": "2ce0ef3c294643c8b4674f9a43098477",
+                "assistant_message_id": "b218299d2f05d92668a54be8a674c725",
+                "status": "sealed",
+                "expected_segment_count": 0,
+                "renderer_version": 1,
+                "created_at": "2026-11-01 11:33:18.119156",
+                "updated_at": "2026-11-01 11:33:18.119160"
+              }
+            ],
+            "archive_sequence_checks": [
+              {
+                "assistant_message_id": "b218299d2f05d92668a54be8a674c725",
+                "manifest_status": "sealed",
+                "expected_segment_count": 0,
+                "observed_segment_count": 0,
+                "observed_sequences": [],
+                "exact_expected_sequence_match": true
+              }
+            ],
+            "archive_payload_coverage": {
+              "segments_observed": 0,
+              "spilled_or_external_payloads": 0,
+              "all_payloads_recovered": true,
+              "complete": true
+            },
+            "instrumented_tool_projection": {
+              "rows": 0,
+              "explicit_project_task_match": true,
+              "conversation_conflicts_excluded": 0,
+              "latest_complete_tuple_policy": true,
+              "source": "flova_obs.stg_observation",
+              "source_bytes_verified": true
+            },
+            "later_feedback_excluded_by_exact_target_keys": true,
+            "candidate_agent_rerun": false
+          }
+        },
+        "E_ACTION_LOG": {
+          "evidence_id": "E_ACTION_LOG",
+          "kind": "action_log_record_index",
+          "content": {
+            "record_refs": [],
+            "archive_segment_record_refs": [],
+            "instrumented_action_record_refs": [],
+            "public_receipt_record_refs": [],
+            "order_note": "Use per-record start_time/created_at or archive seq; refs preserve stable evidence file order. Bodies are stored once in referenced record.content.",
+            "coverage": "Complete coverage of the recorded target-turn public action lane: the sealed manifest expects 0 archive segments, 0 are observed, and all 4 latest exact-task source observations contain 0 inline tool-call bytes and 0 tool-result bytes (one final model generation; no TOOL observations). The complete FINAL public response is preserved separately. There are no recorded public tool actions to recover; this does not prove absence of any uninstrumented action.",
+            "context_update_payloads_excluded": true,
+            "hidden_reasoning_excluded": true
+          }
+        },
+        "E_SCOPE_RECONCILIATION": {
+          "evidence_id": "E_SCOPE_RECONCILIATION",
+          "kind": "trusted_target_turn_recorded_scope_reconciliation",
+          "content": {
+            "project_id": "a94d304b7348478cafa276f3c4dfd04d",
+            "task_ids": [
+              "08898f2aec704e788d64bd09a3a99c7f"
+            ],
+            "source_env": "prod",
+            "scope": "exact target turn including explicit continuation tasks and delegated records with the same project/task binding",
+            "query_receipt": {
+              "status": "ready",
+              "truncated": false,
+              "all_query_rows": 799,
+              "rows_sha256": "d9d6e02209e5d5bb6e06680b930899e10add889ba73f72a3f74efe20bbbdaff8",
+              "sql_sha256": "88f701ddf3bd6aa94263b4bc69b1542f0d0f6bf88da38b385bd754eae1aef0f2"
+            },
+            "source_observation_count": 4,
+            "trace_ids": [
+              "ca018982338b05d47f79133bf4b4852e"
+            ],
+            "payload_bearing_observation_count": 0,
+            "recovered_payload_bearing_observation_count": 0,
+            "missing_payload_observation_count": 0,
+            "all_recorded_nonempty_tool_payloads_recovered": true,
+            "sealed_public_archive_matches": true,
+            "archive_expected": 0,
+            "archive_observed": 0,
+            "recorded_call_names": {},
+            "recorded_call_count_in_recovered_inline_calls": 0,
+            "tool_observations": [],
+            "payload_record_refs": [],
+            "closure_interpretation": "All nonempty recorded tool-call/result observations in the exact task scope are represented by recovered payloads; sealed public archive counts/sequence also match. This supports bounded conclusions about recorded task actions, including delegated actions recorded under those task IDs. It does not assert universal absence of unrecorded activity, external storage state or unseen media properties.",
+            "supersedes": "The generic E_ACTION_LOG partial-recovery label is not a claim of a known missing payload for this verified scope. Original historical coverage label is retained."
+          }
+        }
+      },
+      "evaluation": {
+        "judgment": {
+          "schema_version": "flova.absolute_judgment.v4",
+          "query_id": "FL-EVAL-20261104-221",
+          "criteria": [
+            {
+              "criterion_id": "C1",
+              "status": "P",
+              "reason": "最终回复仅按指定顺序列出三个原文件名。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C2",
+              "status": "P",
+              "reason": "首个文件条目明确登记media_type为video。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C3",
+              "status": "P",
+              "reason": "第二个文件条目明确登记media_type为image。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C4",
+              "status": "P",
+              "reason": "第三个文件条目明确登记media_type为image。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C5",
+              "status": "P",
+              "reason": "首个文件条目返回的resource_id与元数据一致。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`a0258f0ed7c347afa16ef562ad64b0f8`"
+                },
+                {
+                  "evidence_id": "E_BOUNDARY",
+                  "pointer": "/content/explicit_identity_binding/query_id",
+                  "quote": "FL-EVAL-20261104-221"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C6",
+              "status": "P",
+              "reason": "第二个文件条目返回的resource_id与元数据一致。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`faad50b36024476bbe0120ef10ba302e`"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C7",
+              "status": "P",
+              "reason": "第三个文件条目返回的resource_id与元数据一致。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`ffe6f596da6649a493a71df6f5cdcd0e`"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C8",
+              "status": "P",
+              "reason": "可信目标轮次记录完整，未记录任何工具调用、媒体生成、创作或导出动作。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_SCOPE_RECONCILIATION",
+                  "pointer": "/content/recorded_call_count_in_recovered_inline_calls",
+                  "quote": "0"
+                },
+                {
+                  "evidence_id": "E_SCOPE_RECONCILIATION",
+                  "pointer": "/content/tool_observations",
+                  "quote": "[]"
+                },
+                {
+                  "evidence_id": "E_BOUNDARY",
+                  "pointer": "/content/archive_payload_coverage/complete",
+                  "quote": "true"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            }
+          ],
+          "quality": [],
+          "limitations": []
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:35.550952+00:00",
+          "elapsed_seconds": 8.662020708,
+          "input_sha256": "6d30f15bc3b8b85aa88156433dc14d36f4e6e221923d921554a43b761e4b3291",
+          "citation_reanchored": null,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "score": {
+        "lower": 100,
+        "upper": 100,
+        "coverage": 100,
+        "counts": {
+          "P": 8
+        },
+        "must_failed": [],
+        "status": "pass",
+        "applicable_budget": 100.0
+      },
+      "media": [],
+      "execution": [],
+      "source_link": "https://flova.ai/en/project/?id=a94d304b7348478cafa276f3c4dfd04d&message_id=2ce0ef3c294643c8b4674f9a43098477",
+      "execution_flags": []
+    },
+    "terra": {
+      "text": "3 个附件均已登记，顺序如下：\n\n| 原文件名 | media_type | resource_id |\n|---|---|---|\n| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |\n\n未创作作品、生成媒体或导出。",
+      "evidence": {
+        "E_FINAL_RESPONSE": {
+          "evidence_id": "E_FINAL_RESPONSE",
+          "kind": "final_response",
+          "content": {
+            "text": "3 个附件均已登记，顺序如下：\n\n| 原文件名 | media_type | resource_id |\n|---|---|---|\n| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |\n\n未创作作品、生成媒体或导出。",
+            "complete_public_response": true
+          }
+        },
+        "E_BOUNDARY": {
+          "evidence_id": "E_BOUNDARY",
+          "kind": "trusted_execution_boundary",
+          "content": {
+            "execution_status": "succeeded",
+            "finish_reason": "single_turn_complete",
+            "turn_count": 1,
+            "native_boundaries": [
+              {
+                "terminal": true,
+                "progress_hash": "5040a0c3139dc6889b6dfb9f48276a394c57f30beb510958955a05bb0691d4cd",
+                "frames_complete": true,
+                "resources_settled": true
+              }
+            ],
+            "frame_count": 52,
+            "frame_index_first": 1,
+            "frame_index_last": 52,
+            "frame_gaps": [],
+            "frame_hashes": [
+              "06f1bc39a56bf185a34893fc2fbd3c097043cc54aeeb2357dcd2e149d8a6fbbe",
+              "1ecb8128e8771c8ed95605be6062b5ca8e515b854ddfa78843e5c90a7f66b785"
+            ],
+            "resource_receipt": [],
+            "limits": "Complete captured public frames and settled native resource receipt, not a guarantee of full internal tool arguments or opaque delegated actions."
+          }
+        },
+        "E_ACTIONS": {
+          "evidence_id": "E_ACTIONS",
+          "kind": "recorded_current_turn_events",
+          "content": {
+            "events": [
+              {
+                "id": "chat-a5c2f116debc486abf5cbdec7200280c_1",
+                "type": "tool_started",
+                "stream_chat_id": "chat-a5c2f116debc486abf5cbdec7200280c",
+                "data": {
+                  "activity_id": "call_YZe5BjVYNYx4EX204i8GulUJ",
+                  "tool": "project_query",
+                  "summary": "Read the current project graph",
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "projectContentView",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "resource",
+                            "entity_id": "a0258f0ed7c347afa16ef562ad64b0f8",
+                            "display_name": "辅助静帧_不实际引用_2秒.mp4",
+                            "ref": {
+                              "kind": "resource_ref",
+                              "resource_id": "a0258f0ed7c347afa16ef562ad64b0f8"
+                            }
+                          },
+                          {
+                            "entity_type": "resource",
+                            "entity_id": "faad50b36024476bbe0120ef10ba302e",
+                            "display_name": "CHR001-ST01_阿藤_行走济世装_v01.png",
+                            "ref": {
+                              "kind": "resource_ref",
+                              "resource_id": "faad50b36024476bbe0120ef10ba302e"
+                            }
+                          }
+                        ],
+                        "total_count": 3
+                      }
+                    }
+                  }
+                },
+                "timestamp": 1793877512.0138407
+              },
+              {
+                "id": "chat-a5c2f116debc486abf5cbdec7200280c_2",
+                "type": "tool_finished",
+                "stream_chat_id": "chat-a5c2f116debc486abf5cbdec7200280c",
+                "data": {
+                  "activity_id": "call_YZe5BjVYNYx4EX204i8GulUJ",
+                  "tool": "project_query",
+                  "summary": "Read the current project graph",
+                  "operation": null,
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "projectContentView",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "resource",
+                            "entity_id": "a0258f0ed7c347afa16ef562ad64b0f8",
+                            "display_name": "辅助静帧_不实际引用_2秒.mp4",
+                            "ref": {
+                              "kind": "resource_ref",
+                              "resource_id": "a0258f0ed7c347afa16ef562ad64b0f8"
+                            }
+                          },
+                          {
+                            "entity_type": "resource",
+                            "entity_id": "faad50b36024476bbe0120ef10ba302e",
+                            "display_name": "CHR001-ST01_阿藤_行走济世装_v01.png",
+                            "ref": {
+                              "kind": "resource_ref",
+                              "resource_id": "faad50b36024476bbe0120ef10ba302e"
+                            }
+                          }
+                        ],
+                        "total_count": 3
+                      }
+                    }
+                  },
+                  "status": "done",
+                  "result_summary": "Project graph updated to revision 77",
+                  "error": null,
+                  "error_info": null,
+                  "async_ref": null,
+                  "async_batch": null,
+                  "artifacts": []
+                },
+                "timestamp": 1793877512.0299935
+              },
+              {
+                "id": "chat-a5c2f116debc486abf5cbdec7200280c_52",
+                "type": "complete",
+                "stream_chat_id": "chat-a5c2f116debc486abf5cbdec7200280c",
+                "data": {
+                  "status": "workflow_completed",
+                  "stream_chat_id": "chat-a5c2f116debc486abf5cbdec7200280c",
+                  "project_id": "lab_ae7d2796b56d54ef96e57253166e9265",
+                  "llm_credits_info": {
+                    "base_credits": 0.0,
+                    "extra_credits": 0.0
+                  }
+                },
+                "timestamp": 1793877518.0212977
+              }
+            ],
+            "stream_text_excluded_because": "Final text supplied in full separately; stream chunks duplicate it."
+          }
+        },
+        "E_TRACE_COVERAGE": {
+          "evidence_id": "E_TRACE_COVERAGE",
+          "kind": "trace_capture_receipt",
+          "content": {
+            "execution_id": "f55a6541-4286-4f1b-98a5-c5ca3afc1c88",
+            "tools": 0,
+            "nodes": 0,
+            "errors": [
+              {
+                "turn_id": "4ac735a9-b624-4ec9-b4ff-52d6e597f9cc",
+                "error_type": "CliError",
+                "code": "http_502"
+              }
+            ],
+            "status": "partial"
+          }
+        },
+        "E_VIEW_graph": {
+          "evidence_id": "E_VIEW_graph",
+          "kind": "project_scoped_native_read",
+          "content": {
+            "code": 0,
+            "data": {
+              "active_tasks": [],
+              "graph_revision": 77,
+              "layout": {},
+              "layout_updated_at": null,
+              "legacy_skill_migration_required": false,
+              "nodes": [
+                {
+                  "asset_type": "video",
+                  "created_at": "2026-11-01T11:33:02.900307+00:00",
+                  "created_by": "user",
+                  "derived_from": null,
+                  "description": null,
+                  "drafts": [],
+                  "name": "辅助静帧_不实际引用_2秒.mp4",
+                  "node_id": "辅助静帧_不实际引用_2秒_mp4",
+                  "note": null,
+                  "resource_count": 1,
+                  "revision": 0,
+                  "root_order": 1024.0,
+                  "root_pinned": false,
+                  "runtime": {
+                    "active_task_count": 0,
+                    "has_ready": true,
+                    "latest_failure": null
+                  },
+                  "type": "asset",
+                  "updated_at": "2026-11-01T11:33:02.900329+00:00"
+                },
+                {
+                  "asset_type": "image",
+                  "created_at": "2026-11-01T11:33:02.960014+00:00",
+                  "created_by": "user",
+                  "derived_from": null,
+                  "description": null,
+                  "drafts": [],
+                  "name": "CHR001-ST01_阿藤_行走济世装_v01.png",
+                  "node_id": "CHR001_ST01_阿藤_行走济世装_v01_png",
+                  "note": null,
+                  "resource_count": 1,
+                  "revision": 0,
+                  "root_order": 2048.0,
+                  "root_pinned": false,
+                  "runtime": {
+                    "active_task_count": 0,
+                    "has_ready": true,
+                    "latest_failure": null
+                  },
+                  "type": "asset",
+                  "updated_at": "2026-11-01T11:33:02.960016+00:00"
+                },
+                {
+                  "asset_type": "image",
+                  "created_at": "2026-11-01T11:33:03.013653+00:00",
+                  "created_by": "user",
+                  "derived_from": null,
+                  "description": null,
+                  "drafts": [],
+                  "name": "MS43_回忆后崖边_v01.png",
+                  "node_id": "MS43_回忆后崖边_v01_png",
+                  "note": null,
+                  "resource_count": 1,
+                  "revision": 0,
+                  "root_order": 3072.0,
+                  "root_pinned": false,
+                  "runtime": {
+                    "active_task_count": 0,
+                    "has_ready": true,
+                    "latest_failure": null
+                  },
+                  "type": "asset",
+                  "updated_at": "2026-11-01T11:33:03.013655+00:00"
+                }
+              ],
+              "project": {
+                "created_at": "2026-11-05T11:17:36.110576+00:00",
+                "description": null,
+                "history_epoch": 0,
+                "history_format": "legacy_inverse",
+                "migration_source_project_id": null,
+                "permission_context": {
+                  "custom_approval_rules": null,
+                  "display_mode": "direct",
+                  "effective_mode": "full_access",
+                  "has_custom_approval_rules": false,
+                  "project_mode": "full_access",
+                  "required_approvals": [],
+                  "source": "project"
+                },
+                "permission_mode": "full_access",
+                "project_id": "lab_ae7d2796b56d54ef96e57253166e9265",
+                "read_only": true,
+                "revision": 0,
+                "state": "active",
+                "title": "Flova Lab 88d6dd33a50a58cb89e46ab65d8c0e2d",
+                "updated_at": "2026-11-05T11:17:37.282006+00:00"
+              },
+              "project_id": "lab_ae7d2796b56d54ef96e57253166e9265",
+              "resource_manifest": [
+                {
+                  "asset_node_id": "辅助静帧_不实际引用_2秒_mp4",
+                  "resources": [
+                    {
+                      "asset_node_id": "辅助静帧_不实际引用_2秒_mp4",
+                      "attached_at": "2026-11-01T11:33:02.936038+00:00",
+                      "created_at": "2026-11-01T11:33:02.936038+00:00",
+                      "deleted_at": null,
+                      "duration": 2.0,
+                      "favorite": false,
+                      "favorited_at": null,
+                      "from_type": "uploaded",
+                      "generation_tool": null,
+                      "hidden_at": null,
+                      "is_user_uploaded": true,
+                      "media_height": 720,
+                      "media_type": "video",
+                      "media_width": 1280,
+                      "resource_id": "a0258f0ed7c347afa16ef562ad64b0f8",
+                      "standard_url": {
+                        "large": "[signed URL omitted]",
+                        "medium": "[signed URL omitted]",
+                        "small": "[signed URL omitted]"
+                      },
+                      "thumbnail_url": "[signed URL omitted]",
+                      "updated_at": "2026-11-01T11:33:05.108794+00:00"
+                    }
+                  ]
+                },
+                {
+                  "asset_node_id": "CHR001_ST01_阿藤_行走济世装_v01_png",
+                  "resources": [
+                    {
+                      "asset_node_id": "CHR001_ST01_阿藤_行走济世装_v01_png",
+                      "attached_at": "2026-11-01T11:33:02.987118+00:00",
+                      "created_at": "2026-11-01T11:33:02.987118+00:00",
+                      "deleted_at": null,
+                      "duration": null,
+                      "favorite": false,
+                      "favorited_at": null,
+                      "from_type": "uploaded",
+                      "generation_tool": null,
+                      "hidden_at": null,
+                      "is_user_uploaded": true,
+                      "media_height": null,
+                      "media_type": "image",
+                      "media_width": null,
+                      "resource_id": "faad50b36024476bbe0120ef10ba302e",
+                      "standard_url": {
+                        "large": "[signed URL omitted]",
+                        "medium": "[signed URL omitted]",
+                        "small": "[signed URL omitted]"
+                      },
+                      "thumbnail_url": "[signed URL omitted]",
+                      "updated_at": "2026-11-01T11:33:08.788952+00:00"
+                    }
+                  ]
+                },
+                {
+                  "asset_node_id": "MS43_回忆后崖边_v01_png",
+                  "resources": [
+                    {
+                      "asset_node_id": "MS43_回忆后崖边_v01_png",
+                      "attached_at": "2026-11-01T11:33:03.040554+00:00",
+                      "created_at": "2026-11-01T11:33:03.040554+00:00",
+                      "deleted_at": null,
+                      "duration": null,
+                      "favorite": false,
+                      "favorited_at": null,
+                      "from_type": "uploaded",
+                      "generation_tool": null,
+                      "hidden_at": null,
+                      "is_user_uploaded": true,
+                      "media_height": null,
+                      "media_type": "image",
+                      "media_width": null,
+                      "resource_id": "ffe6f596da6649a493a71df6f5cdcd0e",
+                      "standard_url": {
+                        "large": "[signed URL omitted]",
+                        "medium": "[signed URL omitted]",
+                        "small": "[signed URL omitted]"
+                      },
+                      "thumbnail_url": "[signed URL omitted]",
+                      "updated_at": "2026-11-01T11:33:09.081304+00:00"
+                    }
+                  ]
+                }
+              ],
+              "scope": "full",
+              "task_slots": [],
+              "viewport": null
+            },
+            "message": "success",
+            "subcode": 0
+          }
+        },
+        "E_VIEW_resource_a0258f0ed7c347afa16ef562ad64b0f8": {
+          "evidence_id": "E_VIEW_resource_a0258f0ed7c347afa16ef562ad64b0f8",
+          "kind": "project_scoped_native_read",
+          "content": {
+            "code": 0,
+            "data": {
+              "as_of_seq": 77,
+              "asset_node_id": "辅助静帧_不实际引用_2秒_mp4",
+              "recipe_references": [],
+              "resource": {
+                "asset_node_id": "辅助静帧_不实际引用_2秒_mp4",
+                "attached_at": "2026-11-01T11:33:02.936038+00:00",
+                "copied_from_resource_id": null,
+                "created_at": "2026-11-01T11:33:02.936038+00:00",
+                "credits_info": null,
+                "deleted_at": null,
+                "duration": 2.0,
+                "erase_subtitle_eligible": false,
+                "erase_subtitle_unavailable_reason": "unsupported_model",
+                "extend_video_eligible": false,
+                "favorite": false,
+                "favorited_at": null,
+                "from_type": "uploaded",
+                "generation": null,
+                "generation_replayable": false,
+                "generation_tool": null,
+                "hidden_at": null,
+                "is_user_uploaded": true,
+                "media_info": {
+                  "actual_size": "1280x720",
+                  "aspect_ratio": "16:9",
+                  "bitrate_bps": null,
+                  "content_type": null,
+                  "duration": 2.0,
+                  "file_size": null,
+                  "format": null,
+                  "fps": null,
+                  "has_audio": null,
+                  "height": 720,
+                  "image_size": null,
+                  "lyric_analysis": null,
+                  "resolution": null,
+                  "title": null,
+                  "width": 1280,
+                  "words_analysis": null
+                },
+                "media_type": "video",
+                "processing": null,
+                "resource_id": "a0258f0ed7c347afa16ef562ad64b0f8",
+                "standard_url": {
+                  "compressed": "[signed URL omitted]",
+                  "large": "[signed URL omitted]",
+                  "medium": "[signed URL omitted]",
+                  "small": "[signed URL omitted]"
+                },
+                "subtitle_erased": false,
+                "thumbnail_url": "[signed URL omitted]",
+                "transcoder_url": "[signed URL omitted]",
+                "updated_at": "2026-11-01T11:33:05.108794+00:00",
+                "upload_info": {
+                  "source_file_name": "辅助静帧_不实际引用_2秒.mp4",
+                  "source_size_bytes": 348582
+                },
+                "url": "[signed URL omitted]",
+                "watermark_status": null,
+                "watermark_url": null
+              }
+            },
+            "message": "success",
+            "subcode": 0
+          }
+        },
+        "E_VIEW_resource_faad50b36024476bbe0120ef10ba302e": {
+          "evidence_id": "E_VIEW_resource_faad50b36024476bbe0120ef10ba302e",
+          "kind": "project_scoped_native_read",
+          "content": {
+            "code": 0,
+            "data": {
+              "as_of_seq": 77,
+              "asset_node_id": "CHR001_ST01_阿藤_行走济世装_v01_png",
+              "recipe_references": [],
+              "resource": {
+                "asset_node_id": "CHR001_ST01_阿藤_行走济世装_v01_png",
+                "attached_at": "2026-11-01T11:33:02.987118+00:00",
+                "copied_from_resource_id": null,
+                "created_at": "2026-11-01T11:33:02.987118+00:00",
+                "credits_info": null,
+                "deleted_at": null,
+                "duration": null,
+                "erase_subtitle_eligible": false,
+                "erase_subtitle_unavailable_reason": "unsupported_model",
+                "extend_video_eligible": false,
+                "favorite": false,
+                "favorited_at": null,
+                "from_type": "uploaded",
+                "generation": null,
+                "generation_replayable": false,
+                "generation_tool": null,
+                "hidden_at": null,
+                "is_user_uploaded": true,
+                "media_info": {
+                  "actual_size": null,
+                  "aspect_ratio": null,
+                  "bitrate_bps": null,
+                  "content_type": null,
+                  "duration": null,
+                  "file_size": null,
+                  "format": null,
+                  "fps": null,
+                  "has_audio": null,
+                  "height": null,
+                  "image_size": null,
+                  "lyric_analysis": null,
+                  "resolution": null,
+                  "title": null,
+                  "width": null,
+                  "words_analysis": null
+                },
+                "media_type": "image",
+                "processing": null,
+                "resource_id": "faad50b36024476bbe0120ef10ba302e",
+                "standard_url": {
+                  "compressed": "[signed URL omitted]",
+                  "large": "[signed URL omitted]",
+                  "medium": "[signed URL omitted]",
+                  "small": "[signed URL omitted]"
+                },
+                "subtitle_erased": false,
+                "thumbnail_url": "[signed URL omitted]",
+                "transcoder_url": null,
+                "updated_at": "2026-11-01T11:33:08.788952+00:00",
+                "upload_info": {
+                  "source_file_name": "CHR001-ST01_阿藤_行走济世装_v01.png",
+                  "source_size_bytes": 7232480
+                },
+                "url": "[signed URL omitted]",
+                "watermark_status": null,
+                "watermark_url": null
+              }
+            },
+            "message": "success",
+            "subcode": 0
+          }
+        },
+        "E_VIEW_resource_ffe6f596da6649a493a71df6f5cdcd0e": {
+          "evidence_id": "E_VIEW_resource_ffe6f596da6649a493a71df6f5cdcd0e",
+          "kind": "project_scoped_native_read",
+          "content": {
+            "code": 0,
+            "data": {
+              "as_of_seq": 77,
+              "asset_node_id": "MS43_回忆后崖边_v01_png",
+              "recipe_references": [],
+              "resource": {
+                "asset_node_id": "MS43_回忆后崖边_v01_png",
+                "attached_at": "2026-11-01T11:33:03.040554+00:00",
+                "copied_from_resource_id": null,
+                "created_at": "2026-11-01T11:33:03.040554+00:00",
+                "credits_info": null,
+                "deleted_at": null,
+                "duration": null,
+                "erase_subtitle_eligible": false,
+                "erase_subtitle_unavailable_reason": "unsupported_model",
+                "extend_video_eligible": false,
+                "favorite": false,
+                "favorited_at": null,
+                "from_type": "uploaded",
+                "generation": null,
+                "generation_replayable": false,
+                "generation_tool": null,
+                "hidden_at": null,
+                "is_user_uploaded": true,
+                "media_info": {
+                  "actual_size": null,
+                  "aspect_ratio": null,
+                  "bitrate_bps": null,
+                  "content_type": null,
+                  "duration": null,
+                  "file_size": null,
+                  "format": null,
+                  "fps": null,
+                  "has_audio": null,
+                  "height": null,
+                  "image_size": null,
+                  "lyric_analysis": null,
+                  "resolution": null,
+                  "title": null,
+                  "width": null,
+                  "words_analysis": null
+                },
+                "media_type": "image",
+                "processing": null,
+                "resource_id": "ffe6f596da6649a493a71df6f5cdcd0e",
+                "standard_url": {
+                  "compressed": "[signed URL omitted]",
+                  "large": "[signed URL omitted]",
+                  "medium": "[signed URL omitted]",
+                  "small": "[signed URL omitted]"
+                },
+                "subtitle_erased": false,
+                "thumbnail_url": "[signed URL omitted]",
+                "transcoder_url": null,
+                "updated_at": "2026-11-01T11:33:09.081304+00:00",
+                "upload_info": {
+                  "source_file_name": "MS43_回忆后崖边_v01.png",
+                  "source_size_bytes": 8183072
+                },
+                "url": "[signed URL omitted]",
+                "watermark_status": null,
+                "watermark_url": null
+              }
+            },
+            "message": "success",
+            "subcode": 0
+          }
+        }
+      },
+      "evaluation": {
+        "judgment": {
+          "schema_version": "flova.absolute_judgment.v4",
+          "query_id": "FL-EVAL-20261104-221",
+          "criteria": [
+            {
+              "criterion_id": "C1",
+              "status": "P",
+              "reason": "最终回复仅按指定顺序列出三个原文件名。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C2",
+              "status": "P",
+              "reason": "首个附件条目返回media_type为video，且与资源记录一致。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |"
+                },
+                {
+                  "evidence_id": "E_VIEW_resource_a0258f0ed7c347afa16ef562ad64b0f8",
+                  "pointer": "/content/data/resource/media_type",
+                  "quote": "video"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C3",
+              "status": "P",
+              "reason": "第二个附件条目返回media_type为image，且与资源记录一致。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |"
+                },
+                {
+                  "evidence_id": "E_VIEW_resource_faad50b36024476bbe0120ef10ba302e",
+                  "pointer": "/content/data/resource/media_type",
+                  "quote": "image"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C4",
+              "status": "P",
+              "reason": "第三个附件条目返回media_type为image，且与资源记录一致。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                },
+                {
+                  "evidence_id": "E_VIEW_resource_ffe6f596da6649a493a71df6f5cdcd0e",
+                  "pointer": "/content/data/resource/media_type",
+                  "quote": "image"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C5",
+              "status": "P",
+              "reason": "首个附件条目返回的resource_id与资源记录一致。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |"
+                },
+                {
+                  "evidence_id": "E_VIEW_resource_a0258f0ed7c347afa16ef562ad64b0f8",
+                  "pointer": "/content/data/resource/resource_id",
+                  "quote": "a0258f0ed7c347afa16ef562ad64b0f8"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C6",
+              "status": "P",
+              "reason": "第二个附件条目返回的resource_id与资源记录一致。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |"
+                },
+                {
+                  "evidence_id": "E_VIEW_resource_faad50b36024476bbe0120ef10ba302e",
+                  "pointer": "/content/data/resource/resource_id",
+                  "quote": "faad50b36024476bbe0120ef10ba302e"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C7",
+              "status": "P",
+              "reason": "第三个附件条目返回的resource_id与资源记录一致。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                },
+                {
+                  "evidence_id": "E_VIEW_resource_ffe6f596da6649a493a71df6f5cdcd0e",
+                  "pointer": "/content/data/resource/resource_id",
+                  "quote": "ffe6f596da6649a493a71df6f5cdcd0e"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C8",
+              "status": "U",
+              "reason": "最终文本虽称未操作，但执行追踪为partial，不能可靠覆盖全部生成或导出活动。",
+              "reason_code": "coverage_gap",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "未创作作品、生成媒体或导出。"
+                },
+                {
+                  "evidence_id": "E_TRACE_COVERAGE",
+                  "pointer": "/content/status",
+                  "quote": "partial"
+                },
+                {
+                  "evidence_id": "E_BOUNDARY",
+                  "pointer": "/content/limits",
+                  "quote": "Complete captured public frames and settled native resource receipt, not a guarantee of full internal tool arguments or opaque delegated actions."
+                }
+              ],
+              "missing_evidence": [
+                "覆盖本轮全部工具调用、委派操作及导出/媒体生成任务的完整可信活动记录。"
+              ],
+              "blocked_by": null
+            }
+          ],
+          "quality": [],
+          "limitations": [
+            "执行追踪记录明确为partial，无法仅凭最终回复确认未发生全部被禁止操作。"
+          ]
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:40.704129+00:00",
+          "elapsed_seconds": 13.613252834000008,
+          "input_sha256": "a091c4e17e76e192e2d983a2723ab553201797afeab243dc0636cb9a5a2ee082",
+          "citation_reanchored": null,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "score": {
+        "lower": 85.0,
+        "upper": 100,
+        "coverage": 85.0,
+        "counts": {
+          "P": 7,
+          "U": 1
+        },
+        "must_failed": [],
+        "status": "undetermined",
+        "applicable_budget": 100.0
+      },
+      "media": [],
+      "execution": [
+        {
+          "id": "chat-a5c2f116debc486abf5cbdec7200280c_1",
+          "type": "tool_started",
+          "stream_chat_id": "chat-a5c2f116debc486abf5cbdec7200280c",
+          "data": {
+            "activity_id": "call_YZe5BjVYNYx4EX204i8GulUJ",
+            "tool": "project_query",
+            "summary": "Read the current project graph",
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "projectContentView",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "resource",
+                      "entity_id": "a0258f0ed7c347afa16ef562ad64b0f8",
+                      "display_name": "辅助静帧_不实际引用_2秒.mp4",
+                      "ref": {
+                        "kind": "resource_ref",
+                        "resource_id": "a0258f0ed7c347afa16ef562ad64b0f8"
+                      }
+                    },
+                    {
+                      "entity_type": "resource",
+                      "entity_id": "faad50b36024476bbe0120ef10ba302e",
+                      "display_name": "CHR001-ST01_阿藤_行走济世装_v01.png",
+                      "ref": {
+                        "kind": "resource_ref",
+                        "resource_id": "faad50b36024476bbe0120ef10ba302e"
+                      }
+                    }
+                  ],
+                  "total_count": 3
+                }
+              }
+            }
+          },
+          "timestamp": 1793877512.0138407
+        },
+        {
+          "id": "chat-a5c2f116debc486abf5cbdec7200280c_2",
+          "type": "tool_finished",
+          "stream_chat_id": "chat-a5c2f116debc486abf5cbdec7200280c",
+          "data": {
+            "activity_id": "call_YZe5BjVYNYx4EX204i8GulUJ",
+            "tool": "project_query",
+            "summary": "Read the current project graph",
+            "operation": null,
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "projectContentView",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "resource",
+                      "entity_id": "a0258f0ed7c347afa16ef562ad64b0f8",
+                      "display_name": "辅助静帧_不实际引用_2秒.mp4",
+                      "ref": {
+                        "kind": "resource_ref",
+                        "resource_id": "a0258f0ed7c347afa16ef562ad64b0f8"
+                      }
+                    },
+                    {
+                      "entity_type": "resource",
+                      "entity_id": "faad50b36024476bbe0120ef10ba302e",
+                      "display_name": "CHR001-ST01_阿藤_行走济世装_v01.png",
+                      "ref": {
+                        "kind": "resource_ref",
+                        "resource_id": "faad50b36024476bbe0120ef10ba302e"
+                      }
+                    }
+                  ],
+                  "total_count": 3
+                }
+              }
+            },
+            "status": "done",
+            "result_summary": "Project graph updated to revision 77",
+            "error": null,
+            "error_info": null,
+            "async_ref": null,
+            "async_batch": null,
+            "artifacts": []
+          },
+          "timestamp": 1793877512.0299935
+        },
+        {
+          "id": "chat-a5c2f116debc486abf5cbdec7200280c_52",
+          "type": "complete",
+          "stream_chat_id": "chat-a5c2f116debc486abf5cbdec7200280c",
+          "data": {
+            "status": "workflow_completed",
+            "stream_chat_id": "chat-a5c2f116debc486abf5cbdec7200280c",
+            "project_id": "lab_ae7d2796b56d54ef96e57253166e9265",
+            "llm_credits_info": {
+              "base_credits": 0.0,
+              "extra_credits": 0.0
+            }
+          },
+          "timestamp": 1793877518.0212977
+        }
+      ],
+      "source_link": "https://flova-lab.rain-boat.com/api/v1/project-viewer/f55a6541-4286-4f1b-98a5-c5ca3afc1c88/open",
+      "execution_id": "f55a6541-4286-4f1b-98a5-c5ca3afc1c88",
+      "execution_flags": []
+    },
+    "deepseek": {
+      "text": "我只需核对这 3 个附件的资源信息，不做任何生成或创作。已完成登记核对：3 个附件均已写入项目，各自的资源记录与您指定的文件顺序一一对应，没有新建任何作品，也没有触发任何媒体生成或导出。\n\n| 序号 | 原文件名 | media_type | resource_id |\n|---|---|---|---|\n| 1 | 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| 2 | CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| 3 | MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |\n\n补充的登记信息：\n\n- 第 1 项：来自上传，时长 2.0 秒，分辨率 1280×720，比例 16:9，文件约 340 KB。\n- 第 2 项：来自上传，文件约 6.9 MB；画面尺寸未在资源记录中登记。\n- 第 3 项：来自上传，文件约 7.8 MB；画面尺寸未在资源记录中登记。\n\n三项都各自挂在同名的独立资源项下，保持单独可寻址。如果后续需要我读取第 2、3 张图的画面尺寸或内容细节，或按您的制作指令继续，随时发指令即可。",
+      "evidence": {
+        "E_FINAL_RESPONSE": {
+          "evidence_id": "E_FINAL_RESPONSE",
+          "kind": "final_response",
+          "content": {
+            "text": "我只需核对这 3 个附件的资源信息，不做任何生成或创作。已完成登记核对：3 个附件均已写入项目，各自的资源记录与您指定的文件顺序一一对应，没有新建任何作品，也没有触发任何媒体生成或导出。\n\n| 序号 | 原文件名 | media_type | resource_id |\n|---|---|---|---|\n| 1 | 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| 2 | CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| 3 | MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |\n\n补充的登记信息：\n\n- 第 1 项：来自上传，时长 2.0 秒，分辨率 1280×720，比例 16:9，文件约 340 KB。\n- 第 2 项：来自上传，文件约 6.9 MB；画面尺寸未在资源记录中登记。\n- 第 3 项：来自上传，文件约 7.8 MB；画面尺寸未在资源记录中登记。\n\n三项都各自挂在同名的独立资源项下，保持单独可寻址。如果后续需要我读取第 2、3 张图的画面尺寸或内容细节，或按您的制作指令继续，随时发指令即可。",
+            "complete_public_response": true
+          }
+        },
+        "E_BOUNDARY": {
+          "evidence_id": "E_BOUNDARY",
+          "kind": "trusted_execution_boundary",
+          "content": {
+            "execution_status": "succeeded",
+            "finish_reason": "single_turn_complete",
+            "turn_count": 1,
+            "native_boundaries": [
+              {
+                "terminal": true,
+                "progress_hash": "bb7b5e6ee9852cbdc9b3306f16a1c41daae8ba69a3b7cd9c68c505f8e2cbccff",
+                "frames_complete": true,
+                "resources_settled": true
+              }
+            ],
+            "frame_count": 108,
+            "frame_index_first": 1,
+            "frame_index_last": 108,
+            "frame_gaps": [],
+            "frame_hashes": [
+              "1756f273b17f57ecff45591b87e307fb902f552cfb9540a4c7f95768569e28f3",
+              "b431df2b8d8afb3adb4beb81f6c186938b6dcca69533d6ad293e1007d92c5c6f"
+            ],
+            "resource_receipt": [],
+            "limits": "Complete captured public frames and settled native resource receipt, not a guarantee of full internal tool arguments or opaque delegated actions."
+          }
+        },
+        "E_ACTIONS": {
+          "evidence_id": "E_ACTIONS",
+          "kind": "recorded_current_turn_events",
+          "content": {
+            "events": [
+              {
+                "id": "chat-332b1957186d453e894aadf1b23f464f_10",
+                "type": "tool_started",
+                "stream_chat_id": "chat-332b1957186d453e894aadf1b23f464f",
+                "data": {
+                  "activity_id": "call_00_lce29omcui2vomai6lbde4j8",
+                  "tool": "project_query",
+                  "summary": "Read the current project graph",
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "projectContentView",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "resource",
+                            "entity_id": "a0258f0ed7c347afa16ef562ad64b0f8",
+                            "display_name": "辅助静帧_不实际引用_2秒.mp4",
+                            "ref": {
+                              "kind": "resource_ref",
+                              "resource_id": "a0258f0ed7c347afa16ef562ad64b0f8"
+                            }
+                          },
+                          {
+                            "entity_type": "resource",
+                            "entity_id": "faad50b36024476bbe0120ef10ba302e",
+                            "display_name": "CHR001-ST01_阿藤_行走济世装_v01.png",
+                            "ref": {
+                              "kind": "resource_ref",
+                              "resource_id": "faad50b36024476bbe0120ef10ba302e"
+                            }
+                          }
+                        ],
+                        "total_count": 3
+                      }
+                    }
+                  }
+                },
+                "timestamp": 1793876444.7779574
+              },
+              {
+                "id": "chat-332b1957186d453e894aadf1b23f464f_11",
+                "type": "tool_finished",
+                "stream_chat_id": "chat-332b1957186d453e894aadf1b23f464f",
+                "data": {
+                  "activity_id": "call_00_lce29omcui2vomai6lbde4j8",
+                  "tool": "project_query",
+                  "summary": "Read the current project graph",
+                  "operation": null,
+                  "presentation": {
+                    "schema_version": 1,
+                    "copy_key": "projectContentView",
+                    "detail": {
+                      "kind": "targets",
+                      "targets": {
+                        "items": [
+                          {
+                            "entity_type": "resource",
+                            "entity_id": "a0258f0ed7c347afa16ef562ad64b0f8",
+                            "display_name": "辅助静帧_不实际引用_2秒.mp4",
+                            "ref": {
+                              "kind": "resource_ref",
+                              "resource_id": "a0258f0ed7c347afa16ef562ad64b0f8"
+                            }
+                          },
+                          {
+                            "entity_type": "resource",
+                            "entity_id": "faad50b36024476bbe0120ef10ba302e",
+                            "display_name": "CHR001-ST01_阿藤_行走济世装_v01.png",
+                            "ref": {
+                              "kind": "resource_ref",
+                              "resource_id": "faad50b36024476bbe0120ef10ba302e"
+                            }
+                          }
+                        ],
+                        "total_count": 3
+                      }
+                    }
+                  },
+                  "status": "done",
+                  "result_summary": "Project graph updated to revision 77",
+                  "error": null,
+                  "error_info": null,
+                  "async_ref": null,
+                  "async_batch": null,
+                  "artifacts": []
+                },
+                "timestamp": 1793876444.7932742
+              },
+              {
+                "id": "chat-332b1957186d453e894aadf1b23f464f_108",
+                "type": "complete",
+                "stream_chat_id": "chat-332b1957186d453e894aadf1b23f464f",
+                "data": {
+                  "status": "workflow_completed",
+                  "stream_chat_id": "chat-332b1957186d453e894aadf1b23f464f",
+                  "project_id": "lab_235a354a58b65df2b90e9bd3690a2863",
+                  "llm_credits_info": {
+                    "base_credits": 0.0,
+                    "extra_credits": 0.0
+                  }
+                },
+                "timestamp": 1793876452.9917293
+              }
+            ],
+            "stream_text_excluded_because": "Final text supplied in full separately; stream chunks duplicate it."
+          }
+        },
+        "E_TRACE_COVERAGE": {
+          "evidence_id": "E_TRACE_COVERAGE",
+          "kind": "trace_capture_receipt",
+          "content": {
+            "execution_id": "5158549b-bd8d-4b9a-9d27-201f7950be9e",
+            "tools": 0,
+            "nodes": 0,
+            "errors": [
+              {
+                "turn_id": "7292e257-6f91-44c1-8a43-17626de37246",
+                "error_type": "CliError",
+                "code": "http_502"
+              }
+            ],
+            "status": "partial"
+          }
+        },
+        "E_VIEW_graph": {
+          "evidence_id": "E_VIEW_graph",
+          "kind": "project_scoped_native_read",
+          "content": {
+            "code": 0,
+            "data": {
+              "active_tasks": [],
+              "graph_revision": 77,
+              "layout": {},
+              "layout_updated_at": null,
+              "legacy_skill_migration_required": false,
+              "nodes": [
+                {
+                  "asset_type": "video",
+                  "created_at": "2026-11-01T11:33:02.900307+00:00",
+                  "created_by": "user",
+                  "derived_from": null,
+                  "description": null,
+                  "drafts": [],
+                  "name": "辅助静帧_不实际引用_2秒.mp4",
+                  "node_id": "辅助静帧_不实际引用_2秒_mp4",
+                  "note": null,
+                  "resource_count": 1,
+                  "revision": 0,
+                  "root_order": 1024.0,
+                  "root_pinned": false,
+                  "runtime": {
+                    "active_task_count": 0,
+                    "has_ready": true,
+                    "latest_failure": null
+                  },
+                  "type": "asset",
+                  "updated_at": "2026-11-01T11:33:02.900329+00:00"
+                },
+                {
+                  "asset_type": "image",
+                  "created_at": "2026-11-01T11:33:02.960014+00:00",
+                  "created_by": "user",
+                  "derived_from": null,
+                  "description": null,
+                  "drafts": [],
+                  "name": "CHR001-ST01_阿藤_行走济世装_v01.png",
+                  "node_id": "CHR001_ST01_阿藤_行走济世装_v01_png",
+                  "note": null,
+                  "resource_count": 1,
+                  "revision": 0,
+                  "root_order": 2048.0,
+                  "root_pinned": false,
+                  "runtime": {
+                    "active_task_count": 0,
+                    "has_ready": true,
+                    "latest_failure": null
+                  },
+                  "type": "asset",
+                  "updated_at": "2026-11-01T11:33:02.960016+00:00"
+                },
+                {
+                  "asset_type": "image",
+                  "created_at": "2026-11-01T11:33:03.013653+00:00",
+                  "created_by": "user",
+                  "derived_from": null,
+                  "description": null,
+                  "drafts": [],
+                  "name": "MS43_回忆后崖边_v01.png",
+                  "node_id": "MS43_回忆后崖边_v01_png",
+                  "note": null,
+                  "resource_count": 1,
+                  "revision": 0,
+                  "root_order": 3072.0,
+                  "root_pinned": false,
+                  "runtime": {
+                    "active_task_count": 0,
+                    "has_ready": true,
+                    "latest_failure": null
+                  },
+                  "type": "asset",
+                  "updated_at": "2026-11-01T11:33:03.013655+00:00"
+                }
+              ],
+              "project": {
+                "created_at": "2026-11-05T10:59:35.024779+00:00",
+                "description": null,
+                "history_epoch": 0,
+                "history_format": "legacy_inverse",
+                "migration_source_project_id": null,
+                "permission_context": {
+                  "custom_approval_rules": null,
+                  "display_mode": "direct",
+                  "effective_mode": "full_access",
+                  "has_custom_approval_rules": false,
+                  "project_mode": "full_access",
+                  "required_approvals": [],
+                  "source": "project"
+                },
+                "permission_mode": "full_access",
+                "project_id": "lab_235a354a58b65df2b90e9bd3690a2863",
+                "read_only": true,
+                "revision": 0,
+                "state": "active",
+                "title": "Flova Lab 4856f278a7aa5aa1adc3be61c8b1f777",
+                "updated_at": "2026-11-05T10:59:36.299066+00:00"
+              },
+              "project_id": "lab_235a354a58b65df2b90e9bd3690a2863",
+              "resource_manifest": [
+                {
+                  "asset_node_id": "辅助静帧_不实际引用_2秒_mp4",
+                  "resources": [
+                    {
+                      "asset_node_id": "辅助静帧_不实际引用_2秒_mp4",
+                      "attached_at": "2026-11-01T11:33:02.936038+00:00",
+                      "created_at": "2026-11-01T11:33:02.936038+00:00",
+                      "deleted_at": null,
+                      "duration": 2.0,
+                      "favorite": false,
+                      "favorited_at": null,
+                      "from_type": "uploaded",
+                      "generation_tool": null,
+                      "hidden_at": null,
+                      "is_user_uploaded": true,
+                      "media_height": 720,
+                      "media_type": "video",
+                      "media_width": 1280,
+                      "resource_id": "a0258f0ed7c347afa16ef562ad64b0f8",
+                      "standard_url": {
+                        "large": "[signed URL omitted]",
+                        "medium": "[signed URL omitted]",
+                        "small": "[signed URL omitted]"
+                      },
+                      "thumbnail_url": "[signed URL omitted]",
+                      "updated_at": "2026-11-01T11:33:05.108794+00:00"
+                    }
+                  ]
+                },
+                {
+                  "asset_node_id": "CHR001_ST01_阿藤_行走济世装_v01_png",
+                  "resources": [
+                    {
+                      "asset_node_id": "CHR001_ST01_阿藤_行走济世装_v01_png",
+                      "attached_at": "2026-11-01T11:33:02.987118+00:00",
+                      "created_at": "2026-11-01T11:33:02.987118+00:00",
+                      "deleted_at": null,
+                      "duration": null,
+                      "favorite": false,
+                      "favorited_at": null,
+                      "from_type": "uploaded",
+                      "generation_tool": null,
+                      "hidden_at": null,
+                      "is_user_uploaded": true,
+                      "media_height": null,
+                      "media_type": "image",
+                      "media_width": null,
+                      "resource_id": "faad50b36024476bbe0120ef10ba302e",
+                      "standard_url": {
+                        "large": "[signed URL omitted]",
+                        "medium": "[signed URL omitted]",
+                        "small": "[signed URL omitted]"
+                      },
+                      "thumbnail_url": "[signed URL omitted]",
+                      "updated_at": "2026-11-01T11:33:08.788952+00:00"
+                    }
+                  ]
+                },
+                {
+                  "asset_node_id": "MS43_回忆后崖边_v01_png",
+                  "resources": [
+                    {
+                      "asset_node_id": "MS43_回忆后崖边_v01_png",
+                      "attached_at": "2026-11-01T11:33:03.040554+00:00",
+                      "created_at": "2026-11-01T11:33:03.040554+00:00",
+                      "deleted_at": null,
+                      "duration": null,
+                      "favorite": false,
+                      "favorited_at": null,
+                      "from_type": "uploaded",
+                      "generation_tool": null,
+                      "hidden_at": null,
+                      "is_user_uploaded": true,
+                      "media_height": null,
+                      "media_type": "image",
+                      "media_width": null,
+                      "resource_id": "ffe6f596da6649a493a71df6f5cdcd0e",
+                      "standard_url": {
+                        "large": "[signed URL omitted]",
+                        "medium": "[signed URL omitted]",
+                        "small": "[signed URL omitted]"
+                      },
+                      "thumbnail_url": "[signed URL omitted]",
+                      "updated_at": "2026-11-01T11:33:09.081304+00:00"
+                    }
+                  ]
+                }
+              ],
+              "scope": "full",
+              "task_slots": [],
+              "viewport": null
+            },
+            "message": "success",
+            "subcode": 0
+          }
+        },
+        "E_VIEW_resource_a0258f0ed7c347afa16ef562ad64b0f8": {
+          "evidence_id": "E_VIEW_resource_a0258f0ed7c347afa16ef562ad64b0f8",
+          "kind": "project_scoped_native_read",
+          "content": {
+            "code": 0,
+            "data": {
+              "as_of_seq": 77,
+              "asset_node_id": "辅助静帧_不实际引用_2秒_mp4",
+              "recipe_references": [],
+              "resource": {
+                "asset_node_id": "辅助静帧_不实际引用_2秒_mp4",
+                "attached_at": "2026-11-01T11:33:02.936038+00:00",
+                "copied_from_resource_id": null,
+                "created_at": "2026-11-01T11:33:02.936038+00:00",
+                "credits_info": null,
+                "deleted_at": null,
+                "duration": 2.0,
+                "erase_subtitle_eligible": false,
+                "erase_subtitle_unavailable_reason": "unsupported_model",
+                "extend_video_eligible": false,
+                "favorite": false,
+                "favorited_at": null,
+                "from_type": "uploaded",
+                "generation": null,
+                "generation_replayable": false,
+                "generation_tool": null,
+                "hidden_at": null,
+                "is_user_uploaded": true,
+                "media_info": {
+                  "actual_size": "1280x720",
+                  "aspect_ratio": "16:9",
+                  "bitrate_bps": null,
+                  "content_type": null,
+                  "duration": 2.0,
+                  "file_size": null,
+                  "format": null,
+                  "fps": null,
+                  "has_audio": null,
+                  "height": 720,
+                  "image_size": null,
+                  "lyric_analysis": null,
+                  "resolution": null,
+                  "title": null,
+                  "width": 1280,
+                  "words_analysis": null
+                },
+                "media_type": "video",
+                "processing": null,
+                "resource_id": "a0258f0ed7c347afa16ef562ad64b0f8",
+                "standard_url": {
+                  "compressed": "[signed URL omitted]",
+                  "large": "[signed URL omitted]",
+                  "medium": "[signed URL omitted]",
+                  "small": "[signed URL omitted]"
+                },
+                "subtitle_erased": false,
+                "thumbnail_url": "[signed URL omitted]",
+                "transcoder_url": "[signed URL omitted]",
+                "updated_at": "2026-11-01T11:33:05.108794+00:00",
+                "upload_info": {
+                  "source_file_name": "辅助静帧_不实际引用_2秒.mp4",
+                  "source_size_bytes": 348582
+                },
+                "url": "[signed URL omitted]",
+                "watermark_status": null,
+                "watermark_url": null
+              }
+            },
+            "message": "success",
+            "subcode": 0
+          }
+        },
+        "E_VIEW_resource_faad50b36024476bbe0120ef10ba302e": {
+          "evidence_id": "E_VIEW_resource_faad50b36024476bbe0120ef10ba302e",
+          "kind": "project_scoped_native_read",
+          "content": {
+            "code": 0,
+            "data": {
+              "as_of_seq": 77,
+              "asset_node_id": "CHR001_ST01_阿藤_行走济世装_v01_png",
+              "recipe_references": [],
+              "resource": {
+                "asset_node_id": "CHR001_ST01_阿藤_行走济世装_v01_png",
+                "attached_at": "2026-11-01T11:33:02.987118+00:00",
+                "copied_from_resource_id": null,
+                "created_at": "2026-11-01T11:33:02.987118+00:00",
+                "credits_info": null,
+                "deleted_at": null,
+                "duration": null,
+                "erase_subtitle_eligible": false,
+                "erase_subtitle_unavailable_reason": "unsupported_model",
+                "extend_video_eligible": false,
+                "favorite": false,
+                "favorited_at": null,
+                "from_type": "uploaded",
+                "generation": null,
+                "generation_replayable": false,
+                "generation_tool": null,
+                "hidden_at": null,
+                "is_user_uploaded": true,
+                "media_info": {
+                  "actual_size": null,
+                  "aspect_ratio": null,
+                  "bitrate_bps": null,
+                  "content_type": null,
+                  "duration": null,
+                  "file_size": null,
+                  "format": null,
+                  "fps": null,
+                  "has_audio": null,
+                  "height": null,
+                  "image_size": null,
+                  "lyric_analysis": null,
+                  "resolution": null,
+                  "title": null,
+                  "width": null,
+                  "words_analysis": null
+                },
+                "media_type": "image",
+                "processing": null,
+                "resource_id": "faad50b36024476bbe0120ef10ba302e",
+                "standard_url": {
+                  "compressed": "[signed URL omitted]",
+                  "large": "[signed URL omitted]",
+                  "medium": "[signed URL omitted]",
+                  "small": "[signed URL omitted]"
+                },
+                "subtitle_erased": false,
+                "thumbnail_url": "[signed URL omitted]",
+                "transcoder_url": null,
+                "updated_at": "2026-11-01T11:33:08.788952+00:00",
+                "upload_info": {
+                  "source_file_name": "CHR001-ST01_阿藤_行走济世装_v01.png",
+                  "source_size_bytes": 7232480
+                },
+                "url": "[signed URL omitted]",
+                "watermark_status": null,
+                "watermark_url": null
+              }
+            },
+            "message": "success",
+            "subcode": 0
+          }
+        },
+        "E_VIEW_resource_ffe6f596da6649a493a71df6f5cdcd0e": {
+          "evidence_id": "E_VIEW_resource_ffe6f596da6649a493a71df6f5cdcd0e",
+          "kind": "project_scoped_native_read",
+          "content": {
+            "code": 0,
+            "data": {
+              "as_of_seq": 77,
+              "asset_node_id": "MS43_回忆后崖边_v01_png",
+              "recipe_references": [],
+              "resource": {
+                "asset_node_id": "MS43_回忆后崖边_v01_png",
+                "attached_at": "2026-11-01T11:33:03.040554+00:00",
+                "copied_from_resource_id": null,
+                "created_at": "2026-11-01T11:33:03.040554+00:00",
+                "credits_info": null,
+                "deleted_at": null,
+                "duration": null,
+                "erase_subtitle_eligible": false,
+                "erase_subtitle_unavailable_reason": "unsupported_model",
+                "extend_video_eligible": false,
+                "favorite": false,
+                "favorited_at": null,
+                "from_type": "uploaded",
+                "generation": null,
+                "generation_replayable": false,
+                "generation_tool": null,
+                "hidden_at": null,
+                "is_user_uploaded": true,
+                "media_info": {
+                  "actual_size": null,
+                  "aspect_ratio": null,
+                  "bitrate_bps": null,
+                  "content_type": null,
+                  "duration": null,
+                  "file_size": null,
+                  "format": null,
+                  "fps": null,
+                  "has_audio": null,
+                  "height": null,
+                  "image_size": null,
+                  "lyric_analysis": null,
+                  "resolution": null,
+                  "title": null,
+                  "width": null,
+                  "words_analysis": null
+                },
+                "media_type": "image",
+                "processing": null,
+                "resource_id": "ffe6f596da6649a493a71df6f5cdcd0e",
+                "standard_url": {
+                  "compressed": "[signed URL omitted]",
+                  "large": "[signed URL omitted]",
+                  "medium": "[signed URL omitted]",
+                  "small": "[signed URL omitted]"
+                },
+                "subtitle_erased": false,
+                "thumbnail_url": "[signed URL omitted]",
+                "transcoder_url": null,
+                "updated_at": "2026-11-01T11:33:09.081304+00:00",
+                "upload_info": {
+                  "source_file_name": "MS43_回忆后崖边_v01.png",
+                  "source_size_bytes": 8183072
+                },
+                "url": "[signed URL omitted]",
+                "watermark_status": null,
+                "watermark_url": null
+              }
+            },
+            "message": "success",
+            "subcode": 0
+          }
+        }
+      },
+      "evaluation": {
+        "judgment": {
+          "schema_version": "flova.absolute_judgment.v4",
+          "query_id": "FL-EVAL-20261104-221",
+          "criteria": [
+            {
+              "criterion_id": "C1",
+              "status": "P",
+              "reason": "最终回复按指定顺序列出恰好三个原文件名，未混入其他附件。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 1 | 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| 2 | CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| 3 | MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C2",
+              "status": "P",
+              "reason": "首项明确登记media_type为video。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 1 | 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C3",
+              "status": "P",
+              "reason": "第二项明确登记media_type为image。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 2 | CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C4",
+              "status": "P",
+              "reason": "第三项明确登记media_type为image。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 3 | MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C5",
+              "status": "P",
+              "reason": "首项登记的resource_id与可信资源读取一致。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 1 | 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |"
+                },
+                {
+                  "evidence_id": "E_VIEW_resource_a0258f0ed7c347afa16ef562ad64b0f8",
+                  "pointer": "/content/data/resource/resource_id",
+                  "quote": "a0258f0ed7c347afa16ef562ad64b0f8"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C6",
+              "status": "P",
+              "reason": "第二项登记的resource_id与可信资源读取一致。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 2 | CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |"
+                },
+                {
+                  "evidence_id": "E_VIEW_resource_faad50b36024476bbe0120ef10ba302e",
+                  "pointer": "/content/data/resource/resource_id",
+                  "quote": "faad50b36024476bbe0120ef10ba302e"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C7",
+              "status": "P",
+              "reason": "第三项登记的resource_id与可信资源读取一致。",
+              "reason_code": "verified",
+              "citations": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 3 | MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                },
+                {
+                  "evidence_id": "E_VIEW_resource_ffe6f596da6649a493a71df6f5cdcd0e",
+                  "pointer": "/content/data/resource/resource_id",
+                  "quote": "ffe6f596da6649a493a71df6f5cdcd0e"
+                }
+              ],
+              "missing_evidence": [],
+              "blocked_by": null
+            },
+            {
+              "criterion_id": "C8",
+              "status": "U",
+              "reason": "动作追踪记录为partial，且边界明确不保证覆盖不透明委派动作，无法可靠确认全程未发生禁止操作。",
+              "reason_code": "coverage_gap",
+              "citations": [
+                {
+                  "evidence_id": "E_TRACE_COVERAGE",
+                  "pointer": "/content/status",
+                  "quote": "partial"
+                },
+                {
+                  "evidence_id": "E_BOUNDARY",
+                  "pointer": "/content/limits",
+                  "quote": "Complete captured public frames and settled native resource receipt, not a guarantee of full internal tool arguments or opaque delegated actions."
+                }
+              ],
+              "missing_evidence": [
+                "完整覆盖本轮所有工具、委派及导出活动的可信动作记录。"
+              ],
+              "blocked_by": null
+            }
+          ],
+          "quality": [],
+          "limitations": [
+            "执行动作追踪为partial，不能据最终文本或有限事件摘要确认未发生任何媒体生成、创作或导出。"
+          ]
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:41.151803+00:00",
+          "elapsed_seconds": 10.82304937500001,
+          "input_sha256": "c37d9e082466f4551fb3e6c4d6adedbd895dbed54231a46162471213296e8474",
+          "citation_reanchored": null,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "score": {
+        "lower": 85.0,
+        "upper": 100,
+        "coverage": 85.0,
+        "counts": {
+          "P": 7,
+          "U": 1
+        },
+        "must_failed": [],
+        "status": "undetermined",
+        "applicable_budget": 100.0
+      },
+      "media": [],
+      "execution": [
+        {
+          "id": "chat-332b1957186d453e894aadf1b23f464f_10",
+          "type": "tool_started",
+          "stream_chat_id": "chat-332b1957186d453e894aadf1b23f464f",
+          "data": {
+            "activity_id": "call_00_lce29omcui2vomai6lbde4j8",
+            "tool": "project_query",
+            "summary": "Read the current project graph",
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "projectContentView",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "resource",
+                      "entity_id": "a0258f0ed7c347afa16ef562ad64b0f8",
+                      "display_name": "辅助静帧_不实际引用_2秒.mp4",
+                      "ref": {
+                        "kind": "resource_ref",
+                        "resource_id": "a0258f0ed7c347afa16ef562ad64b0f8"
+                      }
+                    },
+                    {
+                      "entity_type": "resource",
+                      "entity_id": "faad50b36024476bbe0120ef10ba302e",
+                      "display_name": "CHR001-ST01_阿藤_行走济世装_v01.png",
+                      "ref": {
+                        "kind": "resource_ref",
+                        "resource_id": "faad50b36024476bbe0120ef10ba302e"
+                      }
+                    }
+                  ],
+                  "total_count": 3
+                }
+              }
+            }
+          },
+          "timestamp": 1793876444.7779574
+        },
+        {
+          "id": "chat-332b1957186d453e894aadf1b23f464f_11",
+          "type": "tool_finished",
+          "stream_chat_id": "chat-332b1957186d453e894aadf1b23f464f",
+          "data": {
+            "activity_id": "call_00_lce29omcui2vomai6lbde4j8",
+            "tool": "project_query",
+            "summary": "Read the current project graph",
+            "operation": null,
+            "presentation": {
+              "schema_version": 1,
+              "copy_key": "projectContentView",
+              "detail": {
+                "kind": "targets",
+                "targets": {
+                  "items": [
+                    {
+                      "entity_type": "resource",
+                      "entity_id": "a0258f0ed7c347afa16ef562ad64b0f8",
+                      "display_name": "辅助静帧_不实际引用_2秒.mp4",
+                      "ref": {
+                        "kind": "resource_ref",
+                        "resource_id": "a0258f0ed7c347afa16ef562ad64b0f8"
+                      }
+                    },
+                    {
+                      "entity_type": "resource",
+                      "entity_id": "faad50b36024476bbe0120ef10ba302e",
+                      "display_name": "CHR001-ST01_阿藤_行走济世装_v01.png",
+                      "ref": {
+                        "kind": "resource_ref",
+                        "resource_id": "faad50b36024476bbe0120ef10ba302e"
+                      }
+                    }
+                  ],
+                  "total_count": 3
+                }
+              }
+            },
+            "status": "done",
+            "result_summary": "Project graph updated to revision 77",
+            "error": null,
+            "error_info": null,
+            "async_ref": null,
+            "async_batch": null,
+            "artifacts": []
+          },
+          "timestamp": 1793876444.7932742
+        },
+        {
+          "id": "chat-332b1957186d453e894aadf1b23f464f_108",
+          "type": "complete",
+          "stream_chat_id": "chat-332b1957186d453e894aadf1b23f464f",
+          "data": {
+            "status": "workflow_completed",
+            "stream_chat_id": "chat-332b1957186d453e894aadf1b23f464f",
+            "project_id": "lab_235a354a58b65df2b90e9bd3690a2863",
+            "llm_credits_info": {
+              "base_credits": 0.0,
+              "extra_credits": 0.0
+            }
+          },
+          "timestamp": 1793876452.9917293
+        }
+      ],
+      "source_link": "https://flova-lab.rain-boat.com/api/v1/project-viewer/5158549b-bd8d-4b9a-9d27-201f7950be9e/open",
+      "execution_id": "5158549b-bd8d-4b9a-9d27-201f7950be9e",
+      "execution_flags": []
+    }
+  },
+  "comparisons": {
+    "terra": {
+      "AB": {
+        "judgment": {
+          "schema_version": "flova.pairwise_judgment.v2",
+          "comparison_id": "FL-EVAL-20261104-221-AB",
+          "criteria": [
+            {
+              "criterion_id": "P1",
+              "decision": "equivalent",
+              "reason": "双方均按用户指定顺序列出三个原文件名，且名称与附件顺序一致。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P2",
+              "decision": "equivalent",
+              "reason": "双方对三项附件均分别返回video、image、image，与给定附件元数据一致。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P3",
+              "decision": "equivalent",
+              "reason": "双方均逐项返回了与附件元数据完全一致的三个真实resource_id，且对应关系和顺序相同。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e`"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e`"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P4",
+              "decision": "equivalent",
+              "reason": "双方公开交付均仅为附件登记表，没有创作或导出成品；X记录范围内没有公开工具动作，Y所记录的动作是读取项目图而非媒体生成或导出。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_ACTION_LOG",
+                  "pointer": "/content/coverage",
+                  "quote": "There are no recorded public tool actions to recover;"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/0/data",
+                  "quote": {
+                    "activity_id": "call_YZe5BjVYNYx4EX204i8GulUJ",
+                    "tool": "project_query",
+                    "summary": "Read the current project graph",
+                    "presentation": {
+                      "schema_version": 1,
+                      "copy_key": "projectContentView",
+                      "detail": {
+                        "kind": "targets",
+                        "targets": {
+                          "items": [
+                            {
+                              "entity_type": "resource",
+                              "entity_id": "a0258f0ed7c347afa16ef562ad64b0f8",
+                              "display_name": "辅助静帧_不实际引用_2秒.mp4",
+                              "ref": {
+                                "kind": "resource_ref",
+                                "resource_id": "a0258f0ed7c347afa16ef562ad64b0f8"
+                              }
+                            },
+                            {
+                              "entity_type": "resource",
+                              "entity_id": "faad50b36024476bbe0120ef10ba302e",
+                              "display_name": "CHR001-ST01_阿藤_行走济世装_v01.png",
+                              "ref": {
+                                "kind": "resource_ref",
+                                "resource_id": "faad50b36024476bbe0120ef10ba302e"
+                              }
+                            }
+                          ],
+                          "total_count": 3
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/0/data/summary",
+                  "quote": "Read the current project graph"
+                }
+              ],
+              "missing_evidence": []
+            }
+          ],
+          "limitations": [
+            "X的记录明确限定为已记录的目标回合动作，不能证明未记录活动绝对不存在。Y的工具事件摘要不含完整工具参数，且E_TRACE_COVERAGE标记为partial；但已捕获的动作显示为项目读取，双方公开最终交付均未包含创作或导出物。"
+          ]
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:42.340961+00:00",
+          "elapsed_seconds": 13.12010566699999,
+          "input_sha256": "f952074e0a969d9632b9ff0532ea0c2eaaf1f9bf2a8b2008a2c484d6cc7d1cbb",
+          "citation_reanchored": true,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "BA": {
+        "judgment": {
+          "schema_version": "flova.pairwise_judgment.v2",
+          "comparison_id": "FL-EVAL-20261104-221-BA",
+          "criteria": [
+            {
+              "criterion_id": "P1",
+              "decision": "equivalent",
+              "reason": "双方均按用户指定顺序完整登记了三个原文件名，且文件名与附件元数据一致。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video |"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| CHR001-ST01_阿藤_行走济世装_v01.png | image |"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| MS43_回忆后崖边_v01.png | image |"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video |"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| CHR001-ST01_阿藤_行走济世装_v01.png | image |"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| MS43_回忆后崖边_v01.png | image |"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P2",
+              "decision": "equivalent",
+              "reason": "双方均将第1个附件登记为video、后两个附件登记为image，与给定附件元数据的媒体类型完全一致。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video |"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| CHR001-ST01_阿藤_行走济世装_v01.png | image |"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| MS43_回忆后崖边_v01.png | image |"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video |"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| CHR001-ST01_阿藤_行走济世装_v01.png | image |"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| MS43_回忆后崖边_v01.png | image |"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P3",
+              "decision": "equivalent",
+              "reason": "双方均逐项返回了三个附件各自的真实resource_id，且ID与题供附件引用一致。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`a0258f0ed7c347afa16ef562ad64b0f8`"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`faad50b36024476bbe0120ef10ba302e`"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`ffe6f596da6649a493a71df6f5cdcd0e`"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`a0258f0ed7c347afa16ef562ad64b0f8`"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`faad50b36024476bbe0120ef10ba302e`"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`ffe6f596da6649a493a71df6f5cdcd0e`"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P4",
+              "decision": "equivalent",
+              "reason": "双方公开交付均仅为三项附件登记表，未交付创作媒体或导出文件。X记录到的操作为读取项目图谱，不是媒体生成或导出；Y的已核定目标轮次记录没有工具调用。就可核实的交付及已记录操作而言，两者同样符合边界要求。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "未创作作品、生成媒体或导出。"
+                },
+                {
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/0/data/tool",
+                  "quote": "project_query"
+                },
+                {
+                  "evidence_id": "E_BOUNDARY",
+                  "pointer": "/content/resource_receipt",
+                  "quote": "[]"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "仅登记附件，未创作作品、未调用媒体生成、未导出。"
+                },
+                {
+                  "evidence_id": "E_SCOPE_RECONCILIATION",
+                  "pointer": "/content/recorded_call_count_in_recovered_inline_calls",
+                  "quote": "0"
+                },
+                {
+                  "evidence_id": "E_ACTION_LOG",
+                  "pointer": "/content/coverage",
+                  "quote": "There are no recorded public tool actions to recover;"
+                }
+              ],
+              "missing_evidence": []
+            }
+          ],
+          "limitations": [
+            "X的追踪覆盖记录标为partial，且工具摘要不含完整参数；因此对X的未记录内部或不透明行为不能作绝对否定。Y的记录范围也明确不证明未记录活动、外部存储状态或未见媒体属性。上述P4结论仅覆盖可核实的公开交付和已记录操作。"
+          ]
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:44.218776+00:00",
+          "elapsed_seconds": 13.69047925000001,
+          "input_sha256": "d1b92c3f4192c5dd7bb9a44623e4689656cec21b16f594e4b7b8b64edf0b8b91",
+          "citation_reanchored": null,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "score": {
+        "criteria": [
+          {
+            "criterion_id": "P1",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 30.0
+          },
+          {
+            "criterion_id": "P2",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 25.0
+          },
+          {
+            "criterion_id": "P3",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 30.0
+          },
+          {
+            "criterion_id": "P4",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 15.0
+          }
+        ],
+        "score": 50.0,
+        "score_lower": 50.0,
+        "score_upper": 50.0,
+        "coverage_percent": 100.0,
+        "order_conflict_weight": 0.0,
+        "rankable": true
+      },
+      "composite": {
+        "lower": 78.0,
+        "upper": 90.0,
+        "gate": "undetermined",
+        "formula": "80% absolute + 20% paired comparison",
+        "rankable": false
+      },
+      "consistency_flags": []
+    },
+    "deepseek": {
+      "AB": {
+        "judgment": {
+          "schema_version": "flova.pairwise_judgment.v2",
+          "comparison_id": "FL-EVAL-20261104-221-AB",
+          "criteria": [
+            {
+              "criterion_id": "P1",
+              "decision": "equivalent",
+              "reason": "双方均按用户指定顺序列出三个原文件名，且名称与请求中的三个附件名逐项一致。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 1 | 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| 2 | CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| 3 | MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P2",
+              "decision": "equivalent",
+              "reason": "双方均将第一项登记为video、后两项登记为image，与附件元数据提供的媒体类型一致。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 1 | 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| 2 | CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| 3 | MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P3",
+              "decision": "equivalent",
+              "reason": "双方均逐项返回与三个附件元数据相同的真实resource_id，且对应顺序正确。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e`"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`a0258f0ed7c347afa16ef562ad64b0f8` |\n| 2 | CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| 3 | MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e`"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P4",
+              "decision": "equivalent",
+              "reason": "两方公开交付均为附件登记表，未交付任何创作或导出作品。X的受信执行范围记录本目标回合没有记录到工具调用；Y记录到的唯一工具是读取项目图谱，且该事件没有产物，符合为登记核对附件而读取信息，未显示媒体生成或导出。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_SCOPE_RECONCILIATION",
+                  "pointer": "/content/recorded_call_count_in_recovered_inline_calls",
+                  "quote": "0"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "仅登记附件，未创作作品、未调用媒体生成、未导出。"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/0/data",
+                  "quote": {
+                    "activity_id": "call_00_lce29omcui2vomai6lbde4j8",
+                    "tool": "project_query",
+                    "summary": "Read the current project graph",
+                    "presentation": {
+                      "schema_version": 1,
+                      "copy_key": "projectContentView",
+                      "detail": {
+                        "kind": "targets",
+                        "targets": {
+                          "items": [
+                            {
+                              "entity_type": "resource",
+                              "entity_id": "a0258f0ed7c347afa16ef562ad64b0f8",
+                              "display_name": "辅助静帧_不实际引用_2秒.mp4",
+                              "ref": {
+                                "kind": "resource_ref",
+                                "resource_id": "a0258f0ed7c347afa16ef562ad64b0f8"
+                              }
+                            },
+                            {
+                              "entity_type": "resource",
+                              "entity_id": "faad50b36024476bbe0120ef10ba302e",
+                              "display_name": "CHR001-ST01_阿藤_行走济世装_v01.png",
+                              "ref": {
+                                "kind": "resource_ref",
+                                "resource_id": "faad50b36024476bbe0120ef10ba302e"
+                              }
+                            }
+                          ],
+                          "total_count": 3
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/1/data/artifacts",
+                  "quote": "[]"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "没有新建任何作品，也没有触发任何媒体生成或导出。"
+                }
+              ],
+              "missing_evidence": []
+            }
+          ],
+          "limitations": [
+            "Y的E_TRACE_COVERAGE标示为partial，且其工具事件摘要不含完整工具参数；因此结论仅基于已捕获的项目查询事件、空产物及最终公开交付，不能证明未记录的内部或外部活动绝对不存在。X的记录范围同样只支持对已记录目标回合动作的有界结论。"
+          ]
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:44.609692+00:00",
+          "elapsed_seconds": 14.236840459000007,
+          "input_sha256": "29cdc650e40317c35d1f65b5dbfb98f7bc9f8070a0a342e003b0d9018fbd35f7",
+          "citation_reanchored": true,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "BA": {
+        "judgment": {
+          "schema_version": "flova.pairwise_judgment.v2",
+          "comparison_id": "FL-EVAL-20261104-221-BA",
+          "criteria": [
+            {
+              "criterion_id": "P1",
+              "decision": "equivalent",
+              "reason": "双方均按用户指定顺序列出三个原文件名，且名称与附件顺序一致。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 1 | 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| 2 | CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| 3 | MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P2",
+              "decision": "equivalent",
+              "reason": "双方均将第1项标为video、第2和第3项标为image，与附件元数据一致。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 1 | 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| 2 | CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| 3 | MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "| 辅助静帧_不实际引用_2秒.mp4 | video | `a0258f0ed7c347afa16ef562ad64b0f8` |\n| CHR001-ST01_阿藤_行走济世装_v01.png | image | `faad50b36024476bbe0120ef10ba302e` |\n| MS43_回忆后崖边_v01.png | image | `ffe6f596da6649a493a71df6f5cdcd0e` |"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P3",
+              "decision": "equivalent",
+              "reason": "双方均准确返回三个附件各自的真实resource_id，且一一对应。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`a0258f0ed7c347afa16ef562ad64b0f8`"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`faad50b36024476bbe0120ef10ba302e`"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`ffe6f596da6649a493a71df6f5cdcd0e`"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`a0258f0ed7c347afa16ef562ad64b0f8`"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`faad50b36024476bbe0120ef10ba302e`"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "`ffe6f596da6649a493a71df6f5cdcd0e`"
+                }
+              ],
+              "missing_evidence": []
+            },
+            {
+              "criterion_id": "P4",
+              "decision": "equivalent",
+              "reason": "双方最终答复均仅围绕三个附件登记，未交付任何创作或导出作品。X的记录动作是读取项目图谱；Y的受信任目标回合记录显示没有记录到工具调用。两者均无可核实的媒体生成或导出交付。",
+              "evidence_X": [
+                {
+                  "evidence_id": "E_ACTIONS",
+                  "pointer": "/content/events/0/data/tool",
+                  "quote": "project_query"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "没有新建任何作品，也没有触发任何媒体生成或导出。"
+                }
+              ],
+              "evidence_Y": [
+                {
+                  "evidence_id": "E_SCOPE_RECONCILIATION",
+                  "pointer": "/content/recorded_call_count_in_recovered_inline_calls",
+                  "quote": "0"
+                },
+                {
+                  "evidence_id": "E_FINAL_RESPONSE",
+                  "pointer": "/content/text",
+                  "quote": "仅登记附件，未创作作品、未调用媒体生成、未导出。"
+                }
+              ],
+              "missing_evidence": []
+            }
+          ],
+          "limitations": [
+            "X的追踪回执标为partial，且工具事件摘要不含完整工具参数；因此对X的内部未记录活动不能作绝对否定，但已记录的当前回合动作和最终交付中均无生成或导出证据。Y的零工具记录也仅覆盖其受信任的目标回合记录范围。"
+          ]
+        },
+        "metadata": {
+          "actual_model": "gpt-5.6-terra",
+          "requested_model": "gpt-5.6-terra",
+          "started_at": "2026-11-05T17:45:51.980753+00:00",
+          "elapsed_seconds": 12.718378040999994,
+          "input_sha256": "fb9f9a96f23fc641bf0400056d58303519d0945c3ee4da22ccfdbafd1fc68f00",
+          "citation_reanchored": null,
+          "semantic_decisions_unchanged": null,
+          "actual_media_attached": null
+        },
+        "attempt": "attempt-005"
+      },
+      "score": {
+        "criteria": [
+          {
+            "criterion_id": "P1",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 30.0
+          },
+          {
+            "criterion_id": "P2",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 25.0
+          },
+          {
+            "criterion_id": "P3",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 30.0
+          },
+          {
+            "criterion_id": "P4",
+            "first_mapped": "tie",
+            "second_mapped": "tie",
+            "status": "tie",
+            "score": 50,
+            "weight": 15.0
+          }
+        ],
+        "score": 50.0,
+        "score_lower": 50.0,
+        "score_upper": 50.0,
+        "coverage_percent": 100.0,
+        "order_conflict_weight": 0.0,
+        "rankable": true
+      },
+      "composite": {
+        "lower": 78.0,
+        "upper": 90.0,
+        "gate": "undetermined",
+        "formula": "80% absolute + 20% paired comparison",
+        "rankable": false
+      },
+      "consistency_flags": []
+    }
+  },
+  "input_media": []
+}

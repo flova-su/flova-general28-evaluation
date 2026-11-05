@@ -1,0 +1,11 @@
+Independent rubric QA v3 supplement (candidate-blind):
+Reject or require revision when:
+1. One C combines independently provable delivery/count, action prohibition, model identity, file resolution or content requirements without a single acceptance fact.
+2. A negative constraint requires universal absence of invisible operations instead of a finite task scope and verifiable closure contract.
+3. Preservation demands all original media despite a closed mutation set that cannot affect protected state, or accepts preservation from an incomplete/opaque mutation set.
+4. P/F/U/N/A confuse known non-delivery, missing evaluator data, optional applicability and cancellation attribution; a draft can receive completion points; a nonexistent required artifact can receive an automatic N/A windfall.
+5. An alias/capability relies on candidate self-report, a tentative user guess or unversioned current docs when historical source facts are needed.
+6. A perceptibility requirement has no observable F anchor and sends every unclear feature to U even with complete media; or it invents details beyond the user request.
+7. Export semantics require an unnecessary asynchronous job, or equate a capability flag with a completed requested export without a usable deliverable.
+8. Splitting/merging changes the original fact budget or uses candidate quality to select weights. Require stable explicit fact budgets before candidate evaluation.
+Output each issue with criterion/fact ID, source basis, severity, minimal correction and evidence prerequisite; do not optimize toward a pass rate or target unknown rate. Keep source-grounded requirements unchanged. Any revision must be versioned and independently checked before use.

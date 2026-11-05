@@ -6,20 +6,20 @@
   <meta name="description" content="搜索和筛选 Flova 评估记录，逐条查看上文轨迹、当前指令、模型产物、Rubric 判断与最终合分。">
   <meta name="theme-color" content="#f5f6f3">
   <title>Flova · 通用评估集 28 条</title>
-  <link rel="stylesheet" href="./styles.css?v=mm-v2.1-20261105">
-  <script defer src="./catalog-data.js?v=mm-v2.1-20261105"></script>
-  <script defer src="./app.js?v=mm-v2.1-20261105"></script>
-  <script defer src="./multimodal-overview.js?v=mm-v2.1-20261105"></script>
+  <link rel="stylesheet" href="./styles.css?v=audit-v3-20261105">
+  <script defer src="./catalog-data.js?v=audit-v3-20261105"></script>
+  <script defer src="./app.js?v=audit-v3-20261105"></script>
+  <script defer src="./multimodal-overview.js?v=audit-v3-20261105"></script>
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="#view=list" aria-label="Flova 评估记录首页"><span class="brand-mark">f</span><strong>flova</strong><span class="brand-divider"></span><span class="brand-label">结果评估</span></a>
-    <div class="topbar-meta"><span class="live-dot"></span><span>多模态重评 · v2</span><a href="https://flova-team.feishu.cn/wiki/CEMMwopc6iKkmWkYy9hcMqAYnGc" target="_blank" rel="noopener">方案文档 ↗</a></div>
+    <div class="topbar-meta"><span class="live-dot"></span><span>未决专项复审 · v3</span><a href="https://flova-team.feishu.cn/wiki/CEMMwopc6iKkmWkYy9hcMqAYnGc" target="_blank" rel="noopener">方案文档 ↗</a></div>
   </header>
   <main class="workspace">
     <section id="catalog-view" aria-labelledby="catalog-title">
       <div class="page-kicker"><span>EVALUATION LIBRARY</span><span>历史真实回应 · 结果评估</span></div>
-      <div class="catalog-heading"><div><h1 id="catalog-title">通用评估集 · 28 条</h1><p>14 类真实任务 · 原始媒体补证 · 逐项评分与固定基准</p></div><a class="catalog-snapshot" href="https://flova-lab.rain-boat.com/datasets/904bf267-f0bb-4d9f-9b46-cf44550d29c9" target="_blank" rel="noopener"><i></i>查看原评估集 ↗</a></div>
+      <div class="catalog-heading"><div><h1 id="catalog-title">通用评估集 · 28 条</h1><p>14 类真实任务 · 媒体补证与未决复审 · 逐项评分</p></div><a class="catalog-snapshot" href="https://flova-lab.rain-boat.com/datasets/904bf267-f0bb-4d9f-9b46-cf44550d29c9" target="_blank" rel="noopener"><i></i>查看原评估集 ↗</a></div>
       <div id="multimodal-overview"></div>
       <div id="catalog-stats" class="catalog-stats" aria-label="全部评估记录概况"></div>
       <section class="catalog-card" aria-label="搜索和筛选评估记录">
@@ -37,7 +37,7 @@
         <footer class="catalog-pagination-bar"><label class="catalog-size-label">每页<select id="catalog-size" aria-label="每页记录数"><option value="20">20</option><option value="50">50</option><option value="100">100</option></select>条</label><div id="catalog-pagination" class="catalog-pagination" aria-label="评估记录分页"></div></footer>
       </section>
       <p class="catalog-help"><span>逐条专属 Rubric</span><i></i><span>完整上下文、产物和证据在详情中查看</span></p>
-      <details class="batch-scope"><summary>本批结果怎么看 · 新旧口径与取证范围</summary><p>每个 Query 根据完整已记录公开上文与当前指令生成专属 Rubric。此次补齐真实媒体，重新调用 GPT-5.6-terra（文字与图片）及 Gemini 3.1 Pro（音视频）评估；未重跑 Agent。</p><p>v2将父项固定预算均分给适用检查项：满足得本项分，未满足得0，证据未明保留区间。必要项失败仍判未通过。旧版“全部检查通过才得父项分”完整保留；时长检查只按来源校准了185/C5一项。新旧变化同时涉及取证、模型和判据澄清，不能全部归因为多模态能力。</p><p>分数区间不取中点；整例未决与未知检查项分别统计。中断且没有可评内容的2例仍保留在28条交付统计，单列退出内容比较。程序引用校验通过不等于人工金标。A/B对比尚无新候选，当前对比分和综合分不填值。</p></details>
+      <details class="batch-scope"><summary>本批结果怎么看 · 新旧口径与取证范围</summary><p>每个 Query 根据完整已记录公开上文与当前指令生成专属 Rubric。v2补齐真实媒体，重新调用 GPT-5.6-terra（文字与图片）及 Gemini 3.1 Pro（音视频）评估；未重跑 Agent。</p><p>v2将父项固定预算均分给适用检查项：满足得本项分，未满足得0，证据未明保留区间。必要项失败仍判未通过。旧版“全部检查通过才得父项分”完整保留；时长检查只按来源校准了185/C5一项。新旧变化同时涉及取证、模型和判据澄清，不能全部归因为多模态能力。</p><p>分数区间不取中点；整例未决与未知检查项分别统计。中断且没有可评内容的2例仍保留在28条交付统计，单列退出内容比较。v3另对11条原未决用例补证及校准判据后重评，其余17条沿用v2。程序引用校验通过不等于人工金标。A/B对比尚无新候选，当前对比分和综合分不填值。</p></details>
     </section>
     <section id="detail-view" hidden aria-labelledby="page-title">
       <div class="detail-navigation"><button id="detail-back" type="button" class="detail-back">← 返回列表</button><div class="record-navigation" aria-label="切换当前筛选中的记录"><span id="detail-position"></span><button id="detail-prev" type="button" aria-label="上一条评估">← 上一条</button><button id="detail-next" type="button" aria-label="下一条评估">下一条 →</button></div></div>

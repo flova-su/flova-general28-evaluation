@@ -1,0 +1,633 @@
+{
+  "version": "focused_undetermined_audit_v3",
+  "audited_cases": 11,
+  "reevaluated_cases": 11,
+  "fully_reevaluated_cases": 10,
+  "criterion_scoped_reassessment": {
+    "case": "218",
+    "criterion": "C4",
+    "other_criteria": "retained from actual v2 Gemini multimodal run",
+    "multimodal_transport_failures": 2,
+    "text_model": "gpt-5.6-terra"
+  },
+  "other_cases_retained_v2": 17,
+  "criteria_before": {
+    "P": 125,
+    "U": 24,
+    "F": 6,
+    "N/A": 1
+  },
+  "criteria_after": {
+    "P": 136,
+    "F": 9,
+    "U": 10,
+    "N/A": 1
+  },
+  "outcomes_before": {
+    "pass": 14,
+    "undetermined": 11,
+    "fail": 3
+  },
+  "outcomes_after": {
+    "pass": 21,
+    "fail": 6,
+    "undetermined": 1
+  },
+  "actual_additional_api_attempts": 16,
+  "valid_additional_outputs": 14,
+  "actual_additional_usage": {
+    "input_tokens": 835995,
+    "output_tokens": 33140,
+    "total_tokens": 869135
+  },
+  "cases": [
+    {
+      "case_id": "FL-EVAL-20261104-028",
+      "title": "模型、产品与商业化问答 · Skill与媒体生成功能关系",
+      "category": "平台事实补证",
+      "problem": "产品资料只写“音频/音乐”，裁判无法核实人物语音能力。",
+      "action": "按实际代码版本补入TTS、voice_id及模型条件参考能力；无需重新生成声音。",
+      "before_outcome": "undetermined",
+      "after_outcome": "pass",
+      "before_score": {
+        "lower": 70.0,
+        "upper": 100.0
+      },
+      "after_score": {
+        "lower": 100.0,
+        "upper": 100.0
+      },
+      "before_unknown": [
+        "C3"
+      ],
+      "after_unknown": [],
+      "changes": [
+        {
+          "criterion_id": "C3",
+          "id": "C3",
+          "statement": "针对声音，说明语音生成、可用音色或音频参考等相关能力的角色，并将实际支持的方式与需查看模型能力的部分区分；无需强制声克隆、特定模型或新建声音资产。",
+          "before": "U",
+          "after": "P",
+          "reason": "回复明确人物声音需要独立的语音生成能力，说明声音参考是否可用于视频取决于所选模型，并以声音样本和台词音频说明生成目标；版本绑定的平台资料支持存在文本语音模型及模型条件化的参考输入，未把参考支持或批量效果说成无条件保证。"
+        }
+      ],
+      "remaining": [],
+      "rubric_changes": [],
+      "review_caveat": ""
+    },
+    {
+      "case_id": "FL-EVAL-20261104-109",
+      "title": "图片制作 · 需求理解与授权",
+      "category": "证据范围与模型补证",
+      "problem": "已交付图片，但“无额外视频/分镜”被要求证明所有不可见活动。",
+      "action": "核销全部已记录工具正文及sealed档案，限定本轮操作范围；另补真实内部模型键映射。",
+      "before_outcome": "undetermined",
+      "after_outcome": "pass",
+      "before_score": {
+        "lower": 92.5,
+        "upper": 100.0
+      },
+      "after_score": {
+        "lower": 100.0,
+        "upper": 100.0
+      },
+      "before_unknown": [
+        "C2"
+      ],
+      "after_unknown": [],
+      "changes": [
+        {
+          "criterion_id": "C2",
+          "id": "C2",
+          "statement": "不生成视频、剧本、分镜或storyboard，出图后结束",
+          "before": "U",
+          "after": "P",
+          "reason": "受信任的精确任务范围对账表明所有已记录工具载荷均已恢复；记录的调用仅包括建资产、配方、只读文档、查询和图像生成，未见视频、剧本、分镜或storyboard产出。"
+        }
+      ],
+      "remaining": [],
+      "rubric_changes": [],
+      "review_caveat": ""
+    },
+    {
+      "case_id": "FL-EVAL-20261104-113",
+      "title": "图片制作 · 单体内容与素材质量",
+      "category": "Rubric可观察性",
+      "problem": "一项混合交付与禁项；羽籥细节不可辨被当成未取到图片。",
+      "action": "补齐操作范围；羽、籥分别核对，不允许羽状道具替代籥。完整图片中要素不可辨按未满足处理。",
+      "before_outcome": "undetermined",
+      "after_outcome": "fail",
+      "before_score": {
+        "lower": 81.66666666666667,
+        "upper": 100.0
+      },
+      "after_score": {
+        "lower": 91.66666666666667,
+        "upper": 91.66666666666667
+      },
+      "before_unknown": [
+        "C1",
+        "C6"
+      ],
+      "after_unknown": [],
+      "changes": [
+        {
+          "criterion_id": "C1",
+          "id": "C1",
+          "statement": "实际交付一张第三集专用封面且无视频音频分镜",
+          "before": "U",
+          "after": "P",
+          "reason": "已验证的目标轮次记录闭合，且仅记录到一次图像生成；候选图像作为该任务资源已恢复，未见视频、音频或分镜生成操作。"
+        },
+        {
+          "criterion_id": "C6",
+          "id": "C6",
+          "statement": "周天子着玄色礼服，乐舞队列持羽籥并体现八佾意象",
+          "before": "U",
+          "after": "F",
+          "reason": "中央周天子及成列黑红礼服舞者可见，舞者手中的羽状道具也可辨；但所需与“羽”分开的籥类管状乐器在完整候选画面中无法清楚辨认，不能仅以羽状道具替代。"
+        }
+      ],
+      "remaining": [],
+      "rubric_changes": [
+        "C6：保留用户要求的羽、籥两个要素，明确不可互代；完整画面不可辨与未提供图像分开。"
+      ],
+      "review_caveat": "道具可辨性对判据敏感：旧版U、初轮P、明确双要素后F。非同设重复实验，建议人工确认籥的可辨性。"
+    },
+    {
+      "case_id": "FL-EVAL-20261104-122",
+      "title": "图片修改 · 执行与修改控制",
+      "category": "模型名称补证",
+      "problem": "Flova Image 2.5 Flare与实际内部键未建立可信关系。",
+      "action": "找到执行时历史别名表、转换实现与明确测试，确认对应image_gpt_flare。",
+      "before_outcome": "undetermined",
+      "after_outcome": "pass",
+      "before_score": {
+        "lower": 87.5,
+        "upper": 100.0
+      },
+      "after_score": {
+        "lower": 100.0,
+        "upper": 100.0
+      },
+      "before_unknown": [
+        "C2"
+      ],
+      "after_unknown": [],
+      "changes": [
+        {
+          "criterion_id": "C2",
+          "id": "C2",
+          "statement": "生成记录绑定Flova Image 2.5 Flare",
+          "before": "U",
+          "after": "P",
+          "reason": "实际生成任务记录的模型键为 image_gpt_flare；版本绑定别名资料将 Flova Image 2.5 Flare 映射至该键。"
+        }
+      ],
+      "remaining": [],
+      "rubric_changes": [],
+      "review_caveat": ""
+    },
+    {
+      "case_id": "FL-EVAL-20261104-124",
+      "title": "图片修改 · 执行与修改控制",
+      "category": "模型名称补证",
+      "problem": "4K可核实，但Flova Image 2与GPT Image 2未建立可信关系。",
+      "action": "找到执行时历史名称转换及明确测试，两者对应相同规范模型键。",
+      "before_outcome": "undetermined",
+      "after_outcome": "pass",
+      "before_score": {
+        "lower": 87.5,
+        "upper": 100.0
+      },
+      "after_score": {
+        "lower": 100.0,
+        "upper": 100.0
+      },
+      "before_unknown": [
+        "C2"
+      ],
+      "after_unknown": [],
+      "changes": [
+        {
+          "criterion_id": "C2",
+          "id": "C2",
+          "statement": "使用Flova Image 2并延续4K输出",
+          "before": "U",
+          "after": "P",
+          "reason": "可信执行结果记录生成任务使用 image_gpt、规格为 4K；版本绑定的模型映射明确将“Flova Image 2”映射至 GPT Image 2，且恢复的候选图为3840×2160。"
+        }
+      ],
+      "remaining": [],
+      "rubric_changes": [],
+      "review_caveat": ""
+    },
+    {
+      "case_id": "FL-EVAL-20261104-178",
+      "title": "视频修改 · 规划与工具",
+      "category": "已知未交付",
+      "problem": "审批中断、没有生成视频，却把“恰好交付一条”也判为未明。",
+      "action": "用实际生成拒绝、完整记录范围与最终确认核定未交付。取消/审批归因与结果验收分开。",
+      "before_outcome": "undetermined",
+      "after_outcome": "fail",
+      "before_score": {
+        "lower": 0.0,
+        "upper": 100.0
+      },
+      "after_score": {
+        "lower": 0.0,
+        "upper": 90.0
+      },
+      "before_unknown": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5"
+      ],
+      "after_unknown": [
+        "C1",
+        "C2",
+        "C3",
+        "C5"
+      ],
+      "changes": [
+        {
+          "criterion_id": "C4",
+          "id": "C4",
+          "statement": "实际交付恰好一个续接视频",
+          "before": "U",
+          "after": "F",
+          "reason": "完整记录范围内生成请求因审批而失败，最终公开答复也明确说明未生成新视频；因此实际交付的视频数量为零，而非恰好一条。"
+        }
+      ],
+      "remaining": [
+        {
+          "id": "C1",
+          "statement": "在指定源视频上调用Seedance 2.5原生VideoExtend追加",
+          "reason": "已保存的草稿配置了指定源、VideoExtend及Seedance 2.5，但生成操作因需要用户批准而失败；没有成功执行原生追加的可信记录。"
+        },
+        {
+          "id": "C2",
+          "statement": "输出为480p且在源末尾向后追加4秒",
+          "reason": "草稿参数计划为480p和4秒，但没有实际生成的视频、结果规格或与6.08秒源视频的时长对照，因此不能确认真实追加方向和时长增量。"
+        },
+        {
+          "id": "C3",
+          "statement": "新增段机器人静躺废料堆，火花逐渐消退",
+          "reason": "草稿提示词要求机器人静止且火花熄灭，但实际媒体未生成且未提供可检查的结果媒体或绑定内容分析，无法核验新增段画面。"
+        },
+        {
+          "id": "C5",
+          "statement": "不重生成源视频且追加前的源内容保持",
+          "reason": "生成未完成，故没有结果成片可与源视频前缀逐段对比。记录可表明草稿指定保留源素材，但不能独立证明实际结果前缀保持原源内容。"
+        }
+      ],
+      "rubric_changes": [],
+      "review_caveat": ""
+    },
+    {
+      "case_id": "FL-EVAL-20261104-203",
+      "title": "时间线编辑 · 静态图转时间线",
+      "category": "评估Prompt范围",
+      "problem": "6/6档案及工具记录齐全，仍因无法排除未记录内部动作而未决。",
+      "action": "接受明确任务范围内的封闭操作证据；没有视频生成调用，静图时间线操作不等于生成视频。",
+      "before_outcome": "undetermined",
+      "after_outcome": "pass",
+      "before_score": {
+        "lower": 80.0,
+        "upper": 100.0
+      },
+      "after_score": {
+        "lower": 100.0,
+        "upper": 100.0
+      },
+      "before_unknown": [
+        "C4"
+      ],
+      "after_unknown": [],
+      "changes": [
+        {
+          "criterion_id": "C4",
+          "id": "C4",
+          "statement": "本轮未执行视频生成",
+          "before": "U",
+          "after": "P",
+          "reason": "精确目标轮次的密封归档和工具载荷已完整恢复；已记录的调用仅包含查询、创建合成、合成委托、插入剪辑和完成合成，不含视频生成调用。"
+        }
+      ],
+      "remaining": [],
+      "rubric_changes": [],
+      "review_caveat": ""
+    },
+    {
+      "case_id": "FL-EVAL-20261104-218",
+      "title": "时间线编辑 · 提高音效相对可听度",
+      "category": "真实缺证据＋证据路径",
+      "problem": "六条音轨不足以判断最终混音；保留画面却被限定必须拿到双份完整快照。",
+      "action": "检查运行时自动计算的连续70→72→73→74差异。结构保留与实际混音/声画听辨分开；后两项继续缺证。",
+      "before_outcome": "undetermined",
+      "after_outcome": "undetermined",
+      "before_score": {
+        "lower": 15.0,
+        "upper": 100.0
+      },
+      "after_score": {
+        "lower": 30.0,
+        "upper": 100.0
+      },
+      "before_unknown": [
+        "C4",
+        "C2",
+        "C3"
+      ],
+      "after_unknown": [
+        "C2",
+        "C3"
+      ],
+      "changes": [
+        {
+          "criterion_id": "C4",
+          "id": "C4",
+          "statement": "声音局部修改保留非目标画面剪辑",
+          "before": "U",
+          "after": "P",
+          "reason": "本轮目标工程的运行时差异链完整、未重基且未截断（70→72→73→74）。各轮实际写入仅涉及音乐或拟音片段的资源、源入点、音量、淡变、起止与时长；没有视频片段新增、删除或字段变更，轨道和工程设置也未变。最终工程总时长持续保持58.751秒，因此本轮声音修正保留了非目标画面剪辑的资源绑定、顺序、裁切、变速、切点及总片长。"
+        }
+      ],
+      "remaining": [
+        {
+          "id": "C2",
+          "statement": "音效清楚可辨且比背景音乐突出",
+          "reason": "缺乏实际合成试听或可信的最终混音试听报告，候选人明确表示未进行真实合片试听，仅通过数值推算，无法证明最终混音中音效是否清楚可辨且比背景音乐突出。"
+        },
+        {
+          "id": "C3",
+          "statement": "保留音效对位及约9秒指定卡扣音",
+          "reason": "缺少真实的工程修改前后基线对比数据，无法确认音效对位是否被准确保留，以及约9秒的指定卡扣音是否仍在正确位置。"
+        }
+      ],
+      "rubric_changes": [
+        "C4：接受等价运行时前后差异；不修改C2混音及C3声画对位的媒体证据要求。"
+      ],
+      "review_caveat": ""
+    },
+    {
+      "case_id": "FL-EVAL-20261104-221",
+      "title": "项目与素材管理 · 按原顺序返回文件名类型及真实ID",
+      "category": "评估Prompt范围",
+      "problem": "仅返回三个附件信息，无工具动作；sealed预期0条却仍要求证明不存在隐形动作。",
+      "action": "核销完整已记录调用范围：0工具调用、0正文缺失。该有限范围足以判断本轮未启动制作。",
+      "before_outcome": "undetermined",
+      "after_outcome": "pass",
+      "before_score": {
+        "lower": 85.0,
+        "upper": 100.0
+      },
+      "after_score": {
+        "lower": 100.0,
+        "upper": 100.0
+      },
+      "before_unknown": [
+        "C8"
+      ],
+      "after_unknown": [],
+      "changes": [
+        {
+          "criterion_id": "C8",
+          "id": "C8",
+          "statement": "本轮不创作作品、不调用媒体生成、不导出",
+          "before": "U",
+          "after": "P",
+          "reason": "精确目标轮次的可信记录范围已闭合；未记录任何工具调用或结果，因而在该受记录范围内未见创作、媒体生成或导出操作。"
+        }
+      ],
+      "remaining": [],
+      "rubric_changes": [],
+      "review_caveat": ""
+    },
+    {
+      "case_id": "FL-EVAL-20261104-238",
+      "title": "项目与素材管理 · 切换到指定Skill",
+      "category": "Rubric证据路径",
+      "problem": "只切换Skill及规则文档，仍要求取回13人图片、11份音色和分镜前后全文。",
+      "action": "新增等价证据路径：完整相关写入集、实际删除节点与工具语义不触及受保护资源；不靠助手保留声明。",
+      "before_outcome": "undetermined",
+      "after_outcome": "pass",
+      "before_score": {
+        "lower": 55.0,
+        "upper": 100.0
+      },
+      "after_score": {
+        "lower": 100.0,
+        "upper": 100.0
+      },
+      "before_unknown": [
+        "C2",
+        "C3",
+        "C6"
+      ],
+      "after_unknown": [],
+      "changes": [
+        {
+          "criterion_id": "C2",
+          "id": "C2",
+          "statement": "保留已有图声素材与已认可声线",
+          "before": "U",
+          "after": "P",
+          "reason": "完整的本轮记录仅包含技能查看、采用、释放、AGENTS.md读取和规则同步；封闭记录范围内没有涉及受保护图声资源或已认可声线的写入、删除或生成操作。同步后的规则明确保留13名角色参考和11份认可音色。"
+        },
+        {
+          "criterion_id": "C3",
+          "id": "C3",
+          "statement": "保留当前正式分镜及其组织",
+          "before": "U",
+          "after": "P",
+          "reason": "封闭的本轮操作集未对正式分镜或其组织进行写入、删除或重分组；实际规则同步明确保留88秒分镜预算、场序和座席方案的待审状态，并禁止改写分镜。"
+        },
+        {
+          "criterion_id": "C6",
+          "id": "C6",
+          "statement": "本轮不启动未经授权的新制作",
+          "before": "U",
+          "after": "P",
+          "reason": "可信的封闭本轮操作记录显示仅有3次技能管理、1次文档读取和1次文档编辑；同步规则还明确本轮不新增生成。没有图、声、视频生成、组装或导出调用。"
+        }
+      ],
+      "remaining": [],
+      "rubric_changes": [
+        "C2：前后快照唯一证据改为快照或可核销的封闭写入集，保留对象及预算不变。",
+        "C3：前后快照唯一证据改为快照或可核销的封闭写入集，保留对象及预算不变。"
+      ],
+      "review_caveat": ""
+    },
+    {
+      "case_id": "FL-EVAL-20261104-253",
+      "title": "成片导出与下载 · 保留所有分镜提示词",
+      "category": "已知未完成导出",
+      "problem": "已创建文档，但最终只指导用户自行导出，旧裁判仍把缺导出回执视为未明。",
+      "action": "区分保存文档、原生Markdown下载能力与实际导出交付；按冻结标准判断已完成的部分。",
+      "before_outcome": "undetermined",
+      "after_outcome": "fail",
+      "before_score": {
+        "lower": 75.0,
+        "upper": 100.0
+      },
+      "after_score": {
+        "lower": 75.0,
+        "upper": 75.0
+      },
+      "before_unknown": [
+        "C3"
+      ],
+      "after_unknown": [],
+      "changes": [
+        {
+          "criterion_id": "C3",
+          "id": "C3",
+          "statement": "实际完成文档导出并给用户获取结果",
+          "before": "U",
+          "after": "F",
+          "reason": "完整记录的工具调用仅含文档查看、创建和编辑，未执行项目导出或下载任务；最终答复也仅指导用户自行点击导出并在下载记录中下载，未实际交付导出文件。"
+        }
+      ],
+      "remaining": [],
+      "rubric_changes": [],
+      "review_caveat": ""
+    }
+  ],
+  "remaining_unknown": [
+    {
+      "case_id": "FL-EVAL-20261104-041",
+      "title": "外部搜索 · 核实人物专业背景",
+      "criterion_id": "C2",
+      "statement": "推荐人物确属明星或名人，播音主持专业学习背景有可核验依据；清楚区分所学专业、毕业院校与后来的主持职业，不以主持过节目、传媒院校就读或表演专业替代播音主持专业。存在不确定者应标注，不能作为已确认符合者。",
+      "reason": "最终公开回复没有列出或确认任何人物，因而无从逐一核验其名人身份、院校及播音主持专业学习背景。虽有检索任务调用，但所检查记录未提供可引用的来源正文或已交付候选。",
+      "category": "用户中止／无结果，整例已失败",
+      "case_outcome": "fail"
+    },
+    {
+      "case_id": "FL-EVAL-20261104-041",
+      "title": "外部搜索 · 核实人物专业背景",
+      "criterion_id": "C3",
+      "statement": "优先推荐当下年轻学生较可能熟悉、容易引出课堂讨论的人，并解释熟悉度或兴趣点如何服务播音主持试听课；这是用户偏好，不以缺少某个热门人物强制失败。",
+      "reason": "回复提及会优先选择方便高一学生讨论的话题方向，但未给出具体人物及其面向高一学生的熟悉度或兴趣理由，无法确认实际推荐是否满足该偏好。",
+      "category": "用户中止／无结果，整例已失败",
+      "case_outcome": "fail"
+    },
+    {
+      "case_id": "FL-EVAL-20261104-041",
+      "title": "外部搜索 · 核实人物专业背景",
+      "criterion_id": "C4",
+      "statement": "本轮先提供人物供用户确认，不在未获人物确认前生成最终 PPT 页面或整套课件；可提出供讨论的上屏和互动方向，但不能以成品 PPT 替代候选资料。",
+      "reason": "公开回复明确表示本轮不生成PPT，符合阶段意图；但同一完整回复没有交付人物资料，且行动归档载荷不完整，不能据此满足“交付人物资料并留待确认后制作”的完整通过条件。",
+      "category": "用户中止／无结果，整例已失败",
+      "case_outcome": "fail"
+    },
+    {
+      "case_id": "FL-EVAL-20261104-178",
+      "title": "视频修改 · 规划与工具",
+      "criterion_id": "C1",
+      "statement": "在指定源视频上调用Seedance 2.5原生VideoExtend追加",
+      "reason": "已保存的草稿配置了指定源、VideoExtend及Seedance 2.5，但生成操作因需要用户批准而失败；没有成功执行原生追加的可信记录。",
+      "category": "审批中断／无结果，整例已失败",
+      "case_outcome": "fail"
+    },
+    {
+      "case_id": "FL-EVAL-20261104-178",
+      "title": "视频修改 · 规划与工具",
+      "criterion_id": "C2",
+      "statement": "输出为480p且在源末尾向后追加4秒",
+      "reason": "草稿参数计划为480p和4秒，但没有实际生成的视频、结果规格或与6.08秒源视频的时长对照，因此不能确认真实追加方向和时长增量。",
+      "category": "审批中断／无结果，整例已失败",
+      "case_outcome": "fail"
+    },
+    {
+      "case_id": "FL-EVAL-20261104-178",
+      "title": "视频修改 · 规划与工具",
+      "criterion_id": "C3",
+      "statement": "新增段机器人静躺废料堆，火花逐渐消退",
+      "reason": "草稿提示词要求机器人静止且火花熄灭，但实际媒体未生成且未提供可检查的结果媒体或绑定内容分析，无法核验新增段画面。",
+      "category": "审批中断／无结果，整例已失败",
+      "case_outcome": "fail"
+    },
+    {
+      "case_id": "FL-EVAL-20261104-178",
+      "title": "视频修改 · 规划与工具",
+      "criterion_id": "C5",
+      "statement": "不重生成源视频且追加前的源内容保持",
+      "reason": "生成未完成，故没有结果成片可与源视频前缀逐段对比。记录可表明草稿指定保留源素材，但不能独立证明实际结果前缀保持原源内容。",
+      "category": "审批中断／无结果，整例已失败",
+      "case_outcome": "fail"
+    },
+    {
+      "case_id": "FL-EVAL-20261104-185",
+      "title": "音频制作与修改 · 同音色局部表演修订",
+      "criterion_id": "C2",
+      "statement": "新配音保持已登记苏倩音色参考不变",
+      "reason": "虽然执行记录显示绑定了原参考音频（8c5b6f9d...），但评测证据中缺失该参考音频的实际媒体文件，无法独立核听新音频是否与参考声线一致。",
+      "category": "原始音色参考缺失",
+      "case_outcome": "fail"
+    },
+    {
+      "case_id": "FL-EVAL-20261104-218",
+      "title": "时间线编辑 · 提高音效相对可听度",
+      "criterion_id": "C2",
+      "statement": "音效清楚可辨且比背景音乐突出",
+      "reason": "缺乏实际合成试听或可信的最终混音试听报告，候选人明确表示未进行真实合片试听，仅通过数值推算，无法证明最终混音中音效是否清楚可辨且比背景音乐突出。",
+      "category": "最终混音／声画基线缺失",
+      "case_outcome": "undetermined"
+    },
+    {
+      "case_id": "FL-EVAL-20261104-218",
+      "title": "时间线编辑 · 提高音效相对可听度",
+      "criterion_id": "C3",
+      "statement": "保留音效对位及约9秒指定卡扣音",
+      "reason": "缺少真实的工程修改前后基线对比数据，无法确认音效对位是否被准确保留，以及约9秒的指定卡扣音是否仍在正确位置。",
+      "category": "最终混音／声画基线缺失",
+      "case_outcome": "undetermined"
+    }
+  ],
+  "remaining_case_undetermined": [
+    "FL-EVAL-20261104-218"
+  ],
+  "rubric_changes": [
+    "113/C6",
+    "218/C4",
+    "238/C2",
+    "238/C3"
+  ],
+  "method": "11 formerly undetermined cases audited: 10 fully reassessed; 218 C4 reviewed by a text-only API call after two Gemini transport timeouts, with C1-C3 and quality retained verbatim from v2 actual multimodal call. Remaining 17 cases retain v2 judgments. Same parent/criterion count and scoring weights. Extra evidence, finite-scope judge policy and disclosed rubric evidence/recognizability anchors changed; this is calibration, not a controlled model improvement experiment.",
+  "transition_counts": [
+    {
+      "before": "P",
+      "after": "P",
+      "count": 125
+    },
+    {
+      "before": "U",
+      "after": "P",
+      "count": 11
+    },
+    {
+      "before": "F",
+      "after": "F",
+      "count": 6
+    },
+    {
+      "before": "U",
+      "after": "U",
+      "count": 10
+    },
+    {
+      "before": "U",
+      "after": "F",
+      "count": 3
+    },
+    {
+      "before": "N/A",
+      "after": "N/A",
+      "count": 1
+    }
+  ]
+}

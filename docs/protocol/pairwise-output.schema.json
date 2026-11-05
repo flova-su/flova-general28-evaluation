@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Flova Pairwise Judgment v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "comparison_id",
+    "criteria",
+    "must_failures_X",
+    "must_failures_Y",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "flova.pairwise_judgment.v1"
+    },
+    "comparison_id": {
+      "type": "string"
+    },
+    "criteria": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "criterion_id",
+          "decision",
+          "reason",
+          "evidence_X",
+          "evidence_Y",
+          "missing_evidence"
+        ],
+        "properties": {
+          "criterion_id": {
+            "type": "string"
+          },
+          "decision": {
+            "enum": [
+              "X_better",
+              "Y_better",
+              "equivalent",
+              "insufficient"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_X": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "asset_id": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "start_seconds": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "end_seconds": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "pointer": {
+                  "type": "string"
+                },
+                "quote": {
+                  "type": "string"
+                },
+                "observation": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "observation"
+              ],
+              "anyOf": [
+                {
+                  "required": [
+                    "asset_id",
+                    "sha256"
+                  ]
+                },
+                {
+                  "required": [
+                    "pointer",
+                    "quote"
+                  ]
+                }
+              ],
+              "additionalProperties": false
+            }
+          },
+          "evidence_Y": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "asset_id": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "start_seconds": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "end_seconds": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "pointer": {
+                  "type": "string"
+                },
+                "quote": {
+                  "type": "string"
+                },
+                "observation": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "observation"
+              ],
+              "anyOf": [
+                {
+                  "required": [
+                    "asset_id",
+                    "sha256"
+                  ]
+                },
+                {
+                  "required": [
+                    "pointer",
+                    "quote"
+                  ]
+                }
+              ],
+              "additionalProperties": false
+            }
+          },
+          "missing_evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "must_failures_X": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "must_failures_Y": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

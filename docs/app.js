@@ -127,6 +127,20 @@
     const parts = all(message.parts).filter((part) => !['text', 'public_text'].includes(part.kind || part.type));
     return `<article class="history-message role-${esc(message.role || 'assistant')}"${preview ? '' : ` id="${source}"`}><div class="message-meta"><strong>${esc(roleNames[message.role] || message.role || '消息')}</strong><time datetime="${esc(message.createdAt || '')}">${esc(dateLabel(message.createdAt))}</time><button class="source-link" type="button" data-action="source" data-source="${esc(id)}" aria-label="查看${esc(roleNames[message.role] || '消息')}完整原文">原文 ↗</button></div><div class="message-copy">${plain(preview ? shorten(body.replace(/\*\*|__/g, '').replace(/\s+/g, ' '), 160) : body || '（此消息没有公开文本，工具记录见下方。）')}${!preview && parts.length ? `<details class="message-parts"><summary>工具与附件（${parts.length}）</summary>${parts.map(publicPart).join('')}</details>` : ''}</div></article>`;
   }
+
+  function renderRecoveredPlayers(item) {
+    const refs=all(item.response?.mediaReferences).filter(r=>r.publicUrl);
+    if(!refs.length)return '';
+    return `<div class="recovered-media"><h3>本轮实际产物 <small>可直接看图 / 播放</small></h3><div class="recovered-grid">${refs.map(r=>`<figure><figcaption><strong>${esc(r.title)}</strong><span>${r.playbackDerivative?'平台播放转码 · 原片质量受限':'取回原件'} · ${num(r.byteSize/1024/1024)} MB</span></figcaption>${r.mediaType==='image'?`<a href="${esc(r.publicUrl)}" target="_blank" rel="noopener"><img src="${esc(r.publicUrl)}" loading="lazy" alt="${esc(r.title)}"></a>`:r.mediaType==='video'?`<video controls preload="metadata" playsinline src="${esc(r.publicUrl)}"></video>`:`<audio controls preload="none" src="${esc(r.publicUrl)}"></audio>`}<div class="media-foot"><a href="${esc(r.publicUrl)}" download>下载本文件 ↗</a><code title="${esc(r.sha256)}">SHA ${esc(r.sha256?.slice(0,12))}…</code></div></figure>`).join('')}</div></div>`;
+  }
+  function renderV2Case(item) {
+    if(!item.previousEvaluation)return '';
+    const a=item.atomicScore||{},b=item.previousEvaluation.atomicScore||{};
+    const interval=x=>num(x.lower)+(x.lower!==x.upper?'–'+num(x.upper):'');
+    const changed=all(item.rubricRows).flatMap(r=>r.checks).map(c=>{const prior=all(item.previousEvaluation.rubricRows).flatMap(r=>r.checks).find(o=>o.criterionId===c.criterionId);return {c,prior};}).filter(x=>x.prior&&x.prior.status!==x.c.status);
+    return `<section class="v2-case"><div class="v2-case-top"><span>多模态重评 · v2</span><span>${esc(item.runMeta?.actual_model||'')}</span></div><div class="v2-comparison"><div><small>同一原子口径 · 旧结果</small><strong>${interval(b)}<em>/100</em></strong></div><span class="v2-arrow">→</span><div><small>本次已确认 / 可能上限</small><strong>${interval(a)}<em>/100</em></strong></div><div class="v2-coverage"><small>可判定权重</small><strong>${num(a.coverage_percent)}<em>%</em></strong></div></div>${!item.contentComparisonEligible?`<p class="v2-note">${esc(item.contentCohortReason)}</p>`:''}<details><summary>${changed.length} 个检查项结论发生变化 · 查看新旧对照</summary><div class="v2-diff">${changed.map(({c,prior})=>`<div><code>${esc(c.id)}</code><span>${esc(c.statement)}</span><span>${pill(prior.status)} → ${pill(c.status)}</span></div>`).join('')||'<p>检查项结论未变；本次调用记录独立保留。</p>'}</div><p class="section-note">两侧按相同v2均分规则重算，原始旧版合取分仍保留。185/C5另有按用户原文校准的标准修订。</p></details><div class="pairwise-state"><strong>固定基准已锁定</strong><span>对比分 —</span><span>综合分 —</span><small>等待新候选；将执行 AB / BA 两次盲评，默认绝对分80% + 对比分20%。本轮未填充虚构对比分。</small></div></section>`;
+  }
+
   function renderContext(item) {
     const messages = historyMessages(item);
     const count = item.history?.count ?? messages.length;
@@ -159,7 +173,7 @@
   function renderMediaReferences(item) {
     const refs = all(item.response?.mediaReferences);
     if (!refs.length) return '';
-    return `<div class="media-references"><h3>媒体与资源记录 <span>${refs.length}</span></h3><p class="section-note">打开可查看资源标识、可用性与取证记录。</p><div class="media-reference-grid">${refs.map((ref) => `<button type="button" class="artifact-card media-reference" data-action="source" data-source="${esc(ref.evidenceId)}" aria-haspopup="dialog"><span class="artifact-icon" aria-hidden="true">◇</span><span><strong>${esc(ref.title || ref.id || '媒体资源')}</strong><small>${esc(ref.mediaType || '媒体')} · ${ref.rawMediaAttached ? '有媒体字节' : '未取得媒体字节'}${ref.inspectionPerformed ? ' · 有检查记录' : ''}</small></span><span aria-hidden="true">↗</span></button>`).join('')}</div></div>`;
+    return `${renderRecoveredPlayers(item)}<div class="media-references"><h3>媒体与资源记录 <span>${refs.length}</span></h3><p class="section-note">打开可查看资源标识、可用性与取证记录。</p><div class="media-reference-grid">${refs.map((ref) => `<button type="button" class="artifact-card media-reference" data-action="source" data-source="${esc(ref.evidenceId)}" aria-haspopup="dialog"><span class="artifact-icon" aria-hidden="true">◇</span><span><strong>${esc(ref.title || ref.id || '媒体资源')}</strong><small>${esc(ref.mediaType || '媒体')} · ${ref.rawMediaAttached ? '有媒体字节' : '未取得媒体字节'}${ref.inspectionPerformed ? ' · 有检查记录' : ''}</small></span><span aria-hidden="true">↗</span></button>`).join('')}</div></div>`;
   }
   function renderResponse(item) {
     const response = item.response || {};
@@ -263,12 +277,12 @@
     return `<strong>${num(row.scoreLower)}–${num(row.scoreUpper)}</strong><span> / ${num(row.budget)} 分</span><small>含未决上限</small>`;
   }
   function renderCheck(check) {
-    return `<article class="check-row"><div class="check-heading"><strong><code>${esc(check.id || '')}</code> ${esc(check.title || '子项检查')}</strong>${pill(check.status)}</div>${check.observedValue ? `<p><span class="muted">观察结果：</span>${esc(text(check.observedValue))}</p>` : ''}${check.reason ? plain(check.reason) : ''}${evidenceReferences(check.citations)}${all(check.missingEvidence).length ? `<p class="missing-evidence">缺失：${esc(check.missingEvidence.map(text).join('；'))}</p>` : ''}</article>`;
+    return `<article class="check-row"><div class="check-heading"><strong><code>${esc(check.id || '')}</code> ${esc(check.title || '子项检查')}</strong>${check.budget!==undefined ? `<span class="check-points">${num(check.earnedLower)}${check.earnedUpper!==check.earnedLower ? '–'+num(check.earnedUpper):''} / ${num(check.budget)} 分</span>`:''}${pill(check.status)}</div>${check.observedValue ? `<p><span class="muted">观察结果：</span>${esc(text(check.observedValue))}</p>` : ''}${check.reason ? plain(check.reason) : ''}${evidenceReferences(check.citations)}${all(check.missingEvidence).length ? `<p class="missing-evidence">缺失：${esc(check.missingEvidence.map(text).join('；'))}</p>` : ''}</article>`;
   }
   function renderRubricRow(row, index) {
     const alphaReasons = { C1: '没有实际修复产物可核验，真实透明结果仍缺证据。', C2: '没有交付修复版本，无法核对标题设计是否保留。', C3: '最终只给出诊断和外部工具建议，没有交付可用成品。', C4: '如实说明修复未完成，没有虚报成功。', C5: '现有证据既不能证明非目标资源受损，也不能证明已完整保护。' };
     const previewReason = currentCase()?.id === 'transparent-title' ? alphaReasons[row.id] || row.reason : row.reason;
-    return `<details class="rubric-row status-${statusClass(row.status)}" id="rubric-${identifier(row.id)}"><summary class="rubric-main"><div class="rubric-name"><span class="rubric-index">${String(index + 1).padStart(2, '0')}</span><h3>${esc(row.title)}</h3><span class="rubric-kind">${row.must === false ? '偏好' : '必要'}</span>${row.statement && row.statement !== row.title ? `<p class="rubric-standard">${esc(row.statement)}</p>` : ''}</div><div class="rubric-score">${pill(row.status)}<div>${scoreLabel(row)}</div></div><div class="rubric-reason"><p>${esc(shorten(previewReason, 150))}</p><span class="row-expand">展开判据与证据 <span aria-hidden="true">⌄</span></span></div></summary><div class="rubric-details"><h4>判定理由</h4>${plain(row.reason)}${row.criterionIds?.length > 1 ? '<p class="section-note">以下子项用于诊断，本行统一计分。</p>' : ''}${all(row.checks).length ? `<div class="check-list">${row.checks.map(renderCheck).join('')}</div>` : '<p class="section-note">该项未另列子检查；以判定理由、证据和缺失项为准。</p>'}${row.anchors ? `<details class="anchor-details"><summary>查看通过 / 未满足 / 未明的判定锚点</summary>${anchorBlocks(row.anchors)}</details>` : ''}${!all(row.checks).length ? evidenceReferences(row.citations, '本轮结果证据') : ''}${evidenceReferences(row.sourceRefs, '标准来自哪些原话')}${all(row.missingEvidence).length ? `<div class="missing-evidence"><h4>尚缺的证据</h4><ul>${row.missingEvidence.map((entry) => `<li>${esc(text(entry))}</li>`).join('')}</ul></div>` : ''}</div></details>`;
+    return `<details class="rubric-row status-${statusClass(row.status)}" id="rubric-${identifier(row.id)}"><summary class="rubric-main"><div class="rubric-name"><span class="rubric-index">${String(index + 1).padStart(2, '0')}</span><h3>${esc(row.title)}</h3><span class="rubric-kind">${row.must === false ? '偏好' : '必要'}</span>${row.statement && row.statement !== row.title ? `<p class="rubric-standard">${esc(row.statement)}</p>` : ''}</div><div class="rubric-score">${pill(row.status)}<div>${scoreLabel(row)}</div></div><div class="rubric-reason"><p>${esc(shorten(previewReason, 150))}</p><span class="row-expand">展开判据与证据 <span aria-hidden="true">⌄</span></span></div></summary><div class="rubric-details"><h4>判定理由</h4>${plain(row.reason)}${row.criterionIds?.length > 1 ? '<p class="section-note">父项预算在以下适用检查项内均分，各项独立计分；必要项门槛仍按原标准判断。</p>' : ''}${all(row.checks).length ? `<div class="check-list">${row.checks.map(renderCheck).join('')}</div>` : '<p class="section-note">该项未另列子检查；以判定理由、证据和缺失项为准。</p>'}${row.anchors ? `<details class="anchor-details"><summary>查看通过 / 未满足 / 未明的判定锚点</summary>${anchorBlocks(row.anchors)}</details>` : ''}${!all(row.checks).length ? evidenceReferences(row.citations, '本轮结果证据') : ''}${evidenceReferences(row.sourceRefs, '标准来自哪些原话')}${all(row.missingEvidence).length ? `<div class="missing-evidence"><h4>尚缺的证据</h4><ul>${row.missingEvidence.map((entry) => `<li>${esc(text(entry))}</li>`).join('')}</ul></div>` : ''}</div></details>`;
   }
   function renderQuality(item) {
     const rows = all(item.qualityRows);
@@ -298,18 +312,18 @@
     const notes = all(item.reviewNotes);
     if (!notes.length) return '';
     const label = `评估复核记录 · ${notes.length} 项`;
-    return `<details class="review-warning"${item.needsReview ? ' open' : ''}><summary>${esc(label)}</summary>${notes.map((note) => `<article><h4>${esc(note.title)}${note.target ? ` · ${esc(note.target)}` : ''}</h4>${plain(note.detail)}${note.proposedReferenceCorrection ? `<p class="section-note">建议对照：<button type="button" class="source-link" data-action="source" data-source="${esc(note.proposedReferenceCorrection.to)}" data-locator="${esc(note.proposedReferenceCorrection.locator || '')}">${esc(note.proposedReferenceCorrection.to)} ↗</button></p>` : ''}</article>`).join('')}</details>`;
+    return `<details class="review-warning"><summary>${esc(label)}</summary>${notes.map((note) => `<article><h4>${esc(note.title)}${note.target ? ` · ${esc(note.target)}` : ''}</h4>${plain(note.detail)}${note.proposedReferenceCorrection ? `<p class="section-note">建议对照：<button type="button" class="source-link" data-action="source" data-source="${esc(note.proposedReferenceCorrection.to)}" data-locator="${esc(note.proposedReferenceCorrection.locator || '')}">${esc(note.proposedReferenceCorrection.to)} ↗</button></p>` : ''}</article>`).join('')}</details>`;
   }
   function reviewAlert(item) {
     if (!item.needsReview) return '';
     const flags = all(item.reviewNotes).filter((note) => note.origin === 'selected_attempt_semantic_audit');
-    return `<div class="review-alert" role="note"><strong>判定待复核 · API 原判与分数已保留</strong><p>${esc(shorten(flags.map((note) => note.detail).join('；') || '独立复核对本例判据或理由提出争议。', 170))}</p><a href="${esc(routeHash(item.id, 'total'))}" data-jump="total">查看复核记录 ↓</a></div>`;
+    return `<div class="review-alert" role="note"><strong>判定待复核 · API 原判与分数已保留</strong><p>${esc(shorten(flags.map((note) => note.detail).join('；') || '本例存在需要人工仲裁的判据或理由；程序校验不能代替语义复核。', 170))}</p><a href="${esc(routeHash(item.id, 'total'))}" data-jump="total">查看复核记录 ↓</a></div>`;
   }
   function technicalRecords(item) {
     const run = item.runMeta || {};
     const meta = state.data?.meta || {};
     const usage = run.actual_usage || {};
-    return `<details class="technical-records"><summary>技术记录 · 评估模型、API 与原始 JSON</summary><div class="technical-overview"><dl class="readable-fields"><div><dt>实际评估模型</dt><dd>${esc(run.actual_model || meta.modelReturned || '未记录')}</dd></div><div><dt>请求别名</dt><dd>${esc(run.requested_alias || meta.modelAlias || '未记录')}</dd></div><div><dt>评估方式</dt><dd>对历史真实回应试评，未重新运行 Agent</dd></div><div><dt>API 协议</dt><dd>${esc(run.protocol || '未记录')}</dd></div><div><dt>调用与用量</dt><dd>本例共 ${num(run.actualCallCount ?? run.attempt ?? 1)} 次调用 · 当前采用第 ${num(run.selectedAttempt ?? run.attempt ?? 1)} 次 · 本次 ${num(usage.total_tokens ?? (Number(usage.input_tokens || 0) + Number(usage.output_tokens || 0)))} tokens</dd></div></dl>${all(meta.limitations).length ? `<ul class="technical-limitations">${meta.limitations.map((note) => `<li>${esc(note)}</li>`).join('')}</ul>` : ''}</div>${rawDetails('专属 Rubric 与需求整理', item.advanced?.rubric || {})}${rawDetails('独立质检与冻结记录', item.advanced?.qualityAudit || {})}${rawDetails('实际模型调用记录', run)}${rawDetails('原始模型判定', item.advanced?.originalJudgment || item.advanced?.originalPilot?.judgment || {})}${rawDetails('逐项聚合记录', item.aggregate)}${rawDetails('冻结标准与来源记录', item.advanced?.sourceCase || {})}${item.advanced?.judgeInput ? rawDetails('提交给模型的完整评估输入', item.advanced.judgeInput) : rawDetails('完整输入文件与来源校验清单', item.advanced?.inputManifest || {})}</details>`;
+    return `<details class="technical-records"><summary>技术记录 · 评估模型、API 与原始 JSON</summary><div class="technical-overview"><dl class="readable-fields"><div><dt>实际评估模型</dt><dd>${esc(run.actual_model || meta.modelReturned || '未记录')}</dd></div><div><dt>请求别名</dt><dd>${esc(run.requested_alias || run.requested_model || meta.modelAlias || '未记录')}</dd></div><div><dt>评估方式</dt><dd>对历史真实回应试评，未重新运行 Agent</dd></div><div><dt>API 协议</dt><dd>${esc(run.protocol || '未记录')}</dd></div><div><dt>调用与用量</dt><dd>本例共 ${num(run.actualCallCount ?? run.attempt ?? 1)} 次调用 · 当前采用第 ${num(run.selectedAttempt ?? run.attempt ?? 1)} 次 · 本次 ${num(usage.total_tokens ?? (Number(usage.input_tokens || 0) + Number(usage.output_tokens || 0)))} tokens</dd></div></dl>${all(meta.limitations).length ? `<ul class="technical-limitations">${meta.limitations.map((note) => `<li>${esc(note)}</li>`).join('')}</ul>` : ''}</div>${rawDetails('专属 Rubric 与需求整理', item.advanced?.rubric || {})}${rawDetails('独立质检与冻结记录', item.advanced?.qualityAudit || {})}${rawDetails('实际模型调用记录', run)}${rawDetails('原始API判定（格式投影另存）', item.advanced?.originalJudgment || item.advanced?.originalPilot?.judgment || {})}${rawDetails('逐项聚合记录', item.aggregate)}${item.previousEvaluation ? rawDetails('旧版完整判定与得分', item.previousEvaluation) : ''}${item.advanced?.strictParentAggregate ? rawDetails('原始合取聚合（保留）', item.advanced.strictParentAggregate) : ''}${rawDetails('冻结标准与来源记录', item.advanced?.sourceCase || {})}${item.advanced?.judgeInput ? rawDetails('提交给模型的完整评估输入', item.advanced.judgeInput) : rawDetails('完整输入文件与来源校验清单', item.advanced?.inputManifest || {})}</details>`;
   }
   function renderTotal(item) {
     const value = totalValues(item);
@@ -442,7 +456,7 @@
       if (!summary.detailUrl) throw new Error('此案例没有完整资料地址。');
       const url = new URL(summary.detailUrl, window.location.href);
       if (url.origin !== window.location.origin || !['http:', 'https:'].includes(url.protocol)) throw new Error('完整资料必须来自本页面的同源静态文件。');
-      const response = await fetch(url.href, { credentials: 'same-origin' });
+      const response = await fetch(url.href, { credentials: 'same-origin', cache: 'no-cache' });
       if (!response.ok) throw new Error(`资料文件读取失败（${response.status}）。`);
       const item = await response.json();
       if (item.id !== summary.id || !hasFullDetail(item)) throw new Error('资料内容与所选案例不一致。');
@@ -471,7 +485,7 @@
     try {
       const item = await loadDetail(summary);
       if (request !== state.detailRequest || state.view !== 'detail' || item.id !== state.caseId) return;
-      $('#review-content').innerHTML = reviewAlert(item) + renderContext(item) + renderInstruction(item) + renderResponse(item) + renderRubrics(item) + renderTotal(item);
+      $('#review-content').innerHTML = reviewAlert(item) + renderV2Case(item) + renderContext(item) + renderInstruction(item) + renderResponse(item) + renderRubrics(item) + renderTotal(item);
       renderRail(item);
       syncDetails();
       if (sectionToOpen) requestAnimationFrame(() => jump(sectionToOpen, 'auto'));

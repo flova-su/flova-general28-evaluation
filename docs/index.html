@@ -37,7 +37,7 @@
         <footer class="catalog-pagination-bar"><label class="catalog-size-label">每页<select id="catalog-size" aria-label="每页记录数"><option value="20">20</option><option value="50">50</option><option value="100">100</option></select>条</label><div id="catalog-pagination" class="catalog-pagination" aria-label="评估记录分页"></div></footer>
       </section>
       <p class="catalog-help"><span>逐条专属 Rubric</span><i></i><span>完整上下文、产物和证据在详情中查看</span></p>
-      <details class="batch-scope"><summary>本批结果怎么看 · 新旧口径与取证范围</summary><p>每个 Query 根据完整已记录公开上文与当前指令生成专属 Rubric。此次补齐真实媒体，重新调用 GPT-5.6-terra（文字与图片）及 Gemini 3.1 Pro（音视频）评估；未重跑 Agent。</p><p>v2将父项固定预算均分给适用检查项：满足得本项分，未满足得0，证据未明保留区间。必要项失败仍判未通过。旧版“全部检查通过才得父项分”完整保留；时长检查只按来源校准了185/C5一项。新旧变化同时涉及取证、模型和判据澄清，不能全部归因为多模态能力。</p><p>分数区间不取中点；整例未决与未知检查项分别统计。外部取消的2例仍保留在28条交付统计，单列退出内容比较。程序引用校验通过不等于人工金标。A/B对比尚无新候选，当前对比分和综合分不填值。</p></details>
+      <details class="batch-scope"><summary>本批结果怎么看 · 新旧口径与取证范围</summary><p>每个 Query 根据完整已记录公开上文与当前指令生成专属 Rubric。此次补齐真实媒体，重新调用 GPT-5.6-terra（文字与图片）及 Gemini 3.1 Pro（音视频）评估；未重跑 Agent。</p><p>v2将父项固定预算均分给适用检查项：满足得本项分，未满足得0，证据未明保留区间。必要项失败仍判未通过。旧版“全部检查通过才得父项分”完整保留；时长检查只按来源校准了185/C5一项。新旧变化同时涉及取证、模型和判据澄清，不能全部归因为多模态能力。</p><p>分数区间不取中点；整例未决与未知检查项分别统计。中断且没有可评内容的2例仍保留在28条交付统计，单列退出内容比较。程序引用校验通过不等于人工金标。A/B对比尚无新候选，当前对比分和综合分不填值。</p></details>
     </section>
     <section id="detail-view" hidden aria-labelledby="page-title">
       <div class="detail-navigation"><button id="detail-back" type="button" class="detail-back">← 返回列表</button><div class="record-navigation" aria-label="切换当前筛选中的记录"><span id="detail-position"></span><button id="detail-prev" type="button" aria-label="上一条评估">← 上一条</button><button id="detail-next" type="button" aria-label="下一条评估">下一条 →</button></div></div>
